@@ -575,9 +575,7 @@ def Fig1(tool):
     for i in IndicesSample:
         
         #if len(NlistSample1) > 50: break
-        if Nlist1[i] < 10**4: continue
-        if Nlist1[i] > 10**5: continue
-        if Slist[i] > 300: continue
+        if Nlist1[i] > 10**4: continue
         
         NlistSample1.append(Nlist1[i])
         klistSample1.append(klist1[i])
@@ -586,8 +584,8 @@ def Fig1(tool):
         ObsBPS1.append(ObsBP1[i])
         ObsRareS1.append(ObsRare1[i])
     
-    FS_RADs = ff.getFS(NlistSample1, SlistSample1, tool)    
-    sys.exit()
+    #FS_RADs = ff.getFS(NlistSample1, SlistSample1, tool)    
+    #sys.exit()
                             
     IN = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'.txt','r')
     

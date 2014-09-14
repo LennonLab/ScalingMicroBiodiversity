@@ -1,4 +1,4 @@
-rare-bio
-========
+RareBio
+=======
 
-code for the rare biosphere project
+Code, data, and text documents related to the study of microbial abundance distributions

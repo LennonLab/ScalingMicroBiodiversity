@@ -5,7 +5,6 @@ from scipy import stats
 from scipy.stats import gaussian_kde
 import re
 import random
-import time
 
 sys.path.append("/Users/lisalocey/Desktop/RareBio/")
 import ModelsN
@@ -366,12 +365,13 @@ def GetSADsFromBiom_labeled(path, dataset):
 
 def getFS(Nlist, Slist, tool, zeros=False):
     
-    if zeros is False: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'.txt','a+')
-    elif zeros is True: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'weak.txt','a+')
+    if zeros is False: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'.txt','w+')
+    elif zeros is True: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'weak.txt','w+')
 
     for i, N in enumerate(Nlist):
-        
         S = Slist[i]
+        
+        print i, N, S
         N = int(N)
         S = int(S)
         
@@ -386,24 +386,11 @@ def getFS(Nlist, Slist, tool, zeros=False):
         
         """ use partitions? """
         if tool == 'Parts':
-            
-            D = {}
             sample_size = 1
-            print i, 'N:',N, 'S:',S, 'sample size:', sample_size,
-            
-            if N > 10**4 or N/S > 20:
-                t1 = time.time()
+            if N > 10**4 or N/S > 50:
                 FS_RADs = partitions.rand_partitions(N, S, sample_size, exact='yes', method='multiplicity')
-                t2 = time.time()
-                print 'multiplicity time:', t2 - t1
-                
-            else: 
-                t1 = time.time()
-                FS_RADs = partitions.rand_partitions(N, S, sample_size, exact='yes', method='divide_and_conquer')
-                t2 = time.time()
-                print 'divide_and_conquer', t2 - t1
-                
-                
+            else: FS_RADs = partitions.rand_partitions(N, S, sample_size, exact='yes', method='divide_and_conquer')
+            
         """ use random fraction? """
         #sample_size = 1
         #rel = False
