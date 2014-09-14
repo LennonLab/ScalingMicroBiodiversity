@@ -4,22 +4,17 @@ import numpy as np
 from scipy.stats import gaussian_kde
 import random
 import scipy as sc
-
+import os
 import sys
 
-sys.path.append("/Users/lisalocey/Desktop/RareBio/")
-import ModelsN
+#mydir = "~/Desktop/Repos/rare-bio/"
+mydir = os.path.expanduser("~/Desktop/Repos/rare-bio/")
 
-sys.path.append("/Users/lisalocey/Desktop/RareBio/")
+
+sys.path.append(mydir+"tools/feasible_functions")
 import feasible_functions as ff
-
-sys.path.append("/Users/lisalocey/Desktop/RareBio/global/GenAnalysis/tools/")
-import mete
-#import pln
-
-sys.path.append("/Users/lisalocey/Desktop/partitions/partitions/Python/")
+sys.path.append(mydir+"tools/partitions/partitions/Python/")
 import partitions
-
 
 
 def get_kdens(summands):
@@ -36,41 +31,7 @@ def get_kdens(summands):
 
 
 
-
-def RandCompFast(Q, N, sample_size, maxn=None):
-    
-    comps = []
-    while len(comps) < sample_size:
-
-        composition = []    
-        indices = []
-        
-        while len(indices) < N-1:
-            index = random.randint(1, Q-1)
-            if index in indices: continue
-            else: indices.append(index)
-    
-        indices.sort()
-        indices.append(Q)
-    
-        nsum = 0
-        composition = [] 
-        for i in indices:
-            i -= sum(composition) 
-            composition.append(i)
-            nsum += i
-        
-        composition.sort()
-    	composition.reverse()
-        comps.append(composition)
-
-    return comps
-    
-    
-
-radDATA = open('/Users/lisalocey/Desktop/RareBio/RADdataEMP.txt','r')
-#radDATA = open('/Users/lisalocey/Desktop/RareBio/RADdataECON.txt','r')
-
+radDATA = open(mydir+'output/RADdataEMP.txt','r')
 
 fs = 10
 color = str()
@@ -196,8 +157,7 @@ def kdensMetrics():
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/ProjectN/MetricsKdensEMP.png',
-    dpi=600)
+    plt.savefig(mydir+'/figs/MetricsKdensEMP.png', dpi=600)
     plt.close()
     print 'kdens fig for metrics: done'   
     
@@ -207,10 +167,6 @@ def kdensMetrics():
     
     
 def scatterMetrics():
-    #metrics = [['Evar', Evarlist], ['Simpsons', ESimplist]]
-    #metrics = [['Evar', Evarlist], ['Simpsons', ESimplist], ['Shannons', Shanlist], ['Eq', EQlist]]
-    #metrics = [['Evenness (Evar)', Evarlist], ['Simpson\'s Diversity', SimpDomlist], ['Simpsons\' evenness', ESimplist], ['Berger-Parker', BPlist]]
-    #metrics = [['Evar', Evarlist], ['Simpson\'s Diversity, 1-D', SimpDomlist], ['Simpsons\' evenness', ESimplist], ['Berger-Parker', BPlist]]
     metrics = [['Heip\'s', EHeiplist], ['Simpson\'s Diversity, 1-D', SimpDomlist], ['Simpsons\' evenness', ESimplist], ['Berger-Parker', BPlist]]
     
     fig = plt.figure()
@@ -265,7 +221,7 @@ def scatterMetrics():
         print metric,'scatter plot: done'
     
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/ProjectN/ScatterMetrics.png', dpi=600)
+    plt.savefig(mydir+'/figs/ScatterMetrics.png', dpi=600)
     plt.close()
     
     return
@@ -345,8 +301,7 @@ def scatterMetricsRare():
         print metric,'scatter plot: done'
     
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/ProjectN/ScatterRare.png',
-    dpi=600)
+    plt.savefig(mydir+'/figs/ScatterRare.png', dpi=600)
     plt.close()
     
     return
@@ -432,8 +387,7 @@ def scatterNmax():
         plt.yscale('log')
             
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/ProjectN/ScatterMax.png',
-    dpi=600)
+    plt.savefig(mydir+'/figs/ScatterMax.png', dpi=600)
     plt.close()
         
     return
@@ -527,8 +481,7 @@ def scatterNmax2():
         
                 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/ScatterMax2.png',
-    dpi=600)
+    plt.savefig(mydir+'/figs/ScatterMax2.png', dpi=600)
     plt.close()
         
     return
@@ -587,7 +540,7 @@ def Fig1(tool):
     #FS_RADs = ff.getFS(NlistSample1, SlistSample1, tool)    
     #sys.exit()
                             
-    IN = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'.txt','r')
+    IN = open(mydir+'/output/macrostates/'+tool+'.txt','r')
     
     RADdict = {}
     for line in IN:
@@ -972,7 +925,7 @@ def Fig1(tool):
     plt.tick_params(axis='both', which='major', labelsize=fs-3)
     
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig('/Users/lisalocey/Desktop/RareBio/figs/RareBio-Fig1.png', dpi=600)
+    plt.savefig(mydir+'/figs/RareBio-Fig1.png', dpi=600)
     plt.close()
     
     
@@ -982,11 +935,11 @@ def Fig1(tool):
 
 
 
-#scatterMetrics()
-#scatterMetricsRare()
-#kdensMetrics()
-#scatterNmax()
-#scatterNmax2()
+scatterMetrics()
+scatterMetricsRare()
+kdensMetrics()
+scatterNmax()
+scatterNmax2()
 
 tool = 'Parts'
 Fig1(tool)
