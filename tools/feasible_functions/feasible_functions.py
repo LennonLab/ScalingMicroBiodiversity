@@ -6,14 +6,16 @@ from scipy.stats import gaussian_kde
 import re
 import random
 
+"""
 sys.path.append("/Users/lisalocey/Desktop/RareBio/")
 import ModelsN
 
 sys.path.append("/Users/lisalocey/Desktop/RareBio/global/GenAnalysis/tools/")
 import mete
 #import pln
+"""
 
-sys.path.append("/Users/lisalocey/Desktop/partitions/partitions/Python/")
+sys.path.append("/Users/lisalocey/Desktop/Repos/partitions/partitions/Python/")
 import partitions
 
 

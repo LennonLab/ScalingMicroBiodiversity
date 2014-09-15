@@ -1,19 +1,21 @@
 from __future__ import division
 import functools
 #import sys
+import os
 
+mydir2 = os.path.expanduser("~/Desktop/data/micro/")
 
-#IN = '/Users/lisalocey/Desktop/RareBio/data/EMP/EMP/full_emp_table_w_tax_closedref.biom'
-IN = '/Users/lisalocey/Desktop/RareBio/data/EMPopen/EMPopen/full_emp_table_w_tax.biom'
+IN = mydir2 + 'EMP/EMPclosed/full_emp_table_w_tax_closedref.biom'
+#IN = mydir2 + 'EMP/EMPopen/full_emp_table_w_tax.biom'
 
-RADs = []
+SSADs = []
 
-#OUT = open('/Users/lisalocey/Desktop/RareBio/data/EMP/EMP/EMP-SSADdata.txt','w+')
-OUT = open('/Users/lisalocey/Desktop/RareBio/data/EMPopen/EMPopen/EMPopen-SSADdata.txt','w+')
+OUT = open(mydir2 + 'EMP/EMPclosed/EMPclosed-SSADdata.txt','w+')
+#OUT = open(mydir2 + 'EMP/EMPopen/EMPopen-SSADdata.txt','w+')
 OUT.close()
 
-#OUT = open('/Users/lisalocey/Desktop/RareBio/data/EMP/EMP/EMP-SSADdata.txt','a')
-OUT = open('/Users/lisalocey/Desktop/RareBio/data/EMPopen/EMPopen/EMPopen-SSADdata.txt','a')
+OUT = open(mydir2 + 'EMP/EMPclosed/EMPclosed-SSADdata.txt','a')
+#OUT = open(mydir2 + 'EMP/EMPopen/EMPopen-SSADdata.txt','a')
 
 c1 = '{'
 

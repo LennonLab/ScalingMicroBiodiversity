@@ -7,7 +7,6 @@ import scipy as sc
 import os
 import sys
 
-#mydir = "~/Desktop/Repos/rare-bio/"
 mydir = os.path.expanduser("~/Desktop/Repos/rare-bio/")
 
 
