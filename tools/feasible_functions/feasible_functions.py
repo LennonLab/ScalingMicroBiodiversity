@@ -5,6 +5,11 @@ from scipy import stats
 from scipy.stats import gaussian_kde
 import re
 import random
+import os
+
+mydir = os.path.expanduser("~/Desktop/Repos/rare-bio/")
+mydir2 = os.path.expanduser("~/Desktop/")
+
 
 """
 sys.path.append("/Users/lisalocey/Desktop/RareBio/")
@@ -21,7 +26,7 @@ import partitions
 
 ########################################################################################################
 ######   A Section devoted to evenness indices and descriptive statistical functions ###################
-minS = 7
+minS = 10
 
 
 def rarityRel(sad): # relative abundance of the least abundant taxon
@@ -29,7 +34,7 @@ def rarityRel(sad): # relative abundance of the least abundant taxon
     """ the probability that the next individual sampled will be from the least 
     abundant taxon """
     
-    return min(sad)/sum(sad)
+    return min(sad)/len(sad)
     
     
 def rarityOnes(sad): 
@@ -60,16 +65,6 @@ def rarityPair(sad):
     return f/n
     
 
-    
-
-def raritySumOnes(sad):
-    """ The rarest you can be is to have a single member. The more singletons,
-    the more rarity. """
-    
-    return sad.count(1)/sum(sad)
-
-
-    
 
 def Berger_Parker(sad):
     return max(sad)/sum(sad)
@@ -163,7 +158,6 @@ def Heips_evenness(SAD):
 def simpsons_dom(SAD):
     D = 0.0
     N = sum(SAD)
-    S = len(SAD)
     
     for x in SAD:
         D += x*(x-1)
@@ -333,14 +327,16 @@ def get_SADs(path, dataset):
             SAD.reverse()
             SADs.append(SAD)
             
-    return(SADs)
+    return SADs
     
     
     
     
-def GetSADsFromBiom_labeled(path, dataset):
-
-    DATA = path + '/' + dataset + '-SSADdata.txt'
+def GetSADsFromBiom_labeled(path, dataset, return_list=True):
+    
+    minS = 10
+    
+    DATA = path + '/' + dataset + '/' + dataset + '-SSADdata.txt'
     SADdict = {}
     
     with open(DATA) as f: 
@@ -355,12 +351,32 @@ def GetSADsFromBiom_labeled(path, dataset):
                 
                 if abundance > 0:
                     if sample not in SADdict:
-                        SADdict[sample] = [[species, abundance]]
+                        
+                        if return_list:
+                            SADdict[sample] = [abundance]
+                        else: SADdict[sample] = [[species, abundance]]
             
-                    else: SADdict[sample].append([species, abundance])
+                    else:
+                        if return_list:
+                            SADdict[sample].append(abundance)
+                        else:
+                            SADdict[sample].append([species, abundance])
         
-            
-    return SADdict
+    if return_list:
+        SADs = []
+        SADlist = SADdict.items()
+    
+        for tup in SADlist:
+                
+            SAD = tup[1]
+            if len(SAD) >= minS: 
+                SAD.sort()
+                SAD.reverse()
+                SADs.append(SAD)
+                
+        return SADs
+                    
+    else: return SADdict
     
     
     
@@ -378,8 +394,8 @@ def getFS(Nlist, Slist, tool, zeros=False):
         S = int(S)
         
         """ use mete? """
-        if tool == 'mete':
-            FS_RADs = [mete.get_mete_rad(S, N)[0]]
+        #if tool == 'mete':
+        #    FS_RADs = [mete.get_mete_rad(S, N)[0]]
         
         """ use compositions? """
         if tool == 'Comps':
@@ -423,4 +439,107 @@ def getFS(Nlist, Slist, tool, zeros=False):
             
     OUT.close()
     print 'getFS(): done'
+
+
+
+def radDATA():
+    
+    Mlist = []
+    datasets = []
+    
+    """
+    seqID = '99'
+    for name in os.listdir('/Users/lisalocey/Desktop/RareBio/data/micro9599/'+seqID+'data'): 
+        index = name.find('-')
+        name = name[0:index]
+        datasets.append([name, 'micro'])        
+    """
+    
+    for name in os.listdir(mydir2 +'data/micro'):
+            datasets.append([name, 'micro'])   
+    
+    for name in os.listdir(mydir2 +'data/macro'):
+            datasets.append([name, 'macro'])   
+    
+    
+    ct = 0
+    numMicros = 0
+    numMacros = 0
+        
+    for dataset in datasets:
+        
+        name = dataset[0] # name of dataset
+        kind = dataset[1] # micro or macro
+        RADs = []
+        
+        if name == '.DS_Store': continue
+        
+        
+        if kind == 'micro':
+            #RADs = getPhyloSADs.get_SADs(seqID, dataset[0], 'genus')    
+    
+            path = kind
             
+            if name == 'EMPopen': continue
+            if name == 'EMPclosed':
+                
+                RADs = GetSADsFromBiom_labeled(mydir2 +'data/'+path+'/', name)
+            
+            else: RADs = get_SADs(mydir2 +'/data/'+path, name)
+            
+            print 'micro', name, len(RADs)
+            
+            if len(RADs) > 200:
+                RADs = random.sample(RADs, 180) # getting between 180 and 200 SADs per dataset    
+            
+            numMicros += len(RADs)
+                                            
+                                                                                                            
+        if kind == 'macro':
+            path = kind
+            RADs = get_SADs(mydir2 +'/data/'+path, name)
+    
+            print 'macro', len(RADs)
+            
+            if len(RADs) > 200:
+                RADs = random.sample(RADs, 100)
+            
+            numMacros += len(RADs)
+    
+        
+        for RAD in RADs:
+            
+            RAD = list([x for x in RAD if x != 0])
+            
+            N = sum(RAD)
+            S = len(RAD)
+            
+            if S < 10: continue 
+            
+            Evar = e_var(RAD)
+            ESimp = simpsons_evenness(RAD)
+            ENee = NHC_evenness(RAD)
+            EPielou = pielous_evenness(RAD)
+            
+            EHeip = Heips_evenness(RAD)
+            EQ = EQ_evenness(RAD)
+            
+            BP = Berger_Parker(RAD)
+            SimpDom = simpsons_dom(RAD)
+            
+            rareRel = rarityRel(RAD)
+            rareOnes = rarityOnes(RAD)
+            
+            skew = stats.skew(RAD)
+            
+            ct+=1
+            
+            Mlist.append([name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew])
+            
+    print 'micros:',numMicros, ' macros:',numMacros, len(Mlist)
+    
+    return Mlist
+    
+    
+    
+    
