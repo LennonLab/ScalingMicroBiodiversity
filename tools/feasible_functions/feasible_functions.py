@@ -300,7 +300,7 @@ def get_SADs(path, dataset):
     
     #print dataset
     
-    minS = 10
+    minS = 2
     ct1, ct2 = 0, 0
     SADdict = {}
     
@@ -334,12 +334,12 @@ def get_SADs(path, dataset):
     
 def GetSADsFromBiom_labeled(path, dataset, return_list=True):
     
-    minS = 10
+    minS = 2
     
-    DATA = path + '/' + dataset + '/' + dataset + '-SSADdata.txt'
+    IN = path + '/' + dataset + '-SSADdata.txt'
     SADdict = {}
     
-    with open(DATA) as f: 
+    with open(IN) as f: 
         
         for d in f:
             if d.strip():
@@ -376,75 +376,31 @@ def GetSADsFromBiom_labeled(path, dataset, return_list=True):
                 
         return SADs
                     
-    else: return SADdict
+    else:
+        OUT = open(path + '/' + dataset + '-data.txt', 'w+')
     
+        SADlist = SADdict.items()
     
-    
-
-def getFS(Nlist, Slist, tool, zeros=False):
-    
-    if zeros is False: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'.txt','w+')
-    elif zeros is True: OUT = open('/Users/lisalocey/Desktop/RareBio/macrostates/'+tool+'weak.txt','w+')
-
-    for i, N in enumerate(Nlist):
-        S = Slist[i]
-        
-        print i, N, S
-        N = int(N)
-        S = int(S)
-        
-        """ use mete? """
-        #if tool == 'mete':
-        #    FS_RADs = [mete.get_mete_rad(S, N)[0]]
-        
-        """ use compositions? """
-        if tool == 'Comps':
-            sample_size = 2
-            FS_RADs = RandCompFast(N, S, sample_size)
-        
-        """ use partitions? """
-        if tool == 'Parts':
-            sample_size = 1
-            if N > 10**4 or N/S > 50:
-                FS_RADs = partitions.rand_partitions(N, S, sample_size, exact='yes', method='multiplicity')
-            else: FS_RADs = partitions.rand_partitions(N, S, sample_size, exact='yes', method='divide_and_conquer')
+        for tup in SADlist:
             
-        """ use random fraction? """
-        #sample_size = 1
-        #rel = False
-        #FS_RADs = ModelsN.DomPreInt(N, sample_size, rel)                
+            site = tup[0]    
+            SP_AB = tup[1]
+            if len(SP_AB) >= minS: 
+                for sp in SP_AB:
+                    print>> OUT, site, sp[0], sp[1]
+                    
+        OUT.close()
         
-        """ use sim-based log-normal? """
-        #sample_size = 10
-        #rel = False
-        #FS_RADs = ModelsN.SimLogNormInt(N, sample_size, rel)                                       
+    return 
         
-        """ use sim-based Pareto? """
-        #sample_size = 10
-        #rel = False
-        #FS_RADs = ModelsN.SimParetoInt(N, sample_size, rel)
-        
-        """ use sim-based Dominance Decay (int)?"""
-        #sample_size = 10
-        #rel = False
-        #FS_RADs = ModelsN.DomDecayInt(N, sample_size, rel)
-        
-        for rad in FS_RADs:
-            if sum(rad) != N or len(rad) != S:
-                print sum(rad), N, len(rad), S
-                print 'incorrect N and S'
-                sys.exit()
-                
-            print>>OUT, rad
-            
-    OUT.close()
-    print 'getFS(): done'
 
 
 
-def radDATA():
+def radDATA(SampSize=500):
     
     Mlist = []
+    Miclist = []
+    Maclist = []
     datasets = []
     
     """
@@ -480,9 +436,11 @@ def radDATA():
     
             path = kind
             
-            if name == 'EMPopen': continue
-            if name == 'EMPclosed':
-                
+            if name == 'EMPopen': 
+                RADs = GetSADsFromBiom_labeled(mydir2 +'data/'+path+'/', name)
+            
+            if name == 'EMPclosed': 
+                continue # don't use both EMP datasets
                 RADs = GetSADsFromBiom_labeled(mydir2 +'data/'+path+'/', name)
             
             else: RADs = get_SADs(mydir2 +'/data/'+path, name)
@@ -490,7 +448,7 @@ def radDATA():
             print 'micro', name, len(RADs)
             
             if len(RADs) > 200:
-                RADs = random.sample(RADs, 180) # getting between 180 and 200 SADs per dataset    
+                RADs = random.sample(RADs, 200) #  180, getting between 180 and 200 SADs per dataset    
             
             numMicros += len(RADs)
                                             
@@ -501,8 +459,8 @@ def radDATA():
     
             print 'macro', len(RADs)
             
-            if len(RADs) > 200:
-                RADs = random.sample(RADs, 100)
+            if len(RADs) > 200: # 200 
+                RADs = random.sample(RADs, 140) # 100
             
             numMacros += len(RADs)
     
@@ -534,9 +492,17 @@ def radDATA():
             
             ct+=1
             
-            Mlist.append([name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew])
+            if kind == 'macro':
+                Maclist.append([name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew])
             
-    print 'micros:',numMicros, ' macros:',numMacros, len(Mlist)
+            elif kind == 'micro':
+                Miclist.append([name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew])
+    
+    Miclist = random.sample(Miclist, SampSize)
+    Maclist = random.sample(Maclist, SampSize)
+    Mlist = list(Miclist + Maclist)        
+            
+    print 'micros:',numMicros, ' macros:',numMacros
     
     return Mlist
     

@@ -1,31 +1,36 @@
 from __future__ import division
+#from __future__ import print_function
 import  matplotlib.pyplot as plt
+
 import numpy as np
 from scipy.stats import gaussian_kde
 import random
 import scipy as sc
+from scipy import stats
+
 import os
 import sys
 
-import pandas
-from pandas.tools import plotting
-from scipy import stats
-from statsmodels.formula.api import ols
-from numpy.random import randn
+import statsmodels.stats.api as sms
+import statsmodels.formula.api as smf
+from statsmodels.sandbox.regression.predstd import wls_prediction_std
 
+#import statsmodels.tsa.api as smTsa
+import pandas as pd
+#import patsy
 from math import log10
+import linecache
+
 
 
 mydir = os.path.expanduser("~/Desktop/Repos/rare-bio/")
+mydir2 = os.path.expanduser("~/Desktop/")
 
 sys.path.append(mydir + "tools/feasible_functions")
 import feasible_functions as ff
 
 sys.path.append(mydir + "tools/partitions")
 #import partitions
-
-
-OrC = 'open'
 
 
 def get_kdens(summands):
@@ -41,13 +46,13 @@ def get_kdens(summands):
     return D
 
 
-fs = 10 # font size used across figures
-color = str()
-
-
 
 def Fig1():
 
+    fs = 10 # font size used across figures
+    color = str()
+    OrC = 'open'
+    
     Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [], [], [], [], []]
     klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [], [], [], [], [], []]
     NmaxList, rareOnesList, rareRelList, rarePairList, rareSkews, KindList = [[], [], [], [], [], []]
@@ -56,48 +61,102 @@ def Fig1():
     ct = 0
     klist = []
     
-    radDATA = ff.radDATA()
-    
-    for data_list in radDATA:
-        
-        name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-        
-        N = float(N)
-        S = float(S)
-        
-        if S < 4: continue
-        
-        N = float(N)
-        S = float(S)
-        
-        Nlist.append(float(np.log(N)))
-        Slist.append(float(np.log(S)))
-        NSlist.append(float(np.log(N/S)))
-        
-        Evarlist.append(float(np.log(float(Evar))))
-        ESimplist.append(float(np.log(float(ESimp))))
-        KindList.append(kind)
-        
-        BPlist.append(float(BP))
-        NmaxList.append(float(np.log(float(BP)*float(N))))
-        EHeiplist.append(float(EHeip))
-        
-        rareRelList.append(float(rareOnes/S))
-        rareOnesList.append(float(rareOnes))
-        rareSkews.append(float(skew))
-        
-        if kind == 'micro': klist.append('b')
-        if kind == 'macro': klist.append('r')
-        
-        ct+=1
-    
-        
-    
-    metrics = [['log(skewnness)', rareSkews], 
-              ['log(greatest species abundance)', NmaxList], 
-              ['log(species evenness)', Evarlist]]
+    radDATA = []
+    datasets = []
+    BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'AGSOIL', 'SLUDGE']
             
-
+    for name in os.listdir(mydir2 +'data/micro'):
+            if name in BadNames: continue
+            
+            path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+            num_lines = sum(1 for line in open(path))
+            datasets.append([name, 'micro', num_lines])   
+    
+    for name in os.listdir(mydir2 +'data/macro'):
+            if name in BadNames: continue
+            
+            path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+            num_lines = sum(1 for line in open(path))
+            datasets.append([name, 'macro', num_lines])   
+    
+    numMac = 0
+    numMic = 0
+            
+    for dataset in datasets:
+        
+        name = dataset[0]
+        kind = dataset[1]
+        numlines = dataset[2]    
+        
+        lines = []
+        
+        if numlines > 80: lines = random.sample(range(1, numlines+1), 80)
+        else: lines = random.sample(range(1, numlines+1), 40)
+        
+        path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+        
+        radDATA = []
+        for line in lines:
+            data = linecache.getline(path, line)
+            radDATA.append(data)
+        
+        print name, kind, numlines, len(radDATA)
+        
+        for data in radDATA:
+            
+            data = data.split()
+            if len(data) == 0: 
+                print 'no data'
+                continue
+            
+            name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data
+            
+            N = float(N)
+            S = float(S)
+            
+            if S < 2: continue # Min species richness
+            
+            Nlist.append(float(np.log(N)))
+            Slist.append(float(np.log(S)))
+            NSlist.append(float(np.log(N/S)))
+            
+            Evarlist.append(float(np.log(float(Evar))))
+            ESimplist.append(float(np.log(float(ESimp))))
+            KindList.append(kind)
+            
+            BPlist.append(float(BP))
+            NmaxList.append(float(np.log(float(BP)*float(N))))
+            EHeiplist.append(float(EHeip))
+            
+            rareOnesList.append(float(rareOnes))
+            rareRelList.append(float(rareOnes)/S)
+            
+            # lines for the log-modulo transformation of skewnness
+            skew = float(skew)
+            sign = 1
+            if skew < 0: sign = -1
+            
+            lms = np.log(np.abs(skew) + 1)
+            lms = lms * sign
+            if lms > 3: print name, N, S
+            rareSkews.append(float(lms))
+            
+            if kind == 'micro':
+                numMic += 1 
+                klist.append('b')
+            if kind == 'macro': 
+                klist.append('r')
+                numMac += 1
+        
+            ct+=1
+    
+    print 'Mic:',numMic,'Mac:', numMac
+    
+    
+    metrics = [['Rarity, log-modulo(skewnness)', rareSkews], 
+              ['Dominance, log(greatest abundance)', NmaxList], 
+              ['Evenness, log(Simpsons)', ESimplist]]
+            
 
     fig = plt.figure()
     for index, i in enumerate(metrics):
@@ -108,6 +167,11 @@ def Fig1():
         metric = i[0]
         metlist = i[1]
         
+        # EXAMINE OLS RESULTS BY SHUFFLING THESE THREE LISTS     
+        #np.random.shuffle(KindList)
+        #np.random.shuffle(Nlist)
+        #np.random.shuffle(metlist)
+        
         MacListX = []
         MacListY = []
         
@@ -117,110 +181,215 @@ def Fig1():
         nmacs = 0
         nmics = 0
         
-        for j, k in enumerate(klist):
+        for j, k in enumerate(KindList):
             
-            if k == 'b': 
+            if k == 'micro': 
                 nmics += 1
                 if index >= 0: MicListX.append(Nlist[j])
                 else: MicListX.append(Slist[j])
                 
-                if metlist[j] == 0: MicListY.append(1)
-                else: MicListY.append(metlist[j])
+                MicListY.append(metlist[j])
         
                 
                 
-            elif k == 'r':
+            elif k == 'macro':
                 nmacs += 1
                 if index >= 0: MacListX.append(Nlist[j])
                 else: MacListX.append(Slist[j])
                 
-                if metlist[j] == 0: MacListY.append(1)
-                else: MacListY.append(metlist[j])
+                MacListY.append(metlist[j])
         
         
         if index == 0:
-            #plt.ylim(0, 7)
+            plt.ylim(0, 5)
             plt.xlim(0, 16)
             pass
             
         if index == 1:
-            plt.ylim(0, 16)
+            plt.ylim(0, 14)
             plt.xlim(0, 16)
             pass
                 
         if index == 2:
-            plt.ylim(-3.5, 0)
+            plt.ylim(-3.5, 0.1)
             plt.xlim(0, 16)
             pass
             
-        # scatter plots
         
-        indices = range(500)
-        random.shuffle(indices)            
+        micY = []
+        micX = []
+        macY = []
+        macX = []
         
-        headers = ["Category","Skewnness","Evenness","Dominance","N","S","AvgAb"] 
-        
-        MultipleRegression(KindList, rareSkews, Evarlist, NmaxList, Nlist, Slist, NSlist, headers)
-        
-        for i in indices:
+        for i in range(len(MacListX)):
             plt.scatter(MacListX[i], MacListY[i], color = 'LightCoral', alpha= 1 , s = 4, linewidths=0.5, edgecolor='Crimson')                                                
             plt.scatter(MicListX[i], MicListY[i], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.5, edgecolor='Steelblue')
-        
-        
-        Y = np.array(MacListY)
-        X = np.array(MacListX)
             
-        Macslope, Macintercept, Macrval, Macpval, Macstderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for macrobes:',Macrval**2, Macslope
+            micY.append(MicListY[i])    
+            macY.append(MacListY[i])    
+            micX.append(MicListX[i])    
+            macX.append(MacListX[i]) 
+        
+        """
+        ### OLS for macrobes
+        Y = np.array(macY)
+        X = np.array(macX)
+            
+        MacSlope, MacInt, MacRval, MacPval, MacStderr = sc.stats.linregress(X,Y)
+        #print metric,': r-squared, slope, and p-val for macrobes:',MacRval**2, MacSlope, MacPval
         
         z = np.polyfit(X,Y,1)
         p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
+        xp = np.linspace(min(X)/2, 2*max(X), 100)
         plt.plot(xp,p(xp),'-',c='r',lw=1)
         
-        
-        Y = np.array(MicListY)
-        X = np.array(MicListX)
+        ### OLS for microbes
+        Y = np.array(micY)
+        X = np.array(micX)
             
-        Micslope, Micintercept, Micrval, Micpval, Micstderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for microbes:',Micrval**2, Micslope
+        MicSlope, MicInt, MicRval, MicPval, MicStderr = sc.stats.linregress(X,Y)
+        #print metric,': r-squared, slope, and p-val for microbes:',MicRval**2, MicSlope, MicPval
         
         z = np.polyfit(X,Y,1)
         p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
+        xp = np.linspace(min(X)/2, 2*max(X), 100)
         plt.plot(xp,p(xp),'-',c='b',lw=1)
+        """
+        
+        # Multiple regression
+        
+        d = pd.DataFrame({'N': list(Nlist)})
+        d['y'] = list(metlist)
+        d['Kind'] = list(KindList)
+
+        f = smf.ols('y ~ N * Kind', d).fit()
+        
+        prstd, iv_l, iv_u = wls_prediction_std(f)
+        
+        MacPIx = []
+        MacPIl = []
+        MacPIh = []
+        MacFitted = []
+        
+        MicPIx = []
+        MicPIl = []
+        MicPIh = []
+        MicFitted = []
+        
+        for j, kval in enumerate(KindList):
+            if kval == 'macro':
+                MacPIx.append(Nlist[j])
+                MacPIl.append(iv_l[j])
+                MacPIh.append(iv_u[j])
+                MacFitted.append(f.fittedvalues[j])
+                
+            elif kval == 'micro':
+                MicPIx.append(Nlist[j])
+                MicPIl.append(iv_l[j])
+                MicPIh.append(iv_u[j])
+                MicFitted.append(f.fittedvalues[j])
+        
+        MacPIx2 = [min(MacPIx), max(MacPIx)]
+        MacPIl2 = [min(MacPIl), max(MacPIl)]
+        MacPIh2 = [min(MacPIh), max(MacPIh)]
+        
+        MicPIx2 = [min(MicPIx), max(MicPIx)]
+        MicPIl2 = [min(MicPIl), max(MicPIl)]
+        MicPIh2 = [min(MicPIh), max(MicPIh)]
+        
+        if index == 2:
+            MacPIl2.reverse()
+            MacPIh2.reverse()
+            #MacPIx2 = MacPIx2.reverse()
+            
+            MicPIl2.reverse()
+            MicPIh2.reverse()
+            #MicPIx2 = MicPIx2.reverse()
+        
+        plt.plot(MacPIx2, MacPIh2, ls='--', c='r', alpha=0.6)
+        plt.plot(MacPIx2, MacPIl2, ls='--', c='r', alpha=0.6)
+        plt.plot(MacPIx, MacFitted, ls='-', c='r', alpha=0.6)
+        
+        plt.plot(MicPIx2, MicPIh2, ls='--', c='b', alpha=0.6)
+        plt.plot(MicPIx2, MicPIl2, ls='--', c='b', alpha=0.6)
+        plt.plot(MicPIx, MicFitted, ls='-', c='b', alpha=0.6)
+        
+        
+        #HC = sms.linear_harvey_collier(f) # Harvey Collier test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
+        #print 'Harvey-Collier test for linearity:', HC
+        print metric
+        print f.summary(), '\n\n'
+        
+        #RB = sms.linear_rainbow(f) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
+        #print 'Rainbow test for linearity:', RB
+        
+        #LM = sms.linear_lm(f.resid, f.model.exog)
+        #print 'Lagrangian multiplier test for linearity:', LM
+        
+        BGtest = sms.acorr_breush_godfrey(f, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
+        print 'Breusch Godfrey test for autocorrelation:', BGtest # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
+        
+        
+        #NeweyWest = sm.stats.sandwich_covariance.cov_hac(f)
+        #print NeweyWest
         
         if index == 0:
-            x = 0.5
-            y = 6.3
-            y2 = 5.8
+            x = 0
+            x2 = 2
+            y = 5.6
+            y2 = 5.2
+            y3 = 4.1
+            
         elif index == 1:
-            x = 0.75
-            y = 14.5
-            y2 = 13.5
+            x = 0
+            x2 = 2
+            y = 15.7
+            y2 = 14.6
+            y3 = 11.8
+            
         elif index == 2:
-            x = 0.75
-            y = -3.1
-            y2 = -3.3
+            x = 0
+            x2 = 9
+            y = 0.51
+            y2 = 0.26
+            y3 = -0.5
+            
+        params = f.params
+        Const = params[0]
+        MicroCoef = params[1]
+        N_Coef = params[2]
+        IntCoef = params[3] 
         
+        r2 = f.rsquared
         
-        plt.text(x, y, 'slope ='+str(round(Micslope,2))+', ' + r'$R^2$' + '=' +str(round(Micrval**2,2)), fontsize=fs-2, color='Steelblue')         
-        plt.text(x, y2, 'slope ='+str(round(Macslope,2))+', ' + r'$R^2$' + '=' +str(round(Macrval**2,2)), fontsize=fs-2, color='Crimson')         
+        pvals = f.pvalues
+        ConstPval = pvals[0]
+        MicroPval = pvals[1]
+        N_Pval = pvals[2]
+        IntPval = pvals[3]
         
+        """
+        if metric == 'Dominance':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$', fontsize=fs-3, color='k')         
+        elif metric == 'Rarity':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      +'+str(round(IntCoef,2))+'('+'$N*micro$'+')', fontsize=fs-3, color='k')         
+        elif metric == 'Evenness':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$'+' + '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      '+str(round(IntCoef,2))+'('+'$N$'+'*'+'$micro$'+')', fontsize=fs-3, color='k')         
+        """
+        plt.text(x2, y3,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-2, color='k')  
         
         if index == 0:
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue',
-                        label= 'microbes (n=500)')
+                        label= 'microbes (n='+str(len(MicListY))+')')
             
             plt.scatter([0],[-1], color = 'LightCoral',alpha= 1, s=10, linewidths=0.9, edgecolor='Crimson',
-                        label= 'macrobes (n=500)')
+                        label= 'macrobes (n='+str(len(MacListY))+')')
             
-            plt.legend(bbox_to_anchor=(-0.03, 1.1, 3.9, .2), loc=10, ncol=2,
+            plt.legend(bbox_to_anchor=(-0.03, 1.1, 3.9, .2), loc=10, ncol=3,
                                 mode="expand",prop={'size':fs})
         
         
-        if index > 0: plt.xlabel('log(abundance of a sample)', fontsize=fs-2)
-        else: plt.xlabel('log(number of species)', fontsize=fs-2)
+        plt.xlabel('log(total abundance of a sample)', fontsize=fs-2)
         
         plt.ylabel(metric, fontsize=fs-2)
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
@@ -234,315 +403,130 @@ def Fig1():
 
 
 
+
+
 def Fig2():
 
-    Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [],
-                                                                    [], [], [], []]
-    klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [],
-                                                                [], [], [], [], []]
-    
-    NmaxList, rareOnesList, rareRelList, rareSkews = [[], [], [], []]
-    
-    ct = 0
-    klist = []
-    
-    #SsadDATA = open(mydir+'output/EMP'+OrC+'-SSAD-ResultsTable.txt','r')
-    SsadDATA = open(mydir+'output/Macro-SSAD-ResultsTable.txt','r')
-    
-    for data in SsadDATA:
-            
-        data_list = data.split()
-        N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-            
-        N = float(N)
-        S = float(S)
-        
-        Evarlist.append(float(Evar))    
-        Nlist.append(N)
-        Slist.append(S)
-            
-        ESimplist.append(float(ESimp))
-        
-        BPlist.append(float(BP))
-        NmaxList.append(float(BP)*float(N))
-        
-        EHeiplist.append(float(EHeip))
-        rareOnesList.append(float(rareOnes))
-        
-        rareSkews.append(float(skew))
-        
-        klist.append('DarkOrange')
-        
-        ct+=1
-        
-            
-    
-    #RadDATA = open(mydir+'output/EMP'+OrC+'-RADdata.txt','r')        
-    RadDATA = open(mydir+'output/Macro-RADdata.txt','r')        
-    
-    
-    for data in RadDATA:
-            
-        data_list = data.split()
-        N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-            
-        N = float(N)
-        S = float(S)
-        
-        Evarlist.append(float(Evar))    
-        Nlist.append(N)
-        Slist.append(S)
-            
-        ESimplist.append(float(ESimp))
-        
-        BPlist.append(float(BP))
-        NmaxList.append(float(BP)*float(N))
-        
-        EHeiplist.append(float(EHeip))
-        rareOnesList.append(float(rareOnes))
-        
-        rareSkews.append(float(skew))
-        
-        klist.append('DarkCyan')
-        
-        ct+=1
-        
-
-        
-    metrics = [['log(number of singletons)', rareOnesList], 
-              ['log(greatest abundance)', NmaxList], 
-              ['log(evenness)', Evarlist]]
-            
-
-
-    fig = plt.figure()
-    for index, i in enumerate(metrics):
-    
-        ax = fig.add_subplot(2, 3, index+1)
-        ax.set_axis_bgcolor('w')
-        
-        metric = i[0]
-        metlist = i[1]
-        
-        RADListX = []
-        RADListY = []
-        
-        SSADListX = []
-        SSADListY = []
-        
-        rads = 0
-        ssads = 0
-        
-        for j, k in enumerate(klist):
-            
-            if k == 'DarkOrange': 
-                ssads += 1
-                if index > 0: SSADListX.append(Nlist[j])
-                else: SSADListX.append(Slist[j])
-                
-                if metlist[j] == 0: SSADListY.append(1)
-                else: SSADListY.append(metlist[j])
-        
-                
-                
-            elif k == 'DarkCyan':
-                rads += 1
-                if index > 0: RADListX.append(Nlist[j])
-                else: RADListX.append(Slist[j])
-                
-                if metlist[j] == 0: RADListY.append(1)
-                else: RADListY.append(metlist[j])
-                
-        
-        if index == 0:
-            plt.ylim(0, 9)
-            plt.xlim(0, 9)
-            pass
-            
-        if index == 1:
-            plt.ylim(0, 16)
-            plt.xlim(0, 16)
-            pass
-                
-        if index == 2:
-            plt.ylim(-3.5, 0.5)
-            plt.xlim(0, 16)
-            pass
-        
-        #print len(SSADListX), len(SSADListY), len(RADListX), len(RADListY)
-        #sys.exit()
-        
-        # scatter plots
-        indices = range(1000)
-        random.shuffle(indices)            
-        
-        RADListX = np.log(RADListX)
-        RADListY = np.log(RADListY)
-        
-        SSADListX = np.log(SSADListX)
-        SSADListY = np.log(SSADListY)
-        
-        for i in indices:
-            plt.scatter(SSADListX[i], SSADListY[i], color = 'PeachPuff', alpha= 1 , s = 4, linewidths=0.5, edgecolor='DarkOrange')                                                
-            plt.scatter(RADListX[i], RADListY[i], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.5, edgecolor='DarkCyan')
-        
-        
-        Y = np.array(RADListY)
-        X = np.array(RADListX)
-            
-        RADslope, RADintercept, RADrval, RADpval, RADstderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for RADs:',RADrval**2, RADslope
-        
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
-        plt.plot(xp,p(xp),'-',c='c',lw=1)
-        
-        
-        Y = np.array(SSADListY)
-        X = np.array(SSADListX)
-            
-        SSADslope, SSADintercept, SSADrval, SSADpval, SSADstderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for SSADs:',SSADrval**2, SSADslope
-        
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
-        plt.plot(xp,p(xp),'-',c='orange',lw=1)
-        
-        if index == 0:
-            x = 0.5
-            y = 8.1
-            y2 = 7.4
-        elif index == 1:
-            x = 0.75
-            y = 14.5
-            y2 = 13.0
-        elif index == 2:
-            x = 0.75
-            y = -3.0
-            y2 = -3.3
-        
-        plt.text(x, y, 'slope ='+str(round(RADslope,2))+', ' + r'$R^2$' + '=' +str(round(RADrval**2,2)), fontsize=fs-2, color='DarkCyan')         
-        plt.text(x, y2, 'slope ='+str(round(SSADslope,2))+', ' + r'$R^2$' + '=' +str(round(SSADrval**2,2)), fontsize=fs-2, color='DarkOrange')         
-    
-        
-        if index == 0:
-            plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='DarkCyan',
-                        label= '1000 randomly drawn Macrobe RADs')
-            
-            plt.scatter([0],[-1], color = 'PeachPuff',alpha= 1, s=10, linewidths=0.9, edgecolor='DarkOrange',
-                        label= '1000 randomly drawn Macrobe SSADs')
-            
-            plt.legend(bbox_to_anchor=(-0.03, 1.1, 3.9, .2), loc=10, ncol=2,
-                                mode="expand",prop={'size':fs})
-        
-        
-        if index > 0: plt.xlabel('Abundance of a sample or an OTU,log', fontsize=fs-2)
-        else: plt.xlabel('Number of species or sites, log', fontsize=fs-2)
-        
-        plt.ylabel(metric, fontsize=fs-2)
-        plt.tick_params(axis='both', which='major', labelsize=fs-3)
-        
-    plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    #plt.savefig(mydir+'/figs/Locey_Lennon_Fig2-'+OrC+'_REF.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Locey_Lennon_Fig2-Macro.png', dpi=600, bbox_inches = "tight")
-    plt.close()
-    
-    return
-
-
-
-
-def Fig2Alt():
+    fs = 10 # font size used across figures
+    color = str()
 
     Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [],
                                                                     [], [], [], []]
     klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [],
                                                                 [], [], [], [], []]
     
-    NmaxList, rareOnesList, rareRelList, rareSkews = [[], [], [], []]
+    NmaxList, rareOnesList, rareRelList, rareSkews, NSlist = [[], [], [], [], []]
     
     ct = 0
     klist = []
     
-    OrC = 'closed'
+    radDATA = []
+    datasets = []
+    BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'AGSOIL', 'SLUDGE', 'CHU', 'HYDRO', 'CATLIN', 'FECES', 'FUNGI', 'LAUB']
+            
+    for name in os.listdir(mydir2 +'data/micro'):
+            if name in BadNames: continue
+            
+            path = mydir2+'data/micro/'+name+'/'+name+'-SSADMetricData.txt'
+            num_lines = 5594412
+            #num_lines = sum(1 for line in open(path))
+            datasets.append([name, 'micro', num_lines])   
     
-    SsadDATA = open(mydir+'output/EMP'+OrC+'-SSAD-ResultsTable.txt','r')
+    for name in os.listdir(mydir2 +'data/macro'):
+            if name in BadNames: continue
+            
+            path = mydir2+'data/macro/'+name+'/'+name+'-SSADMetricData.txt'
+            num_lines = sum(1 for line in open(path))
+            datasets.append([name, 'macro', num_lines])   
     
-    for data in SsadDATA:
-            
-        data_list = data.split()
-        N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-            
-        N = float(N)
-        S = float(S)
-        
-        Evarlist.append(float(Evar))    
-        Nlist.append(N)
-        Slist.append(S)
-            
-        ESimplist.append(float(ESimp))
-        
-        BPlist.append(float(BP))
-        NmaxList.append(float(BP)*float(N))
-        
-        EHeiplist.append(float(EHeip))
-        rareOnesList.append(float(rareOnes))
-        
-        rareSkews.append(float(skew))
-        
-        klist.append('DarkOrange')
-        
-        ct+=1
-        
-            
+    numMac = 0
+    numMic = 0
+    KindList = []    
     
-    SsadDATA = open(mydir+'output/Macro-SSAD-ResultsTable.txt','r')
+    for dataset in datasets:
+        
+        name = dataset[0]
+        kind = dataset[1]
+        numlines = dataset[2]    
+        
+        lines = []
+        
+        SampSize = 1800
+        
+        if kind == 'macro' and numlines > 200: lines = random.sample(range(1, numlines+1), 300)
+        elif kind == 'macro': lines = random.sample(range(1, numlines+1), 40)
+        elif kind == 'micro': lines = random.sample(range(1, numlines+1), SampSize)
+        path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SSADMetricData.txt'
+        
+        radDATA = []
+        for line in lines:
+            data = linecache.getline(path, line)
+            radDATA.append(data)
+        
+        print name, kind, numlines, len(radDATA)
+        
+        for data in radDATA:
+            
+            data = data.split()
+            if len(data) == 0: 
+                print 'no data'
+                continue
+            
+            N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data
+            
+            N = float(N)
+            S = float(S)
+        
+            if S < 1: continue
+        
+            Evarlist.append(float(Evar))    
+            Nlist.append(float(np.log(N)))
+            Slist.append(float(np.log(S)))
+            NSlist.append(float(np.log(N/S)))
+            
+            ESimplist.append(float(ESimp))
+        
+            BPlist.append(float(BP))
+            NmaxList.append(float(np.log(float(BP)*float(N))))
+        
+            EHeiplist.append(float(EHeip))
+            rareOnesList.append(float(rareOnes))
+        
+            # log-modulo of skew
+            skew = float(skew)
+            sign = 1
+            if skew < 0: sign = -1
+            
+            lms = np.log(np.abs(skew) + 1)
+            lms = lms * sign
+            rareSkews.append(float(lms))
+        
+            if kind == 'micro': 
+                klist.append('DarkOrange')
+                numMic += 1
+            elif kind == 'macro': 
+                klist.append('DarkCyan')
+                numMac += 1
+            
+            KindList.append(kind)
+            ct+=1
+        
     
+    print 'Macrobes', numMac, 'Microbes:', numMic
+         
+    metrics = [['Rarity, log-modulo(skewnness)', 'Rarity', rareSkews], 
+              ['Dominance, log(greatest abundance)', 'Dominance', NmaxList], 
+              ['Evenness, Simpsons', 'Evenness', ESimplist]]    
     
-    for data in SsadDATA:
-            
-        data_list = data.split()
-        N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-            
-        N = float(N)
-        S = float(S)
-        
-        Evarlist.append(float(Evar))    
-        Nlist.append(N)
-        Slist.append(S)
-            
-        ESimplist.append(float(ESimp))
-        
-        BPlist.append(float(BP))
-        NmaxList.append(float(BP)*float(N))
-        
-        EHeiplist.append(float(EHeip))
-        rareOnesList.append(float(rareOnes))
-        
-        rareSkews.append(float(skew))
-        
-        klist.append('DarkCyan')
-        
-        ct+=1
-        
-
-        
-    metrics = [['log(number of singletons)', rareOnesList], 
-              ['log(greatest abundance)', NmaxList], 
-              ['log(evenness)', Evarlist]]
-            
-
-
     fig = plt.figure()
-    for index, i in enumerate(metrics):
+    for i, val in enumerate(metrics):
     
-        ax = fig.add_subplot(2, 3, index+1)
+        ax = fig.add_subplot(2, 3, i+1)
         ax.set_axis_bgcolor('w')
         
-        metric = i[0]
-        metlist = i[1]
+        ylabel = val[0]
+        metric = str(val[1])
+        metlist = val[2]
         
         MacSSADListX = []
         MacSSADListY = []
@@ -553,116 +537,161 @@ def Fig2Alt():
         for j, k in enumerate(klist):
             
             if k == 'DarkOrange': 
-                if index > 0: MicSSADListX.append(Nlist[j])
-                else: MicSSADListX.append(Slist[j])
-                
-                if metlist[j] == 0: MicSSADListY.append(1)
-                else: MicSSADListY.append(metlist[j])
+                MicSSADListX.append(Nlist[j])
+                MicSSADListY.append(metlist[j])
         
-                
-                
             elif k == 'DarkCyan':
-                if index > 0: MacSSADListX.append(Nlist[j])
-                else: MacSSADListX.append(Slist[j])
-                
-                if metlist[j] == 0: MacSSADListY.append(1)
-                else: MacSSADListY.append(metlist[j])
+                MacSSADListX.append(Nlist[j])
+                MacSSADListY.append(metlist[j])
                 
         
-        if index == 0:
-            plt.ylim(0, 9)
-            plt.xlim(0, 9)
+        if i == 0:
+            plt.ylim(-1, 4)
+            plt.xlim(0, 16)
             pass
             
-        if index == 1:
-            plt.ylim(0, 16)
+        if i == 1:
+            plt.ylim(0, 12)
             plt.xlim(0, 16)
             pass
                 
-        if index == 2:
-            plt.ylim(-3.5, 0.5)
+        if i == 2:
+            plt.ylim(0, 1.1)
+            #plt.ylim(-3.5, 0.5)
             plt.xlim(0, 16)
             pass
         
-        #print len(MacSSADListX), len(MacSSADListY), len(MicSSADListX), len(MicSSADListY)
-        #sys.exit()
+        for ii in range(len(MicSSADListX)):
+            plt.scatter(MicSSADListX[ii], MicSSADListY[ii], color = 'PeachPuff', alpha= 1 , s = 4, linewidths=0.25, edgecolor='DarkOrange')                                                
+            plt.scatter(MacSSADListX[ii], MacSSADListY[ii], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.25, edgecolor='DarkCyan')
+
         
-        # scatter plots
-        indices = range(1000)
-        random.shuffle(indices)            
+        d = pd.DataFrame({'N': list(Nlist)})
+        d['y'] = list(metlist)
+        d['Kind'] = list(KindList)
+
+        f = smf.ols('y ~ N * Kind', d).fit()
+        print (f.summary()), '\n\n'
         
-        MacSSADListX = np.log(MacSSADListX)
-        MacSSADListY = np.log(MacSSADListY)
+        prstd, iv_l, iv_u = wls_prediction_std(f)
         
-        MicSSADListX = np.log(MicSSADListX)
-        MicSSADListY = np.log(MicSSADListY)
+        MacPIx = []
+        MacPIl = []
+        MacPIh = []
+        MacFitted = []
         
-        for i in indices:
+        MicPIx = []
+        MicPIl = []
+        MicPIh = []
+        MicFitted = []
+        
+        for j, kval in enumerate(KindList):
+            if kval == 'macro':
+                MacPIx.append(Nlist[j])
+                MacPIl.append(iv_l[j])
+                MacPIh.append(iv_u[j])
+                MacFitted.append(f.fittedvalues[j])
+                
+            elif kval == 'micro':
+                MicPIx.append(Nlist[j])
+                MicPIl.append(iv_l[j])
+                MicPIh.append(iv_u[j])
+                MicFitted.append(f.fittedvalues[j])
+        
+        MacPIx2 = [min(MacPIx), max(MacPIx)]
+        MacPIl2 = [min(MacPIl), max(MacPIl)]
+        MacPIh2 = [min(MacPIh), max(MacPIh)]
+        
+        MicPIx2 = [min(MicPIx), max(MicPIx)]
+        MicPIl2 = [min(MicPIl), max(MicPIl)]
+        MicPIh2 = [min(MicPIh), max(MicPIh)]
+        
+        if metric == 'Evenness':
+            MacPIl2.reverse()
+            MacPIh2.reverse()
+            #MacPIx2 = MacPIx2.reverse()
             
-            plt.scatter(MicSSADListX[i], MicSSADListY[i], color = 'PeachPuff', alpha= 1 , s = 4, linewidths=0.5, edgecolor='DarkOrange')                                                
-            plt.scatter(MacSSADListX[i], MacSSADListY[i], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.5, edgecolor='DarkCyan')
+            MicPIl2.reverse()
+            MicPIh2.reverse()
+            #MicPIx2 = MicPIx2.reverse()
         
+        plt.plot(MacPIx2, MacPIh2, ls='--', c='c', alpha=0.9)
+        plt.plot(MacPIx2, MacPIl2, ls='--', c='c', alpha=0.9)
+        plt.plot(MacPIx, MacFitted, ls='-', c='c', alpha=0.9)
         
-        Y = np.array(MacSSADListY)
-        X = np.array(MacSSADListX)
+        plt.plot(MicPIx2, MicPIh2, ls='--', c='orange', alpha=0.9)
+        plt.plot(MicPIx2, MicPIl2, ls='--', c='orange', alpha=0.9)
+        plt.plot(MicPIx, MicFitted, ls='-', c='orange', alpha=0.9)
+        
+        #plt.fill_between(MacPIx, MacPIh, MacPIl, facecolor= 'c', alpha=0.3)
+        #plt.fill_between(MicPIx, MicPIh, MicPIl, facecolor= 'orange', alpha=0.3)
+        
+        if i == 0:
+            x2 = 1
+            y2 = 4.2
+            y3 = 3.32
             
-        MacSlope, MacIntercept, MacRval, MacPval, MacStderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for Macrobe SSADs:', MacRval**2, MacSlope
-        
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
-        plt.plot(xp,p(xp),'-',c='c',lw=1)
-        
-        
-        Y = np.array(MicSSADListY)
-        X = np.array(MicSSADListX)
+        elif i == 1:
+            x2 = 1
+            y2 = 12.4
+            y3 = 10.3
             
-        MicSlope, MicIntercept, MicRval, MicPval, MicStderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for Microbe SSADs:', MicRval**2, MicSlope
+        elif i == 2:
+            x2 = 9
+            y2 = 1.14
+            y3 = 0.94
         
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 1000)
-        plt.plot(xp,p(xp),'-',c='orange',lw=1)
+        params = f.params
+        Const = params[0]
+        MicroCoef = params[1]
+        N_Coef = params[2]
+        IntCoef = params[3] 
         
-        if index == 0:
-            x = 0.5
-            y = 8.1
-            y2 = 7.4
-        elif index == 1:
-            x = 0.75
-            y = 14.5
-            y2 = 13.0
-        elif index == 2:
-            x = 0.75
-            y = -3.0
-            y2 = -3.3
+        r2 = f.rsquared
         
-        plt.text(x, y, 'slope ='+str(round(MacSlope,2))+', ' + r'$R^2$' + '=' +str(round(MacRval**2,2)), fontsize=fs-2, color='DarkCyan')         
-        plt.text(x, y2, 'slope ='+str(round(MicSlope,2))+', ' + r'$R^2$' + '=' +str(round(MicRval**2,2)), fontsize=fs-2, color='DarkOrange')         
-    
+        pvals = f.pvalues
+        ConstPval = pvals[0]
+        MicroPval = pvals[1]
+        N_Pval = pvals[2]
+        IntPval = pvals[3]
         
-        if index == 0:
+        #if min(pval) >= 0.05:
+        #    print "no significance"
+        #if InteractionPval < 0.05:
+                    
+        #plt.text(x, y,  r'$m$'+'='+str(round(MacSlope,2))+ ', ' + r'$b$' + '='+ str(round(MacInt,2))+', ' + r'$R^2$' + '=' +str(round(MacRval**2,2))+', p='+str(round(MacPval,4)), fontsize=fs-3, color='DarkCyan')         
+        #plt.text(x, y2, r'$m$'+ '='+str(round(MicSlope,2))+', ' + r'$b$' + '='+ str(round(MicInt,2))+', ' + r'$R^2$' + '=' +str(round(MicRval**2,2))+', p='+str(round(MicPval,4)), fontsize=fs-3, color='DarkOrange')         
+        
+        if metric == 'Dominance':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$', fontsize=fs-3, color='k')         
+        elif metric == 'Rarity':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      +'+str(round(IntCoef,2))+'('+'$N*micro$'+')', fontsize=fs-3, color='k')         
+        elif metric == 'Evenness':
+            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$'+' + '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      '+str(round(IntCoef,2))+'('+'$N$'+'*'+'$micro$'+')', fontsize=fs-3, color='k')         
+        
+        
+        #plt.text(x, y2, r'$y_i$'+ '='+str(Const)+' + '+str(N_Coef)+'*'+r'$N$'+' + '+str(MicroCoef)+'*'+'r$micro$', fontsize=fs-3, color='k')         
+        
+        plt.text(x2, y3,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-2, color='k')         
+        
+        if i == 0:
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='DarkCyan',
-                        label= '1000 Macrobe SSADs')
+                        label= str(SampSize)+' Macrobe SSADs')
             
             plt.scatter([0],[-1], color = 'PeachPuff',alpha= 1, s=10, linewidths=0.9, edgecolor='DarkOrange',
-                        label= '1000 Microbe SSADs')
+                        label= str(SampSize)+' Microbe SSADs')
             
-            plt.legend(bbox_to_anchor=(-0.03, 1.1, 3.9, .2), loc=10, ncol=2,
+            plt.legend(bbox_to_anchor=(-0.03, 1.2, 3.9, .2), loc=10, ncol=2,
                                 mode="expand",prop={'size':fs})
         
+        plt.xlabel('log(abundance of a taxa in a dataset)', fontsize=fs-3)
         
-        if index > 0: plt.xlabel('Abundance of a sample or an OTU, log', fontsize=fs-2)
-        else: plt.xlabel('Number of sites, log', fontsize=fs-2)
-        
-        plt.ylabel(metric, fontsize=fs-2)
+        plt.ylabel(ylabel, fontsize=fs-3)
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
         
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/Locey_Lennon_Fig2Alt.png', dpi=600, bbox_inches = "tight")
-    plt.close()
+    plt.savefig(mydir+'/figs/Locey_Lennon_'+str(OrC)+'_Fig2.png', dpi=600, bbox_inches = "tight")
+    #plt.show()
     
     return
 
@@ -676,6 +705,9 @@ def Fig3():
     species scales in a log-log fashion with the total abundance of the sample
     or system. """
 
+    fs = 10 # font size used across figures
+    color = str()
+
     Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [],
                                                             [], [], [], []]
     klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [],
@@ -684,7 +716,7 @@ def Fig3():
     NmaxList, rareOnesList, rareRelList, rarePairList, rareSumOnesList = [[], [],
                                                                     [], [], []]
     
-    OrC = 'closed' # is the microbial data (Earth Microbiome Project) going to 
+    OrC = 'open' # is the microbial data (Earth Microbiome Project) going to 
                     # represent closed or open reference OTU assignment
 
     ct = 0
@@ -855,6 +887,9 @@ def Fig3():
     
 
 def TL():
+    
+    fs = 10 # font size used across figures
+    color = str()
     
     """ A figure demonstrating mean-variance relationships for abundances among 
     taxa in the same community (sample) and for abundances of individual taxa
@@ -1028,37 +1063,10 @@ def TL():
 
 
 
-def MultipleRegression(KindList, rareSkews, Evarlist, NmaxList, Nlist, Slist, NSlist, headers):
-    
-    # headers = [ "Category", "Skewnness", "Evenness", "Dominance", "N", "S", "AvgAb"] 
-    
-    OUT = open(mydir + 'output/MultipleRegressionData.csv','w+')
-    
-    print >>OUT, "" ","+str(headers[0])+','+str(headers[1])+','+str(headers[2])+','+str(headers[3])+','+str(headers[4])+','+str(headers[5])+','+str(headers[6])
-    
-    for i, val in enumerate(KindList):
-        print >>OUT, str(i+1)+','+str(val)+','+str(rareSkews[i])+','+str(Evarlist[i])+','+str(NmaxList[i])+','+str(Nlist[i])+','+str(Slist[i])+','+str(NSlist[i])
-        
-    OUT.close()
-        
-    data = pandas.read_csv(mydir + 'output/MultipleRegressionData.csv', sep=',') #, na_values="."
-    
-    PanString = str(headers[1])+' ~ '+str(headers[4])
-    model = ols(PanString, data).fit()
-    print(model.summary())
-    
-    sys.exit()
-    
-    return
-    
-
 """ The following lines call figure functions to reproduce figures from the 
     Locey and Lennon (2014) manuscript """
 
 Fig1()
-
 #Fig2()
-#Fig2Alt()
-
 #Fig3()
 #TL()
