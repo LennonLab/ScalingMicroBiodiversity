@@ -11,14 +11,13 @@ sys.path.append(mydir + "/Repos/rare-bio/tools/feasible_functions")
 import feasible_functions as ff
 
 mydir = os.path.expanduser("~/Desktop")
-#OUT = open(mydir+'/Repos/rare-bio/output/EMPclosed-SSAD-ResultsTable.txt','w+')
-OUT = open(mydir+'/Repos/rare-bio/output/Macro-SSAD-ResultsTable.txt','w+')
 
+#OUT1 = open(mydir+'/Repos/rare-bio/output/EMPclosed-SSAD-ResultsTable.txt','w+')
 
 
 def get_EMP_SSADs():
 
-    DATA = mydir + '/data/micro/EMPclosed/EMPclosed-SSADdata.txt'
+    DATA = mydir + '/data/micro/EMPopen/EMPopen/EMPopen-SSADdata.txt'
     
     SSADdict = {}
     
@@ -57,7 +56,6 @@ def get_EMP_SSADs():
     
 def get_Macro_SSADs():
     
-    SSADdict = {}
     for name in os.listdir(mydir +'/data/macro'):
         
         if name == 'BCI': continue
@@ -65,7 +63,12 @@ def get_Macro_SSADs():
             
         else:    
             print name      
-            DATA = mydir + '/data/macro/'+name+'/'+name+'-data.txt'
+            
+            SSADdict = {}
+    
+            path = mydir + '/data/macro/'+name+'/'+name
+            OUT = open(path + '-SSADMetricData.txt','w+')
+            DATA = path+'-data.txt'
                 
             with open(DATA) as f: 
         
@@ -91,69 +94,57 @@ def get_Macro_SSADs():
              
         
         
-    SSADs = []
-    SSADlist = SSADdict.items()
-    
-    for tup in SSADlist:
+            SSADs = []
+            SSADlist = SSADdict.items()
+        
+            for tup in SSADlist:
+                
+                SSAD = tup[1]
+                if len(SSAD) >= 1: 
+                    SSAD.sort()
+                    SSAD.reverse()
+                    SSADs.append(SSAD)
+                    
+                    
+            num = len(SSADs)
+            ct = 0
             
-        SSAD = tup[1]
-        if len(SSAD) >= 1: 
-            SSAD.sort()
-            SSAD.reverse()
-            SSADs.append(SSAD)
+            for SSAD in SSADs:
+                
+                SSAD = list([x for x in SSAD if x != 0]) # removes zeros
+                
+                N = int(sum(SSAD))
+                S = int(len(SSAD))
+                        
+                if S < 1: continue 
+                
+                print name, 'N:',N,'S:',S,'  ', num - ct
+                
+                Evar = ff.e_var(SSAD)
+                ESimp = ff.simpsons_evenness(SSAD)
+                ENee = ff.NHC_evenness(SSAD)
+                EPielou = ff.pielous_evenness(SSAD)
+                        
+                EHeip = ff.Heips_evenness(SSAD)
+                EQ = ff.EQ_evenness(SSAD)
+                        
+                BP = ff.Berger_Parker(SSAD)
+                SimpDom = 0 #ff.simpsons_dom(SSAD)
+                        
+                rareRel = ff.rarityRel(SSAD)
+                rareOnes = ff.rarityOnes(SSAD)
+                        
+                skew = stats.skew(SSAD)
+                
+                ct += 1
+                
+                print>>OUT, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew
+                
+            print 'number of SSADs:', len(SSADs)
             
-    return SSADs        
-    
-    
-
-
-#numEMP = 0
-#numEMPopen = 0
-#SSADs = get_EMP_SSADs()
-
-SSADs = get_Macro_SSADs()
-num = len(SSADs)
-print 'Number of SSADs:', num
-ct = 0
-
-for SSAD in SSADs:
-    
-    SSAD = list([x for x in SSAD if x != 0]) # removes zeros
-    
-    N = int(sum(SSAD))
-    S = int(len(SSAD))
+            OUT.close()
             
-    if S < 1: continue 
+    return
     
-    print 'N:',N,'S:',S,'  ', num - ct
     
-    Evar = ff.e_var(SSAD)
-    ESimp = ff.simpsons_evenness(SSAD)
-    ENee = ff.NHC_evenness(SSAD)
-    EPielou = ff.pielous_evenness(SSAD)
-            
-    EHeip = ff.Heips_evenness(SSAD)
-    EQ = ff.EQ_evenness(SSAD)
-            
-    BP = ff.Berger_Parker(SSAD)
-    SimpDom = 0 #ff.simpsons_dom(SSAD)
-            
-    rareRel = ff.rarityRel(SSAD)
-    rareOnes = ff.rarityOnes(SSAD)
-            
-    skew = stats.skew(SSAD)
-    
-    if S == 1: Var = 0
-    elif S > 1: Var = np.var(np.array(SSAD), ddof=1)
-    else:
-        print 'problem with Var'
-        sys.exit()
-    
-    ct += 1
-    
-    #print>>OUT, N, S, ESimp, EHeip, BP, SimpDom, rareRel, rareOnes, rareSumOnes, Var, Evar
-    print>>OUT, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew
-    
-print 'number of SSADs:', len(SSADs)
-
-OUT.close()
+get_Macro_SSADs()

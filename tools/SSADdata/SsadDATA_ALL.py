@@ -44,7 +44,7 @@ for dataset in datasets:
     if name == '.DS_Store': continue
     
     kind = dataset[1] # micro or macro
-    OUT = open(mydir2 + 'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt','w+')
+    OUT = open(mydir2 + 'data/'+kind+'/'+name+'/'+name+'-SSADMetricData.txt','w+')
     RADs = []
     
     if kind == 'macro':
