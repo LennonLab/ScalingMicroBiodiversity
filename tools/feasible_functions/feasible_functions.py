@@ -380,8 +380,12 @@ def GetSADsFromBiom_labeled(path, dataset, return_list=True):
         OUT = open(path + '/' + dataset + '-data.txt', 'w+')
     
         SADlist = SADdict.items()
-    
+        n = len(SADlist)    
+        ct = 0
+        
         for tup in SADlist:
+            print n - ct
+            ct+=1
             
             site = tup[0]    
             SP_AB = tup[1]

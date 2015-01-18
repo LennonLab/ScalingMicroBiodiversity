@@ -10,10 +10,12 @@ from scipy import stats
 
 import os
 import sys
+from scipy.stats.distributions import t
 
 import statsmodels.stats.api as sms
 import statsmodels.formula.api as smf
 from statsmodels.sandbox.regression.predstd import wls_prediction_std
+from statsmodels.stats.outliers_influence import summary_table
 
 #import statsmodels.tsa.api as smTsa
 import pandas as pd
@@ -84,13 +86,10 @@ def Fig1():
             
     for dataset in datasets:
         
-        name = dataset[0]
-        kind = dataset[1]
-        numlines = dataset[2]    
-        
+        name, kind, numlines = dataset
         lines = []
         
-        if numlines > 80: lines = random.sample(range(1, numlines+1), 80)
+        if numlines > 40: lines = random.sample(range(1, numlines+1), 40)
         else: lines = random.sample(range(1, numlines+1), 40)
         
         path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -138,7 +137,7 @@ def Fig1():
             
             lms = np.log(np.abs(skew) + 1)
             lms = lms * sign
-            if lms > 3: print name, N, S
+            #if lms > 3: print name, N, S
             rareSkews.append(float(lms))
             
             if kind == 'micro':
@@ -161,8 +160,7 @@ def Fig1():
     fig = plt.figure()
     for index, i in enumerate(metrics):
     
-        ax = fig.add_subplot(2, 3, index+1)
-        ax.set_axis_bgcolor('w')
+        fig.add_subplot(2, 3, index+1)
         
         metric = i[0]
         metlist = i[1]
@@ -190,15 +188,12 @@ def Fig1():
                 
                 MicListY.append(metlist[j])
         
-                
-                
             elif k == 'macro':
                 nmacs += 1
                 if index >= 0: MacListX.append(Nlist[j])
                 else: MacListX.append(Slist[j])
                 
                 MacListY.append(metlist[j])
-        
         
         if index == 0:
             plt.ylim(0, 5)
@@ -214,13 +209,12 @@ def Fig1():
             plt.ylim(-3.5, 0.1)
             plt.xlim(0, 16)
             pass
-            
         
         micY = []
         micX = []
         macY = []
         macX = []
-        
+    
         for i in range(len(MacListX)):
             plt.scatter(MacListX[i], MacListY[i], color = 'LightCoral', alpha= 1 , s = 4, linewidths=0.5, edgecolor='Crimson')                                                
             plt.scatter(MicListX[i], MicListY[i], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.5, edgecolor='Steelblue')
@@ -230,34 +224,13 @@ def Fig1():
             micX.append(MicListX[i])    
             macX.append(MacListX[i]) 
         
-        """
         ### OLS for macrobes
-        Y = np.array(macY)
-        X = np.array(macX)
-            
-        MacSlope, MacInt, MacRval, MacPval, MacStderr = sc.stats.linregress(X,Y)
-        #print metric,': r-squared, slope, and p-val for macrobes:',MacRval**2, MacSlope, MacPval
-        
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 100)
-        plt.plot(xp,p(xp),'-',c='r',lw=1)
-        
-        ### OLS for microbes
-        Y = np.array(micY)
-        X = np.array(micX)
-            
-        MicSlope, MicInt, MicRval, MicPval, MicStderr = sc.stats.linregress(X,Y)
-        #print metric,': r-squared, slope, and p-val for microbes:',MicRval**2, MicSlope, MicPval
-        
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(min(X)/2, 2*max(X), 100)
-        plt.plot(xp,p(xp),'-',c='b',lw=1)
-        """
+        #Y = np.array(macY+micY)
+        #X = np.array(macX+micX)
+        #MacSlope, MacInt, MacRval, MacPval, MacStderr = sc.stats.linregress(X,Y)
+        #print metric,' for Combined: r-squared, slope, and p-val for macrobes:',MacRval**2, MacSlope, MacPval
         
         # Multiple regression
-        
         d = pd.DataFrame({'N': list(Nlist)})
         d['y'] = list(metlist)
         d['Kind'] = list(KindList)
@@ -289,71 +262,57 @@ def Fig1():
                 MicPIh.append(iv_u[j])
                 MicFitted.append(f.fittedvalues[j])
         
-        MacPIx2 = [min(MacPIx), max(MacPIx)]
-        MacPIl2 = [min(MacPIl), max(MacPIl)]
-        MacPIh2 = [min(MacPIh), max(MacPIh)]
-        
-        MicPIx2 = [min(MicPIx), max(MicPIx)]
-        MicPIl2 = [min(MicPIl), max(MicPIl)]
-        MicPIh2 = [min(MicPIh), max(MicPIh)]
-        
-        if index == 2:
-            MacPIl2.reverse()
-            MacPIh2.reverse()
-            #MacPIx2 = MacPIx2.reverse()
-            
-            MicPIl2.reverse()
-            MicPIh2.reverse()
-            #MicPIx2 = MicPIx2.reverse()
-        
-        plt.plot(MacPIx2, MacPIh2, ls='--', c='r', alpha=0.6)
-        plt.plot(MacPIx2, MacPIl2, ls='--', c='r', alpha=0.6)
+        plt.plot(MacPIx, MacPIh, ls=':', lw=0.1, c='r', alpha=0.6)
+        plt.plot(MacPIx, MacPIl, ls=':', lw=0.1, c='r', alpha=0.6)
+        #plt.fill_between(MacPIx, MacPIl, MacPIh, linewidth=0.0, facecolor= 'r', alpha=0.9)
         plt.plot(MacPIx, MacFitted, ls='-', c='r', alpha=0.6)
         
-        plt.plot(MicPIx2, MicPIh2, ls='--', c='b', alpha=0.6)
-        plt.plot(MicPIx2, MicPIl2, ls='--', c='b', alpha=0.6)
+        plt.plot(MicPIx, MicPIh, ls=':', lw=0.1, c='b', alpha=0.6)
+        plt.plot(MicPIx, MicPIl, ls=':', lw=0.1, c='b', alpha=0.6)
+        #plt.fill_between(MicPIx, MicPIl, MicPIh, linewidth=0.0, facecolor= 'b', alpha=0.9)
         plt.plot(MicPIx, MicFitted, ls='-', c='b', alpha=0.6)
         
+        print '\n',metric
+        print f.summary(), '\n'
         
-        #HC = sms.linear_harvey_collier(f) # Harvey Collier test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
-        #print 'Harvey-Collier test for linearity:', HC
-        print metric
-        print f.summary(), '\n\n'
+        """
+        HC = sms.linear_harvey_collier(f) # Harvey Collier test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
+        print 'Harvey-Collier test for linearity:', HC
         
-        #RB = sms.linear_rainbow(f) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
-        #print 'Rainbow test for linearity:', RB
+        RB = sms.linear_rainbow(f) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
+        print 'Rainbow test for linearity:', RB
         
-        #LM = sms.linear_lm(f.resid, f.model.exog)
-        #print 'Lagrangian multiplier test for linearity:', LM
+        LM = sms.linear_lm(f.resid, f.model.exog)
+        print 'Lagrangian multiplier test for linearity:', LM
         
         BGtest = sms.acorr_breush_godfrey(f, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
         print 'Breusch Godfrey test for autocorrelation:', BGtest # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
         
-        
-        #NeweyWest = sm.stats.sandwich_covariance.cov_hac(f)
-        #print NeweyWest
+        NeweyWest = sms.sandwich_covariance.cov_hac(f)
+        print NeweyWest
+        """
         
         if index == 0:
-            x = 0
+            x = 2
             x2 = 2
             y = 5.6
             y2 = 5.2
             y3 = 4.1
             
         elif index == 1:
-            x = 0
+            x = 2
             x2 = 2
             y = 15.7
             y2 = 14.6
             y3 = 11.8
             
         elif index == 2:
-            x = 0
+            x = 2
             x2 = 9
             y = 0.51
             y2 = 0.26
             y3 = -0.5
-            
+        
         params = f.params
         Const = params[0]
         MicroCoef = params[1]
@@ -368,14 +327,18 @@ def Fig1():
         N_Pval = pvals[2]
         IntPval = pvals[3]
         
-        """
-        if metric == 'Dominance':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$', fontsize=fs-3, color='k')         
-        elif metric == 'Rarity':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      +'+str(round(IntCoef,2))+'('+'$N*micro$'+')', fontsize=fs-3, color='k')         
-        elif metric == 'Evenness':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$'+' + '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      '+str(round(IntCoef,2))+'('+'$N$'+'*'+'$micro$'+')', fontsize=fs-3, color='k')         
-        """
+        if index == 0:
+            plt.text(x, y, r'$y_{micro}$'+ ' = '+str(round(Const+MicroCoef,2))+'+'+str(round(N_Coef, 2))+'*'+r'$N$', fontsize=fs-2, color='Steelblue')         
+            plt.text(x, y2, r'$y_{macro}$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='Crimson')  
+        
+        elif index == 1:
+            plt.text(x, y, r'$y_{micro}$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='Steelblue')         
+            plt.text(x, y2, r'$y_{macro}$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='Crimson')         
+        
+        elif index == 2:
+            plt.text(x, y, r'$y_{micro}$'+ ' = '+str(round(Const+MicroCoef,2))+' '+str(round(N_Coef+IntCoef,2))+'*'+r'$N$', fontsize=fs-2, color='Steelblue')         
+            plt.text(x,y2, r'$y_{macro}$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='Crimson')         
+        
         plt.text(x2, y3,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-2, color='k')  
         
         if index == 0:
@@ -385,7 +348,7 @@ def Fig1():
             plt.scatter([0],[-1], color = 'LightCoral',alpha= 1, s=10, linewidths=0.9, edgecolor='Crimson',
                         label= 'macrobes (n='+str(len(MacListY))+')')
             
-            plt.legend(bbox_to_anchor=(-0.03, 1.1, 3.9, .2), loc=10, ncol=3,
+            plt.legend(bbox_to_anchor=(-0.04, 1.2, 3.89, .2), loc=10, ncol=2,
                                 mode="expand",prop={'size':fs})
         
         
@@ -409,6 +372,7 @@ def Fig2():
 
     fs = 10 # font size used across figures
     color = str()
+    OrC = 'open'
 
     Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [],
                                                                     [], [], [], []]
@@ -479,7 +443,7 @@ def Fig2():
         
             if S < 1: continue
         
-            Evarlist.append(float(Evar))    
+            Evarlist.append(np.log(float(Evar)))    
             Nlist.append(float(np.log(N)))
             Slist.append(float(np.log(S)))
             NSlist.append(float(np.log(N/S)))
@@ -494,12 +458,14 @@ def Fig2():
         
             # log-modulo of skew
             skew = float(skew)
-            sign = 1
-            if skew < 0: sign = -1
+            rareSkews.append(skew)
             
-            lms = np.log(np.abs(skew) + 1)
-            lms = lms * sign
-            rareSkews.append(float(lms))
+            #sign = 1
+            #if skew < 0: sign = -1
+            
+            #lms = np.log(np.abs(skew) + 1)
+            #lms = lms * sign
+            #rareSkews.append(float(lms))
         
             if kind == 'micro': 
                 klist.append('DarkOrange')
@@ -544,7 +510,7 @@ def Fig2():
                 MacSSADListX.append(Nlist[j])
                 MacSSADListY.append(metlist[j])
                 
-        
+        """
         if i == 0:
             plt.ylim(-1, 4)
             plt.xlim(0, 16)
@@ -556,11 +522,10 @@ def Fig2():
             pass
                 
         if i == 2:
-            plt.ylim(0, 1.1)
-            #plt.ylim(-3.5, 0.5)
+            plt.ylim(-3.5, 0.5)
             plt.xlim(0, 16)
             pass
-        
+        """
         for ii in range(len(MicSSADListX)):
             plt.scatter(MicSSADListX[ii], MicSSADListY[ii], color = 'PeachPuff', alpha= 1 , s = 4, linewidths=0.25, edgecolor='DarkOrange')                                                
             plt.scatter(MacSSADListX[ii], MacSSADListY[ii], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.25, edgecolor='DarkCyan')
@@ -598,48 +563,33 @@ def Fig2():
                 MicPIh.append(iv_u[j])
                 MicFitted.append(f.fittedvalues[j])
         
-        MacPIx2 = [min(MacPIx), max(MacPIx)]
-        MacPIl2 = [min(MacPIl), max(MacPIl)]
-        MacPIh2 = [min(MacPIh), max(MacPIh)]
         
-        MicPIx2 = [min(MicPIx), max(MicPIx)]
-        MicPIl2 = [min(MicPIl), max(MicPIl)]
-        MicPIh2 = [min(MicPIh), max(MicPIh)]
+        plt.plot(MacPIx, MacPIh, ls='--', lw=0.1, c='c', alpha=0.9)
+        plt.plot(MacPIx, MacPIl, ls='--', lw=0.1, c='c', alpha=0.9)
+        #plt.fill_between(MacPIx2, MacPIh2, MacPIl2, facecolor= 'c', alpha=0.3)
+        plt.plot(MacPIx, MacFitted, ls='-', lw=1, c='c', alpha=0.9)
         
-        if metric == 'Evenness':
-            MacPIl2.reverse()
-            MacPIh2.reverse()
-            #MacPIx2 = MacPIx2.reverse()
-            
-            MicPIl2.reverse()
-            MicPIh2.reverse()
-            #MicPIx2 = MicPIx2.reverse()
+        plt.plot(MicPIx, MicPIh, ls='--', lw=0.1, c='orange', alpha=0.9)
+        plt.plot(MicPIx, MicPIl, ls='--', lw=0.1, c='orange', alpha=0.9)
+        #plt.fill_between(MicPIx2, MicPIh2, MicPIl2, facecolor= 'orange', alpha=0.3)
+        plt.plot(MicPIx, MicFitted, ls='-', lw=1, c='orange', alpha=0.9)
         
-        plt.plot(MacPIx2, MacPIh2, ls='--', c='c', alpha=0.9)
-        plt.plot(MacPIx2, MacPIl2, ls='--', c='c', alpha=0.9)
-        plt.plot(MacPIx, MacFitted, ls='-', c='c', alpha=0.9)
-        
-        plt.plot(MicPIx2, MicPIh2, ls='--', c='orange', alpha=0.9)
-        plt.plot(MicPIx2, MicPIl2, ls='--', c='orange', alpha=0.9)
-        plt.plot(MicPIx, MicFitted, ls='-', c='orange', alpha=0.9)
-        
-        #plt.fill_between(MacPIx, MacPIh, MacPIl, facecolor= 'c', alpha=0.3)
-        #plt.fill_between(MicPIx, MicPIh, MicPIl, facecolor= 'orange', alpha=0.3)
-        
+        """
         if i == 0:
-            x2 = 1
+            x = 1
             y2 = 4.2
             y3 = 3.32
             
         elif i == 1:
-            x2 = 1
+            x = 1
             y2 = 12.4
             y3 = 10.3
             
         elif i == 2:
-            x2 = 9
+            x = 9
             y2 = 1.14
             y3 = 0.94
+        """
         
         params = f.params
         Const = params[0]
@@ -655,25 +605,22 @@ def Fig2():
         N_Pval = pvals[2]
         IntPval = pvals[3]
         
-        #if min(pval) >= 0.05:
-        #    print "no significance"
-        #if InteractionPval < 0.05:
-                    
-        #plt.text(x, y,  r'$m$'+'='+str(round(MacSlope,2))+ ', ' + r'$b$' + '='+ str(round(MacInt,2))+', ' + r'$R^2$' + '=' +str(round(MacRval**2,2))+', p='+str(round(MacPval,4)), fontsize=fs-3, color='DarkCyan')         
-        #plt.text(x, y2, r'$m$'+ '='+str(round(MicSlope,2))+', ' + r'$b$' + '='+ str(round(MicInt,2))+', ' + r'$R^2$' + '=' +str(round(MicRval**2,2))+', p='+str(round(MicPval,4)), fontsize=fs-3, color='DarkOrange')         
-        
+        """
         if metric == 'Dominance':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$', fontsize=fs-3, color='k')         
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkCyan')         
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkOrange')
         elif metric == 'Rarity':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+'+'+str(round(N_Coef,2))+'*'+r'$N$'+' '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      +'+str(round(IntCoef,2))+'('+'$N*micro$'+')', fontsize=fs-3, color='k')         
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkCyan')         
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkOrange')
         elif metric == 'Evenness':
-            plt.text(1, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$'+' + '+str(round(MicroCoef,2))+'*'+'$micro$'+'\n      '+str(round(IntCoef,2))+'('+'$N$'+'*'+'$micro$'+')', fontsize=fs-3, color='k')         
-        
-        
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkCyan')         
+            plt.text(x, y2, r'$y_i$'+ ' = '+str(round(Const,2))+' '+str(round(N_Coef,2))+'*'+r'$N$', fontsize=fs-2, color='DarkOrange')
+        """
         #plt.text(x, y2, r'$y_i$'+ '='+str(Const)+' + '+str(N_Coef)+'*'+r'$N$'+' + '+str(MicroCoef)+'*'+'r$micro$', fontsize=fs-3, color='k')         
         
-        plt.text(x2, y3,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-2, color='k')         
+        #plt.text(x, y3,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-2, color='k')         
         
+        """
         if i == 0:
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='DarkCyan',
                         label= str(SampSize)+' Macrobe SSADs')
@@ -683,7 +630,7 @@ def Fig2():
             
             plt.legend(bbox_to_anchor=(-0.03, 1.2, 3.9, .2), loc=10, ncol=2,
                                 mode="expand",prop={'size':fs})
-        
+        """
         plt.xlabel('log(abundance of a taxa in a dataset)', fontsize=fs-3)
         
         plt.ylabel(ylabel, fontsize=fs-3)
@@ -1066,7 +1013,7 @@ def TL():
 """ The following lines call figure functions to reproduce figures from the 
     Locey and Lennon (2014) manuscript """
 
-Fig1()
-#Fig2()
+#Fig1()
+Fig2()
 #Fig3()
 #TL()

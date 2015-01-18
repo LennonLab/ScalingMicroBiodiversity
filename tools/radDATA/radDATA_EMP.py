@@ -17,7 +17,7 @@ numEMP = 0
 numEMPopen = 0
 RADs = []
     
-RADs = ff.GetSADsFromBiom_labeled(mydir2 +'data/micro', 'EMPopen')
+RADs = ff.GetSADsFromBiom_labeled(mydir2 +'data/micro/EMPopen', 'EMPopen')
 
 for RAD in RADs:
     
