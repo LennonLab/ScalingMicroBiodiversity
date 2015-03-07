@@ -2,7 +2,7 @@ import os
 
 mydir2 = os.path.expanduser("~/Desktop/")
 
-OrC = 'open'
+OrC = 'closed'
 
 def GetSADsFromBiom_labeled(path, dataset):
     
@@ -11,14 +11,15 @@ def GetSADsFromBiom_labeled(path, dataset):
     IN = path + '/' + dataset + '-SSADdata.txt'
     n = sum(1 for line in open(IN))
     
-    SADdict = {}
+    SiteDict = {}
     
+    print 'Starting build of SiteDict'
     with open(IN) as f: 
         
         for d in f:
             
-            print 'Reading in SSAD data. Lines left:', n
-            n -= 1
+            #print 'Reading in SSAD data. Lines left:', n
+            #n -= 1
             
             if d.strip():
                 
@@ -28,32 +29,30 @@ def GetSADsFromBiom_labeled(path, dataset):
                 abundance = float(d[2])
                 
                 if abundance > 0:
-                    if sample not in SADdict:
+                    if sample not in SiteDict:
                         
-                        SADdict[sample] = [[species, abundance]]
+                        SiteDict[sample] = [species]
             
                     else:
-                        SADdict[sample].append([species, abundance])
+                        SiteDict[sample].append(species)
     
-    IN.close()
+    print 'Finished building SiteDict'
+    
     
     OUT = open(path + '/' + dataset + '-SbyS.txt','w+')
         
-    SADlist = SADdict.items()
-    n = len(SADlist)
+    SiteLists = SiteDict.items()
+    n = len(SiteLists)
     
-    for i, tup in enumerate(SADlist):
+    for i, site in enumerate(SiteLists):
                 
-        SAD = tup[1]
-        if len(SAD) >= minS: 
-            SAD.sort()
-            SAD.reverse()
+        if len(site) >= minS: 
             print n - i
-            print >> OUT, SAD
-                
+            print >> OUT, site
                     
     OUT.close()
-        
+    
+    print 'Finished generating SbyS file'    
     return 
         
 GetSADsFromBiom_labeled(mydir2 +'data/micro/EMP'+OrC, 'EMP'+OrC)
