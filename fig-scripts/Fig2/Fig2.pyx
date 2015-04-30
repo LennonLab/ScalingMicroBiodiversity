@@ -3,7 +3,6 @@ from __future__ import division
 import  matplotlib.pyplot as plt
 
 import numpy as np
-from scipy.stats import gaussian_kde
 import random
 import scipy as sc
 from scipy import stats
@@ -14,37 +13,24 @@ import sys
 from scipy.stats.distributions import t
 
 import statsmodels.stats.api as sms
+import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.sandbox.regression.predstd import wls_prediction_std
 from statsmodels.stats.outliers_influence import summary_table
 
-import pandas as pd
-#import patsy
 from math import log10
+import itertools as it
+
+import pandas as pd
 import linecache
 
 
-
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/GitHub/")
+mydir2 = os.path.expanduser("~/")
 
 
 
-def get_kdens(summands):
-    """ Finds the kernel density function """
-
-    density = gaussian_kde(summands)
-    n = 1000 #len(summands)
-    xs = np.linspace(float(min(summands)),float(max(summands)),n)
-    density.covariance_factor = lambda : .4
-    density._compute_covariance()
-    D = [xs,density(xs)]
-    return D
-
-
-
-
-def Fig3():
+def Fig2():
 
     """ A figure demonstrating a strong abundance relationship across 30
     orders of magnitude in total abundance. The abundance of the most abundant
@@ -52,170 +38,186 @@ def Fig3():
     or system. """
 
     fs = 10 # font size used across figures
-    #color = str()
+    Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
-    Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [],
-                                                            [], [], [], []]
-    klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [],
-                                                        [], [], [], [], []]
+    BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
 
-    NmaxList, rareOnesList, rareRelList, rarePairList, rareSumOnesList = [[], [],
-                                                                    [], [], []]
+    for name in os.listdir(mydir2 +'data/micro'):
+        if name in BadNames: continue
+        #if name == 'EMPopen': pass
+        #else: continue
 
-    OrC = 'open' # is the microbial data (Earth Microbiome Project) going to
-                    # represent closed or open reference OTU assignment
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
-    ct = 0
-    klist = []
+        numlines = sum(1 for line in open(path))
+        print name, numlines
+        datasets.append([name, 'micro', numlines])
 
-    radDATA = open(mydir+'output/EMP'+OrC+'-RADdata.txt','r')
+    its = 1
+    for i in range(its):
+        print i
+        for dataset in datasets:
+            name, kind, numlines = dataset
+            lines = []
+
+            lines = []
+            lines = np.random.choice(range(1, numlines+1), 2000, replace=True)
+
+            #lines = random.sample(range(1, numlines+1), numlines)
+
+            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+
+            for line in lines:
+                data = linecache.getline(path, line)
+                radDATA.append(data)
+
+            klist.append('DarkCyan')
+
     for data in radDATA:
 
-        data_list = data.split()
-        #N, S, ESimp, EHeip, BP, SimpDom, rareRel, rareOnes, rareSumOnes, Var, Evar = data_list
-        N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data_list
-        Nlist.append(float(N))
-        Slist.append(float(S))
+        data = data.split()
+        name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
-        Evarlist.append(float(Evar))
-        NmaxList.append(float(BP)*float(N))
+        N = float(N)
+        S = float(S)
 
+        if S < 10 or N < 11: continue # Min species richness
+
+        Nlist.append(float(np.log10(float(N))))
+        NmaxList.append(float(np.log10(float(Nmax))))
         klist.append('DarkCyan')
 
-        ct+=1
-
-
-
-    metrics = [['Dominance, '+'log'+r'$_{10}$', NmaxList]]
-
+    metric = 'Dominance, '+'log'+r'$_{10}$'
 
     fig = plt.figure()
-    for index, i in enumerate(metrics):
+    ax = fig.add_subplot(1, 1, 1)
 
-        ax = fig.add_subplot(1, 1, 1)
+    Nlist, NmaxList = zip(*sorted(zip(Nlist, NmaxList)))
+    Nlist = list(Nlist)
+    NmaxList = list(NmaxList)
 
-        if index == 1: continue
+    # Regression
+    d = pd.DataFrame({'N': list(Nlist)})
+    d['y'] = list(NmaxList)
+    f = smf.ols('y ~ N', d).fit()
 
-        metric = i[0]
-        metlist = i[1]
+    R2 = f.rsquared
+    pval = f.pvalues
+    intercept = f.params[0]
+    slope = f.params[1]
 
-        RADListX = []
-        RADListY = []
+    print f.summary()
+    print intercept, slope
 
-        rads = 0
+    X = np.linspace(6, 40, 100)
+    Y = f.predict(exog=dict(N=X))
+    Nlist2 = Nlist + X.tolist()
+    NmaxList2 = NmaxList + Y.tolist()
 
-        for j, k in enumerate(klist):
+    d = pd.DataFrame({'N': list(Nlist2)})
+    d['y'] = list(NmaxList2)
+    f = smf.ols('y ~ N', d).fit()
 
-            if k == 'DarkCyan':
-                rads += 1
-                if index == 0: RADListX.append(Nlist[j])
-                else: RADListX.append(Slist[j])
+    st, data, ss2 = summary_table(f, alpha=0.05)
+    fittedvalues = data[:,2]
+    pred_mean_se = data[:,3]
+    pred_mean_ci_low, pred_mean_ci_upp = data[:,4:6].T
+    pred_ci_low, pred_ci_upp = data[:,6:8].T
 
-                if metlist[j] == 0: RADListY.append(1)
-                else: RADListY.append(metlist[j])
+    plt.fill_between(Nlist2, pred_ci_low, pred_ci_upp, color='r', lw=0.5, alpha=0.2)
 
+    print 'r-squared and slope for RADs w/out inferred:', round(R2, 3), round(slope,3)
 
-        # scatter plots
-        indices = range(1000)
-        random.shuffle(indices)
+    #label1 = 'EMP (heat mapped only): slope ='+str(round(slope,3))+', ' + r'$R^2$' + '=' +str(round(R2, 3))
+    #ax.plot([0],[0], '-', c='Steelblue', lw=4, alpha=1, label=label1)
 
-        RADListX = np.log10(RADListX)
-        RADListY = np.log10(RADListY)
+    plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 80, bins='log', cmap=plt.cm.Reds_r)
 
-        RADListX = RADListX.tolist()
-        RADListY = RADListY.tolist()
+    GO = log10(1110*10**26) # estimated open ocean bacteria; add reference
+    Pm = log10(2.9*10**27) # estimated Prochlorococcus marinus; add reference
+    Earth = log10(10**30) # estimated bacteria on Earth; add reference
+    SAR11 = log10(2*10**28) # estimated Pelagibacter ubique; add reference
+    Earth = log10(3.17 * 10**30) # estimated bacteria on Earth; add reference
 
+    HGx = log10(10**14) # estimated bacteria in Human gut; add reference
+    HGy = log10(0.1169*(10**14)) # estimated most abundant bacteria in Human gut; add reference
+    # 0.0053
+    COWx = log10(2.226*10**15) # estimated bacteria in Cow rumen; add reference
+    COWy = log10((0.52/80)*(2.226*10**15)) # estimated dominance in Cow rumen; add reference
+    #0.5/80
 
-        #for i in indices:
-        #    ax.scatter(RADListX[i], RADListY[i], color = 'SkyBlue', alpha= 0.5 , s = 40, linewidths=0.5, edgecolor='DarkCyan')
+    #EMPx = log10(1252724704)
+    #EMPy = log10(597974)
 
-        Y = np.array(RADListY)
-        X = np.array(RADListX)
+    c = '0.3'
+    ax.text(11, SAR11+0.5, 'Ocean abundance of '+r'$Pelagibacter$'+' '+r'$ubique$', fontsize=fs+2, color = c)
+    ax.axhline(SAR11, 0, 0.9, ls = '--', c = c)
 
-        RADslope2, RADintercept2, RADrval2, RADpval2, RADstderr2 = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for RADs w/out inferred:',round(RADrval2**2,3), round(RADslope2,3)
+    ax.text(11, Pm-1.15, 'Abundance of '+r'$Prochloroccus$', fontsize=fs+2, color = c)
+    ax.axhline(Pm, 0, 0.88, ls = '--', c = c)
 
-        z = np.polyfit(X,Y,1)
-        p = np.poly1d(z)
-        xp = np.linspace(1, 2, 1000)
+    ax.text(GO-1, 24, 'Non-sediment ocean bacteria', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(GO, 0, 0.86, ls = '--', c = c)
 
-        label1 = 'EMP (heat mapped only): slope ='+str(round(RADslope2,3))+', ' + r'$R^2$' + '=' +str(round(RADrval2**2,3))
-        ax.plot([0],[0], '-', c='Steelblue', lw=4, alpha=1, label=label1)
+    ax.text(Earth+0.5, 26, 'Global abundance of bacteria', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(Earth, 0, 0.88, ls = '--', c = c)
 
-        plt.hexbin(RADListX, RADListY, mincnt=1, gridsize = 30, bins='log', cmap=plt.cm.Blues_r, label='EMP')
+    ax.text(2, HGy-1.5, 'Avg. in human guts', fontsize=fs+2, color = c)
+    ax.axhline(HGy, 0, 0.40, ls = '--', c = c)
 
-        # Adding in derived/inferred points
-        GO = log10(1.2*10**29) # estimated open ocean bacteria
-        Pm = log10(2.9*10**27) # estimated Prochlorococcus marinus
+    ax.text(HGx-1, 8, 'Human gut', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(HGx, 0, 0.38, ls = '--', c = c)
 
-        Earth = log10(3.17 *10**30) # estimated bacteria on Earth
-        SAR11 = log10(2 * 10**28) # estimated Pelagibacter ubique
+    ax.text(4, COWy+0.6, 'Avg among '+r'$Prevotella$', fontsize=fs+2, color = c)
+    ax.axhline(COWy, 0, 0.44, ls = '--', c = c)
 
-        HGx = log10(10**13)
-        HGy = log10(0.0053*(10**13))
+    ax.text(COWx+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(COWx, 0, 0.41, ls = '--', c = c)
 
-        COWx = log10(2.226*10**15)
-        COWy = log10((0.5/80)*(2.226*10**15))
+    ax.text(9, -3.17, 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*1.8)
+    ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
 
+    plt.scatter([GO], [Pm], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
+    plt.scatter([Earth], [SAR11], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
 
-        ax.text(11, SAR11+0.5, 'Ocean abundance of '+r'$Pelagibacter$'+' '+r'$ubique$', fontsize=fs+2, color = '0.4')
-        ax.axhline(SAR11, 0, 0.88, ls = '--', c = '0.4')
+    plt.scatter([HGx], [HGy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
+    plt.scatter([COWx], [COWy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
 
-        ax.text(11, Pm-1.1, 'Ocean abundance of '+r'$Prochloroccus$', fontsize=fs+2, color = '0.4')
-        ax.axhline(Pm, 0, 0.86, ls = '--', c = '0.4')
-
-        ax.text(GO-1, 24, 'Global abundance of ocean bacteria', fontsize=fs+2, color = '0.4', rotation = 90)
-        ax.axvline(GO, 0, 0.86, ls = '--', c = '0.4')
-
-        ax.text(Earth+0.5, 26, 'Global abundance of bacteria', fontsize=fs+2, color = '0.4', rotation = 90)
-        ax.axvline(Earth, 0, 0.89, ls = '--', c = '0.4')
-
-        ax.text(4.2, HGy+0.65, 'max for any OTU', fontsize=fs+2, color = '0.4')
-        ax.axhline(HGy, 0, 0.38, ls = '--', c = '0.4')
-
-        ax.text(HGx-1, 8, 'Human gut', fontsize=fs+2, color = '0.4', rotation = 90)
-        ax.axvline(HGx, 0, 0.33, ls = '--', c = '0.4')
-
-        ax.text(5, COWy+0.65, 'avg among '+r'$Prevotella$', fontsize=fs+2, color = '0.4')
-        ax.axhline(COWy, 0, 0.42, ls = '--', c = '0.4')
-
-        ax.text(COWx+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = '0.4', rotation = 90)
-        ax.axvline(COWx, 0, 0.41, ls = '--', c = '0.4')
-
-        ax.text(5.5, -3.15, 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*1.8)
-        ax.text(-3.1, 24, metric, fontsize=fs*1.8, rotation=90)
-
-
-        plt.scatter([GO], [Pm], color = 'r', alpha= 1 , s = 40, linewidths=0.5, edgecolor='r')
-        plt.scatter([Earth], [SAR11], color = 'r', alpha= 1 , s = 40, linewidths=0.5, edgecolor='r')
-
-        plt.scatter([HGx], [HGy], color = 'r', alpha= 1 , s = 40, linewidths=0.5, edgecolor='r')
-        plt.scatter([COWx], [COWy], color = 'r', alpha= 1 , s = 40, linewidths=0.5, edgecolor='r')
-
-        X = X.tolist()
-        X.extend([HGx, GO, Earth, COWx])
-        Y = Y.tolist()
-        Y.extend([HGy, Pm, SAR11, COWy])
-
-        RADslope, RADintercept, RADrval, RADpval, RADstderr = sc.stats.linregress(X,Y)
-        print metric,': r-squared and slope for RADs w/ inferred:', round(RADrval**2,3), round(RADslope,3)
-
-        z = np.polyfit(X,Y, 1)
-        p = np.poly1d(z)
-        xp = np.linspace(0, 32, 1000)
-
-        label2 = 'EMP + inferred points: slope ='+str(round(RADslope,3))+', ' + r'$R^2$' + '=' +str(round(RADrval**2,3))
-        ax.plot(xp, p(xp), '--', c='red', lw=2, label=label2)
-
-        plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
-                                mode="expand",prop={'size':fs+4})
+    #plt.scatter([EMPx], [EMPy], color = 'b', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
+    #plt.scatter([COWx], [COWy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
 
 
-        plt.xlim(0, 34)
-        plt.ylim(0, 32)
+    plt.plot([0,32],[0,32], ls = '-', lw=2, c='0.7')
+    ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
 
-    plt.savefig(mydir+'/figs/Locey_Lennon_2015_Fig3v2-'+OrC+'_REF.png', dpi=600,
-                bbox_inches = "tight")
+
+    Nlist.extend([HGx, GO, Earth, COWx])
+    NmaxList.extend([HGy, Pm, SAR11, COWy])
+
+    """
+    d = pd.DataFrame({'N': list(Nlist)})
+    d['y'] = list(NmaxList)
+    f = smf.ols('y ~ N', d).fit()
+
+    R2 = f.rsquared
+    pval = f.pvalues
+    intercept = f.params[0]
+    slope = f.params[1]
+
+    print ': r-squared and slope for RADs with inferred:', round(R2,3), round(slope,3)
+    """
+
+    #label2 = 'EMP + inferred points: slope ='+str(round(slope,3))+', ' + r'$R^2$' + '=' +str(round(R2,3))
+
+    #plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
+    #                        mode="expand",prop={'size':fs+4})
+
+    plt.xlim(1, 33)
+    plt.ylim(0, 32)
+
+    plt.savefig(mydir+'/figs/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     plt.close()
 
     return
@@ -226,4 +228,4 @@ def Fig3():
 """ The following lines call figure functions to reproduce figures from the
     Locey and Lennon (2014) manuscript """
 
-Fig3()
+Fig2()
