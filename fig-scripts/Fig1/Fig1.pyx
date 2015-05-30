@@ -30,13 +30,13 @@ mydir2 = os.path.expanduser("~/")
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'GENTRY', 'AGSOIL', 'SLUDGE', 'FECES']
+    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC']
 
     for name in os.listdir(mydir2 +'data/micro'):
         if name in BadNames: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -45,8 +45,8 @@ def Fig1():
     for name in os.listdir(mydir2 +'data/macro'):
         if name in BadNames: continue
 
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -69,7 +69,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 100
+        its = 300
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -83,10 +83,13 @@ def Fig1():
 
                 name, kind, numlines = dataset
                 lines = []
-                lines = np.random.choice(range(1, numlines+1), 40, replace=True)
+                if name == 'EMPclosed' or name == 'EMPopen':
+                    lines = np.random.choice(range(1, numlines+1), 25, replace=True)
+                if kind == 'micro': lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 80, replace=True)
 
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -270,9 +273,9 @@ def Fig1():
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()

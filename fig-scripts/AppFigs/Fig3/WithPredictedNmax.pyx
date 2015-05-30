@@ -35,10 +35,10 @@ pi = math.pi
 def Preston1(N, Nmax, guess):
 
     def alpha1(a):
-        return (sqrt(pi) * Nmax)/(2.0*a) * erf(log(2.0)/a) - N # find alpha
+        return (sqrt(pi) * Nmax)/(2.0*a) * erf(log10(2.0)/a) - N # find alpha
 
     def s1(a):
-        return sqrt(pi)/a * exp( (log(2.0)/(2.0*a))**2.0 ) # Using equation 8
+        return sqrt(pi)/a * exp( (log10(2.0)/(2.0*a))**2.0 ) # Using equation 8
 
     a = opt.fsolve(alpha1, guess)[0]
     #a = opt.newton(alpha1, guess, maxiter=100)
@@ -226,35 +226,50 @@ def Fig3():
     plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 40, bins='log', cmap=plt.cm.Blues_r, label='EMP')
 
     # Adding in derived/inferred points
-    c = '0.3'
+    # N and S for the Earth Microbiome Project
+
+    plt.scatter([empN], [empS], color = 'orange', alpha= 1 , s = 40, linewidths=0.5, edgecolor='w', label='Earth Microbiome Project')
+
     GO = 1110*10**26 # estimated open ocean bacteria; add reference
     Pm = 2.9*10**27 # estimated Prochlorococcus marinus; add reference
     Earth = 10**30 # estimated bacteria on Earth; add reference
-    SAR11 = Earth*0.1 #2*10**28 # estimated Pelagibacter ubique; add reference
+    SAR11 = 2*10**28 # estimated Pelagibacter ubique; add reference
 
-    HGx =10**14 # estimated bacteria in Human gut; add reference
-    HGy = 0.1169*(10**14) # estimated most abundant bacteria in Human gut; add reference # 0.0053
-    COWx = 2.226*10**15 # estimated bacteria in Cow rumen; add reference
-    COWy = (0.52/80)*(2.226*10**15) # estimated dominance in Cow rumen; add reference #0.5/80
-
-    Nmin = 1
-    # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
+    # Global Ocean estimates based on Whitman et al. (1998) and dominance relationship
     N = float(GO)
-    Nmax = float(Pm)
+    b =  -0.42
+    z =  0.96
+    Nmax = 10**(b + z * log10(N))
+    Nmin = 1
     guess = 0.1
     S2 = Preston2(N, Nmax, Nmin, guess)
     guess = 0.01
     S1 = Preston1(N, Nmax, guess)
+
     S2 = log10(S2)
     S1 = log10(S1)
     N = log10(N)
+    plt.scatter([N], [S1], color = 'cyan', s = 40, linewidths=0.5, edgecolor='cyan', label='Global ocean; using predicted Nmax = '+str('%.2e' % Nmax), alpha=0.5)
+    plt.scatter([N], [S2], color = 'b', s = 40, linewidths=0.5, edgecolor='b', label='Global ocean; using predicted Nmax = '+str('%.2e' % Nmax), alpha=0.5)
+    Nlist.extend([N, N])
+    Slist.extend([S1,S2])
+    print 'predicted Nmax, S1, & S2 for the Global Ocean:', Nmax, S1, S2
 
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.80, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.80, ls = '--', c = c)
-    ax.text(N-1, 8, 'Global ocean', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
+
+    # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
+    N = float(GO)
+    Nmax = float(Pm)
+    Nmin = 1
+    guess = 0.1
+    S2 = Preston2(N, Nmax, Nmin, guess)
+    guess = 0.01
+    S1 = Preston1(N, Nmax, guess)
+
+    S2 = log10(S2)
+    S1 = log10(S1)
+    N = log10(N)
+    plt.scatter([N], [S1], color = 'DarkBlue', s = 40, linewidths=0.5, edgecolor='DarkBlue', label='Global ocean; estimated '+r'$Prochloroccus$'+'= '+str(round(Nmax,2)), alpha=0.5)
+    plt.scatter([N], [S2], color = 'DodgerBlue', s = 40, linewidths=0.5, edgecolor='DodgerBlue', label='Global ocean; estimated '+r'$Prochloroccus$'+'= '+str(round(Nmax,2)), alpha=0.5)
     Nlist.extend([N,N])
     Slist.extend([S1,S2])
     print 'predicted S1 & S2 for the Global Ocean:', S1, S2
@@ -263,75 +278,69 @@ def Fig3():
     # Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
     N = float(Earth)
     Nmax = float(SAR11)
+    Nmin = 1
     guess = 0.1
     S2 = Preston2(N, Nmax, Nmin, guess)
     guess = 0.01
     S1 = Preston1(N, Nmax, guess)
+
     S2 = log10(S2)
     S1 = log10(S1)
     N = log10(N)
-
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.80, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.80, ls = '--', c = c)
-    ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
+    plt.scatter([N], [S], color = 'SaddleBrown', s = 40, linewidths=1, edgecolor='SaddleBrown', label='Earth; estimated '+r'$Pelagibacter$'+' '+r'$ubique$' +'= '+str('%.2e' % Nmax), alpha=0.5)
+    plt.scatter([N], [S], color = 'OliveDrab', s = 40, linewidths=1, edgecolor='OliveDrab', label='Earth; estimated '+r'$Pelagibacter$'+' '+r'$ubique$' +'= '+str('%.2e' % Nmax), alpha=0.5)
     Nlist.extend([N, N])
     Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Earth:', S1, S2
+    print 'predicted S1 & S2 for Earth based on estimated SAR11:', S1, S2
 
 
-    # Human Gut based on ...
-    N = float(HGx)
-    Nmax = float(HGy)
+    # Global estimates based on Kallmeyer et al. (2012) and dominance relationship
+    N = float(Earth)
+    b = -0.42 # intercept
+    z = 0.96 # slope
+    Nmax = 10**(b + z * np.log10(N))
+    Nmin = 1
     guess = 0.1
     S2 = Preston2(N, Nmax, Nmin, guess)
     guess = 0.01
     S1 = Preston1(N, Nmax, guess)
+
     S2 = log10(S2)
     S1 = log10(S1)
-    N = log10(N)
-
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.45, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.45, ls = '--', c = c)
-    ax.text(N-1, 8, 'Human Gut', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
+    N = np.log10(N)
+    plt.scatter([N], [S2], color = 'Purple', alpha= 1 , s = 40, linewidths=1, edgecolor='Purple', label='Earth; predicted Nmax = '+str('%.2e' % Nmax))
+    plt.scatter([N], [S1], color = 'm', alpha= 1 , s = 40, linewidths=1, edgecolor='m', label='Earth; predicted Nmax = '+str('%.2e' % Nmax))
     Nlist.extend([N, N])
     Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Human Gut:', S1, S2
+    print 'predicted Nmax, S1, & S2 for Earth based on Nmax vs. N:', N, S1, S2
 
-
-    # Cow Rumen based on ...
-    N = float(COWx)
-    Nmax = float(COWy)
-    guess = 0.1
-    S2 = Preston2(N, Nmax, Nmin, guess)
-    guess = 0.01
-    S1 = Preston1(N, Nmax, guess)
-    S2 = log10(S2)
-    S1 = log10(S1)
-    N = log10(N)
-
-    """
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.40, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.40, ls = '--', c = c)
-    ax.text(N-1, 8, 'Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.38, ls = '--', c = c)
-    Nlist.extend([N, N])
-    Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Cow Rumen:', S1, S2
-    """
-
-    """
     # N and S for the Human Microbiome Project,
     S = np.log10(27483)
     N = np.log10(22618041)
     plt.scatter([N], [S], color = 'b', alpha= 1 , s = 40, linewidths=1, edgecolor='w', label='Human Microbiome Project')
+    Nlist.append(N)
+    Slist.append(S)
+
+    """
+    # N and S for Hydrothermal vents (archaea), Brazelton et al. 2009
+    S = np.log10(817)
+    N = np.log10(167031)
+    plt.scatter([N], [S], color = 'g', alpha= 1 , s = 40, linewidths=1, edgecolor='w', label='Sampled hydrothermal vents')
+    Nlist.append(N)
+    Slist.append(S)
+
+
+    # N and S for sampled Cow Rumen, Jami & Mizrahi 2012
+    S = np.log10(4896)
+    N = np.log10(100000)
+    plt.scatter([N], [S], color = 'm', alpha= 1 , s = 40, linewidths=1, edgecolor='w', label='Sampled cow rumen')
+    Nlist.append(N)
+    Slist.append(S)
+
+    # Smapled N and S from Human Gut, from Eckburg et al. 2005
+    N = np.log10(11831)
+    S = np.log10(395)
+    plt.scatter([N], [S], color = 'Lime', alpha= 1 , s = 40, linewidths=1, edgecolor='w', label='Sampled human gut')
     Nlist.append(N)
     Slist.append(S)
     """
@@ -339,8 +348,20 @@ def Fig3():
     ax.text(8, -2., 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*2)
     ax.text(-2.3, 18, 'OTU '+ metric, fontsize=fs*2, rotation=90)
 
-    #leg = plt.legend(loc=2, numpoints = 1, prop={'size':fs})
-    #leg.draw_frame(False)
+    # Regression
+    d = pd.DataFrame({'N': list(Nlist)})
+    d['y'] = list(Slist)
+    f = smf.ols('y ~ N', d).fit()
+
+    R2 = f.rsquared
+    pval = f.pvalues
+    intercept = f.params[0]
+    slope = f.params[1]
+
+    print 'r-squared and slope for RADs with inferred:', round(R2, 3), round(slope,3)
+
+    leg = plt.legend(loc=2, numpoints = 1, prop={'size':fs})
+    leg.draw_frame(False)
 
     plt.xlim(1, 31)
     plt.ylim(0.8, 25)
