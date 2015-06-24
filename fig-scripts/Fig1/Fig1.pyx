@@ -273,10 +273,8 @@ def Fig1():
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
     plt.close()
