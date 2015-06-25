@@ -42,6 +42,10 @@ def getNmax(N):
     return 10 ** (-0.65 + 0.97*(log10(N)))
 
 
+def expS(N, b, slope):
+    return 10 ** (b + slope*(log10(N)))
+
+
 
 def Fig3():
 
@@ -207,7 +211,9 @@ def Fig3():
     plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Nlist.extend([N])
     Slist.extend([S2])
-    print 'guess, a, & S for Earth:', guess, '%.3e' % a, '%.3e' % 10**S2
+    print 'm and b', slope, intercept
+    empS = expS(Earth, intercept, slope)
+    print 'expS, guess, a, & S for Earth:', empS, guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Human Gut based on ...
@@ -258,7 +264,7 @@ def Fig3():
     plt.xlim(1, 31)
     plt.ylim(0.8, 15)
 
-    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
