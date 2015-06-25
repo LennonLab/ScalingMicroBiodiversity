@@ -1,106 +1,45 @@
 from __future__ import division
 import  matplotlib.pyplot as plt
-
 import numpy as np
 import random
 import scipy as sc
 from scipy import stats
-
 import os
 import sys
-
 import statsmodels.stats.api as sms
 import statsmodels.formula.api as smf
 from statsmodels.sandbox.regression.predstd import wls_prediction_std
 from statsmodels.stats.outliers_influence import summary_table
-
 from numpy import log, log2, exp, sqrt, log10, pi
 from scipy.optimize import fsolve
 import scipy.optimize as opt
-
-import pandas as pd
-#import patsy
+import pandas as pd #import patsy
 import mpmath as mpm
 from scipy.optimize import fsolve
 from math import erf, pi
 import linecache
+import math
 
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
 mydir2 = os.path.expanduser("~/")
-
-import math
 pi = math.pi
 
 
-def Preston1(N, Nmax, guess):
+def alpha2(a, N, Nmax, Nmin):
+    y = sqrt(pi*Nmin*Nmax)/(2.0*a) * exp((a * log2(sqrt(Nmax/Nmin)))**2.0)
+    y = y * exp((log(2.0)/(2.0*a))**2.0)
+    y = y * erf(a * log2(sqrt(Nmax/Nmin)) - log(2.0)/(2.0*a)) + erf(a * log2(sqrt(Nmax/Nmin)) + log(2.0)/(2.0*a))
+    y -= N
 
-    def alpha1(a):
-        return (sqrt(pi) * Nmax)/(2.0*a) * erf(log(2.0)/a) - N # find alpha
+    return y # find alpha
 
-    def s1(a):
-        return sqrt(pi)/a * exp( (log(2.0)/(2.0*a))**2.0 ) # Using equation 8
-
-    a = opt.fsolve(alpha1, guess)[0]
-    #a = opt.newton(alpha1, guess, maxiter=100)
-    print 'Preston1:  guess:',guess,' alpha:',a
-
-    return s1(a)
+def s2(a, Nmax, Nmin):
+    return sqrt(pi)/a * exp( (a * log2(sqrt(Nmax/Nmin)))**2) # Using equation 10
 
 
-def Preston2(N, Nmax, Nmin, guess):
 
-    def alpha2(a):
-        y = sqrt(pi*Nmin*Nmax)/(2.0*a) * exp((a * log2(sqrt(Nmax/Nmin)))**2.0)
-        y = y * exp((log(2.0)/(2.0*a))**2.0)
-        y = y * erf(a * log2(sqrt(Nmax/Nmin)) - log(2.0)/(2.0*a)) + erf(a * log2(sqrt(Nmax/Nmin)) + log(2.0)/(2.0*a))
-        y -= N
-        return y # find alpha
-
-    def s2(a):
-        return sqrt(pi)/a * exp( (a * log2(sqrt(Nmax/Nmin)))**2) # Using equation 10
-
-    a = opt.fsolve(alpha2, guess)[0]
-    #a = opt.newton(alpha2, guess, maxiter=100)
-
-    print 'Preston2:  guess:',guess,' alpha:',a
-    #print '\nalpha2 = ', a, 'f(alpha2) = ','%.2e' % alpha2(a), 'S2:','%.2e' % S2
-    return s2(a)
-
-
-def get_EMP_SSADs():
-
-    DATA = mydir2 + "data/micro/EMPclosed/EMPclosed-SSADdata.txt"
-
-    SSADdict = {}
-
-    with open(DATA) as f:
-
-        for d in f:
-            if d.strip():
-
-                d = d.split()
-                species = d[0]
-                abundance = float(d[2])
-
-                if abundance > 0:
-                    if species in SSADdict:
-                        SSADdict[species].append(abundance)
-                    else:
-                        SSADdict[species] = [abundance]
-
-    SSADs = []
-    SSADlist = SSADdict.items()
-
-    S = len(SSADlist)
-    N = 0
-    for tup in SSADlist:
-
-        SSAD = tup[1]
-        if len(SSAD) >= 1:
-
-            N += sum(SSAD)
-
-    return [N, S]
+def getNmax(N):
+    return 10 ** (-0.65 + 0.97*(log10(N)))
 
 
 
@@ -115,13 +54,13 @@ def Fig3():
     Nlist, Slist, klist, NmaxList, datasets, radDATA = [[],[],[],[],[],[]]
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
+    BadNames = ['.DS_Store', 'AGSOIL', 'SLUDGE']
 
     for name in os.listdir(mydir2 +'data/micro'):
         if name in BadNames: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         numlines = sum(1 for line in open(path))
         print name, numlines
@@ -130,14 +69,16 @@ def Fig3():
     its = 1
     for i in range(its):
         for dataset in datasets:
+
             name, kind, numlines = dataset
-
             lines = []
-            lines = np.random.choice(range(1, numlines+1), 2000, replace=True)
+            if name == 'EMPclosed' or name == 'EMPopen':
+                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+            if kind == 'micro': lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+            else: lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
 
-            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
-
+            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
             for line in lines:
                 data = linecache.getline(path, line)
                 radDATA.append(data)
@@ -148,7 +89,8 @@ def Fig3():
         name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
         N = float(N)
-        S = float(chao1)
+        S = float(S)
+        if S > 10**4: print name
         Nmax = float(Nmax)
 
         if S < 10 or N < 11: continue # Min species richness
@@ -157,18 +99,6 @@ def Fig3():
         Slist.append(float(np.log10(S)))
         NmaxList.append(float(np.log10(Nmax)))
         klist.append('DarkCyan')
-
-    N_open_ones = 1315651204
-    S_open_ones = 5594412
-    N_open_noones = 1252725686
-    S_open_noones = 2826534
-    N_closed_ones = 654448644
-    S_closed_ones = 69444
-    N_closed_noones = 648525168
-    S_closed_noones = 64658
-
-    empN = np.log10(N_open_ones)
-    empS = np.log10(S_open_ones)
 
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
@@ -180,8 +110,8 @@ def Fig3():
 
     # Regression for Dominance (Nmax) vs. N
     d = pd.DataFrame({'N': Nlist})
-    d['y'] = NmaxList
-    f = smf.ols('y ~ N', d).fit()
+    d['Nmax'] = NmaxList
+    f = smf.ols('Nmax ~ N', d).fit()
 
     dR2 = f.rsquared
     dpval = f.pvalues[0]
@@ -191,8 +121,8 @@ def Fig3():
 
     # Regression for Richness (S) vs. N
     d = pd.DataFrame({'N': Nlist})
-    d['y'] = Slist
-    f = smf.ols('y ~ N', d).fit()
+    d['S'] = Slist
+    f = smf.ols('S ~ N', d).fit()
 
     R2 = f.rsquared
     pval = f.pvalues[0]
@@ -223,140 +153,121 @@ def Fig3():
     xp = np.linspace(0, 32, 1000)
 
     plt.plot(xp, p(xp), '--', c='red', lw=2, alpha=0.8, label= r'$S$'+ ' = '+str(round(intercept,2))+'+'+str(round(slope,2))+'*'+r'$N$', color='Crimson')
-    plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 40, bins='log', cmap=plt.cm.Blues_r, label='EMP')
+    plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 20, bins='log', cmap=plt.cm.Reds, label='EMP')
 
     # Adding in derived/inferred points
     c = '0.3'
     GO = 1110*10**26 # estimated open ocean bacteria; add reference
     Pm = 2.9*10**27 # estimated Prochlorococcus marinus; add reference
-    Earth = 10**30 # estimated bacteria on Earth; add reference
-    SAR11 = Earth*0.1 #2*10**28 # estimated Pelagibacter ubique; add reference
+    Earth = 3.17*10**30 # estimated bacteria on Earth; add reference
+    SAR11 = 2*10**28 # estimated Pelagibacter ubique; add reference
 
     HGx =10**14 # estimated bacteria in Human gut; add reference
     HGy = 0.1169*(10**14) # estimated most abundant bacteria in Human gut; add reference # 0.0053
     COWx = 2.226*10**15 # estimated bacteria in Cow rumen; add reference
     COWy = (0.52/80)*(2.226*10**15) # estimated dominance in Cow rumen; add reference #0.5/80
 
-    Nmin = 1
     # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
+    Nmin = 1
     N = float(GO)
-    Nmax = float(Pm)
-    guess = 0.1
-    S2 = Preston2(N, Nmax, Nmin, guess)
-    guess = 0.01
-    S1 = Preston1(N, Nmax, guess)
+    Nmax = getNmax(N)
+    #Nmax = float(Pm)
+
+    guess = 0.1011
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    S2 = s2(a, Nmax, Nmin)
     S2 = log10(S2)
-    S1 = log10(S1)
     N = log10(N)
 
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.80, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.80, ls = '--', c = c)
-    ax.text(N-1, 8, 'Global ocean', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
-    Nlist.extend([N,N])
-    Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for the Global Ocean:', S1, S2
+    ax.text(2, S2*1.015, 'S of Global Ocean', fontsize=fs+2, color = c)
+    ax.axhline(S2, 0, 0.93, ls = '--', c = c)
+    ax.text(N-1, S2*.75, 'N of Global ocean', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(N, 0, 0.67, ls = '--', c = c)
+    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    Nlist.extend([N])
+    Slist.extend([S2])
+    print 'guess, a, & S for the Global Ocean:', guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
     N = float(Earth)
     Nmax = float(SAR11)
-    guess = 0.1
-    S2 = Preston2(N, Nmax, Nmin, guess)
-    guess = 0.01
-    S1 = Preston1(N, Nmax, guess)
+    #Nmax = getNmax(N)
+
+    guess = 0.09859
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    S2 = s2(a, Nmax, Nmin)
     S2 = log10(S2)
-    S1 = log10(S1)
     N = log10(N)
 
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.80, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.80, ls = '--', c = c)
-    ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
-    Nlist.extend([N, N])
-    Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Earth:', S1, S2
+    ax.text(2, S2*1.01, 'S of Earth', fontsize=fs+2, color = c)
+    ax.axhline(S2, 0, 0.97, ls = '--', c = c)
+    ax.text(N-1, 8, 'N of Earth', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(N, 0, 0.77, ls = '--', c = c)
+    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    Nlist.extend([N])
+    Slist.extend([S2])
+    print 'guess, a, & S for Earth:', guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Human Gut based on ...
     N = float(HGx)
-    Nmax = float(HGy)
-    guess = 0.1
-    S2 = Preston2(N, Nmax, Nmin, guess)
-    guess = 0.01
-    S1 = Preston1(N, Nmax, guess)
+    #Nmax = float(HGy)
+    Nmax = getNmax(N)
+
+    guess = 0.1509
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    S2 = s2(a, Nmax, Nmin)
     S2 = log10(S2)
-    S1 = log10(S1)
     N = log10(N)
 
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.45, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.45, ls = '--', c = c)
-    ax.text(N-1, 8, 'Human Gut', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, S2/25, ls = '--', c = c)
-    Nlist.extend([N, N])
-    Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Human Gut:', S1, S2
+    ax.text(2, S2*.9, 'S of Human Gut', fontsize=fs+2, color = c)
+    ax.axhline(S2, 0, 0.43, ls = '--', c = c)
+    ax.text(N-1, 4.7, 'N of Human Gut', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(N, 0, 0.33, ls = '--', c = c)
+    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    Nlist.extend([N])
+    Slist.extend([S2])
+    print 'guess, a, & S for Human Gut:', guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Cow Rumen based on ...
     N = float(COWx)
-    Nmax = float(COWy)
+    #Nmax = float(COWy)
+    Nmax = getNmax(N)
+
     guess = 0.1
-    S2 = Preston2(N, Nmax, Nmin, guess)
-    guess = 0.01
-    S1 = Preston1(N, Nmax, guess)
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    S2 = s2(a, Nmax, Nmin)
     S2 = log10(S2)
-    S1 = log10(S1)
     N = log10(N)
 
-    """
-    ax.text(2, S1-1.5, 'predicted high', fontsize=fs+2, color = c)
-    ax.axhline(S1, 0, 0.40, ls = '--', c = c)
-    ax.text(2, S2-1.5, 'predicted low', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.40, ls = '--', c = c)
-    ax.text(N-1, 8, 'Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
+    ax.text(2, S2*1.04, 'S of Cow Rumen', fontsize=fs+2, color = c)
+    ax.axhline(S2, 0, 0.45, ls = '--', c = c)
+    ax.text(N+0.3, 5.1, 'N of Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
     ax.axvline(N, 0, 0.38, ls = '--', c = c)
-    Nlist.extend([N, N])
-    Slist.extend([S1,S2])
-    print 'predicted S1 & S2 for Cow Rumen:', S1, S2
-    """
+    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    Nlist.extend([N])
+    Slist.extend([S2])
 
-    """
-    # N and S for the Human Microbiome Project,
-    S = np.log10(27483)
-    N = np.log10(22618041)
-    plt.scatter([N], [S], color = 'b', alpha= 1 , s = 40, linewidths=1, edgecolor='w', label='Human Microbiome Project')
-    Nlist.append(N)
-    Slist.append(S)
-    """
 
     ax.text(8, -2., 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*2)
-    ax.text(-2.3, 18, 'OTU '+ metric, fontsize=fs*2, rotation=90)
-
+    ax.text(-2.3, 12, 'OTU '+ metric, fontsize=fs*2, rotation=90)
     #leg = plt.legend(loc=2, numpoints = 1, prop={'size':fs})
     #leg.draw_frame(False)
-
     plt.xlim(1, 31)
-    plt.ylim(0.8, 25)
+    plt.ylim(0.8, 15)
 
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
-
     #plt.show()
-    #plt.close()
 
     return
 
 
 """ The following lines call figure functions to reproduce figures from the
-    Locey and Lennon (2014) manuscript """
+    Locey and Lennon (2015) manuscript """
 
 Fig3()
