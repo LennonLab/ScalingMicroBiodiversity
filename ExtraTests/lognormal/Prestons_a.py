@@ -13,7 +13,7 @@ pi = math.pi
 
 GO = 1110*10**26 # estimated open ocean bacteria; add reference
 Pm = 2.9*10**27 # estimated Prochlorococcus marinus; add reference
-Earth = 3*10**30 # estimated bacteria on Earth; add reference
+#Earth = 3*10**30 # estimated bacteria on Earth; add reference
 SAR11 = 2*10**28 # estimated Pelagibacter ubique; add reference
 Earth = 3.17 * 10**30 # estimated bacteria on Earth; add reference
 
@@ -55,7 +55,7 @@ def getNmax(N):
     return 10 ** (0.5 + 0.93*(log10(N)))
 
 def empS(N):
-    return 10 ** (0.2 + 0.55*(log10(Pm)))
+    return 10 ** (0.639 + 0.431*(log10(Earth)))
 
 
 Nt = float(Earth)
@@ -72,7 +72,7 @@ a = opt.fsolve(alpha1, guess)[0]
 #a = opt.newton(alpha1, guess)
 
 S1 = s1(a)
-print '\nalpha1 =', a, 'f(alpha1) = ', '%.2e' % alpha1(a), 'S1:','%.3e' % S1
+#print '\nalpha1 =', a, 'f(alpha1) = ', '%.2e' % alpha1(a), 'S1:','%.3e' % S1
 
 alist = np.linspace(0.99*a, a*1.2, 1000)
 plt.plot(alist, alpha1(alist))
@@ -83,7 +83,7 @@ plt.grid()
 ############################################### Assuming Nmin = 1
 fig.add_subplot(2,2,2)
 
-guess = 0.369
+guess = 0.099
 a = opt.fsolve(alpha2, guess)[0]
 #a = opt.newton(alpha2, guess, maxiter=100)
 
