@@ -54,7 +54,7 @@ def s2(a):
 def getNmax(N):
     return 10 ** (0.5 + 0.93*(log10(N)))
 
-def empS(N):
+def empS(N, b, slope):
     return 10 ** (0.639 + 0.431*(log10(Earth)))
 
 
