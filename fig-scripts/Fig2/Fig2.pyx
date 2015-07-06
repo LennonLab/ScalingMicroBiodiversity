@@ -78,7 +78,7 @@ def Fig2():
     for data in radDATA:
 
         data = data.split()
-        name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+        name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
         N = float(N)
         S = float(S)
@@ -217,7 +217,7 @@ def Fig2():
     plt.xlim(1, 33)
     plt.ylim(0, 32)
 
-    plt.savefig(mydir+'/figs/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     plt.close()
 
     return

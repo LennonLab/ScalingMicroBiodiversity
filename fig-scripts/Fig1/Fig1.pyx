@@ -25,40 +25,100 @@ import linecache
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
 mydir2 = os.path.expanduser("~/")
 
+sys.path.append(mydir2 + "tools/metrics")
+import metrics as mets
 
 
 def Fig1():
 
     datasets = []
     BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
+        if name in GoodNames: pass
+        else: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
         print name, num_lines
 
     for name in os.listdir(mydir2 +'data/macro'):
-        if name in BadNames: continue
+        if name in GoodNames: pass
+        else: continue
 
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
         print name, num_lines
+
+
+    FS_rarity = []
+    FS_dom = []
+    FS_ev = []
+    FS_S = []
+    Nlist = []
+
+    IN = mydir+'/output/partitions.txt'
+    num_lines = sum(1 for line in open(IN))
+    print 'lines:',num_lines
+    for line in open(IN):
+        rad = eval(line)
+
+        skew = stats.skew(rad)
+        # log-modulo transformation of skewnness
+        lms = np.log10(np.abs(skew) + 1)
+        if skew < 0: lms = lms * -1
+        FS_rarity.append(lms)
+
+        FS_S.append(np.log10(len(rad)))
+        Nlist.append(np.log10(sum(rad)))
+        FS_dom.append(np.log10(max(rad)))
+        ESimp = mets.e_simpson(rad)
+        FS_ev.append(np.log10(ESimp))
+
+    FSlists = [FS_rarity, FS_dom, FS_ev, FS_S]
 
     metrics = ['Rarity, '+r'$log_{10}$',
             'Dominance, '+r'$log_{10}$',
             'Evenness, ' +r'$log_{10}$',
             'Richness, ' +r'$log_{10}$']
 
-
     fig = plt.figure()
+    for index, ylist in enumerate(FSlists):
+
+        fig.add_subplot(2, 2, index+1)
+        # regression
+        d = pd.DataFrame({'N': list(Nlist)})
+        d['y'] = list(ylist)
+        f = smf.ols('y ~ N', d).fit()
+
+        # code for prediction intervals
+        X = np.linspace(-1, 10, 1000)
+        Y = f.predict(exog=dict(N=X))
+        Nlist2 = Nlist + X.tolist()
+    	ylist2 = ylist + Y.tolist()
+
+        d = pd.DataFrame({'N': list(Nlist2)})
+        d['y'] = list(ylist2)
+        f = smf.ols('y ~ N', d).fit()
+
+        st, data, ss2 = summary_table(f, alpha=0.05)
+
+        fittedvalues = data[:,2]
+        predict_mean_se = data[:,3]
+        predict_mean_ci_low, predict_mean_ci_upp = data[:,4:6].T
+        predict_ci_low, predict_ci_upp = data[:,6:8].T
+
+        plt.fill_between(Nlist2, predict_ci_low, predict_ci_upp, color='0.7', lw=0.0, alpha=0.4)
+
+
+
     for index, i in enumerate(metrics):
 
         metric = i
@@ -69,7 +129,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 300
+        its = 1000
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -84,12 +144,12 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 25, replace=True)
-                if kind == 'micro': lines = np.random.choice(range(1, numlines+1), 50, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 80, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -98,7 +158,7 @@ def Fig1():
             for data in radDATA:
 
                 data = data.split()
-                name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+                name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
                 N = float(N)
                 S = float(S)
@@ -176,13 +236,9 @@ def Fig1():
         print metric
         lm = smf.ols('y ~ N * Kind', d).fit()
         print lm.summary()
-        print metric
-        f1 = smf.ols('y ~ N', d).fit()
-        print f1.summary()
         print '\n\n'
 
         st, data, ss2 = summary_table(lm, alpha=0.05)
-        st_all, data_all, ss2_all = summary_table(f1, alpha=0.05)
         # ss2: Obs, Dep Var Population, Predicted Value, Std Error Mean Predict,
         # Mean ci 95% low, Mean ci 95% upp, Predict ci 95% low, Predict ci 95% upp,
         # Residual, Std Error Residual, Student Residual, Cook's D
@@ -192,10 +248,6 @@ def Fig1():
         predict_mean_ci_low, predict_mean_ci_upp = data[:,4:6].T
         predict_ci_low, predict_ci_upp = data[:,6:8].T
 
-        fittedvalues_all = data_all[:,2]
-        predict_mean_se_all = data_all[:,3]
-        predict_mean_ci_low_all, predict_mean_ci_upp_all = data_all[:,4:6].T
-        predict_ci_low_all, predict_ci_upp_all = data_all[:,6:8].T
 
         for j, kval in enumerate(KindList):
             if kval == 'macro':
@@ -215,8 +267,6 @@ def Fig1():
         MicPIx, MicFitted, micCiH, micCiL = zip(*sorted(zip(MicPIx, MicFitted, micCiH, micCiL)))
         MacPIx, MacFitted, macCiH, macCiL = zip(*sorted(zip(MacPIx, MacFitted, macCiH, macCiL)))
 
-        Nlist_all = list(Nlist)
-        Nlist_all, predict_mean_ci_low_all, predict_mean_ci_upp_all = zip(*sorted(zip(Nlist_all, predict_mean_ci_low_all, predict_mean_ci_upp_all)))
 
         num = min(len(MacListX), len(MicListX))
         for i in range(num):
@@ -224,48 +274,52 @@ def Fig1():
             plt.scatter(MicListX[i], MicListY[i], color = 'SkyBlue', alpha= 1 , s = 4, linewidths=0.5, edgecolor='Steelblue')
 
         plt.fill_between(MacPIx, macCiL, macCiH, color='r', lw=0.0, alpha=0.3)
+        plt.plot(MacPIx, MacFitted,  color='r', ls='--', lw=0.5, alpha=0.8)
         plt.fill_between(MicPIx, micCiL, micCiH, color='b', lw=0.0, alpha=0.3)
-        plt.fill_between(Nlist_all, predict_mean_ci_low_all, predict_mean_ci_upp_all, color='0.3', lw=0.0, alpha=0.6)
+        plt.plot(MicPIx, MicFitted,  color='b', ls='--', lw=0.5, alpha=0.8)
 
         MicInt = round(np.mean(MicIntList), 2)
         MicCoef = round(np.mean(MicCoefList), 2)
         MacInt = round(np.mean(MacIntList), 2)
         MacCoef = round(np.mean(MacCoefList), 2)
-        R2 = round(np.mean(R2List), 3)
+        R2 = round(np.mean(R2List), 2)
 
         if index == 0:
             plt.ylim(-0.1, 2.0)
             plt.xlim(1, 6)
-            plt.text(1.35, 1.7, r'$micro$'+ ' = '+str(round(MicInt,2))+'+'+str(round(MicCoef, 2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(1.35, 1.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
+            plt.text(1.35, 1.7, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 1.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 1.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= 'microbes (n='+str(len(MicListY))+')')
             plt.scatter([0],[-1], color = 'LightCoral',alpha= 1, s=10, linewidths=0.9, edgecolor='Crimson', label= 'macrobes (n='+str(len(MacListY))+')')
-            plt.legend(bbox_to_anchor=(-0.04, 1.1, 2.5, .2), loc=10, ncol=2, mode="expand",prop={'size':fs+2})
+            plt.legend(bbox_to_anchor=(-0.04, 1.1, 2.48, .2), loc=10, ncol=2, mode="expand",prop={'size':fs+2})
 
         elif index == 1:
+
+            plt.plot([0,7],[0,7], ls = '--', lw=1, c='0.7')
+            #ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
             plt.ylim(0, 6)
             plt.xlim(1, 6)
 
-            plt.text(1.35, 5.1, r'$micro$'+ ' = '+str(round(MicInt,2))+'+'+str(round(MicCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(1.35, 4.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
+            plt.text(1.35, 5.1, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 4.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 3.75,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 2:
-            plt.ylim(-2.5, 0.0)
+            plt.ylim(-3.0, 0.0)
             plt.xlim(1, 6)
 
-            plt.text(1.35, -1.8, r'$micro$'+ ' = '+str(round(MicInt,2))+' '+str(round(MicCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(1.35, -2.0, r'$macro$'+ ' = '+str(round(MacInt,2))+' '+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
-            plt.text(1.35, -2.3,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(1.35, -2.8, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, -2.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, -2.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 3:
             plt.ylim(0.9, 4.5)
             plt.xlim(1, 6)
 
-            plt.text(1.35, 3.9, r'$micro$'+ ' = '+str(round(MicInt,2))+'+'+str(round(MicCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
+            plt.text(1.35, 3.9, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 3.0,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         plt.xlabel('Total abundance, ' + r'$log_{10}$', fontsize=fs)
@@ -273,8 +327,8 @@ def Fig1():
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_OpenRef_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_OpenRef.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
     plt.close()
