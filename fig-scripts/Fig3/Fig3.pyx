@@ -39,7 +39,7 @@ def s2(a, Nmax, Nmin):
 
 
 def getNmax(N):
-    return 10 ** (-0.65 + 0.97*(log10(N)))
+    return 10 ** (-0.4 + 0.94*(log10(N)))
 
 
 def expS(N, b, slope):
@@ -58,17 +58,22 @@ def Fig3():
     Nlist, Slist, klist, NmaxList, datasets, radDATA = [[],[],[],[],[],[]]
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    BadNames = ['.DS_Store', 'AGSOIL', 'SLUDGE']
+    #BadNames = ['.DS_Store', 'AGSOIL', 'FECES']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
+        #if name in BadNames: continue
+        if name in GoodNames: pass
+        else: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         numlines = sum(1 for line in open(path))
         print name, numlines
         datasets.append([name, 'micro', numlines])
+
+    print '\n'
 
     its = 1
     for i in range(its):
@@ -77,12 +82,12 @@ def Fig3():
             name, kind, numlines = dataset
             lines = []
             if name == 'EMPclosed' or name == 'EMPopen':
-                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
-            if kind == 'micro': lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
-            else: lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+                lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+            #else: lines = np.random.choice(range(1, numlines+1), 10, replace=True)
 
-            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
             for line in lines:
                 data = linecache.getline(path, line)
                 radDATA.append(data)
@@ -90,17 +95,18 @@ def Fig3():
 
     for data in radDATA:
         data = data.split()
-        name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+        name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
         N = float(N)
         S = float(S)
-        if S > 10**4: print name
+        #if S > 10**4: print name
         Nmax = float(Nmax)
 
         if S < 10 or N < 11: continue # Min species richness
 
         Nlist.append(float(np.log10(N)))
         Slist.append(float(np.log10(S)))
+
         NmaxList.append(float(np.log10(Nmax)))
         klist.append('DarkCyan')
 
@@ -121,7 +127,7 @@ def Fig3():
     dpval = f.pvalues[0]
     dintercept = f.params[0]
     dslope = f.params[1]
-    print 'intercept, slope, pval, & R2 for Nmax vs. N:', round(dintercept,3), round(dslope,3), round(dpval,3), round(dR2,3)
+    print 'R2 for Nmax vs. N:', round(dR2,3)
 
     # Regression for Richness (S) vs. N
     d = pd.DataFrame({'N': Nlist})
@@ -133,7 +139,9 @@ def Fig3():
     intercept = f.params[0]
     slope = f.params[1]
 
-    print 'intercept, slope, pval, & R2 for S vs. N (w/out derived):', round(intercept, 3), round(slope,3), round(pval,3), round(R2,3)
+    print 'R2 for S vs. N:', round(R2,3),'\n'
+    plt.text(2, 10, r'$N_{max}$'+ ' = '+str(round(intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
+    plt.text(2, 9,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
 
     # code for prediction intervals
     X = np.linspace(5, 32, 100)
@@ -174,46 +182,68 @@ def Fig3():
     # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
     Nmin = 1
     N = float(GO)
-    Nmax = getNmax(N)
-    #Nmax = float(Pm)
+    empS = expS(N, intercept, slope)
 
-    guess = 0.1011
+    Nmax = Pm
+    guess = 0.1019
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    print guess, a
+    S2 = s2(a, Nmax, Nmin)
+
+    print 'P.m.:', '%.2e' % float(Pm), 'Nmax:', '%.2e' % getNmax(N)
+    print 'scaling law prediction of S for Global Ocean:', '%.3e' % empS
+    print 'lognormal prediction of S for Global Ocean, using estimated Nmax:', '%.3e' % S2
+
+    Nmax = getNmax(N)
+    guess = 0.106
     a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
     S2 = s2(a, Nmax, Nmin)
+
+    print 'lognormal prediction of S for Global Ocean, using predicted Nmax:', '%.3e' % S2,'\n'
+
     S2 = log10(S2)
     N = log10(N)
 
-    ax.text(2, S2*1.015, 'S of Global Ocean', fontsize=fs+2, color = c)
+    ax.text(17, S2*0.95, 'Global Ocean', fontsize=fs+2, color = c)
     ax.axhline(S2, 0, 0.93, ls = '--', c = c)
-    ax.text(N-1, S2*.75, 'N of Global ocean', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.67, ls = '--', c = c)
+    ax.text(N-1, S2*.75, 'Global ocean', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(N, 0, 0.8, ls = '--', c = c)
     plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Nlist.extend([N])
     Slist.extend([S2])
-    print 'guess, a, & S for the Global Ocean:', guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
     N = float(Earth)
-    Nmax = float(SAR11)
-    #Nmax = getNmax(N)
+    empS = expS(N, intercept, slope)
 
-    guess = 0.09859
+    Nmax = SAR11
+    guess = 0.1060
+    a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
+    print guess, a
+    S2 = s2(a, Nmax, Nmin)
+
+    print 'P.ubique.:', '%.2e' % float(SAR11), 'Nmax:', '%.2e' % getNmax(N)
+    print 'scaling law prediction of S for Earth:', '%.3e' % empS
+    print 'lognormal prediction of S for Earth, using estimated Nmax:', '%.3e' % S2
+
+    Nmax = getNmax(N)
+    guess = 0.1011
     a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
     S2 = s2(a, Nmax, Nmin)
+
+    print 'lognormal prediction of S for Earth, using predicted Nmax:', '%.3e' % S2
+
     S2 = log10(S2)
     N = log10(N)
 
-    ax.text(2, S2*1.01, 'S of Earth', fontsize=fs+2, color = c)
+    ax.text(20, S2*1.025, 'Earth', fontsize=fs+2, color = c)
     ax.axhline(S2, 0, 0.97, ls = '--', c = c)
-    ax.text(N-1, 8, 'N of Earth', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.77, ls = '--', c = c)
+    ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = c, rotation = 90)
+    ax.axvline(N, 0, 0.8, ls = '--', c = c)
     plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Nlist.extend([N])
     Slist.extend([S2])
-    print 'm and b', slope, intercept
-    empS = expS(Earth, intercept, slope)
-    print 'expS, guess, a, & S for Earth:', empS, guess, '%.3e' % a, '%.3e' % 10**S2
 
 
     # Human Gut based on ...
@@ -227,14 +257,14 @@ def Fig3():
     S2 = log10(S2)
     N = log10(N)
 
-    ax.text(2, S2*.9, 'S of Human Gut', fontsize=fs+2, color = c)
+    ax.text(2, S2*.9, 'Human Gut', fontsize=fs+2, color = c)
     ax.axhline(S2, 0, 0.43, ls = '--', c = c)
-    ax.text(N-1, 4.7, 'N of Human Gut', fontsize=fs+2, color = c, rotation = 90)
+    ax.text(N-1, 3.2, 'Human Gut', fontsize=fs+2, color = c, rotation = 90)
     ax.axvline(N, 0, 0.33, ls = '--', c = c)
     plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Nlist.extend([N])
     Slist.extend([S2])
-    print 'guess, a, & S for Human Gut:', guess, '%.3e' % a, '%.3e' % 10**S2
+    #print 'predS for Human Gut:', '%.3e' % 10**S2
 
 
     # Cow Rumen based on ...
@@ -248,24 +278,24 @@ def Fig3():
     S2 = log10(S2)
     N = log10(N)
 
-    ax.text(2, S2*1.04, 'S of Cow Rumen', fontsize=fs+2, color = c)
+    ax.text(2, S2*1.04, 'Cow Rumen', fontsize=fs+2, color = c)
     ax.axhline(S2, 0, 0.45, ls = '--', c = c)
-    ax.text(N+0.3, 5.1, 'N of Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
+    ax.text(N+0.3, 4.2, 'Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
     ax.axvline(N, 0, 0.38, ls = '--', c = c)
     plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Nlist.extend([N])
     Slist.extend([S2])
 
 
-    ax.text(8, -2., 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*2)
+    ax.text(3, -1, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.3, 12, 'OTU '+ metric, fontsize=fs*2, rotation=90)
     #leg = plt.legend(loc=2, numpoints = 1, prop={'size':fs})
     #leg.draw_frame(False)
     plt.xlim(1, 31)
-    plt.ylim(0.8, 15)
+    plt.ylim(0.8, 14)
 
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
     #plt.show()

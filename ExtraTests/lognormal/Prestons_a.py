@@ -54,8 +54,8 @@ def s2(a):
 def getNmax(N):
     return 10 ** (0.5 + 0.93*(log10(N)))
 
-def empS(N, b, slope):
-    return 10 ** (0.639 + 0.431*(log10(Earth)))
+def empS(N, b=0.639, slope=0.431):
+    return 10 ** (0.639 + 0.431*(log10(N)))
 
 
 Nt = float(Earth)

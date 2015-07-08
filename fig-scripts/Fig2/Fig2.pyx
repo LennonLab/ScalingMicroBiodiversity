@@ -40,12 +40,13 @@ def Fig2():
     fs = 10 # font size used across figures
     Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
-    BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
+    #BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
-        #if name == 'EMPopen': pass
-        #else: continue
+        #if name in BadNames: continue
+        if name in GoodNames: pass
+        else: continue
 
         path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
@@ -62,12 +63,12 @@ def Fig2():
             lines = []
 
             lines = []
-            lines = np.random.choice(range(1, numlines+1), 2000, replace=True)
+            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
 
             #lines = random.sample(range(1, numlines+1), numlines)
 
-            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+            path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+            #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
             for line in lines:
                 data = linecache.getline(path, line)
@@ -78,7 +79,7 @@ def Fig2():
     for data in radDATA:
 
         data = data.split()
-        name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+        name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
         N = float(N)
         S = float(S)
@@ -89,7 +90,7 @@ def Fig2():
         NmaxList.append(float(np.log10(float(Nmax))))
         klist.append('DarkCyan')
 
-    metric = 'Dominance, '+'log'+r'$_{10}$'
+    metric = 'Dominance, '+'$log$'+r'$_{10}$'
 
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
@@ -127,8 +128,11 @@ def Fig2():
     pred_ci_low, pred_ci_upp = data[:,6:8].T
 
     plt.fill_between(Nlist2, pred_ci_low, pred_ci_upp, color='r', lw=0.5, alpha=0.2)
+    plt.text(2, 22, r'$N_{max}$'+ ' = '+str(round(intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
+    plt.text(2, 20,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
 
     print 'r-squared and slope for RADs w/out inferred:', round(R2, 3), round(slope,3)
+
 
     #label1 = 'EMP (heat mapped only): slope ='+str(round(slope,3))+', ' + r'$R^2$' + '=' +str(round(R2, 3))
     #ax.plot([0],[0], '-', c='Steelblue', lw=4, alpha=1, label=label1)
@@ -176,7 +180,7 @@ def Fig2():
     ax.text(COWx+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = c, rotation = 90)
     ax.axvline(COWx, 0, 0.41, ls = '--', c = c)
 
-    ax.text(9, -3.17, 'Total abundance, '+ 'log'+r'$_{10}$', fontsize=fs*1.8)
+    ax.text(3, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
 
     plt.scatter([GO], [Pm], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
@@ -217,8 +221,12 @@ def Fig2():
     plt.xlim(1, 33)
     plt.ylim(0, 32)
 
-    plt.savefig(mydir+'/figs/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.close()
+    plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference.png', dpi=600, bbox_inches = "tight")
+
+    #plt.show()
 
     return
 
