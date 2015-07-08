@@ -33,14 +33,14 @@ def Fig1():
 
     datasets = []
     BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC']
-    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -50,8 +50,8 @@ def Fig1():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -148,8 +148,8 @@ def Fig1():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -322,16 +322,19 @@ def Fig1():
             plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 3.0,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
-        plt.xlabel('Total abundance, ' + r'$log_{10}$', fontsize=fs)
+
+        plt.xlabel('Number of reads or individuals, '+ '$log$'+r'$_{10}$', fontsize=fs)
         plt.ylabel(metric, fontsize=fs)
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_OpenRef_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1_OpenRef.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
-    plt.close()
+    #plt.close()
 
     return
 
