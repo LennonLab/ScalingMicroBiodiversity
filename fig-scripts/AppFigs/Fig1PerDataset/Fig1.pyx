@@ -29,6 +29,8 @@ mydir2 = os.path.expanduser("~/")
 
 def Fig1():
 
+    OUT = open(mydir + 'output/PerDataset.txt','w+')
+
     """ This code generates a 4 plot figure of diversity properties (rarity,
         dominance, evenness, richness) versus total abundance, for each dataset.
         This code also generates a .txt file of results for the regression
@@ -62,6 +64,7 @@ def Fig1():
             'Richness, ' +r'$log_{10}$']
 
     OUT = open(mydir + 'output/SummaryPerDataset_NoMicrobe1s.txt','w+')
+    #OUT = open(mydir + 'output/SummaryPerDataset.txt','w+')
 
     for dataset in datasets:
 
@@ -76,7 +79,7 @@ def Fig1():
             Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-            its = 1
+            its = 1000
             f = list()
             for n in range(its):
 
@@ -89,7 +92,7 @@ def Fig1():
 
                 name, kind, numlines = dataset
                 lines = []
-                lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
+                lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
                 path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -101,7 +104,7 @@ def Fig1():
                 for data in radDATA:
 
                     data = data.split()
-                    name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+                    name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
                     N = float(N)
                     S = float(S)
@@ -157,6 +160,8 @@ def Fig1():
             Coef = round(np.mean(CoefList), 2)
             R2 = round(np.mean(R2List), 3)
 
+            print dataset, metric, Int, Coef, R2
+
             x = min(Nlist)
             y = 1.1*max(metlist)
 
@@ -181,7 +186,7 @@ def Fig1():
             print>>OUT, name, kind, metrix[index], np.mean(PIx), np.mean(Slist), Int, Coef
 
         #plt.subplots_adjust(wspace=0.4, hspace=0.4)
-        #plt.savefig(mydir+'/figs/appendix/Fig1/Locey_Lennon_2015_'+name+'_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/appendix/Fig1/PerDataset/Locey_Lennon_2015_'+name+'_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
         #plt.show()
         print name
 
