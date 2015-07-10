@@ -43,7 +43,7 @@ def getNmax(N):
 
 
 def expS(N, b, slope):
-    return 10 ** (b + slope*(log10(N)))
+    return b*(N**slope)
 
 
 
@@ -58,8 +58,8 @@ def Fig3():
     Nlist, Slist, klist, NmaxList, datasets, radDATA = [[],[],[],[],[],[]]
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    #BadNames = ['.DS_Store', 'AGSOIL', 'FECES']
-    GoodNames = ['MGRAST', 'HMP', 'EMPopen']
+    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed']
 
     for name in os.listdir(mydir2 +'data/micro'):
         #if name in BadNames: continue
@@ -75,16 +75,15 @@ def Fig3():
 
     print '\n'
 
-    its = 1
+    its = 10
     for i in range(its):
         for dataset in datasets:
 
             name, kind, numlines = dataset
             lines = []
             if name == 'EMPclosed' or name == 'EMPopen':
-                lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
-            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
-            #else: lines = np.random.choice(range(1, numlines+1), 10, replace=True)
+                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
 
             #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
             path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -138,6 +137,7 @@ def Fig3():
     pval = f.pvalues[0]
     intercept = f.params[0]
     slope = f.params[1]
+
 
     print 'R2 for S vs. N:', round(R2,3),'\n'
     plt.text(2, 10, r'$N_{max}$'+ ' = '+str(round(intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
@@ -216,6 +216,7 @@ def Fig3():
     # Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
     N = float(Earth)
     empS = expS(N, intercept, slope)
+    print slope, intercept, '%.3e' % empS
 
     Nmax = SAR11
     guess = 0.1060
@@ -226,6 +227,8 @@ def Fig3():
     print 'P.ubique.:', '%.2e' % float(SAR11), 'Nmax:', '%.2e' % getNmax(N)
     print 'scaling law prediction of S for Earth:', '%.3e' % empS
     print 'lognormal prediction of S for Earth, using estimated Nmax:', '%.3e' % S2
+
+    sys.exit()
 
     Nmax = getNmax(N)
     guess = 0.1011
