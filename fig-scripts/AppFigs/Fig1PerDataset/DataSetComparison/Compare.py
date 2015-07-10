@@ -32,7 +32,7 @@ def setBoxColors(bp):
 
 
 datasets = []
-BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPclosed', 'FECES', 'MGRAST', 'NABC']
+BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPopen', 'FECES', 'MGRAST', 'NABC', 'FUNGI']
 #GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 metrics = ['rarity', 'dominance', 'evenness', 'richness']
 
@@ -63,7 +63,7 @@ for m in metrics:
             macIntList.append(float(Int))
             macCoefList.append(float(Coef))
 
-        print name, avgN, avgS
+        #print name, avgN, avgS
 
     IN.close()
 

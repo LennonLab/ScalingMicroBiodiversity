@@ -13,7 +13,6 @@ pi = math.pi
 
 GO = 1110*10**26 # estimated open ocean bacteria; add reference
 Pm = 2.9*10**27 # estimated Prochlorococcus marinus; add reference
-#Earth = 3*10**30 # estimated bacteria on Earth; add reference
 SAR11 = 2*10**28 # estimated Pelagibacter ubique; add reference
 Earth = 3.17 * 10**30 # estimated bacteria on Earth; add reference
 

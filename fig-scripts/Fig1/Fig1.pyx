@@ -32,15 +32,15 @@ import metrics as mets
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'MGRAST', 'FECES', 'EMPopen']
-    #GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed', 'BIGN', 'BOVINE', 'SED', 'FUNGI']
+    GoodNames = ['MGRAST','HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        #if name in GoodNames: pass
-        #else: continue
+        if name in GoodNames: pass
+        else: continue
 
-        if name in BadNames: continue
-        else: pass
+        #if name in BadNames: continue
+        #else: pass
 
         #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
@@ -50,11 +50,11 @@ def Fig1():
         print name, num_lines
 
     for name in os.listdir(mydir2 +'data/macro'):
-        #if name in GoodNames: pass
-        #else: continue
+        if name in GoodNames: pass
+        else: continue
 
-        if name in BadNames: continue
-        else: pass
+        #if name in BadNames: continue
+        #else: pass
 
         #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
@@ -64,67 +64,12 @@ def Fig1():
         print name, num_lines
 
 
-    FS_rarity = []
-    FS_dom = []
-    FS_ev = []
-    FS_S = []
-    Nlist = []
-
-    IN = mydir+'/output/partitions.txt'
-    num_lines = sum(1 for line in open(IN))
-    print 'lines:',num_lines
-    for line in open(IN):
-        rad = eval(line)
-
-        skew = stats.skew(rad)
-        # log-modulo transformation of skewnness
-        lms = np.log10(np.abs(skew) + 1)
-        if skew < 0: lms = lms * -1
-        FS_rarity.append(lms)
-
-        FS_S.append(np.log10(len(rad)))
-        Nlist.append(np.log10(sum(rad)))
-        FS_dom.append(np.log10(max(rad)))
-        ESimp = mets.e_simpson(rad)
-        FS_ev.append(np.log10(ESimp))
-
-    FSlists = [FS_rarity, FS_dom, FS_ev, FS_S]
-
     metrics = ['Rarity, '+r'$log_{10}$',
             'Dominance, '+r'$log_{10}$',
             'Evenness, ' +r'$log_{10}$',
             'Richness, ' +r'$log_{10}$']
 
     fig = plt.figure()
-    for index, ylist in enumerate(FSlists):
-
-        fig.add_subplot(2, 2, index+1)
-        # regression
-        d = pd.DataFrame({'N': list(Nlist)})
-        d['y'] = list(ylist)
-        f = smf.ols('y ~ N', d).fit()
-
-        # code for prediction intervals
-        X = np.linspace(-1, 10, 1000)
-        Y = f.predict(exog=dict(N=X))
-        Nlist2 = Nlist + X.tolist()
-    	ylist2 = ylist + Y.tolist()
-
-        d = pd.DataFrame({'N': list(Nlist2)})
-        d['y'] = list(ylist2)
-        f = smf.ols('y ~ N', d).fit()
-
-        st, data, ss2 = summary_table(f, alpha=0.05)
-
-        fittedvalues = data[:,2]
-        predict_mean_se = data[:,3]
-        predict_mean_ci_low, predict_mean_ci_upp = data[:,4:6].T
-        predict_ci_low, predict_ci_upp = data[:,6:8].T
-
-        plt.fill_between(Nlist2, predict_ci_low, predict_ci_upp, color='0.7', lw=0.0, alpha=0.4)
-
-
-
     for index, i in enumerate(metrics):
 
         metric = i
@@ -135,7 +80,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 1000
+        its = 300
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -150,8 +95,8 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 40, replace=True) # 166
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 40, replace=True) #167
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 50, replace=True) #167
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 100
 
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
@@ -169,7 +114,7 @@ def Fig1():
                 N = float(N)
                 S = float(S)
 
-                if S < 2 or N < 10: continue
+                if S < 2 or N < 11: continue
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
@@ -203,8 +148,6 @@ def Fig1():
             d['Kind'] = list(KindList)
             f = smf.ols('y ~ N * Kind', d).fit()
 
-            # Simple regression
-            #f1 = smf.ols('y ~ N', d).fit()
 
             MacIntList.append(f.params[0])
             MacCoefList.append(f.params[2])
