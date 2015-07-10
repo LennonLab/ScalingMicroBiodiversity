@@ -32,12 +32,15 @@ import metrics as mets
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC']
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'MGRAST', 'FECES', 'EMPopen']
+    #GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        if name in GoodNames: pass
-        else: continue
+        #if name in GoodNames: pass
+        #else: continue
+
+        if name in BadNames: continue
+        else: pass
 
         #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
@@ -47,8 +50,11 @@ def Fig1():
         print name, num_lines
 
     for name in os.listdir(mydir2 +'data/macro'):
-        if name in GoodNames: pass
-        else: continue
+        #if name in GoodNames: pass
+        #else: continue
+
+        if name in BadNames: continue
+        else: pass
 
         #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
@@ -144,9 +150,9 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 40, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 40, replace=True) #167
+                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 100
 
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -331,9 +337,9 @@ def Fig1():
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
-    #plt.show()
+    plt.show()
     #plt.close()
 
     return
