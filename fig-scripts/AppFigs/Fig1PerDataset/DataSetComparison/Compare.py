@@ -32,7 +32,7 @@ def setBoxColors(bp):
 
 
 datasets = []
-BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPopen', 'FECES', 'MGRAST', 'NABC']
+BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPopen', 'FECES', 'MGRAST', 'NABC', 'FUNGI']
 #GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 metrics = ['rarity', 'dominance', 'evenness', 'richness']
 
@@ -110,5 +110,5 @@ for m in metrics:
     hB.set_visible(False)
     hR.set_visible(False)
 
-    plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_NoMicrobeSingletons_ClosedRef.png', dpi=600, bbox_inches = "tight")
-    #plt.show()
+    #plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_NoMicrobeSingletons_ClosedRef.png', dpi=600, bbox_inches = "tight")
+    plt.show()

@@ -32,15 +32,15 @@ import metrics as mets
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed']
-    GoodNames = ['HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed', 'BIGN', 'BOVINE', 'SED', 'FUNGI']
+    GoodNames = ['MGRAST','HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
-        #if name in GoodNames: pass
-        #else: continue
+        if name in GoodNames: pass
+        else: continue
 
-        if name in BadNames: continue
-        else: pass
+        #if name in BadNames: continue
+        #else: pass
 
         #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
@@ -50,11 +50,11 @@ def Fig1():
         print name, num_lines
 
     for name in os.listdir(mydir2 +'data/macro'):
-        #if name in GoodNames: pass
-        #else: continue
+        if name in GoodNames: pass
+        else: continue
 
-        if name in BadNames: continue
-        else: pass
+        #if name in BadNames: continue
+        #else: pass
 
         #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
         path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
@@ -80,7 +80,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 10
+        its = 300
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -95,8 +95,8 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 42, replace=True) # 166
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 41, replace=True) #167
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 50, replace=True) #167
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 100
 
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
@@ -114,7 +114,7 @@ def Fig1():
                 N = float(N)
                 S = float(S)
 
-                if S < 10 or N < 11: continue
+                if S < 2 or N < 11: continue
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
@@ -279,10 +279,10 @@ def Fig1():
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
-    #plt.show()
+    plt.show()
     #plt.close()
 
     return

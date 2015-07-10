@@ -43,7 +43,7 @@ def getNmax(N):
 
 
 def expS(N, b, slope):
-    return b*(N**slope)
+    return 10 ** (b + slope*(log10(N)))
 
 
 
@@ -58,8 +58,8 @@ def Fig3():
     Nlist, Slist, klist, NmaxList, datasets, radDATA = [[],[],[],[],[],[]]
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed']
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed']
+    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPopen']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen']
 
     for name in os.listdir(mydir2 +'data/micro'):
         #if name in BadNames: continue
@@ -75,15 +75,15 @@ def Fig3():
 
     print '\n'
 
-    its = 10
+    its = 1000
     for i in range(its):
         for dataset in datasets:
 
             name, kind, numlines = dataset
             lines = []
             if name == 'EMPclosed' or name == 'EMPopen':
-                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
-            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+                lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
             #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
             path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -101,7 +101,7 @@ def Fig3():
         #if S > 10**4: print name
         Nmax = float(Nmax)
 
-        if S < 10 or N < 11: continue # Min species richness
+        if S < 2 or N < 11: continue # Min species richness
 
         Nlist.append(float(np.log10(N)))
         Slist.append(float(np.log10(S)))
@@ -228,7 +228,6 @@ def Fig3():
     print 'scaling law prediction of S for Earth:', '%.3e' % empS
     print 'lognormal prediction of S for Earth, using estimated Nmax:', '%.3e' % S2
 
-    sys.exit()
 
     Nmax = getNmax(N)
     guess = 0.1011
