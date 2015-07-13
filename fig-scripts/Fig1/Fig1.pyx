@@ -33,7 +33,7 @@ def Fig1():
 
     datasets = []
     #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed', 'BIGN', 'BOVINE', 'SED', 'FUNGI']
-    GoodNames = ['MGRAST','HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):
         if name in GoodNames: pass
@@ -80,7 +80,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 300
+        its = 100
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -95,9 +95,9 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 50, replace=True) # 166
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 50, replace=True) #167
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 100
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
 
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -114,7 +114,7 @@ def Fig1():
                 N = float(N)
                 S = float(S)
 
-                if S < 2 or N < 11: continue
+                if S < 10 or N < 11: continue
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
