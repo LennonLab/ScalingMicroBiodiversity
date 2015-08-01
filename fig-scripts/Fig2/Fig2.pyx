@@ -41,40 +41,32 @@ def Fig2():
     Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
     #BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
-    GoodNames = ['MGRAST', 'HMP', 'EMPopen']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed']
 
     for name in os.listdir(mydir2 +'data/micro'):
         #if name in BadNames: continue
         if name in GoodNames: pass
         else: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         numlines = sum(1 for line in open(path))
         print name, numlines
         datasets.append([name, 'micro', numlines])
 
-    its = 1
-    for i in range(its):
-        print i
-        for dataset in datasets:
-            name, kind, numlines = dataset
-            lines = []
+    for dataset in datasets:
+        name, kind, numlines = dataset
+        lines = []
+        lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
-            lines = []
-            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+        for line in lines:
+            data = linecache.getline(path, line)
+            radDATA.append(data)
 
-            #lines = random.sample(range(1, numlines+1), numlines)
-
-            path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-            #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
-
-            for line in lines:
-                data = linecache.getline(path, line)
-                radDATA.append(data)
-
-            klist.append('DarkCyan')
+        klist.append('DarkCyan')
 
     for data in radDATA:
 
@@ -139,55 +131,62 @@ def Fig2():
 
     plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 80, bins='log', cmap=plt.cm.Reds_r)
 
-    GO = log10(1110*10**26) # estimated open ocean bacteria; add reference
-    Pm = log10(2.9*10**27) # estimated Prochlorococcus marinus; add reference
-    Earth = log10(10**30) # estimated bacteria on Earth; add reference
-    SAR11 = log10(2*10**28) # estimated Pelagibacter ubique; add reference
-    Earth = log10(3.17 * 10**30) # estimated bacteria on Earth; add reference
+    GO = np.log10([360.0*(10**26), 1010.0*(10**26)]) # estimated open ocean bacteria; Whitman et al. 1998
+    Pm = np.log10([2.8*(10**27), 3.0*(10**27)]) # estimated Prochlorococcus; Flombaum et al. 2013
+    Syn = np.log10([6.7*(10**26), 7.3*(10**26)]) # estimated Synechococcus; Flombaum et al. 2013
 
-    HGx = log10(10**14) # estimated bacteria in Human gut; add reference
-    HGy = log10(0.1169*(10**14)) # estimated most abundant bacteria in Human gut; add reference
-    # 0.0053
-    COWx = log10(2.226*10**15) # estimated bacteria in Cow rumen; add reference
-    COWy = log10((0.52/80)*(2.226*10**15)) # estimated dominance in Cow rumen; add reference
-    #0.5/80
+    Earth = np.log10([9.2*(10**29), 31.7*(10**29)]) # estimated bacteria on Earth; Kallmeyer et al. 2012
+    SAR11 = np.log10([2.0*(10**28), 2.0*(10**28)]) # estimated percent abundance of SAR11; Morris et al. (2002)
 
-    #EMPx = log10(1252724704)
-    #EMPy = log10(597974)
+    HGx = np.log10([0.5*(10**14), 1.5*(10**14)]) # estimated bacteria in Human gut; ADD REFERENCE
+    HGy = np.log10([0.05*(10**min(HGx)), 0.15*(10**max(HGx))]) # estimated most abundant bacteria in Human gut; Turnbaugh et al. (2009)
 
-    c = '0.3'
-    ax.text(11, SAR11+0.5, 'Ocean abundance of '+r'$Pelagibacter$'+' '+r'$ubique$', fontsize=fs+2, color = c)
-    ax.axhline(SAR11, 0, 0.9, ls = '--', c = c)
+    COWx = np.log10([0.5*2.226*(10**15), 1.5*2.226*(10**15)]) # estimated bacteria in Cow rumen; LOW:   HIGH: Whitman et al. (1998)
+    COWy = np.log10([0.09*(10**min(COWx)), .15*(10**max(COWx))]) # estimated dominance in Cow rumen;
 
-    ax.text(11, Pm-1.15, 'Abundance of '+r'$Prochloroccus$', fontsize=fs+2, color = c)
-    ax.axhline(Pm, 0, 0.88, ls = '--', c = c)
+    c = '0.2'
+    ## EARTH
+    ax.text(11, max(SAR11+0.5), r'$Prochlorococcus$ to $Pelagibacterales$', fontsize=fs+2, color = c)
+    ax.text(max(Earth)+0.5, 26, 'Earth microbiome', fontsize=fs+2, color = c, rotation = 90)
+    ax.axhline(min(Pm), 0, 0.9, ls = '--', c = c)
+    ax.axhline(max(SAR11), 0, 0.9, ls = '--', c = c)
+    ax.axvline(min(Earth), 0, 0.88, ls = '--', c = c)
+    ax.axvline(max(Earth), 0, 0.88, ls = '--', c = c)
+    plt.fill_between(Earth, min(Pm), max(SAR11), color = c, alpha= 0.8 , linewidths=0.5, edgecolor='0.2')
 
-    ax.text(GO-1, 24, 'Non-sediment ocean bacteria', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(GO, 0, 0.86, ls = '--', c = c)
+    a = 0.8
+    c = '0.4'
+    ## GLOBAL OCEAN
+    ax.text(10, min(Pm)-2.2, r'$Synechococcus$ to $Prochloroccus$', fontsize=fs+2, color = c)
+    ax.text(min(GO)-1, 24, 'Non-sediment ocean bacteria', fontsize=fs+2, color = c, rotation = 90)
+    ax.axhline(min(Syn), 0, 0.88, ls = '--', c = c)
+    ax.axhline(max(Pm), 0, 0.88, ls = '--', c = c)
+    ax.axvline(min(GO), 0, 0.86, ls = '--', c = c)
+    ax.axvline(max(GO), 0, 0.86, ls = '--', c = c)
+    plt.fill_between(GO, min(Syn), max(Pm), color = c, alpha= a , linewidths=0.5, edgecolor='0.2')
 
-    ax.text(Earth+0.5, 26, 'Global abundance of bacteria', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(Earth, 0, 0.88, ls = '--', c = c)
+    c = '0.2'
+    ## HUMAN GUT
+    ax.text(2, min(HGy)-1.5, 'Human gut', fontsize=fs+2, color = c)
+    ax.text(min(HGx)-1, 8, 'Human gut', fontsize=fs+2, color = c, rotation = 90)
+    ax.axhline(min(HGy), 0, 0.40, ls = '--', c = c)
+    ax.axhline(max(HGy), 0, 0.40, ls = '--', c = c)
+    ax.axvline(min(HGx), 0, 0.38, ls = '--', c = c)
+    ax.axvline(max(HGx), 0, 0.38, ls = '--', c = c)
+    plt.fill_between(HGx, min(HGy), max(HGy), color = c, alpha= a, linewidths=0.5, edgecolor='0.2')
 
-    ax.text(2, HGy-1.5, 'Avg. in human guts', fontsize=fs+2, color = c)
-    ax.axhline(HGy, 0, 0.40, ls = '--', c = c)
-
-    ax.text(HGx-1, 8, 'Human gut', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(HGx, 0, 0.38, ls = '--', c = c)
-
-    ax.text(4, COWy+0.6, 'Avg among '+r'$Prevotella$', fontsize=fs+2, color = c)
-    ax.axhline(COWy, 0, 0.44, ls = '--', c = c)
-
-    ax.text(COWx+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(COWx, 0, 0.41, ls = '--', c = c)
+    c = '0.4'
+    ## COW RUMEN
+    ax.text(4, max(COWy)+0.6, 'Cow rumen', fontsize=fs+2, color = c)
+    ax.text(max(COWx)+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = c, rotation = 90)
+    ax.axhline(min(COWy), 0, 0.44, ls = '--', c = c)
+    ax.axhline(max(COWy), 0, 0.44, ls = '--', c = c)
+    ax.axvline(min(COWx), 0, 0.41, ls = '--', c = c)
+    ax.axvline(max(COWx), 0, 0.41, ls = '--', c = c)
+    plt.fill_between(COWx, min(COWy), max(COWy), color = c, alpha= a, linewidths=0.5, edgecolor='0.2')
 
     ax.text(3, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
-
-    plt.scatter([GO], [Pm], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
-    plt.scatter([Earth], [SAR11], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
-
-    plt.scatter([HGx], [HGy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
-    plt.scatter([COWx], [COWy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
 
     #plt.scatter([EMPx], [EMPy], color = 'b', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
     #plt.scatter([COWx], [COWy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
@@ -196,40 +195,16 @@ def Fig2():
     plt.plot([0,32],[0,32], ls = '-', lw=2, c='0.7')
     ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
 
-
-    Nlist.extend([HGx, GO, Earth, COWx])
-    NmaxList.extend([HGy, Pm, SAR11, COWy])
-
-    """
-    d = pd.DataFrame({'N': list(Nlist)})
-    d['y'] = list(NmaxList)
-    f = smf.ols('y ~ N', d).fit()
-
-    R2 = f.rsquared
-    pval = f.pvalues
-    intercept = f.params[0]
-    slope = f.params[1]
-
-    print ': r-squared and slope for RADs with inferred:', round(R2,3), round(slope,3)
-    """
-
-    #label2 = 'EMP + inferred points: slope ='+str(round(slope,3))+', ' + r'$R^2$' + '=' +str(round(R2,3))
-
-    #plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
-    #                        mode="expand",prop={'size':fs+4})
-
     plt.xlim(1, 33)
     plt.ylim(0, 32)
 
-    plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
-
     return
-
 
 
 
