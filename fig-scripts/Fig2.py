@@ -118,14 +118,17 @@ def Fig2():
     pred_mean_ci_low, pred_mean_ci_upp = data[:,4:6].T
     pred_ci_low, pred_ci_upp = data[:,6:8].T
 
+    label1 = 'Microbial dominance-abundance ($N_{max}$ vs. $N$) scaling relationship'
+    label2 = 'Ranges of reported $N_{max}$ and $N$'
+
     plt.fill_between(Nlist2, pred_ci_low, pred_ci_upp, color='r', lw=0.5, alpha=0.2)
     plt.text(2, 22, r'$N_{max}$'+ ' = '+str(round(intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
     plt.text(2, 20,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
+    plt.plot(X.tolist(), Y.tolist(), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
 
     print 'r-squared and slope for RADs w/out inferred:', round(R2, 3), round(slope,3)
 
 
-    #label1 = 'EMP (heat mapped only): slope ='+str(round(slope,3))+', ' + r'$R^2$' + '=' +str(round(R2, 3))
     #ax.plot([0],[0], '-', c='Steelblue', lw=4, alpha=1, label=label1)
 
     plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 80, bins='log', cmap=plt.cm.Reds_r)
@@ -154,7 +157,7 @@ def Fig2():
     ax.text(max(Earth)+0.5, 26, 'Earth microbiome', fontsize=fs+2, color = 'k', rotation = 90)
     ax.axhline(y, 0, 0.90, ls = '--', c = '0.6')
     ax.axvline(x, 0, 0.85, ls = '--', c = '0.6')
-    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
+    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1, label=label2)
 
     c = '0.4'
     ## GLOBAL OCEAN
@@ -188,7 +191,7 @@ def Fig2():
     y_range = (max(COWy) - min(COWy))/2.0
 
     ax.text(8, max(COWy)+0.3, 'Cow rumen', fontsize=fs+2, color = 'k')
-    ax.text(max(COWx)+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.text(max(COWx)+0.4, 11.2, 'Cow rumen', fontsize=fs+2, color = 'k', rotation = 90)
     ax.axhline(y, 0, 0.41, ls = '--', c = '0.6')
     ax.axvline(x, 0, 0.43, ls = '--', c = '0.6')
     plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
@@ -196,15 +199,14 @@ def Fig2():
     ax.text(3, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
 
-    #plt.scatter([EMPx], [EMPy], color = 'b', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
-    #plt.scatter([COWx], [COWy], color = '0.3', alpha= 1 , s = 40, linewidths=0.5, edgecolor='0.2')
-
-
     plt.plot([0,32],[0,32], ls = '-', lw=2, c='0.7')
     ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
 
     plt.xlim(1, 33)
     plt.ylim(0, 32)
+
+    plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
+                                mode="expand",prop={'size':fs+2}, numpoints=1)
 
     #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")

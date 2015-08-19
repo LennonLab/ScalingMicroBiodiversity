@@ -752,8 +752,8 @@ def Fig1():
 
     #plt.tick_params(axis='both', which='major', labelsize=fs-3)
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/ResamplingOverRegression-open_REF.png', dpi=600, bbox_inches = "tight")
-    plt.close()
+    #plt.savefig(mydir+'/figs/ResamplingOverRegression-open_REF.png', dpi=600, bbox_inches = "tight")
+    #plt.close()
     plt.show()
 
     return

@@ -110,7 +110,7 @@ def Fig3():
 
     print '\n'
 
-    its = 100
+    its = 1
     d_blist = []
     d_zlist = []
     s_blist = []
@@ -126,9 +126,9 @@ def Fig3():
             lines = []
 
             if name == 'EMPclosed' or name == 'EMPopen':
-                lines = np.random.choice(range(1, numlines+1), 500, replace=True)
+                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
             elif kind == 'micro': lines = np.random.choice(range(1, numlines+1),
-                            500, replace=True)
+                            1000, replace=True)
 
             #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
             path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -204,8 +204,8 @@ def Fig3():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
 
-    #plt.text(2, 10, r'$N_{max}$'+ ' = '+str(round(db, 2))+'*'+r'$N$'+'$^{'+str(round(dz, 2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
-    #plt.text(2, 9,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
+    plt.text(2, 10, r'$S$'+ ' = '+str(round(sb, 2))+'*'+r'$N$'+'$^{'+str(round(sz, 2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
+    plt.text(2, 9,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
 
     # code for prediction intervals
     X = np.linspace(5, 32, 100)
@@ -228,8 +228,11 @@ def Fig3():
     p = np.poly1d(z)
     xp = np.linspace(0, 32, 1000)
 
-    plt.plot(xp, p(xp), '--', c='red', lw=2, alpha=0.8, color='Crimson')
-    plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 20, bins='log', cmap=plt.cm.Reds, label='EMP')
+    label1 = 'Microbial richness-abundance ($S$ vs. $N$) scaling relationship'
+    label2 = 'Predicted $S$ from the lognormal, using reported $N$ & predicted $N_{max}$'
+
+    plt.plot(xp, p(xp), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
+    plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 20, bins='log', cmap=plt.cm.Reds_r, label='EMP')
 
     # Adding in derived/inferred points
     c = '0.3'
@@ -252,6 +255,8 @@ def Fig3():
     ## ON THE LOGNORMAL PREDICTIVE FRAMEWORK OF CURTIS AND SLOAN USING
     ## 1.) THE ESTIMATED NMAX AND 2.) THE PREDICTED NMAX
 
+    Ns = []
+    Ss = []
 
     # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
     guess = 0.1019
@@ -287,15 +292,17 @@ def Fig3():
 
     S2 = float(S_ln)
     N = float(avgN)
-    S_sem = float(2*S_ln_sem)
-    N_sem = float(2*avgN_sem)
+    S_sem = float(4*S_ln_sem)
+    N_sem = float(4*avgN_sem)
 
-    ax.text(17, S2*0.95, 'Global Ocean', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.91, ls = '--', c = c)
-    ax.text(N-1, S2*.75, 'Global ocean', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.8, ls = '--', c = c)
-    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
-    plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='w', linewidth=2)
+    ax.text(18, S2*0.95, 'Global Ocean', fontsize=fs+2, color = 'k')
+    ax.axhline(S2, 0, 0.91, ls = '--', c = '0.6')
+    ax.text(N-1, S2*.75, 'Global ocean', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axvline(N, 0, 0.8, ls = '--', c = '0.6')
+    #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    Ns.append(N)
+    Ss.append(S2)
+    #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
 
 
     # Earth, i.e., Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
@@ -333,15 +340,18 @@ def Fig3():
 
     S2 = float(S_ln)
     N = float(avgN)
-    S_sem = float(2*S_ln_sem)
-    N_sem = float(2*avgN_sem)
+    S_sem = float(4*S_ln_sem)
+    N_sem = float(4*avgN_sem)
 
-    ax.text(20, S2*1.025, 'Earth', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.95, ls = '--', c = c)
-    ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.8, ls = '--', c = c)
-    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
-    plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='w', linewidth=2)
+    ax.text(25, S2*1.025, 'Earth', fontsize=fs+2, color = 'k')
+    ax.axhline(S2, 0, 0.95, ls = '--', c = '0.6')
+    ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axvline(N, 0, 0.8, ls = '--', c = '0.6')
+    #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
+    Ns.append(N)
+    Ss.append(S2)
+
 
     # Human Gut
     guess = 0.1509
@@ -358,15 +368,17 @@ def Fig3():
 
     S2 = float(S_ln)
     N = float(avgN)
-    S_sem = float(2*S_ln_sem)
-    N_sem = float(2*avgN_sem)
+    S_sem = float(4*S_ln_sem)
+    N_sem = float(4*avgN_sem)
 
-    ax.text(2, S2*.9, 'Human Gut', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.41, ls = '--', c = c)
-    ax.text(N-1, 3.2, 'Human Gut', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.33, ls = '--', c = c)
-    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
-    plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='w', linewidth=2)
+    ax.text(3, S2*.9, 'Human Gut', fontsize=fs+2, color = 'k')
+    ax.axhline(S2, 0, 0.41, ls = '--', c = '0.6')
+    ax.text(N-1, 3.2, 'Human Gut', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axvline(N, 0, 0.33, ls = '--', c = '0.6')
+    #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
+    #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
+    Ns.append(N)
+    Ss.append(S2)
     #print 'predS for Human Gut:', '%.3e' % 10**S2
 
 
@@ -385,26 +397,32 @@ def Fig3():
 
     S2 = float(S_ln)
     N = float(avgN)
-    S_sem = float(2*S_ln_sem)
-    N_sem = float(2*avgN_sem)
+    S_sem = float(4*S_ln_sem)
+    N_sem = float(4*avgN_sem)
 
-    ax.text(2, S2*1.04, 'Cow Rumen', fontsize=fs+2, color = c)
-    ax.axhline(S2, 0, 0.43, ls = '--', c = c)
-    ax.text(N+0.3, 4.2, 'Cow Rumen', fontsize=fs+2, color = c, rotation = 90)
-    ax.axvline(N, 0, 0.38, ls = '--', c = c)
-    plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
-    plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='w', linewidth=2)
+    ax.text(6, S2*1.04, 'Cow Rumen', fontsize=fs+2, color = 'k')
+    ax.axhline(S2, 0, 0.43, ls = '--', c = '0.6')
+    ax.text(N+0.3, 4.2, 'Cow Rumen', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axvline(N, 0, 0.38, ls = '--', c = '0.6')
+    Ns.append(N)
+    Ss.append(S2)
+
+    plt.scatter(Ns, Ss, color = '0.4', alpha= 0.8, s = 50, linewidths=2, edgecolor='k', label=label2)
+    #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
 
     ax.text(3, -1, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.3, 12, 'OTU '+ metric, fontsize=fs*2, rotation=90)
     plt.xlim(1, 31)
     plt.ylim(0.8, 14)
 
+    plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
+                                mode="expand",prop={'size':fs+2})
+
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
-    plt.show()
+    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    #plt.show()
 
     return
 
