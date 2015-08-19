@@ -145,44 +145,53 @@ def Fig2():
 
     c = '0.2'
     ## EARTH
-    ax.text(11, max(SAR11+0.5), r'$Prochlorococcus$ to $Pelagibacterales$', fontsize=fs+2, color = c)
-    ax.text(max(Earth)+0.5, 26, 'Earth microbiome', fontsize=fs+2, color = c, rotation = 90)
-    ax.axhline(min(Pm), 0, 0.9, ls = '--', c = c)
-    ax.axhline(max(SAR11), 0, 0.9, ls = '--', c = c)
-    ax.axvline(min(Earth), 0, 0.88, ls = '--', c = c)
-    ax.axvline(max(Earth), 0, 0.88, ls = '--', c = c)
-    plt.fill_between(Earth, min(Pm), max(SAR11), color = c, alpha= 0.8 , linewidths=0.5, edgecolor='0.2')
+    x = [np.mean(Earth)]
+    x_range = (max(Earth) - min(Earth))/2.0
+    y = [np.mean([min(Pm), max(SAR11)])]
+    y_range = (max(SAR11) - min(Pm))/2.0
 
-    a = 0.8
+    ax.text(13.3, max(SAR11)+0.2, r'$Prochlorococcus$ to $Pelagibacterales$', fontsize=fs+2, color = 'k')
+    ax.text(max(Earth)+0.5, 26, 'Earth microbiome', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axhline(y, 0, 0.90, ls = '--', c = '0.6')
+    ax.axvline(x, 0, 0.85, ls = '--', c = '0.6')
+    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
+
     c = '0.4'
     ## GLOBAL OCEAN
-    ax.text(10, min(Pm)-2.2, r'$Synechococcus$ to $Prochloroccus$', fontsize=fs+2, color = c)
-    ax.text(min(GO)-1, 24, 'Non-sediment ocean bacteria', fontsize=fs+2, color = c, rotation = 90)
-    ax.axhline(min(Syn), 0, 0.88, ls = '--', c = c)
-    ax.axhline(max(Pm), 0, 0.88, ls = '--', c = c)
-    ax.axvline(min(GO), 0, 0.86, ls = '--', c = c)
-    ax.axvline(max(GO), 0, 0.86, ls = '--', c = c)
-    plt.fill_between(GO, min(Syn), max(Pm), color = c, alpha= a , linewidths=0.5, edgecolor='0.2')
+    x = [np.mean(GO)]
+    x_range = (max(GO) - min(GO))/2.0
+    y = [np.mean(Pm)]
+    y_range = (max(SAR11) - min(Pm))/2.0
 
-    c = '0.2'
+    ax.text(11, min(Pm)-1.25, r'$Synechococcus$ to $Prochloroccus$', fontsize=fs+2, color = 'k')
+    ax.text(min(GO)-1, 22, 'Non-sediment ocean bacteria', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axhline(y, 0, 0.85, ls = '--', c = '0.6')
+    ax.axvline(x, 0, 0.83, ls = '--', c = '0.6')
+    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
+
     ## HUMAN GUT
-    ax.text(2, min(HGy)-1.5, 'Human gut', fontsize=fs+2, color = c)
-    ax.text(min(HGx)-1, 8, 'Human gut', fontsize=fs+2, color = c, rotation = 90)
-    ax.axhline(min(HGy), 0, 0.40, ls = '--', c = c)
-    ax.axhline(max(HGy), 0, 0.40, ls = '--', c = c)
-    ax.axvline(min(HGx), 0, 0.38, ls = '--', c = c)
-    ax.axvline(max(HGx), 0, 0.38, ls = '--', c = c)
-    plt.fill_between(HGx, min(HGy), max(HGy), color = c, alpha= a, linewidths=0.5, edgecolor='0.2')
+    x = [np.mean(HGx)]
+    x_range = (max(HGx) - min(HGx))/2.0
+    y = [np.mean(HGy)]
+    y_range = (max(HGy) - min(HGy))/2.0
 
-    c = '0.4'
+    ax.text(5, min(HGy)-1, 'Human gut', fontsize=fs+2, color = 'k')
+    ax.text(min(HGx)-1, 8, 'Human gut', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axhline(y, 0, 0.40, ls = '--', c = '0.6')
+    ax.axvline(x, 0, 0.38, ls = '--', c = '0.6')
+    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
+
     ## COW RUMEN
-    ax.text(4, max(COWy)+0.6, 'Cow rumen', fontsize=fs+2, color = c)
-    ax.text(max(COWx)+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = c, rotation = 90)
-    ax.axhline(min(COWy), 0, 0.44, ls = '--', c = c)
-    ax.axhline(max(COWy), 0, 0.44, ls = '--', c = c)
-    ax.axvline(min(COWx), 0, 0.41, ls = '--', c = c)
-    ax.axvline(max(COWx), 0, 0.41, ls = '--', c = c)
-    plt.fill_between(COWx, min(COWy), max(COWy), color = c, alpha= a, linewidths=0.5, edgecolor='0.2')
+    x = [np.mean(COWx)]
+    x_range = (max(COWx) - min(COWx))/2.0
+    y = [np.mean(COWy)]
+    y_range = (max(COWy) - min(COWy))/2.0
+
+    ax.text(8, max(COWy)+0.3, 'Cow rumen', fontsize=fs+2, color = 'k')
+    ax.text(max(COWx)+0.4, 10.8, 'Cow rumen', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axhline(y, 0, 0.41, ls = '--', c = '0.6')
+    ax.axvline(x, 0, 0.43, ls = '--', c = '0.6')
+    plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
 
     ax.text(3, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
     ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
