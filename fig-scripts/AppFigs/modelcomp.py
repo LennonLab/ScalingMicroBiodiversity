@@ -25,7 +25,7 @@ import linecache
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
 mydir2 = os.path.expanduser("~/")
 
-sys.path.append(mydir2 + "tools/metrics")
+sys.path.append(mydir2 + "GitHub/DiversityTools/metrics")
 import metrics as mets
 
 
