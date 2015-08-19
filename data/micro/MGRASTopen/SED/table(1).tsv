@@ -1,0 +1,37 @@
+Category	Label	Value
+Project	project_name	Three sediment comparison
+Project	mgrast_id	mgp1829
+Project	PI_organization	Southern Medical University
+Project	PI_firstname	Hongwei
+Project	PI_organization_address	Tonghe, Guangzhou, PRChina
+Project	PI_organization_country	China
+Project	PI_lastname	Zhou
+Project	project_description	A comparison of bacterial communities in freshwater, marine and intertidal sediments along Perl river, China. All samples were determined using Illumina paired-end sequencing for the 16S rRNA V6 tag
+Project	PI_email	biodegradation@gmail.com
+Sample	sample_name	Marine 8
+Sample	mgrast_id	mgs75125
+Sample	country	Hong Kong
+Sample	longitude	114.1095
+Sample	location	YOW
+Sample	collection_date	2009-09-02
+Sample	feature	marine habitat
+Sample	collection_time	15:00:00
+Sample	env_package	sediment
+Sample	latitude	22.39643
+Sample	sample_name	Marine 8
+Sample	biome	marginal sea biome
+Sample	collection_timezone	UTC+8
+Sample	material	marine sediment
+Library: mimarks-survey	library_name	Marine 8
+Library: mimarks-survey	mgrast_id	mgl75127
+Library: mimarks-survey	metagenome_id	4490075.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	50s rRNA
+Library: mimarks-survey	metagenome_name	Marine 8
+Library: mimarks-survey	file_name	M8.fa
+Library: mimarks-survey	sample_name	Marine 8
+Library: mimarks-survey	file_checksum	faecf60e14ed4c8aa036c2e5180e4456
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: sediment	mgrast_id	mge75126
+Enviromental Package: sediment	env_package	sediment
+Enviromental Package: sediment	sample_name	Marine 8

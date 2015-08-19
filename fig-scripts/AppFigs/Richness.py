@@ -22,29 +22,29 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/")
-
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'GENTRY', 'AGSOIL', 'SLUDGE', 'FECES']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
-    for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/micro'):
+        if name in GoodNames: pass
+        else: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
 
-    for name in os.listdir(mydir2 +'data/macro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/macro'):
+        if name in GoodNames: pass
+        else: continue
 
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
 
@@ -82,8 +82,8 @@ def Fig1():
                 if numlines > 40: lines = random.sample(range(1, numlines+1), 40)
                 else: lines = random.sample(range(1, numlines+1), 40)
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)

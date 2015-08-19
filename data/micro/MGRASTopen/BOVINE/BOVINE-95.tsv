@@ -1,0 +1,721 @@
+metagenome	source	domain	phylum	class	order	family	genus	species	abundance	avg eValue	avg % ident	avg align len	# hits	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium hippocoleae	1	-48.00	100.00	96.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium phocae	1813	-21.00	100.00	50.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	12	-32.00	100.00	69.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	31	-32.00	100.00	69.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	9	-32.00	100.00	69.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	4	-32.00	100.00	69.00	1	
+4640037.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	83	-34.00	100.00	72.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	6	-34.00	100.00	72.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	5	-32.00	100.00	69.00	1	
+4640043.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	7	-32.00	100.00	69.00	1	
+4640032.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	6	-30.17	100.00	65.83	1	
+4640046.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	8	-34.00	100.00	72.00	1	
+4640034.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	6	-32.00	100.00	69.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium pluranimalium	5	-29.00	100.00	64.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	12	-99.00	100.00	182.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	1	-27.00	100.00	62.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	32	-101.50	99.50	188.44	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	9	-103.00	99.48	191.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	4	-103.00	99.48	191.00	1	
+4640036.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	2	-68.00	100.00	130.00	1	
+4640037.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	83	-101.00	99.47	188.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	6	-54.00	100.00	107.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	5	-104.00	100.00	191.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	29	-54.00	100.00	107.00	1	
+4640043.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	7	-103.00	99.48	191.00	1	
+4640032.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	6	-95.50	99.57	178.17	1	
+4640046.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	8	-105.00	99.48	194.00	1	
+4640034.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	6	-103.00	99.48	191.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella abortisuis	1819	-54.07	100.00	107.17	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella bonasi	1	-21.00	100.00	50.00	1	
+4640036.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella bonasi	2	-21.00	100.00	50.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella bonasi	1	-21.00	100.00	50.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Catenulisporaceae	Catenulispora	Catenulispora yoronensis	1	-22.00	100.00	53.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium amycolatum	14	-84.00	100.00	156.50	2	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium aurimucosum	6	-135.00	100.00	243.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium bovis	19	-58.00	96.09	128.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium casei	1	-108.00	100.00	197.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium casei	1	-114.00	100.00	208.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium casei	142	-114.00	100.00	208.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium casei	1	-114.00	100.00	208.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium casei	11	-114.00	100.00	208.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium glutamicum	1	-80.00	100.00	151.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium glutamicum	2	-80.50	100.00	151.50	2	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium glutamicum	47	-45.00	100.00	92.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium glutamicum	2	-80.50	100.00	151.50	2	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium riegelii	3	-53.00	100.00	104.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium riegelii	1	-53.00	100.00	104.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium riegelii	2	-53.00	100.00	104.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	1	-131.00	100.00	237.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	142	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	3	-92.33	100.00	171.00	3	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	11	-131.00	100.00	237.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp.	1	-131.00	100.00	237.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1145	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1145	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1146	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1146	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1147	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1147	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1149	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1149	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1150	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1150	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1151	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1151	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1152	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 1152	1	-125.00	100.00	226.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 3010	1	-131.00	100.00	237.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 3010	1	-125.00	100.00	226.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium tuberculostearicum	1	-134.00	100.00	241.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium urealyticum	6	-131.33	99.31	242.33	2	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium vitaeruminis	3	-78.00	95.24	168.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium vitaeruminis	1	-78.00	95.24	168.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Corynebacteriaceae	Corynebacterium	Corynebacterium vitaeruminis	2	-78.00	95.24	168.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Dermabacteraceae	Brachybacterium	Brachybacterium paraconglomeratum	2	-133.00	100.00	239.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Dermabacteraceae	Brachybacterium	Brachybacterium paraconglomeratum	1	-36.00	100.00	76.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Dermacoccaceae	Dermacoccus	Dermacoccus sp. Ellin185	1	-23.00	100.00	54.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Dietziaceae	Dietzia	Dietzia maris	1	-130.00	99.58	239.00	1	
+4640032.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Geodermatophilaceae	Geodermatophilus	Geodermatophilus obscurus	3	-53.00	100.00	104.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Intrasporangiaceae	Janibacter	Janibacter limosus	1	-35.00	97.37	76.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Intrasporangiaceae	Tetrasphaera	Tetrasphaera japonica	5	-44.00	100.00	89.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Microbacteriaceae	Mycetocola	Mycetocola saprophilus	1	-21.00	100.00	50.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Microbacteriaceae	Mycetocola	Mycetocola saprophilus	1	-47.00	100.00	94.00	1	
+4640037.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Microbacteriaceae	Rathayibacter	Rathayibacter rathayi	13	-51.00	100.00	102.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Arthrobacter	Arthrobacter keyseri	1	-110.00	99.50	202.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Arthrobacter	Arthrobacter oxydans	1	-69.00	100.00	132.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Arthrobacter	Arthrobacter ramosus	1	-80.00	99.34	152.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Arthrobacter	Arthrobacter sp. FG1	1	-80.00	99.34	152.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Kocuria	Kocuria rosea	1	-44.00	100.00	90.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Kocuria	Kocuria sp. JL-51	1	-122.00	100.00	221.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Kocuria	Kocuria sp. JL-51	1	-133.00	100.00	240.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus	1	-135.00	100.00	243.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus	11	-132.00	99.18	245.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus	1	-135.00	100.00	243.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus lylae	1	-52.00	99.04	104.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus sp. SMCC ZAT351	1	-120.00	98.64	221.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus sp. SMCC ZAT351	1	-131.00	98.75	240.00	1	
+4640043.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Micrococcaceae	Rothia	Rothia mucilaginosa	8	-134.00	100.00	242.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Mycobacteriaceae	Mycobacterium	Mycobacterium asiaticum	3	-81.00	99.34	152.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Mycobacteriaceae	Mycobacterium	Mycobacterium hassiacum	4	-55.00	100.00	107.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Mycobacteriaceae	Mycobacterium	Mycobacterium simulans	3	-80.00	98.68	152.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Mycobacteriaceae	Mycobacterium	Mycobacterium sphagni	1	-47.00	98.00	100.00	1	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardiaceae	Nocardia	Nocardia sp. H17-1	1	-133.00	100.00	239.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardiaceae	Nocardia	Nocardia sp. H17-1	15	-132.00	99.58	239.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardiaceae	Rhodococcus	Rhodococcus erythropolis	1	-119.00	100.00	217.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardioidaceae	Nocardioides	Nocardioides sp.	1	-51.00	100.00	101.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardioidaceae	Nocardioides	Nocardioides sp. CF8	8	-52.00	100.00	103.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardioidaceae	Nocardioides	Nocardioides sp. JS614	4	-61.00	99.16	119.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardioidaceae	Pimelobacter	Pimelobacter simplex	1	-52.00	99.04	104.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Nocardioidaceae	Pimelobacter	Pimelobacter simplex	4	-52.00	99.04	104.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	30	-133.00	100.00	239.00	1	
+4640044.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	3	-133.00	100.00	239.00	1	
+4640040.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	1	-133.00	100.00	239.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	1	-133.00	100.00	239.00	1	
+4640043.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	9	-133.00	100.00	239.00	1	
+4640046.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	5	-107.00	100.00	196.00	1	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Propionibacteriaceae	Propionibacterium	Propionibacterium acnes	62	-115.00	99.25	215.67	2	
+4640041.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Pseudonocardiaceae	Pseudonocardia	Pseudonocardia saturnea	1	-79.00	100.00	148.00	1	
+4640039.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Pseudonocardiaceae	Pseudonocardia	Pseudonocardia saturnea	2	-79.00	100.00	148.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Actinomycetales	Thermomonosporaceae	Actinomadura	Actinomadura formosensis	3	-36.00	100.00	75.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium pseudolongum	8	-124.00	100.00	224.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium minutum	3	-25.00	100.00	58.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium minutum	5	-25.00	100.00	58.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium minutum	1	-23.00	100.00	54.00	1	
+4640034.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium minutum	1	-25.00	100.00	58.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium rimae	3	-29.00	100.00	65.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium rimae	1	-58.00	100.00	113.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium rimae	5	-29.00	100.00	65.00	1	
+4640042.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium rimae	1	-29.00	100.00	65.00	1	
+4640034.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium rimae	1	-29.00	100.00	65.00	1	
+4640038.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Atopobium	Atopobium vaginae	1	-21.00	100.00	51.00	1	
+4640030.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Eggerthella	Eggerthella lenta	3	-24.00	100.00	56.00	1	
+4640031.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Eggerthella	Eggerthella lenta	1	-24.00	100.00	56.00	1	
+4640036.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Gordonibacter	Gordonibacter pamelaeae	64	-28.00	100.00	63.00	2	
+4640034.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Gordonibacter	Gordonibacter pamelaeae	4	-28.00	100.00	63.00	2	
+4640033.3	M5RNA	Bacteria	Actinobacteria	Actinobacteria (class)	Coriobacteriales	Coriobacteriaceae	Gordonibacter	Gordonibacter pamelaeae	838	-28.00	100.00	63.00	2	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	245	-21.00	100.00	51.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	2	-22.00	100.00	52.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	4	-21.75	100.00	51.50	2	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	45	-21.00	100.00	51.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	56	-21.57	100.00	51.57	2	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	22	-21.00	100.00	51.00	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	96	-21.01	100.00	51.01	2	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	2	-21.50	100.00	51.00	2	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	7	-21.14	100.00	50.29	2	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	2	-21.50	100.00	51.50	2	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides acidifaciens	4	-21.00	100.00	50.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides barnesiae	8	-21.00	100.00	50.75	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides barnesiae	1	-22.00	100.00	52.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides clarus	1	-21.00	100.00	51.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides clarus	1	-21.00	100.00	51.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides clarus	1	-21.00	100.00	50.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	285	-30.00	100.00	66.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	36	-30.00	100.00	66.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	4	-30.00	100.00	66.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	1	-30.00	100.00	66.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	2	-30.00	100.00	66.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	30	-30.00	100.00	66.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	391	-30.00	100.00	66.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	17	-30.00	100.00	66.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides dorei	28	-30.00	100.00	66.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides fragilis	2	-129.00	100.00	235.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides fragilis	2	-139.00	100.00	251.00	2	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	64	-21.00	100.00	51.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	10	-21.00	100.00	51.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	1	-21.00	100.00	51.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	32	-21.00	100.00	51.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	13	-21.00	100.00	51.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	460	-21.00	100.00	51.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides gallinarum	573	-21.00	100.00	51.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides intestinalis	3	-21.00	100.00	51.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	551	-98.68	99.73	184.25	2	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	26	-24.74	100.00	57.26	1	
+4640041.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	3	-21.00	100.00	51.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	10	-21.00	100.00	51.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	104	-27.49	100.00	61.94	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	49	-21.00	100.00	51.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	1657	-21.45	100.00	51.74	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	14	-25.84	100.00	59.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	28	-55.28	100.00	108.86	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	109	-31.34	99.90	68.70	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	15	-21.00	100.00	51.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	125	-21.00	100.00	51.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	23	-82.22	100.00	154.31	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	75	-60.97	100.00	117.97	1	
+4640046.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	181	-21.00	100.00	51.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides pyogenes	24	-82.33	100.00	154.50	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	2	-70.00	100.00	134.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	2	-70.00	100.00	134.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	44	-70.00	100.00	134.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	4	-70.00	100.00	134.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	3	-70.00	100.00	134.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	51	-70.00	100.00	134.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	30	-45.00	100.00	91.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp.	16	-70.00	100.00	134.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Barnesiella	Barnesiella viscericola	1	-21.00	100.00	50.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Barnesiella	Barnesiella viscericola	1	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Barnesiella	Barnesiella viscericola	5	-22.00	100.00	52.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Barnesiella	Barnesiella viscericola	1	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Parabacteroides	Parabacteroides gordonii	1	-22.00	100.00	53.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Parabacteroides	Parabacteroides gordonii	1	-22.00	100.00	53.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas cangingivalis	3	-22.00	100.00	53.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	185	-25.00	100.00	58.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	12	-39.00	100.00	82.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	17	-39.00	100.00	82.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	2	-39.00	100.00	82.00	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	1	-39.00	100.00	82.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	13	-39.00	100.00	82.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas endodontalis	31	-35.25	100.00	74.50	2	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivalis	1	-20.00	100.00	50.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	130	-35.00	100.00	75.00	1	
+4640041.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	1	-48.00	99.02	102.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	4	-48.00	99.02	102.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	7	-48.00	99.02	102.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	95	-48.00	99.02	102.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	3	-48.00	99.02	102.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	1	-48.00	99.02	102.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	146	-51.00	100.00	102.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	46	-51.00	100.00	102.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivicanis	254	-20.00	100.00	50.00	1	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	554	-123.00	100.00	225.00	1	
+4640041.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	4	-133.00	100.00	242.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	6	-133.00	99.59	242.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	46	-132.67	99.45	242.00	2	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	68	-133.00	99.59	242.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	153	-133.00	100.00	242.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	61	-133.00	100.00	242.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	10	-133.00	99.59	242.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	1210	-99.00	100.00	183.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	120	-133.00	99.59	242.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	1	-133.00	100.00	242.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	297	-82.00	98.77	162.00	1	
+4640046.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	246	-111.00	99.52	210.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	248	-118.00	99.55	221.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas levii	798	-120.91	99.11	223.85	2	
+4640030.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas uenonis	3	-58.00	100.00	114.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas uenonis	5	-58.00	100.00	114.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas uenonis	1	-58.00	100.00	114.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas uenonis	3	-58.00	100.00	114.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella buccae	1	-26.00	100.00	58.00	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella copri	1	-22.00	100.00	53.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella corporis	2	-21.00	100.00	51.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella loescheii	1	-21.00	100.00	50.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella loescheii	4	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella nanceiensis	4	-39.50	100.00	81.50	2	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. oral taxon 299	2	-56.00	100.00	109.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella stercorea	13	-29.00	100.00	64.00	1	
+4640036.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella timonensis	1	-58.00	99.13	115.00	1	
+4640034.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella timonensis	7	-58.00	99.13	115.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes shahii	2	-23.00	100.00	54.00	1	
+4640037.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes shahii	1	-23.00	100.00	54.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes shahii	38	-38.21	100.00	79.05	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Cytophaga	Cytophaga sp. I-1858	1	-24.00	100.00	56.00	1	
+4640033.3	M5RNA	Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Flectobacillus	Flectobacillus major	31	-20.00	98.04	51.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Bergeyella	Bergeyella zoohelcum	1	-26.00	100.00	59.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga gingivalis	6	-132.00	100.00	240.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Chryseobacterium	Chryseobacterium soli	5	-30.00	100.00	65.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Coenonia	Coenonia anatina	1	-25.00	100.00	57.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium columnare	1	-46.00	100.00	92.00	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp.	1	-21.00	100.00	50.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella anatipestifer	5	-23.00	100.00	55.00	1	
+4640042.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella columbina	1	-24.00	100.00	56.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella sp. IPDH 98/90	1	-30.00	100.00	67.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella sp. IPDH 98/90	19	-30.00	100.00	67.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella sp. IPDH 98/90	1	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella sp. IPDH 98/90	3	-30.00	100.00	67.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Riemerella	Riemerella sp. IPDH 98/90	1	-30.00	100.00	67.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	unclassified (derived from Flavobacteriaceae)	Flavobacteriaceae bacterium JJC	1	-32.00	100.00	70.00	1	
+4640038.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	unclassified (derived from Flavobacteriaceae)	Flavobacteriaceae bacterium JJC	19	-32.00	100.00	70.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	unclassified (derived from Flavobacteriaceae)	Flavobacteriaceae bacterium JJC	3	-37.00	100.00	79.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	unclassified (derived from Flavobacteriaceae)	Flavobacteriaceae bacterium JJC	1	-37.00	100.00	79.00	1	
+4640039.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	1	-22.00	100.00	52.00	1	
+4640044.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	2	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	58	-22.00	100.00	52.00	1	
+4640031.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	5	-31.00	100.00	68.00	1	
+4640045.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	2	-22.00	100.00	52.00	1	
+4640043.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	2	-22.00	100.00	52.00	1	
+4640032.3	M5RNA	Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	unclassified (derived from Sphingobacteriales)	Terrimonas	Terrimonas lutea	6	-21.17	100.00	50.33	1	
+4640031.3	M5RNA	Bacteria	Cyanobacteria	unclassified (derived from Cyanobacteria)	Nostocales	Nostocaceae	Dolichospermum	Dolichospermum crassum	3	-39.00	100.00	82.00	1	
+4640031.3	M5RNA	Bacteria	Cyanobacteria	unclassified (derived from Cyanobacteria)	Oscillatoriales	unclassified (derived from Oscillatoriales)	Planktothrix	Planktothrix mougeotii	1	-41.00	100.00	84.00	1	
+4640040.3	M5RNA	Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcaceae	Deinococcus	Deinococcus radiodurans	1	-21.00	100.00	51.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus anthracis	8	-142.00	100.00	255.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus anthracis	28	-142.00	100.00	255.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus anthracis	1	-142.00	100.00	255.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cereus	24	-141.00	100.00	255.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cereus	1	-142.00	100.00	255.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cereus	8	-142.00	100.00	255.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cereus	28	-142.00	100.00	255.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus licheniformis	8	-141.00	99.87	254.00	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus pumilus	1	-88.00	100.00	163.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp.	1	-89.00	100.00	167.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. GB02-30	4	-112.00	100.00	205.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. PL-12	1	-98.00	100.00	181.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus subtilis	1	-111.00	100.00	204.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus thuringiensis	8	-142.00	100.00	255.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus thuringiensis	28	-142.00	100.00	255.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus thuringiensis	1	-142.00	100.00	255.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Geobacillus	Geobacillus caldoxylosilyticus	572	-101.00	99.15	190.00	2	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Geobacillus	Geobacillus stearothermophilus	9	-69.00	100.00	131.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Geobacillus	Geobacillus stearothermophilus	11	-69.00	100.00	131.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Geobacillus	Geobacillus stearothermophilus	2	-64.00	100.00	123.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Geobacillus	Geobacillus stearothermophilus	1	-64.00	100.00	123.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Planomicrobium	Planomicrobium okeanokoites	1	-39.00	100.00	81.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus aureus	2	-58.00	100.00	114.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus aureus	13	-141.00	100.00	254.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus aureus	1	-113.00	99.52	209.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus chromogenes	2	-91.00	98.87	177.00	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus cohnii	1	-50.00	100.00	99.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus epidermidis	2	-83.00	100.00	156.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus epidermidis	1	-83.00	100.00	156.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus pasteuri	2	-69.00	100.00	132.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	unclassified (derived from Bacillales)	Gemella	Gemella haemolysans	4	-32.00	100.00	69.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	unclassified (derived from Bacillales)	Gemella	Gemella haemolysans	15	-32.00	100.00	69.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	unclassified (derived from Bacillales)	Gemella	Gemella haemolysans	2	-32.00	100.00	69.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	unclassified (derived from Bacillales)	Gemella	Gemella haemolysans	10	-141.00	100.00	256.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Bacillales	unclassified (derived from Bacillales)	Gemella	Gemella sanguinis	2	-125.33	99.31	234.33	2	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus viridans	2	-137.67	100.00	248.67	2	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus viridans	6	-134.67	99.74	245.00	2	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus casseliflavus	53	-86.00	100.00	162.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus villorum	53	-46.00	100.00	94.00	1	
+4640046.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Melissococcus	Melissococcus plutonius	1	-90.00	99.41	169.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Vagococcus	Vagococcus fluvialis	1	-134.00	100.00	243.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus murinus	2342	-65.00	100.00	126.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Lactococcus	Lactococcus lactis	1	-120.00	100.00	219.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus dysgalactiae	24	-140.00	100.00	253.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus dysgalactiae	3	-140.00	100.00	253.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus dysgalactiae	2	-140.00	100.00	253.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus dysgalactiae	48	-140.00	100.00	253.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus mitis	606	-110.00	97.81	230.00	2	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus mitis	2	-132.00	99.59	241.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus parauberis	178	-22.00	100.00	53.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus parauberis	1	-136.00	99.60	253.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus parauberis	1	-39.00	98.78	82.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	15	-43.00	100.00	89.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	336	-53.00	100.00	105.00	2	
+4640038.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	10	-53.00	100.00	105.00	2	
+4640044.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	83	-47.56	100.00	96.30	3	
+4640037.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	3	-43.00	100.00	89.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	34	-44.72	100.00	91.76	3	
+4640042.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	14	-42.14	100.00	87.57	2	
+4640045.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	200	-53.00	100.00	105.00	2	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	19	-52.00	100.00	104.30	3	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus uberis	71	-140.00	100.00	253.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	uncultured Streptococcus sp.	27	-137.31	99.64	251.21	2	
+4640033.3	M5RNA	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	uncultured Streptococcus sp.	2	-138.00	99.60	251.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Butyricicoccus	Butyricicoccus pullicaecorum	1	-26.00	100.00	60.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium bolteae	2	-26.00	100.00	59.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium bolteae	2	-21.00	100.00	50.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium bolteae	1	-21.00	100.00	50.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium bolteae	4	-33.00	100.00	71.00	2	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium cadaveris	1	-75.00	100.00	141.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium cadaveris	3	-75.00	100.00	141.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium disporicum	5	-75.00	100.00	143.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium disporicum	5	-64.00	99.23	130.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium disporicum	3	-73.67	100.00	140.33	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium disporicum	1	-99.00	100.00	182.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium indolis	1	-21.00	100.00	51.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium indolis	1	-28.00	100.00	63.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium leptum	2	-24.00	100.00	56.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium nexile	4	-51.00	100.00	102.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium nexile	1	-48.00	100.00	96.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium nexile	89	-51.85	99.09	103.67	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium nexile	5	-50.80	100.00	101.40	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium nexile	3	-51.00	99.36	102.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium perfringens	1	-136.00	100.00	246.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium perfringens	1	-44.00	100.00	89.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium polysaccharolyticum	1	-24.00	100.00	55.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium polysaccharolyticum	1	-24.00	100.00	56.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. CA6	1	-47.00	100.00	94.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. Kas107-2	5	-24.00	100.00	56.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. Kas107-2	2	-22.00	100.00	52.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. MLG080-1	1	-28.00	100.00	62.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. enrichment culture clone 7-14	112	-22.06	100.00	52.12	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. enrichment culture clone 7-14	6	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. enrichment culture clone 7-25	12	-24.00	100.00	55.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium subterminale	1	-41.00	100.00	85.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium symbiosum	1	-24.00	100.00	56.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium symbiosum	1	-27.00	100.00	62.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium xylanolyticum	3	-20.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium xylanolyticum	1	-37.00	100.00	78.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	1	-40.00	100.00	82.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	16	-40.00	100.00	82.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	7	-40.00	100.00	82.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	13	-40.00	100.00	82.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	12	-40.00	100.00	82.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	4	-40.00	100.00	82.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	9	-40.00	100.00	82.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	11	-40.00	100.00	82.00	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	39	-40.00	100.00	82.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Anaerococcus	Anaerococcus prevotii	85	-40.00	100.00	82.00	1	
+4640030.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	9	-38.00	100.00	79.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	50	-27.64	100.00	61.96	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	22	-37.73	100.00	78.59	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	141	-38.00	100.00	79.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	1	-38.00	100.00	79.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	1	-38.00	100.00	79.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	15	-38.00	100.00	79.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	21	-38.00	100.00	79.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	6	-38.00	100.00	79.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	15	-38.00	100.00	79.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	1	-38.00	100.00	79.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	113	-38.00	100.00	79.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	7	-38.28	100.00	79.72	1	
+4640046.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	1	-38.00	100.00	79.00	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	4	-38.00	100.00	79.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Helcococcus	Helcococcus kunzii	3	-38.00	100.00	79.00	1	
+4640030.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	21	-40.00	100.00	82.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	1	-40.00	100.00	82.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	42	-40.00	100.00	82.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	16	-40.00	100.00	82.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	7	-40.00	100.00	82.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	2	-40.00	100.00	82.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	13	-40.00	100.00	82.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	70	-40.00	100.00	82.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	12	-40.00	100.00	82.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	4	-40.00	100.00	82.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	9	-40.00	100.00	82.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	11	-37.00	100.00	76.95	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	39	-40.00	100.00	82.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus asaccharolyticus	85	-40.00	100.00	82.00	1	
+4640030.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	21	-70.00	100.00	134.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	81	-40.00	100.00	83.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	42	-70.00	100.00	134.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	65	-40.33	100.00	83.56	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	12	-70.00	100.00	134.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	70	-70.00	100.00	134.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	8	-70.00	100.00	134.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	3	-68.00	99.24	131.00	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XI. Incertae Sedis	Peptoniphilus	Peptoniphilus indolicus	21	-56.00	100.00	110.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium cellulosolvens	5	-23.20	100.00	54.20	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium cellulosolvens	3	-32.00	100.00	69.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium eligens	1	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium eligens	1	-21.00	100.00	50.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium hallii	70	-29.02	100.00	64.03	2	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium hallii	39	-27.97	100.00	62.36	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium hallii	60	-37.50	100.00	77.50	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium hallii	2	-37.50	100.00	77.50	2	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium hallii	116	-30.50	100.00	66.00	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium oxidoreducens	172	-29.40	100.00	64.35	2	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium oxidoreducens	4	-29.50	100.00	64.50	2	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium ramulus	5	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium ramulus	1	-23.00	100.00	54.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium rectale	1	-24.00	100.00	55.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium rectale	1	-27.00	100.00	61.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium ruminantium	2	-29.50	100.00	65.50	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium saburreum	3	-90.00	100.00	168.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	Eubacterium siraeum	2	-52.00	100.00	102.00	2	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Acetitomaculum	Acetitomaculum ruminis	13	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerostipes	Anaerostipes butyraticus	1	-29.00	100.00	64.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia coccoides	7	-43.00	100.00	88.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia hydrogenotrophica	376	-35.00	100.00	74.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia sp. Ser8	7	-27.00	100.00	61.00	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	[Ruminococcus] gnavus	5	-24.00	100.00	55.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	[Ruminococcus] gnavus	1	-24.00	100.00	55.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	[Ruminococcus] gnavus	9	-34.25	98.98	75.50	3	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	[Ruminococcus] obeum	1	-29.00	100.00	65.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	[Ruminococcus] torques	20	-65.00	99.21	127.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio crossotus	5	-40.00	100.00	83.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio crossotus	1	-45.00	100.00	91.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	1	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	3	-36.75	100.00	76.62	2	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	1	-36.00	100.00	76.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	1	-26.00	100.00	60.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	45	-25.36	100.00	58.60	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Coprococcus	Coprococcus eutactus	15	-59.00	97.60	125.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Dorea	Dorea formicigenerans	1	-29.00	100.00	64.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Pseudobutyrivibrio	Pseudobutyrivibrio ruminis	1	-31.00	100.00	68.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Pseudobutyrivibrio	Pseudobutyrivibrio xylanivorans	2	-26.40	100.00	60.40	2	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia intestinalis	3	-44.00	100.00	90.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia intestinalis	1	-21.00	100.00	51.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia intestinalis	3	-21.00	100.00	51.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia inulinivorans	3	-26.00	100.00	59.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia inulinivorans	2	-27.00	100.00	60.50	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Syntrophococcus	Syntrophococcus sucromutans	1	-139.00	98.82	255.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Syntrophococcus	Syntrophococcus sucromutans	1	-101.00	100.00	185.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	unclassified (derived from Lachnospiraceae)	Lachnospiraceae bacterium 14-2	329	-100.00	99.46	186.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	unclassified (derived from Lachnospiraceae)	Lachnospiraceae bacterium A4	10	-32.00	100.00	70.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	unclassified (derived from Lachnospiraceae)	Lachnospiraceae bacterium A4	1	-20.00	100.00	50.00	1	
+4640030.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	30	-41.00	100.00	85.00	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	1	-41.00	100.00	85.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	40	-41.00	100.00	85.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	5	-41.00	100.00	85.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	32	-41.00	100.00	85.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	5	-52.00	100.00	105.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	41	-41.00	100.00	85.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	22	-41.00	100.00	85.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	5	-41.00	100.00	85.00	1	
+4640046.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	51	-29.00	100.00	65.00	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptostreptococcus	Peptostreptococcus anaerobius	10	-54.00	100.00	107.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bartlettii	1	-70.00	100.00	134.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bartlettii	4	-54.00	100.00	107.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bartlettii	4	-70.00	100.00	134.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bartlettii	14	-41.00	100.00	85.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bifermentans	63	-128.00	100.00	232.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] bifermentans	5	-26.00	100.00	59.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] lituseburense	3	-57.25	99.72	113.50	2	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] lituseburense	9	-46.07	100.00	92.93	2	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] lituseburense	4	-38.00	100.00	79.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] lituseburense	14	-38.00	100.00	79.00	1	
+4640030.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	50	-69.00	100.00	132.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	6	-57.81	100.00	113.25	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	43	-61.59	99.87	119.53	2	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	4	-37.00	100.00	78.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	14	-37.00	100.00	78.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	unclassified (derived from Peptostreptococcaceae)	[Clostridium] sordellii	2	-40.75	100.00	84.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus colihominis	4	-25.00	100.00	57.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Anaerotruncus	Anaerotruncus colihominis	22	-25.00	100.00	57.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii	2	-22.00	100.00	52.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii	245	-21.50	100.00	51.50	3	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus flavefaciens	100	-21.00	100.00	51.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus gauvreauii	16	-24.00	100.00	55.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Ruminococcus	Ruminococcus lactaris	20	-72.00	99.28	138.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Subdoligranulum	Subdoligranulum variabile	242	-48.00	100.00	96.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	unclassified (derived from Ruminococcaceae)	Ruminococcaceae bacterium D16	17	-22.59	100.00	52.82	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	unclassified (derived from Ruminococcaceae)	Ruminococcaceae bacterium D16	19	-21.00	100.00	50.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	unclassified (derived from Ruminococcaceae)	Ruminococcaceae bacterium D16	21	-21.00	100.00	50.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium ART55/1	17	-56.59	95.79	122.53	1	
+4640041.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	4	-47.00	100.00	95.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	2	-48.00	100.00	95.80	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	3	-44.67	100.00	90.67	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	6	-46.92	100.00	94.85	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	27	-44.00	100.00	90.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SL7/1	1	-44.00	100.00	90.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SM4/1	2	-21.00	100.00	50.00	1	
+4640039.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SSC/2	69	-26.00	100.00	58.02	1	
+4640038.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SSC/2	39	-24.97	100.00	56.56	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SSC/2	30	-26.00	100.00	59.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SSC/2	12	-23.00	100.00	53.44	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified (derived from Clostridiales)	unclassified (derived from Clostridiales)	butyrate-producing bacterium SSC/2	58	-26.00	100.00	59.00	1	
+4640042.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Megasphaera	Megasphaera elsdenii	1	-40.00	100.00	83.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	6	-22.00	100.00	52.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	6	-22.00	100.00	52.00	1	
+4640031.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	1	-22.00	100.00	52.00	1	
+4640045.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	1	-22.00	100.00	52.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	1	-22.00	100.00	52.00	1	
+4640034.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	18	-22.00	100.00	52.00	1	
+4640033.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella atypica	77	-22.00	100.00	52.00	1	
+4640036.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella caviae	36	-31.00	100.00	67.00	1	
+4640037.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella caviae	168	-31.00	100.00	67.00	1	
+4640044.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella parvula	113	-22.00	100.00	53.00	1	
+4640040.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella parvula	587	-22.00	100.00	53.00	1	
+4640043.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella parvula	1	-22.00	100.00	53.00	1	
+4640032.3	M5RNA	Bacteria	Firmicutes	Negativicutes	Selenomonadales	Veillonellaceae	Veillonella	Veillonella parvula	14	-23.00	100.00	53.00	1	
+4640034.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	2211	-64.65	99.78	125.64	3	
+4640030.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	648	-94.00	99.45	181.00	1	
+4640041.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	654	-92.03	100.00	171.09	1	
+4640039.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	63	-129.00	100.00	234.00	1	
+4640038.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	1113	-54.20	100.00	106.35	1	
+4640044.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	111	-129.00	100.00	234.00	1	
+4640036.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	3304	-123.00	99.56	229.00	1	
+4640037.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	2033	-102.45	98.73	196.95	2	
+4640040.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	99	-37.00	98.81	84.00	1	
+4640031.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	463	-73.00	100.00	139.00	1	
+4640042.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	781	-80.19	99.99	152.44	1	
+4640045.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	237	-129.00	100.00	234.00	1	
+4640043.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	152	-129.00	100.00	234.00	1	
+4640032.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	573	-95.01	98.45	192.99	1	
+4640046.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	2344	-67.04	100.00	129.07	1	
+4640033.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	135	-128.00	99.57	234.00	1	
+4640044.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	188	-34.00	100.00	73.00	1	
+4640037.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	132	-34.00	100.00	73.00	1	
+4640045.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	1292	-34.01	100.00	73.02	2	
+4640032.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	13	-34.00	100.00	73.00	1	
+4640046.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	4	-23.00	100.00	54.00	1	
+4640030.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium periodonticum	1	-22.00	100.00	53.00	1	
+4640031.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium periodonticum	6	-22.00	100.00	53.00	1	
+4640031.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium varium	12	-114.50	99.74	211.50	2	
+4640030.3	M5RNA	Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium varium	2	-99.00	99.78	185.00	2	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Brevundimonas	Brevundimonas vesicularis	6	-74.00	100.00	141.00	1	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bosea	Bosea massiliensis	2	-116.00	100.00	211.00	2	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Rhodopseudomonas	Rhodopseudomonas palustris	1	-38.00	100.00	80.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Hyphomicrobium	uncultured Hyphomicrobium sp.	1	-73.00	100.00	138.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	unclassified (derived from Rhodobacteraceae)	uncultured Rhodobacteraceae bacterium	1	-76.00	99.31	144.00	1	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter indonesiensis	1	-27.00	100.00	61.00	1	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter lovaniensis	11	-41.00	100.00	85.00	1	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter lovaniensis	1	-41.00	100.00	85.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter lovaniensis	21	-41.00	100.00	85.00	1	
+4640042.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter lovaniensis	1	-41.00	100.00	85.00	1	
+4640043.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter lovaniensis	4	-41.00	100.00	85.00	1	
+4640033.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Roseomonas	Roseomonas gilardii	2	-42.50	100.00	86.50	2	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Anaplasma	Anaplasma centrale	1	-46.00	100.00	93.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Anaplasma	Anaplasma phagocytophilum	3	-30.00	100.00	67.00	1	
+4640045.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Anaplasma	Anaplasma phagocytophilum	29	-56.00	99.18	110.59	3	
+4640043.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Anaplasma	Anaplasma phagocytophilum	5	-26.00	100.00	59.80	1	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. M41-VN10-2W	1	-40.00	100.00	83.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis alaskensis	1	-118.00	100.00	215.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	uncultured alpha proteobacterium	3	-45.00	100.00	91.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	uncultured alpha proteobacterium	1	-97.00	100.00	178.00	1	
+4640033.3	M5RNA	Bacteria	Proteobacteria	Alphaproteobacteria	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	unclassified (derived from Alphaproteobacteria)	uncultured alpha proteobacterium	7	-36.00	96.20	79.00	1	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Achromobacter	Achromobacter xylosoxidans	5	-107.00	100.00	195.00	1	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Achromobacter	uncultured Achromobacter sp.	5	-106.00	99.49	195.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Alcaligenes	Alcaligenes sp. 'ESPY2 (A-III)'	1	-21.00	100.00	50.00	1	
+4640034.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Alcaligenes	Alcaligenes sp. OS2	8	-28.00	100.00	62.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia tropica	1	-135.00	100.00	243.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter nitroreducens	1	-131.00	100.00	237.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	unclassified (derived from Comamonadaceae)	uncultured Comamonadaceae bacterium	1	-132.00	100.00	237.00	1	
+4640037.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	unclassified (derived from Burkholderiales)	Rubrivivax	Rubrivivax gelatinosus	1	-96.00	99.44	178.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Kingella	Kingella kingae	6	-42.00	100.00	87.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Nitrosomonadaceae	Nitrosomonas	Nitrosomonas sp. Nm86	4	-124.00	98.69	229.00	1	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	uncultured beta proteobacterium	3	-103.00	99.49	195.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	uncultured beta proteobacterium	37	-121.00	99.55	221.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	uncultured beta proteobacterium	1	-107.00	100.00	195.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Betaproteobacteria	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	unclassified (derived from Betaproteobacteria)	uncultured beta proteobacterium	1	-132.00	100.00	237.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Deltaproteobacteria	unclassified (derived from Deltaproteobacteria)	unclassified (derived from Deltaproteobacteria)	unclassified (derived from Deltaproteobacteria)	uncultured delta proteobacterium	1	-62.00	100.00	119.00	1	
+4640037.3	M5RNA	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter gracilis	11	-28.00	100.00	63.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter lanienae	2	-121.00	100.00	222.00	2	
+4640030.3	M5RNA	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Sulfurospirillum	Sulfurospirillum deleyianum	2	-28.00	100.00	62.00	1	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Sulfurospirillum	Sulfurospirillum deleyianum	1	-28.00	100.00	62.00	1	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Enterobacter	Enterobacter gergoviae	2	-131.00	100.00	236.33	2	
+4640033.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Escherichia	uncultured Escherichia sp.	1	-127.00	99.17	240.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Klebsiella	Klebsiella oxytoca	1	-87.00	98.31	178.00	1	
+4640042.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Klebsiella	uncultured Klebsiella sp.	1	-124.00	100.00	225.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Salmonella	Salmonella enterica	1	-113.00	98.21	223.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Serratia	Serratia marcescens	214	-137.00	100.00	247.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Serratia	Serratia marcescens	6	-98.00	99.45	182.00	1	
+4640045.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Serratia	uncultured Serratia sp.	1	-133.00	99.59	241.00	1	
+4640043.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Serratia	uncultured Serratia sp.	2	-134.00	100.00	241.00	1	
+4640033.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Shigella	Shigella dysenteriae	1	-130.00	98.39	248.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Legionellales	Legionellaceae	Legionella	Legionella lytica	1	-47.00	100.00	94.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Legionellales	Legionellaceae	Legionella	Legionella sp. NML 93L054	1	-21.00	100.00	50.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	10	-139.00	100.00	250.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	6	-139.00	100.00	250.00	1	
+4640037.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	1242	-139.00	99.60	252.00	1	
+4640045.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	3	-139.00	100.00	250.00	1	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	17	-130.00	98.39	249.00	1	
+4640046.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	2	-127.00	100.00	230.00	1	
+4640034.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	2	-140.00	100.00	252.00	1	
+4640040.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia haemolytica	4	-134.00	99.19	247.00	2	
+4640032.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia haemolytica	46	-134.00	99.19	247.00	2	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. NCTC 11313	224	-134.00	99.19	247.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. NCTC 11313	1	-134.00	99.19	247.00	1	
+4640044.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. NCTC 11313	1	-108.00	100.00	198.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter calcoaceticus	1	-133.00	99.17	242.00	1	
+4640042.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter seohaensis	1	-90.00	99.41	169.00	1	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Psychrobacter	Psychrobacter marincola	1	-110.00	100.00	202.00	1	
+4640042.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Psychrobacter	Psychrobacter marincola	1	-112.00	100.00	204.00	1	
+4640041.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas pertucinogena	1	-133.00	99.59	241.00	1	
+4640039.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	uncultured gamma proteobacterium	1	-137.00	100.00	247.00	1	
+4640038.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	uncultured gamma proteobacterium	23	-45.00	100.00	91.00	1	
+4640031.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	uncultured gamma proteobacterium	1	-48.00	100.00	96.00	1	
+4640042.3	M5RNA	Bacteria	Proteobacteria	Gammaproteobacteria	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	unclassified (derived from Gammaproteobacteria)	uncultured gamma proteobacterium	1	-137.00	100.00	247.00	1	
+4640033.3	M5RNA	Bacteria	Proteobacteria	unclassified (derived from Proteobacteria)	unclassified (derived from Proteobacteria)	unclassified (derived from Proteobacteria)	unclassified (derived from Proteobacteria)	uncultured proteobacterium	11	-137.00	99.60	247.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma arginini	97	-81.06	97.63	161.91	2	
+4640044.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovigenitalium	91	-63.00	100.00	122.00	1	
+4640037.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovigenitalium	4	-63.00	100.00	122.00	1	
+4640045.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovigenitalium	280	-62.88	100.00	121.80	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovigenitalium	12	-63.00	100.00	122.00	1	
+4640034.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovigenitalium	1	-63.00	100.00	122.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma californicum	1	-129.00	99.58	240.00	1	
+4640030.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	2	-127.00	100.00	231.00	2	
+4640037.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	4	-128.50	99.58	235.50	2	
+4640031.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	138	-129.00	100.00	235.50	2	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	182	-62.21	98.53	131.44	2	
+4640034.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	52	-58.00	100.00	115.00	2	
+4640033.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	14	-128.50	99.58	235.50	2	
+4640030.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma feliminutum	1	-47.00	100.00	96.00	1	
+4640044.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma feliminutum	1	-47.00	100.00	96.00	1	
+4640037.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma feliminutum	1	-47.00	100.00	96.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma feliminutum	14	-47.00	100.00	96.00	1	
+4640044.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma phocirhinis	91	-22.00	100.00	52.00	1	
+4640037.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma phocirhinis	4	-22.00	100.00	52.00	1	
+4640045.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma phocirhinis	279	-22.00	100.00	52.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma phocirhinis	13	-22.23	100.00	52.38	1	
+4640034.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma phocirhinis	1	-22.00	100.00	52.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma simbae	1	-63.00	100.00	123.00	1	
+4640041.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	84	-47.00	99.01	101.00	1	
+4640039.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	8	-47.00	99.01	101.00	1	
+4640044.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	13	-43.00	96.81	94.00	1	
+4640036.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	1	-42.00	95.74	94.00	1	
+4640037.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	2	-46.00	97.91	97.50	1	
+4640040.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	4	-70.00	97.24	145.00	1	
+4640042.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	344	-47.00	99.01	101.00	1	
+4640045.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	13	-43.31	96.98	94.54	1	
+4640043.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma canigenitalium	1	-47.00	99.01	101.00	1	
+4640032.3	M5RNA	Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Ureaplasma	Ureaplasma gallorale	1	-37.00	100.00	78.00	1	
+4640039.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	rumen bacterium NK3B85	4	-55.00	95.83	120.00	1	
+4640040.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	rumen bacterium NK3B85	2	-29.00	100.00	64.00	1	
+4640042.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	rumen bacterium NK3B85	1	-26.00	100.00	60.00	1	
+4640045.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	rumen bacterium NK3B85	1	-24.00	100.00	56.00	1	
+4640030.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	1	-131.00	100.00	237.00	1	
+4640041.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	61	-83.31	99.96	155.90	9	
+4640039.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	266	-128.88	100.00	233.20	17	
+4640038.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	437	-109.12	99.85	200.06	18	
+4640044.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	1	-38.00	100.00	79.00	1	
+4640036.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	4	-124.00	99.77	224.00	2	
+4640037.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	12	-30.43	100.00	67.86	2	
+4640040.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	93	-104.94	99.75	195.28	17	
+4640031.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	49	-88.34	99.40	166.26	20	
+4640042.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	9	-91.04	100.00	169.21	7	
+4640045.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	3	-106.00	99.84	196.33	3	
+4640043.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	5	-97.80	99.91	181.60	4	
+4640032.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	38	-89.38	99.95	166.09	18	
+4640034.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	1	-131.00	100.00	237.00	1	
+4640033.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured bacterium	201	-71.11	98.76	141.38	6	
+4640033.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured marine bacterium	1	-128.00	100.00	232.00	1	
+4640040.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured rumen bacterium	1	-20.00	100.00	50.00	1	
+4640031.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured soil bacterium	1	-70.00	97.89	142.00	1	
+4640032.3	M5RNA	Bacteria	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	unclassified (derived from Bacteria)	uncultured soil bacterium	3	-75.00	100.00	142.00	1	
+4640044.3	M5RNA	Eukaryota	Arthropoda	Insecta	Isoptera	Rhinotermitidae	Coptotermes	Coptotermes formosanus	1	-23.00	100.00	53.00	1	
+4640040.3	M5RNA	Eukaryota	Arthropoda	Insecta	Isoptera	Rhinotermitidae	Coptotermes	Coptotermes formosanus	118	-34.52	100.00	74.36	1	
+4640042.3	M5RNA	Eukaryota	Arthropoda	Insecta	Isoptera	Rhinotermitidae	Coptotermes	Coptotermes formosanus	1	-21.00	100.00	51.00	1	
+4640043.3	M5RNA	Eukaryota	Arthropoda	Insecta	Isoptera	Rhinotermitidae	Coptotermes	Coptotermes formosanus	6	-41.00	100.00	85.00	1	
+4640041.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	65	-51.46	99.81	102.15	6	
+4640039.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	25	-76.92	99.91	145.00	5	
+4640038.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	127	-109.22	99.68	200.89	10	
+4640044.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	49	-74.42	99.34	141.40	4	
+4640042.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	4	-96.33	99.71	178.17	4	
+4640043.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	37	-103.11	99.67	190.17	6	
+4640032.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	19	-91.67	99.09	173.95	6	
+4640034.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	8	-43.00	100.00	87.00	1	
+4640033.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	199	-104.35	98.78	196.44	8	
+4640040.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	18	-59.01	99.71	117.04	5	
+4640031.3	M5RNA	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	unassigned	9	-89.86	99.74	167.68	7	
+4640038.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	uncultured organism	7	-32.33	100.00	69.67	2	
+4640037.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	uncultured prokaryote	1	-116.00	99.07	214.00	1	
+4640041.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unidentified	1	-22.00	100.00	52.00	1	
+4640039.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unidentified	1	-46.00	100.00	93.00	1	
+4640040.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unidentified	1	-112.00	99.52	207.00	1	
+4640033.3	M5RNA	unclassified sequences	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unclassified (derived from unclassified sequences)	unidentified	1	-130.00	98.39	248.00	1	

@@ -4,9 +4,7 @@ import sys
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import setp
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/")
-
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 # function for setting the colors of the box plots pairs
 def setBoxColors(bp):

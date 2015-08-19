@@ -23,34 +23,35 @@ from math import log10
 import linecache
 
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/")
-
 
 
 def Fig1():
 
     datasets = []
-    BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'GENTRY', 'AGSOIL', 'SLUDGE', 'FECES']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
-    for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/micro'):
+        if name in GoodNames: pass
+        else: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
         print name, num_lines
 
-    for name in os.listdir(mydir2 +'data/macro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/macro'):
+        if name in GoodNames: pass
+        else: continue
 
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
         print name, num_lines
+
 
     metrics = ['Rarity, '+r'$log_{10}$',
             'Dominance, '+r'$log_{10}$',
@@ -87,8 +88,8 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = np.random.choice(range(1, numlines+1), 40, replace=True)
 
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 # Randomly reassign the kind, micro or macro on the per site-level
                 kind = names[i]

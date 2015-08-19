@@ -1,0 +1,4523 @@
+4495717.3	Bacteria	unclassified (derived from Clostridiales)	19430
+4495717.3	Bacteria	Eubacterium	17963
+4495717.3	Bacteria	Butyrivibrio	14700
+4495717.3	Bacteria	Blautia	12749
+4495717.3	Bacteria	Clostridium	11517
+4495717.3	Bacteria	Bacteroides	10784
+4495717.3	Bacteria	Faecalibacterium	8219
+4495717.3	Bacteria	Ruminococcus	8197
+4495717.3	Bacteria	unclassified (derived from Bacteria)	3426
+4495717.3	Bacteria	unclassified (derived from Lachnospiraceae)	2392
+4495717.3	Bacteria	Bifidobacterium	2363
+4495717.3	Bacteria	Veillonella	2054
+4495717.3	Bacteria	Akkermansia	1944
+4495717.3	Bacteria	Streptococcus	1019
+4495717.3	Bacteria	Collinsella	966
+4495717.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	808
+4495717.3	Bacteria	Dialister	786
+4495717.3	Bacteria	Hespellia	709
+4495717.3	Bacteria	Dorea	632
+4495717.3	Bacteria	Roseburia	449
+4495717.3	Bacteria	Anaerotruncus	333
+4495717.3	Bacteria	Ethanoligenens	309
+4495717.3	Bacteria	Anaerostipes	232
+4495717.3	Bacteria	Selenomonas	230
+4495717.3	Bacteria	Butyricicoccus	215
+4495717.3	Bacteria	Actinomyces	193
+4495717.3	Bacteria	Syntrophococcus	159
+4495717.3	Bacteria	unclassified (derived from Ruminococcaceae)	148
+4495717.3	Bacteria	Parabacteroides	145
+4495717.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	132
+4495717.3	Bacteria	Lachnospira	109
+4495717.3	Bacteria	Bacillus	82
+4495717.3	Bacteria	Odoribacter	69
+4495717.3	Bacteria	Alkaliphilus	66
+4495717.3	Bacteria	Alistipes	63
+4495717.3	Bacteria	Robinsoniella	58
+4495717.3	Bacteria	Barnesiella	55
+4495717.3	Bacteria	Acetitomaculum	54
+4495717.3	Bacteria	Pseudobutyrivibrio	52
+4495717.3	Bacteria	unclassified (derived from Alphaproteobacteria)	49
+4495717.3	Bacteria	Atopobium	46
+4495717.3	Bacteria	Lactococcus	41
+4495717.3	Bacteria	Ureibacillus	36
+4495717.3	Bacteria	Marinilabilia	34
+4495717.3	Bacteria	Lactobacillus	28
+4495717.3	Bacteria	Prevotella	26
+4495717.3	Bacteria	Megasphaera	25
+4495717.3	Bacteria	Peptostreptococcus	22
+4495717.3	Bacteria	Abiotrophia	19
+4495717.3	Bacteria	Granulicatella	19
+4495717.3	Bacteria	Megamonas	18
+4495717.3	Bacteria	Acetobacterium	17
+4495717.3	Bacteria	Anaerofustis	17
+4495717.3	Bacteria	Phascolarctobacterium	17
+4495717.3	Bacteria	Acidaminococcus	16
+4495717.3	Bacteria	Leuconostoc	15
+4495717.3	Bacteria	Escherichia	15
+4495717.3	Bacteria	unclassified (derived from Proteobacteria)	12
+4495717.3	Bacteria	Corynebacterium	11
+4495717.3	Bacteria	Sedimentibacter	11
+4495717.3	Bacteria	Gemella	8
+4495717.3	Bacteria	Hydrogenobaculum	7
+4495717.3	Bacteria	Catenibacterium	7
+4495717.3	Bacteria	Enterococcus	6
+4495717.3	Bacteria	Pediococcus	6
+4495717.3	Bacteria	Thermoanaerobacter	6
+4495717.3	Bacteria	Oribacterium	5
+4495717.3	Bacteria	Caloramator	4
+4495717.3	Bacteria	Desulfitibacter	4
+4495717.3	Bacteria	unclassified (derived from Gammaproteobacteria)	4
+4495717.3	Bacteria	Aeriscardovia	3
+4495717.3	Bacteria	Fusibacter	3
+4495717.3	Bacteria	Peptococcus	3
+4495717.3	Bacteria	Phyllobacterium	3
+4495717.3	Bacteria	Rothia	2
+4495717.3	Bacteria	Eggerthella	2
+4495717.3	Bacteria	Sphingobacterium	2
+4495717.3	Bacteria	Paenibacillus	2
+4495717.3	Bacteria	Tissierella	2
+4495717.3	Bacteria	Coprococcus	2
+4495717.3	Bacteria	Desulfotomaculum	2
+4495717.3	Bacteria	Natranaerobius	2
+4495717.3	Bacteria	Rhizobium	2
+4495717.3	Bacteria	Desulfovibrio	2
+4495717.3	Bacteria	Pseudomonas	2
+4495717.3	Bacteria	Saccharomonospora	1
+4495717.3	Bacteria	Porphyromonas	1
+4495717.3	Bacteria	Pedobacter	1
+4495717.3	Bacteria	Cohnella	1
+4495717.3	Bacteria	Laceyella	1
+4495717.3	Bacteria	Oxobacter	1
+4495717.3	Bacteria	Anaerobranca	1
+4495717.3	Bacteria	Shuttleworthia	1
+4495717.3	Bacteria	Candidatus Desulforudis	1
+4495717.3	Bacteria	Desulfitobacterium	1
+4495717.3	Bacteria	Brevundimonas	1
+4495717.3	Bacteria	Corallococcus	1
+4495717.3	Bacteria	Aeromonas	1
+4495717.3	Bacteria	Allochromatium	1
+4495717.3	Bacteria	Enterobacter	1
+4495717.3	Bacteria	Pasteurella	1
+4495708.3	Bacteria	unclassified (derived from Clostridiales)	16447
+4495708.3	Bacteria	Eubacterium	13237
+4495708.3	Bacteria	Butyrivibrio	12560
+4495708.3	Bacteria	Blautia	10942
+4495708.3	Bacteria	Clostridium	8653
+4495708.3	Bacteria	Faecalibacterium	7482
+4495708.3	Bacteria	Bacteroides	7435
+4495708.3	Bacteria	Ruminococcus	4610
+4495708.3	Bacteria	unclassified (derived from Bacteria)	2711
+4495708.3	Bacteria	Bifidobacterium	1974
+4495708.3	Bacteria	unclassified (derived from Lachnospiraceae)	1970
+4495708.3	Bacteria	Veillonella	1935
+4495708.3	Bacteria	Akkermansia	1391
+4495708.3	Bacteria	Roseburia	699
+4495708.3	Bacteria	Dorea	649
+4495708.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	604
+4495708.3	Bacteria	Bacillus	437
+4495708.3	Bacteria	Collinsella	380
+4495708.3	Bacteria	Hespellia	283
+4495708.3	Bacteria	Ethanoligenens	237
+4495708.3	Bacteria	Anaerotruncus	149
+4495708.3	Bacteria	Syntrophococcus	147
+4495708.3	Bacteria	Butyricicoccus	141
+4495708.3	Bacteria	Actinomyces	134
+4495708.3	Bacteria	unclassified (derived from Ruminococcaceae)	120
+4495708.3	Bacteria	Selenomonas	115
+4495708.3	Bacteria	Anaerostipes	112
+4495708.3	Bacteria	Coprococcus	103
+4495708.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	99
+4495708.3	Bacteria	Alkaliphilus	90
+4495708.3	Bacteria	Alistipes	80
+4495708.3	Bacteria	Candidatus Desulforudis	78
+4495708.3	Bacteria	Parabacteroides	66
+4495708.3	Bacteria	Streptococcus	54
+4495708.3	Bacteria	Dialister	47
+4495708.3	Bacteria	Barnesiella	44
+4495708.3	Bacteria	Ureibacillus	40
+4495708.3	Bacteria	Lachnospira	37
+4495708.3	Bacteria	Marinilabilia	34
+4495708.3	Bacteria	unclassified (derived from Gammaproteobacteria)	28
+4495708.3	Bacteria	Atopobium	24
+4495708.3	Bacteria	Odoribacter	24
+4495708.3	Bacteria	Robinsoniella	24
+4495708.3	Bacteria	Acetobacterium	22
+4495708.3	Bacteria	Pseudobutyrivibrio	22
+4495708.3	Bacteria	Carboxydothermus	22
+4495708.3	Bacteria	Hydrogenobaculum	20
+4495708.3	Bacteria	Megamonas	20
+4495708.3	Bacteria	unclassified (derived from Alphaproteobacteria)	20
+4495708.3	Bacteria	Lactococcus	16
+4495708.3	Bacteria	Lactobacillus	14
+4495708.3	Bacteria	Corynebacterium	10
+4495708.3	Bacteria	Prevotella	8
+4495708.3	Bacteria	Enterococcus	7
+4495708.3	Bacteria	Desulfotomaculum	7
+4495708.3	Bacteria	Pseudomonas	7
+4495708.3	Bacteria	Desulfosporosinus	5
+4495708.3	Bacteria	Acidaminococcus	5
+4495708.3	Bacteria	Cellulosimicrobium	4
+4495708.3	Bacteria	Aeriscardovia	2
+4495708.3	Bacteria	Gordonibacter	2
+4495708.3	Bacteria	Sedimentibacter	2
+4495708.3	Bacteria	Oribacterium	2
+4495708.3	Bacteria	Peptostreptococcus	2
+4495708.3	Bacteria	Holdemania	2
+4495708.3	Bacteria	Thiorhodococcus	2
+4495708.3	Bacteria	Acinetobacter	2
+4495708.3	Bacteria	Arcanobacterium	1
+4495708.3	Bacteria	Kocuria	1
+4495708.3	Bacteria	Mycobacterium	1
+4495708.3	Bacteria	Enterorhabdus	1
+4495708.3	Bacteria	Empedobacter	1
+4495708.3	Bacteria	Wautersiella	1
+4495708.3	Bacteria	Sphingobacterium	1
+4495708.3	Bacteria	Aneurinibacillus	1
+4495708.3	Bacteria	Gemella	1
+4495708.3	Bacteria	Carnobacterium	1
+4495708.3	Bacteria	Trichococcus	1
+4495708.3	Bacteria	Pediococcus	1
+4495708.3	Bacteria	Weissella	1
+4495708.3	Bacteria	Tissierella	1
+4495708.3	Bacteria	Thermaerobacter	1
+4495708.3	Bacteria	Desulfitibacter	1
+4495708.3	Bacteria	Thermoanaerobacter	1
+4495708.3	Bacteria	Erysipelothrix	1
+4495708.3	Bacteria	Phascolarctobacterium	1
+4495708.3	Bacteria	Achromobacter	1
+4495708.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495708.3	Bacteria	Myxococcus	1
+4495708.3	Bacteria	Enterobacter	1
+4495697.3	Bacteria	unclassified (derived from Clostridiales)	24868
+4495697.3	Bacteria	Eubacterium	24198
+4495697.3	Bacteria	Blautia	19782
+4495697.3	Bacteria	Clostridium	16202
+4495697.3	Bacteria	Butyrivibrio	16130
+4495697.3	Bacteria	Faecalibacterium	12081
+4495697.3	Bacteria	Bacteroides	11138
+4495697.3	Bacteria	Ruminococcus	10705
+4495697.3	Bacteria	unclassified (derived from Bacteria)	3858
+4495697.3	Bacteria	Veillonella	3424
+4495697.3	Bacteria	Bifidobacterium	2648
+4495697.3	Bacteria	unclassified (derived from Lachnospiraceae)	1703
+4495697.3	Bacteria	Hespellia	1681
+4495697.3	Bacteria	Collinsella	1512
+4495697.3	Bacteria	Dorea	942
+4495697.3	Bacteria	Selenomonas	818
+4495697.3	Bacteria	Akkermansia	791
+4495697.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	710
+4495697.3	Bacteria	Bacillus	523
+4495697.3	Bacteria	Anaerostipes	480
+4495697.3	Bacteria	Ethanoligenens	362
+4495697.3	Bacteria	Actinomyces	210
+4495697.3	Bacteria	Syntrophococcus	196
+4495697.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	191
+4495697.3	Bacteria	Parabacteroides	173
+4495697.3	Bacteria	Butyricicoccus	171
+4495697.3	Bacteria	Roseburia	154
+4495697.3	Bacteria	unclassified (derived from Ruminococcaceae)	132
+4495697.3	Bacteria	Alkaliphilus	121
+4495697.3	Bacteria	Ureibacillus	117
+4495697.3	Bacteria	Streptococcus	88
+4495697.3	Bacteria	Dialister	79
+4495697.3	Bacteria	Anaerotruncus	66
+4495697.3	Bacteria	Atopobium	53
+4495697.3	Bacteria	Barnesiella	52
+4495697.3	Bacteria	Alistipes	49
+4495697.3	Bacteria	Lactococcus	43
+4495697.3	Bacteria	Marinilabilia	42
+4495697.3	Bacteria	Lachnospira	37
+4495697.3	Bacteria	Robinsoniella	32
+4495697.3	Bacteria	Lactobacillus	30
+4495697.3	Bacteria	Porphyromonas	22
+4495697.3	Bacteria	Pseudobutyrivibrio	20
+4495697.3	Bacteria	Megamonas	17
+4495697.3	Bacteria	Enterococcus	15
+4495697.3	Bacteria	Thermoanaerobacter	13
+4495697.3	Bacteria	Phascolarctobacterium	13
+4495697.3	Bacteria	unclassified (derived from Gammaproteobacteria)	13
+4495697.3	Bacteria	Aeriscardovia	12
+4495697.3	Bacteria	unclassified (derived from Alphaproteobacteria)	12
+4495697.3	Bacteria	Acidaminococcus	11
+4495697.3	Bacteria	Escherichia	11
+4495697.3	Bacteria	Brevundimonas	9
+4495697.3	Bacteria	Abiotrophia	8
+4495697.3	Bacteria	Acetobacterium	8
+4495697.3	Bacteria	Corynebacterium	6
+4495697.3	Bacteria	Gordonibacter	6
+4495697.3	Bacteria	Hydrogenobaculum	5
+4495697.3	Bacteria	Sulfurihydrogenibium	5
+4495697.3	Bacteria	Ralstonia	5
+4495697.3	Bacteria	Sedimentibacter	4
+4495697.3	Bacteria	Oribacterium	4
+4495697.3	Bacteria	Catenibacterium	4
+4495697.3	Bacteria	Thermosinus	4
+4495697.3	Bacteria	Sarcina	3
+4495697.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	3
+4495697.3	Bacteria	Anaerofustis	3
+4495697.3	Bacteria	Peptostreptococcus	3
+4495697.3	Bacteria	Pseudomonas	3
+4495697.3	Bacteria	Alloscardovia	2
+4495697.3	Bacteria	Metascardovia	2
+4495697.3	Bacteria	Gemella	2
+4495697.3	Bacteria	Granulicatella	2
+4495697.3	Bacteria	Pediococcus	2
+4495697.3	Bacteria	Leuconostoc	2
+4495697.3	Bacteria	Fusibacter	2
+4495697.3	Bacteria	Desulfitobacterium	2
+4495697.3	Bacteria	Acetivibrio	2
+4495697.3	Bacteria	Bulleidia	2
+4495697.3	Bacteria	Phyllobacterium	2
+4495697.3	Bacteria	Cellulomonas	1
+4495697.3	Bacteria	Kocuria	1
+4495697.3	Bacteria	Micromonospora	1
+4495697.3	Bacteria	Scardovia	1
+4495697.3	Bacteria	Odoribacter	1
+4495697.3	Bacteria	Chloroherpeton	1
+4495697.3	Bacteria	Carnobacterium	1
+4495697.3	Bacteria	Peptococcus	1
+4495697.3	Bacteria	Methylobacterium	1
+4495697.3	Bacteria	Achromobacter	1
+4495697.3	Bacteria	Bilophila	1
+4495697.3	Bacteria	Desulfovibrio	1
+4495697.3	Bacteria	Dethiosulfovibrio	1
+4495687.3	Bacteria	unclassified (derived from Clostridiales)	19777
+4495687.3	Bacteria	Eubacterium	19743
+4495687.3	Bacteria	Butyrivibrio	18589
+4495687.3	Bacteria	Clostridium	15076
+4495687.3	Bacteria	Blautia	14774
+4495687.3	Bacteria	Bacteroides	10056
+4495687.3	Bacteria	Ruminococcus	7160
+4495687.3	Bacteria	Faecalibacterium	7068
+4495687.3	Bacteria	Bifidobacterium	3246
+4495687.3	Bacteria	Veillonella	2364
+4495687.3	Bacteria	unclassified (derived from Bacteria)	2254
+4495687.3	Bacteria	Akkermansia	1520
+4495687.3	Bacteria	unclassified (derived from Lachnospiraceae)	1119
+4495687.3	Bacteria	Collinsella	972
+4495687.3	Bacteria	Hespellia	870
+4495687.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	706
+4495687.3	Bacteria	Dialister	462
+4495687.3	Bacteria	Syntrophococcus	456
+4495687.3	Bacteria	Selenomonas	442
+4495687.3	Bacteria	Dorea	441
+4495687.3	Bacteria	Roseburia	366
+4495687.3	Bacteria	Parabacteroides	237
+4495687.3	Bacteria	Ethanoligenens	214
+4495687.3	Bacteria	Butyricicoccus	170
+4495687.3	Bacteria	Actinomyces	147
+4495687.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	120
+4495687.3	Bacteria	Anaerostipes	105
+4495687.3	Bacteria	Anaerotruncus	105
+4495687.3	Bacteria	Hydrogenobaculum	94
+4495687.3	Bacteria	unclassified (derived from Ruminococcaceae)	81
+4495687.3	Bacteria	Lachnospira	79
+4495687.3	Bacteria	Alkaliphilus	76
+4495687.3	Bacteria	Barnesiella	48
+4495687.3	Bacteria	Streptococcus	48
+4495687.3	Bacteria	Bacillus	46
+4495687.3	Bacteria	Ureibacillus	46
+4495687.3	Bacteria	Alistipes	42
+4495687.3	Bacteria	Peptostreptococcus	34
+4495687.3	Bacteria	Atopobium	27
+4495687.3	Bacteria	Oribacterium	24
+4495687.3	Bacteria	Lactobacillus	22
+4495687.3	Bacteria	Lactococcus	17
+4495687.3	Bacteria	Prevotella	15
+4495687.3	Bacteria	Odoribacter	14
+4495687.3	Bacteria	Robinsoniella	13
+4495687.3	Bacteria	Megamonas	11
+4495687.3	Bacteria	Halothermothrix	10
+4495687.3	Bacteria	Corynebacterium	9
+4495687.3	Bacteria	Desulfotomaculum	9
+4495687.3	Bacteria	Granulicatella	8
+4495687.3	Bacteria	Aneurinibacillus	7
+4495687.3	Bacteria	Symbiobacterium	7
+4495687.3	Bacteria	unclassified (derived from Alphaproteobacteria)	7
+4495687.3	Bacteria	Streptomyces	6
+4495687.3	Bacteria	Pseudomonas	5
+4495687.3	Bacteria	Aeriscardovia	4
+4495687.3	Bacteria	Sedimentibacter	4
+4495687.3	Bacteria	unclassified (derived from Gammaproteobacteria)	4
+4495687.3	Bacteria	Marinilabilia	3
+4495687.3	Bacteria	Gemella	3
+4495687.3	Bacteria	Caloramator	3
+4495687.3	Bacteria	Acetobacterium	3
+4495687.3	Bacteria	Acetitomaculum	3
+4495687.3	Bacteria	Acidaminococcus	3
+4495687.3	Bacteria	Phascolarctobacterium	3
+4495687.3	Bacteria	Aminobacter	3
+4495687.3	Bacteria	Yersinia	3
+4495687.3	Bacteria	Arthrobacter	2
+4495687.3	Bacteria	Thermaerobacter	2
+4495687.3	Bacteria	Desulfovibrio	2
+4495687.3	Bacteria	Rothia	1
+4495687.3	Bacteria	Thermobifida	1
+4495687.3	Bacteria	Gordonibacter	1
+4495687.3	Bacteria	Desulfurobacterium	1
+4495687.3	Bacteria	Elizabethkingia	1
+4495687.3	Bacteria	Sphingobacterium	1
+4495687.3	Bacteria	Prosthecochloris	1
+4495687.3	Bacteria	Sphaerobacter	1
+4495687.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	1
+4495687.3	Bacteria	Anaerofustis	1
+4495687.3	Bacteria	Pseudobutyrivibrio	1
+4495687.3	Bacteria	Shuttleworthia	1
+4495687.3	Bacteria	Candidatus Desulforudis	1
+4495687.3	Bacteria	Peptococcus	1
+4495687.3	Bacteria	Thermosinus	1
+4495687.3	Bacteria	Rhodobacter	1
+4495687.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495687.3	Bacteria	Desulfocella	1
+4495687.3	Bacteria	Allochromatium	1
+4495687.3	Bacteria	Thiocapsa	1
+4495687.3	Bacteria	Escherichia	1
+4495678.3	Bacteria	Blautia	45752
+4495678.3	Bacteria	Faecalibacterium	25458
+4495678.3	Bacteria	Clostridium	20147
+4495678.3	Bacteria	unclassified (derived from Clostridiales)	11187
+4495678.3	Bacteria	Butyrivibrio	11108
+4495678.3	Bacteria	Eubacterium	10057
+4495678.3	Bacteria	Peptococcus	4228
+4495678.3	Bacteria	Bacteroides	4174
+4495678.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	2801
+4495678.3	Bacteria	unclassified (derived from Lachnospiraceae)	2008
+4495678.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1877
+4495678.3	Bacteria	Bifidobacterium	1041
+4495678.3	Bacteria	unclassified (derived from Bacteria)	916
+4495678.3	Bacteria	Roseburia	912
+4495678.3	Bacteria	Ruminococcus	900
+4495678.3	Bacteria	Subdoligranulum	323
+4495678.3	Bacteria	Hespellia	320
+4495678.3	Bacteria	Oribacterium	246
+4495678.3	Bacteria	Butyricicoccus	227
+4495678.3	Bacteria	Pseudomonas	214
+4495678.3	Bacteria	Carnobacterium	181
+4495678.3	Bacteria	Parabacteroides	178
+4495678.3	Bacteria	Acetobacterium	176
+4495678.3	Bacteria	unclassified (derived from Ruminococcaceae)	173
+4495678.3	Bacteria	Lactobacillus	167
+4495678.3	Bacteria	Dorea	158
+4495678.3	Bacteria	Pseudobutyrivibrio	156
+4495678.3	Bacteria	Anaerostipes	150
+4495678.3	Bacteria	Veillonella	132
+4495678.3	Bacteria	Actinomyces	127
+4495678.3	Bacteria	Phascolarctobacterium	82
+4495678.3	Bacteria	Ureibacillus	81
+4495678.3	Bacteria	Acidaminococcus	80
+4495678.3	Bacteria	Alistipes	68
+4495678.3	Bacteria	Anaerotruncus	66
+4495678.3	Bacteria	Lachnospira	65
+4495678.3	Bacteria	Prevotella	52
+4495678.3	Bacteria	Barnesiella	42
+4495678.3	Bacteria	Methylobacterium	38
+4495678.3	Bacteria	Collinsella	31
+4495678.3	Bacteria	Enterobacter	30
+4495678.3	Bacteria	Pasteurella	29
+4495678.3	Bacteria	Megamonas	28
+4495678.3	Bacteria	Phyllobacterium	23
+4495678.3	Bacteria	Corynebacterium	15
+4495678.3	Bacteria	Streptococcus	15
+4495678.3	Bacteria	Alkaliphilus	15
+4495678.3	Bacteria	Rothia	14
+4495678.3	Bacteria	Selenomonas	11
+4495678.3	Bacteria	Sarcina	10
+4495678.3	Bacteria	Megasphaera	9
+4495678.3	Bacteria	Odoribacter	6
+4495678.3	Bacteria	Leuconostoc	6
+4495678.3	Bacteria	Atopobium	5
+4495678.3	Bacteria	Marinilabilia	5
+4495678.3	Bacteria	Gemella	5
+4495678.3	Bacteria	unclassified (derived from Burkholderiales)	5
+4495678.3	Bacteria	Porphyromonas	4
+4495678.3	Bacteria	Bacillus	4
+4495678.3	Bacteria	Abiotrophia	4
+4495678.3	Bacteria	Peptoniphilus	4
+4495678.3	Bacteria	Shuttleworthia	4
+4495678.3	Bacteria	Helicobacter	4
+4495678.3	Bacteria	Rhodococcus	3
+4495678.3	Bacteria	Granulicatella	3
+4495678.3	Bacteria	Robinsoniella	3
+4495678.3	Bacteria	Desulfotomaculum	3
+4495678.3	Bacteria	unclassified (derived from Alphaproteobacteria)	3
+4495678.3	Bacteria	Providencia	3
+4495678.3	Bacteria	Acinetobacter	3
+4495678.3	Bacteria	Akkermansia	3
+4495678.3	Bacteria	Eggerthella	2
+4495678.3	Bacteria	Rikenella	2
+4495678.3	Bacteria	Prolixibacter	2
+4495678.3	Bacteria	Enterococcus	2
+4495678.3	Bacteria	Lactococcus	2
+4495678.3	Bacteria	Finegoldia	2
+4495678.3	Bacteria	Acetitomaculum	2
+4495678.3	Bacteria	Holdemania	2
+4495678.3	Bacteria	Dialister	2
+4495678.3	Bacteria	Mesorhizobium	2
+4495678.3	Bacteria	Acidovorax	2
+4495678.3	Bacteria	Mobiluncus	1
+4495678.3	Bacteria	Arthrobacter	1
+4495678.3	Bacteria	Aeriscardovia	1
+4495678.3	Bacteria	Sphingobacterium	1
+4495678.3	Bacteria	Staphylococcus	1
+4495678.3	Bacteria	Paralactobacillus	1
+4495678.3	Bacteria	Pediococcus	1
+4495678.3	Bacteria	Sedimentibacter	1
+4495678.3	Bacteria	Fusibacter	1
+4495678.3	Bacteria	Coprococcus	1
+4495678.3	Bacteria	Desulfitibacter	1
+4495678.3	Bacteria	Thermincola	1
+4495678.3	Bacteria	Coprobacillus	1
+4495678.3	Bacteria	Erysipelothrix	1
+4495678.3	Bacteria	Brevundimonas	1
+4495678.3	Bacteria	Sphingobium	1
+4495678.3	Bacteria	Nitrococcus	1
+4495678.3	Bacteria	Arsenophonus	1
+4495678.3	Bacteria	Escherichia	1
+4495678.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495678.3	Bacteria	unclassified (derived from Proteobacteria)	1
+4495677.3	Bacteria	Faecalibacterium	25980
+4495677.3	Bacteria	Blautia	25588
+4495677.3	Bacteria	Clostridium	17940
+4495677.3	Bacteria	unclassified (derived from Clostridiales)	13408
+4495677.3	Bacteria	Ruminococcus	13019
+4495677.3	Bacteria	Eubacterium	10195
+4495677.3	Bacteria	Butyrivibrio	4341
+4495677.3	Bacteria	Bacteroides	2943
+4495677.3	Bacteria	Hespellia	2374
+4495677.3	Bacteria	Veillonella	1822
+4495677.3	Bacteria	Akkermansia	1737
+4495677.3	Bacteria	unclassified (derived from Lachnospiraceae)	1604
+4495677.3	Bacteria	unclassified (derived from Bacteria)	1496
+4495677.3	Bacteria	Bifidobacterium	794
+4495677.3	Bacteria	Dorea	616
+4495677.3	Bacteria	Selenomonas	502
+4495677.3	Bacteria	Bacillus	272
+4495677.3	Bacteria	Anaerotruncus	238
+4495677.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	222
+4495677.3	Bacteria	Ethanoligenens	216
+4495677.3	Bacteria	Fusibacter	189
+4495677.3	Bacteria	unclassified (derived from Ruminococcaceae)	174
+4495677.3	Bacteria	Syntrophococcus	151
+4495677.3	Bacteria	Roseburia	142
+4495677.3	Bacteria	Alkaliphilus	109
+4495677.3	Bacteria	Anaerostipes	88
+4495677.3	Bacteria	Robinsoniella	78
+4495677.3	Bacteria	Acetitomaculum	70
+4495677.3	Bacteria	Collinsella	53
+4495677.3	Bacteria	Actinomyces	44
+4495677.3	Bacteria	Butyricicoccus	42
+4495677.3	Bacteria	Barnesiella	39
+4495677.3	Bacteria	Dialister	34
+4495677.3	Bacteria	Alistipes	30
+4495677.3	Bacteria	Ureibacillus	28
+4495677.3	Bacteria	Megamonas	28
+4495677.3	Bacteria	Peptococcus	27
+4495677.3	Bacteria	Acetobacterium	25
+4495677.3	Bacteria	Marinilabilia	23
+4495677.3	Bacteria	Lactobacillus	15
+4495677.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	15
+4495677.3	Bacteria	Atopobium	14
+4495677.3	Bacteria	Aneurinibacillus	12
+4495677.3	Bacteria	Granulicatella	12
+4495677.3	Bacteria	Oribacterium	12
+4495677.3	Bacteria	Streptococcus	11
+4495677.3	Bacteria	Lachnospira	11
+4495677.3	Bacteria	Parabacteroides	9
+4495677.3	Bacteria	unclassified (derived from Alphaproteobacteria)	9
+4495677.3	Bacteria	Pseudomonas	8
+4495677.3	Bacteria	Shuttleworthia	7
+4495677.3	Bacteria	Desulfosporosinus	7
+4495677.3	Bacteria	Porphyromonas	5
+4495677.3	Bacteria	Sarcina	5
+4495677.3	Bacteria	unclassified (derived from Gammaproteobacteria)	5
+4495677.3	Bacteria	Leuconostoc	4
+4495677.3	Bacteria	Aminobacter	4
+4495677.3	Bacteria	Sphingobacterium	3
+4495677.3	Bacteria	Corynebacterium	2
+4495677.3	Bacteria	Odoribacter	2
+4495677.3	Bacteria	Caloramator	2
+4495677.3	Bacteria	Pseudobutyrivibrio	2
+4495677.3	Bacteria	Escherichia	2
+4495677.3	Bacteria	Rhodococcus	1
+4495677.3	Bacteria	Aeriscardovia	1
+4495677.3	Bacteria	Cryptobacterium	1
+4495677.3	Bacteria	Hydrogenobaculum	1
+4495677.3	Bacteria	Sulfurihydrogenibium	1
+4495677.3	Bacteria	Prevotella	1
+4495677.3	Bacteria	Terrimonas	1
+4495677.3	Bacteria	Trichococcus	1
+4495677.3	Bacteria	Enterococcus	1
+4495677.3	Bacteria	Lactococcus	1
+4495677.3	Bacteria	Sedimentibacter	1
+4495677.3	Bacteria	Anaerobranca	1
+4495677.3	Bacteria	Thermaerobacter	1
+4495677.3	Bacteria	Candidatus Desulforudis	1
+4495677.3	Bacteria	Desulfitobacterium	1
+4495677.3	Bacteria	Peptostreptococcus	1
+4495677.3	Bacteria	Catenibacterium	1
+4495677.3	Bacteria	Holdemania	1
+4495677.3	Bacteria	Acidaminococcus	1
+4495677.3	Bacteria	Phascolarctobacterium	1
+4495677.3	Bacteria	Brevundimonas	1
+4495677.3	Bacteria	unclassified (derived from Deltaproteobacteria)	1
+4495677.3	Bacteria	Enterobacter	1
+4495677.3	Bacteria	Pyramidobacter	1
+4495676.3	Bacteria	Blautia	45824
+4495676.3	Bacteria	Faecalibacterium	26937
+4495676.3	Bacteria	Clostridium	21819
+4495676.3	Bacteria	Eubacterium	15260
+4495676.3	Bacteria	unclassified (derived from Clostridiales)	14507
+4495676.3	Bacteria	Butyrivibrio	12768
+4495676.3	Bacteria	Roseburia	4238
+4495676.3	Bacteria	Bacteroides	2817
+4495676.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2418
+4495676.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	1612
+4495676.3	Bacteria	unclassified (derived from Lachnospiraceae)	1494
+4495676.3	Bacteria	Ruminococcus	1486
+4495676.3	Bacteria	Bifidobacterium	1061
+4495676.3	Bacteria	unclassified (derived from Bacteria)	766
+4495676.3	Bacteria	Hespellia	670
+4495676.3	Bacteria	Subdoligranulum	353
+4495676.3	Bacteria	Carnobacterium	297
+4495676.3	Bacteria	Butyricicoccus	187
+4495676.3	Bacteria	Lactobacillus	171
+4495676.3	Bacteria	Parabacteroides	152
+4495676.3	Bacteria	Pseudomonas	140
+4495676.3	Bacteria	Oribacterium	132
+4495676.3	Bacteria	Sarcina	126
+4495676.3	Bacteria	Streptococcus	120
+4495676.3	Bacteria	unclassified (derived from Ruminococcaceae)	107
+4495676.3	Bacteria	Ureibacillus	92
+4495676.3	Bacteria	Actinomyces	81
+4495676.3	Bacteria	Alistipes	58
+4495676.3	Bacteria	Barnesiella	57
+4495676.3	Bacteria	Selenomonas	55
+4495676.3	Bacteria	Veillonella	55
+4495676.3	Bacteria	Pseudobutyrivibrio	52
+4495676.3	Bacteria	Dorea	48
+4495676.3	Bacteria	Acidaminococcus	48
+4495676.3	Bacteria	Enterococcus	39
+4495676.3	Bacteria	Anaerotruncus	36
+4495676.3	Bacteria	Syntrophococcus	32
+4495676.3	Bacteria	Anaerostipes	31
+4495676.3	Bacteria	Collinsella	29
+4495676.3	Bacteria	Corynebacterium	26
+4495676.3	Bacteria	Desulfotomaculum	25
+4495676.3	Bacteria	Enterobacter	24
+4495676.3	Bacteria	Lachnospira	22
+4495676.3	Bacteria	Aeriscardovia	16
+4495676.3	Bacteria	Peptococcus	16
+4495676.3	Bacteria	Bacillus	13
+4495676.3	Bacteria	Holdemania	12
+4495676.3	Bacteria	Megamonas	10
+4495676.3	Bacteria	Megasphaera	10
+4495676.3	Bacteria	Shuttleworthia	9
+4495676.3	Bacteria	Methylobacterium	9
+4495676.3	Bacteria	Porphyromonas	8
+4495676.3	Bacteria	Gemella	7
+4495676.3	Bacteria	Variovorax	7
+4495676.3	Bacteria	Acetobacterium	6
+4495676.3	Bacteria	Escherichia	6
+4495676.3	Bacteria	Marinilabilia	5
+4495676.3	Bacteria	Prevotella	5
+4495676.3	Bacteria	Rikenella	5
+4495676.3	Bacteria	Lactococcus	5
+4495676.3	Bacteria	Coprobacillus	5
+4495676.3	Bacteria	Phascolarctobacterium	5
+4495676.3	Bacteria	Pectinatus	5
+4495676.3	Bacteria	Bradyrhizobium	5
+4495676.3	Bacteria	Rothia	4
+4495676.3	Bacteria	Atopobium	4
+4495676.3	Bacteria	Gordonibacter	4
+4495676.3	Bacteria	Alkaliphilus	4
+4495676.3	Bacteria	Catenibacterium	4
+4495676.3	Bacteria	Akkermansia	4
+4495676.3	Bacteria	Rhodococcus	3
+4495676.3	Bacteria	Granulicatella	3
+4495676.3	Bacteria	Leuconostoc	3
+4495676.3	Bacteria	Weissella	3
+4495676.3	Bacteria	Dialister	3
+4495676.3	Bacteria	Abiotrophia	2
+4495676.3	Bacteria	Sedimentibacter	2
+4495676.3	Bacteria	Ethanoligenens	2
+4495676.3	Bacteria	unclassified (derived from Alphaproteobacteria)	2
+4495676.3	Bacteria	Nitrococcus	2
+4495676.3	Bacteria	Arcanobacterium	1
+4495676.3	Bacteria	Brevibacterium	1
+4495676.3	Bacteria	Terrabacter	1
+4495676.3	Bacteria	Microlunatus	1
+4495676.3	Bacteria	Pseudonocardia	1
+4495676.3	Bacteria	Tannerella	1
+4495676.3	Bacteria	Trichococcus	1
+4495676.3	Bacteria	Finegoldia	1
+4495676.3	Bacteria	Acetitomaculum	1
+4495676.3	Bacteria	Thermincola	1
+4495676.3	Bacteria	Brevundimonas	1
+4495676.3	Bacteria	Brucella	1
+4495676.3	Bacteria	Aminobacter	1
+4495676.3	Bacteria	Phaeobacter	1
+4495676.3	Bacteria	Acidovorax	1
+4495676.3	Bacteria	Helicobacter	1
+4495676.3	Bacteria	Allochromatium	1
+4495676.3	Bacteria	Arsenophonus	1
+4495676.3	Bacteria	Pantoea	1
+4495676.3	Bacteria	Providencia	1
+4495676.3	Bacteria	Pasteurella	1
+4495676.3	Bacteria	Acinetobacter	1
+4495676.3	Bacteria	Stenotrophomonas	1
+4495676.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495676.3	Bacteria	Acholeplasma	1
+4495676.3	Bacteria	Candidatus Phytoplasma	1
+4495675.3	Bacteria	Blautia	10110
+4495675.3	Bacteria	Faecalibacterium	7854
+4495675.3	Bacteria	Clostridium	5277
+4495675.3	Bacteria	Eubacterium	3793
+4495675.3	Bacteria	Butyrivibrio	3601
+4495675.3	Bacteria	unclassified (derived from Clostridiales)	2514
+4495675.3	Bacteria	Roseburia	1154
+4495675.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	983
+4495675.3	Bacteria	Bacteroides	879
+4495675.3	Bacteria	unclassified (derived from Lachnospiraceae)	390
+4495675.3	Bacteria	Bifidobacterium	374
+4495675.3	Bacteria	Veillonella	341
+4495675.3	Bacteria	Ruminococcus	322
+4495675.3	Bacteria	unclassified (derived from Bacteria)	234
+4495675.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	228
+4495675.3	Bacteria	Carnobacterium	118
+4495675.3	Bacteria	Pseudobutyrivibrio	86
+4495675.3	Bacteria	Dorea	79
+4495675.3	Bacteria	Butyricicoccus	73
+4495675.3	Bacteria	Sarcina	54
+4495675.3	Bacteria	Hespellia	47
+4495675.3	Bacteria	Oribacterium	36
+4495675.3	Bacteria	unclassified (derived from Ruminococcaceae)	36
+4495675.3	Bacteria	Parabacteroides	30
+4495675.3	Bacteria	Peptococcus	28
+4495675.3	Bacteria	Lactobacillus	25
+4495675.3	Bacteria	Anaerotruncus	22
+4495675.3	Bacteria	Streptococcus	21
+4495675.3	Bacteria	Ureibacillus	18
+4495675.3	Bacteria	Actinomyces	15
+4495675.3	Bacteria	Syntrophococcus	11
+4495675.3	Bacteria	Acidaminococcus	8
+4495675.3	Bacteria	Phascolarctobacterium	8
+4495675.3	Bacteria	Lachnospira	7
+4495675.3	Bacteria	Collinsella	6
+4495675.3	Bacteria	Alistipes	6
+4495675.3	Bacteria	Shuttleworthia	6
+4495675.3	Bacteria	Megamonas	6
+4495675.3	Bacteria	Enterobacter	6
+4495675.3	Bacteria	Barnesiella	5
+4495675.3	Bacteria	Methylobacterium	5
+4495675.3	Bacteria	Phyllobacterium	4
+4495675.3	Bacteria	Gemella	3
+4495675.3	Bacteria	Enterococcus	2
+4495675.3	Bacteria	Acetobacterium	2
+4495675.3	Bacteria	Anaerostipes	2
+4495675.3	Bacteria	Ethanoligenens	2
+4495675.3	Bacteria	Pectinatus	2
+4495675.3	Bacteria	Selenomonas	2
+4495675.3	Bacteria	unclassified (derived from Comamonadaceae)	2
+4495675.3	Bacteria	Corynebacterium	1
+4495675.3	Bacteria	Rothia	1
+4495675.3	Bacteria	Atopobium	1
+4495675.3	Bacteria	Hydrogenobaculum	1
+4495675.3	Bacteria	Tannerella	1
+4495675.3	Bacteria	Prevotella	1
+4495675.3	Bacteria	Lysinibacillus	1
+4495675.3	Bacteria	Staphylococcus	1
+4495675.3	Bacteria	Weissella	1
+4495675.3	Bacteria	Lactococcus	1
+4495675.3	Bacteria	Brevundimonas	1
+4495675.3	Bacteria	Acinetobacter	1
+4495675.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495675.3	Bacteria	Akkermansia	1
+4495674.3	Bacteria	Blautia	49437
+4495674.3	Bacteria	Faecalibacterium	26627
+4495674.3	Bacteria	Eubacterium	22664
+4495674.3	Bacteria	Clostridium	16964
+4495674.3	Bacteria	Butyrivibrio	15186
+4495674.3	Bacteria	unclassified (derived from Clostridiales)	12230
+4495674.3	Bacteria	Bacteroides	6964
+4495674.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	4235
+4495674.3	Bacteria	unclassified (derived from Lachnospiraceae)	3261
+4495674.3	Bacteria	Ruminococcus	2576
+4495674.3	Bacteria	Veillonella	2367
+4495674.3	Bacteria	Hespellia	2273
+4495674.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	1850
+4495674.3	Bacteria	Bifidobacterium	1825
+4495674.3	Bacteria	unclassified (derived from Bacteria)	1168
+4495674.3	Bacteria	Roseburia	859
+4495674.3	Bacteria	Pseudobutyrivibrio	498
+4495674.3	Bacteria	Oribacterium	396
+4495674.3	Bacteria	Carnobacterium	340
+4495674.3	Bacteria	Butyricicoccus	224
+4495674.3	Bacteria	Dorea	210
+4495674.3	Bacteria	Shuttleworthia	206
+4495674.3	Bacteria	Sarcina	203
+4495674.3	Bacteria	Parabacteroides	196
+4495674.3	Bacteria	Lactobacillus	196
+4495674.3	Bacteria	unclassified (derived from Ruminococcaceae)	159
+4495674.3	Bacteria	Tannerella	143
+4495674.3	Bacteria	Prevotella	121
+4495674.3	Bacteria	Acidaminococcus	95
+4495674.3	Bacteria	Actinomyces	94
+4495674.3	Bacteria	Ureibacillus	93
+4495674.3	Bacteria	Abiotrophia	91
+4495674.3	Bacteria	Alistipes	88
+4495674.3	Bacteria	Anaerotruncus	88
+4495674.3	Bacteria	Pseudomonas	87
+4495674.3	Bacteria	Alkaliphilus	65
+4495674.3	Bacteria	Ammonifex	62
+4495674.3	Bacteria	Selenomonas	46
+4495674.3	Bacteria	Collinsella	42
+4495674.3	Bacteria	Barnesiella	41
+4495674.3	Bacteria	Megasphaera	40
+4495674.3	Bacteria	Leuconostoc	38
+4495674.3	Bacteria	Enterobacter	34
+4495674.3	Bacteria	Porphyromonas	29
+4495674.3	Bacteria	Anaerostipes	29
+4495674.3	Bacteria	Lachnospira	28
+4495674.3	Bacteria	Coprobacillus	26
+4495674.3	Bacteria	Peptococcus	22
+4495674.3	Bacteria	Megamonas	21
+4495674.3	Bacteria	Haemophilus	21
+4495674.3	Bacteria	Rothia	18
+4495674.3	Bacteria	Holdemania	18
+4495674.3	Bacteria	Streptococcus	17
+4495674.3	Bacteria	Achromobacter	16
+4495674.3	Bacteria	Desulfotomaculum	14
+4495674.3	Bacteria	Arsenophonus	13
+4495674.3	Bacteria	Gemella	12
+4495674.3	Bacteria	Thermincola	11
+4495674.3	Bacteria	Ethanoligenens	11
+4495674.3	Bacteria	Phascolarctobacterium	9
+4495674.3	Bacteria	Aminobacter	8
+4495674.3	Bacteria	Marinilabilia	7
+4495674.3	Bacteria	Acetobacterium	7
+4495674.3	Bacteria	Pectinatus	7
+4495674.3	Bacteria	Acinetobacter	7
+4495674.3	Bacteria	unclassified (derived from Alphaproteobacteria)	6
+4495674.3	Bacteria	Corynebacterium	5
+4495674.3	Bacteria	Brevundimonas	5
+4495674.3	Bacteria	Akkermansia	5
+4495674.3	Bacteria	Atopobium	4
+4495674.3	Bacteria	Eggerthella	4
+4495674.3	Bacteria	Rikenella	4
+4495674.3	Bacteria	Enterococcus	4
+4495674.3	Bacteria	Sedimentibacter	4
+4495674.3	Bacteria	Rhodococcus	3
+4495674.3	Bacteria	Odoribacter	3
+4495674.3	Bacteria	Bacillus	3
+4495674.3	Bacteria	Lactococcus	3
+4495674.3	Bacteria	Syntrophococcus	3
+4495674.3	Bacteria	Mesorhizobium	3
+4495674.3	Bacteria	unclassified (derived from Comamonadaceae)	3
+4495674.3	Bacteria	Geobacillus	2
+4495674.3	Bacteria	Anaerococcus	2
+4495674.3	Bacteria	Peptoniphilus	2
+4495674.3	Bacteria	Robinsoniella	2
+4495674.3	Bacteria	Dialister	2
+4495674.3	Bacteria	Bradyrhizobium	2
+4495674.3	Bacteria	Methylobacterium	2
+4495674.3	Bacteria	unclassified (derived from Burkholderiales)	2
+4495674.3	Bacteria	Proteus	2
+4495674.3	Bacteria	Halomonas	2
+4495674.3	Bacteria	Gordonia	1
+4495674.3	Bacteria	Brochothrix	1
+4495674.3	Bacteria	Alkalibacterium	1
+4495674.3	Bacteria	Granulicatella	1
+4495674.3	Bacteria	Anaerofustis	1
+4495674.3	Bacteria	Acetitomaculum	1
+4495674.3	Bacteria	Catenibacterium	1
+4495674.3	Bacteria	Thermosinus	1
+4495674.3	Bacteria	Phyllobacterium	1
+4495674.3	Bacteria	Rhodobacter	1
+4495674.3	Bacteria	Helicobacter	1
+4495674.3	Bacteria	Candidatus Phlomobacter	1
+4495674.3	Bacteria	Escherichia	1
+4495674.3	Bacteria	Klebsiella	1
+4495674.3	Bacteria	Yersinia	1
+4495674.3	Bacteria	Xanthomonas	1
+4495674.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495673.3	Bacteria	Faecalibacterium	5891
+4495673.3	Bacteria	Blautia	4871
+4495673.3	Bacteria	Clostridium	2508
+4495673.3	Bacteria	Butyrivibrio	2365
+4495673.3	Bacteria	Eubacterium	1908
+4495673.3	Bacteria	unclassified (derived from Clostridiales)	1521
+4495673.3	Bacteria	Bacteroides	832
+4495673.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	716
+4495673.3	Bacteria	unclassified (derived from Lachnospiraceae)	318
+4495673.3	Bacteria	Bifidobacterium	312
+4495673.3	Bacteria	Peptococcus	229
+4495673.3	Bacteria	Ruminococcus	167
+4495673.3	Bacteria	Roseburia	144
+4495673.3	Bacteria	unclassified (derived from Bacteria)	132
+4495673.3	Bacteria	Carnobacterium	91
+4495673.3	Bacteria	Oribacterium	69
+4495673.3	Bacteria	Parabacteroides	48
+4495673.3	Bacteria	unclassified (derived from Ruminococcaceae)	42
+4495673.3	Bacteria	Pseudobutyrivibrio	36
+4495673.3	Bacteria	Butyricicoccus	34
+4495673.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	32
+4495673.3	Bacteria	Hespellia	31
+4495673.3	Bacteria	Lactobacillus	27
+4495673.3	Bacteria	Anaerotruncus	18
+4495673.3	Bacteria	Shuttleworthia	17
+4495673.3	Bacteria	Megamonas	17
+4495673.3	Bacteria	Dorea	13
+4495673.3	Bacteria	Acetobacterium	12
+4495673.3	Bacteria	Selenomonas	12
+4495673.3	Bacteria	Alistipes	11
+4495673.3	Bacteria	Actinomyces	9
+4495673.3	Bacteria	Acidaminococcus	9
+4495673.3	Bacteria	Veillonella	7
+4495673.3	Bacteria	Collinsella	6
+4495673.3	Bacteria	Phascolarctobacterium	6
+4495673.3	Bacteria	Barnesiella	4
+4495673.3	Bacteria	Tannerella	3
+4495673.3	Bacteria	Lactococcus	3
+4495673.3	Bacteria	Anaerostipes	3
+4495673.3	Bacteria	Pseudomonas	3
+4495673.3	Bacteria	Atopobium	2
+4495673.3	Bacteria	Streptococcus	2
+4495673.3	Bacteria	unclassified (derived from Alphaproteobacteria)	2
+4495673.3	Bacteria	Corynebacterium	1
+4495673.3	Bacteria	Rothia	1
+4495673.3	Bacteria	Porphyromonas	1
+4495673.3	Bacteria	Rikenella	1
+4495673.3	Bacteria	Ornithobacterium	1
+4495673.3	Bacteria	Sphingobacterium	1
+4495673.3	Bacteria	Aneurinibacillus	1
+4495673.3	Bacteria	Weissella	1
+4495673.3	Bacteria	Peptoniphilus	1
+4495673.3	Bacteria	Lachnospira	1
+4495673.3	Bacteria	Halothermothrix	1
+4495673.3	Bacteria	Ralstonia	1
+4495673.3	Bacteria	Acinetobacter	1
+4495672.3	Bacteria	Faecalibacterium	40903
+4495672.3	Bacteria	Blautia	32659
+4495672.3	Bacteria	Eubacterium	12312
+4495672.3	Bacteria	Clostridium	11807
+4495672.3	Bacteria	Butyrivibrio	11641
+4495672.3	Bacteria	unclassified (derived from Clostridiales)	10876
+4495672.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	3362
+4495672.3	Bacteria	Bacteroides	2877
+4495672.3	Bacteria	Ruminococcus	2712
+4495672.3	Bacteria	unclassified (derived from Lachnospiraceae)	2433
+4495672.3	Bacteria	Bifidobacterium	2273
+4495672.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	1935
+4495672.3	Bacteria	unclassified (derived from Bacteria)	737
+4495672.3	Bacteria	Anaerostipes	378
+4495672.3	Bacteria	Butyricicoccus	274
+4495672.3	Bacteria	Roseburia	235
+4495672.3	Bacteria	Oribacterium	213
+4495672.3	Bacteria	Shuttleworthia	203
+4495672.3	Bacteria	Sarcina	185
+4495672.3	Bacteria	Anaerotruncus	172
+4495672.3	Bacteria	Veillonella	171
+4495672.3	Bacteria	unclassified (derived from Ruminococcaceae)	158
+4495672.3	Bacteria	Hespellia	145
+4495672.3	Bacteria	Lachnospira	116
+4495672.3	Bacteria	Dorea	114
+4495672.3	Bacteria	Megamonas	111
+4495672.3	Bacteria	Lactobacillus	106
+4495672.3	Bacteria	Carnobacterium	103
+4495672.3	Bacteria	Ureibacillus	92
+4495672.3	Bacteria	Parabacteroides	69
+4495672.3	Bacteria	Acidaminococcus	41
+4495672.3	Bacteria	Collinsella	39
+4495672.3	Bacteria	Alistipes	36
+4495672.3	Bacteria	Methylobacterium	34
+4495672.3	Bacteria	Acetobacterium	31
+4495672.3	Bacteria	Barnesiella	26
+4495672.3	Bacteria	Desulfotomaculum	25
+4495672.3	Bacteria	Enterobacter	25
+4495672.3	Bacteria	Pseudobutyrivibrio	23
+4495672.3	Bacteria	Streptococcus	22
+4495672.3	Bacteria	Bacillus	13
+4495672.3	Bacteria	Aminobacter	13
+4495672.3	Bacteria	Rothia	12
+4495672.3	Bacteria	Selenomonas	9
+4495672.3	Bacteria	Porphyromonas	8
+4495672.3	Bacteria	Gemella	8
+4495672.3	Bacteria	Actinomyces	7
+4495672.3	Bacteria	Phascolarctobacterium	7
+4495672.3	Bacteria	Ethanoligenens	6
+4495672.3	Bacteria	Megasphaera	6
+4495672.3	Bacteria	Pseudomonas	6
+4495672.3	Bacteria	Akkermansia	6
+4495672.3	Bacteria	Eggerthella	5
+4495672.3	Bacteria	Leuconostoc	5
+4495672.3	Bacteria	Pectinatus	5
+4495672.3	Bacteria	Corynebacterium	4
+4495672.3	Bacteria	Prevotella	4
+4495672.3	Bacteria	Finegoldia	4
+4495672.3	Bacteria	Coprobacillus	4
+4495672.3	Bacteria	unclassified (derived from Gammaproteobacteria)	4
+4495672.3	Bacteria	Aeriscardovia	3
+4495672.3	Bacteria	Staphylococcus	3
+4495672.3	Bacteria	Ralstonia	3
+4495672.3	Bacteria	Arsenophonus	3
+4495672.3	Bacteria	Marinilabilia	2
+4495672.3	Bacteria	Lysinibacillus	2
+4495672.3	Bacteria	Enterococcus	2
+4495672.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	2
+4495672.3	Bacteria	Peptostreptococcus	2
+4495672.3	Bacteria	Acetivibrio	2
+4495672.3	Bacteria	Subdoligranulum	2
+4495672.3	Bacteria	Yersinia	2
+4495672.3	Bacteria	Gordonia	1
+4495672.3	Bacteria	Serinicoccus	1
+4495672.3	Bacteria	Atopobium	1
+4495672.3	Bacteria	Butyricimonas	1
+4495672.3	Bacteria	Tannerella	1
+4495672.3	Bacteria	Brochothrix	1
+4495672.3	Bacteria	Granulicatella	1
+4495672.3	Bacteria	Vagococcus	1
+4495672.3	Bacteria	Pediococcus	1
+4495672.3	Bacteria	Sedimentibacter	1
+4495672.3	Bacteria	Anaerofustis	1
+4495672.3	Bacteria	Peptococcus	1
+4495672.3	Bacteria	Ammonifex	1
+4495672.3	Bacteria	Dialister	1
+4495672.3	Bacteria	Phyllobacterium	1
+4495672.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495672.3	Bacteria	Acidovorax	1
+4495672.3	Bacteria	Thioalkalivibrio	1
+4495672.3	Bacteria	Escherichia	1
+4495671.3	Bacteria	Blautia	13919
+4495671.3	Bacteria	Faecalibacterium	11994
+4495671.3	Bacteria	Eubacterium	3972
+4495671.3	Bacteria	Butyrivibrio	3903
+4495671.3	Bacteria	unclassified (derived from Clostridiales)	3472
+4495671.3	Bacteria	Clostridium	3246
+4495671.3	Bacteria	Bifidobacterium	3113
+4495671.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1469
+4495671.3	Bacteria	Bacteroides	966
+4495671.3	Bacteria	Ruminococcus	709
+4495671.3	Bacteria	unclassified (derived from Lachnospiraceae)	659
+4495671.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	659
+4495671.3	Bacteria	unclassified (derived from Bacteria)	332
+4495671.3	Bacteria	Oribacterium	148
+4495671.3	Bacteria	Lachnospira	147
+4495671.3	Bacteria	Veillonella	113
+4495671.3	Bacteria	Dorea	103
+4495671.3	Bacteria	Hespellia	101
+4495671.3	Bacteria	Sarcina	59
+4495671.3	Bacteria	Butyricicoccus	49
+4495671.3	Bacteria	Pseudomonas	46
+4495671.3	Bacteria	Peptococcus	42
+4495671.3	Bacteria	Shuttleworthia	39
+4495671.3	Bacteria	unclassified (derived from Ruminococcaceae)	33
+4495671.3	Bacteria	Anaerotruncus	30
+4495671.3	Bacteria	Parabacteroides	22
+4495671.3	Bacteria	Collinsella	18
+4495671.3	Bacteria	Ureibacillus	18
+4495671.3	Bacteria	Acidaminococcus	15
+4495671.3	Bacteria	Lactobacillus	14
+4495671.3	Bacteria	Roseburia	14
+4495671.3	Bacteria	Alistipes	13
+4495671.3	Bacteria	Phascolarctobacterium	13
+4495671.3	Bacteria	Ethanoligenens	12
+4495671.3	Bacteria	Megamonas	12
+4495671.3	Bacteria	Carnobacterium	11
+4495671.3	Bacteria	Coprobacillus	10
+4495671.3	Bacteria	Hydrogenobacter	8
+4495671.3	Bacteria	Anaerostipes	8
+4495671.3	Bacteria	Streptococcus	7
+4495671.3	Bacteria	Syntrophococcus	7
+4495671.3	Bacteria	Trichococcus	5
+4495671.3	Bacteria	Selenomonas	5
+4495671.3	Bacteria	Actinomyces	3
+4495671.3	Bacteria	Odoribacter	3
+4495671.3	Bacteria	Pseudobutyrivibrio	3
+4495671.3	Bacteria	Corynebacterium	2
+4495671.3	Bacteria	Hydrogenobaculum	2
+4495671.3	Bacteria	Barnesiella	2
+4495671.3	Bacteria	Rhodothermus	2
+4495671.3	Bacteria	Sedimentibacter	2
+4495671.3	Bacteria	Methylobacterium	2
+4495671.3	Bacteria	Aminobacter	2
+4495671.3	Bacteria	Ralstonia	2
+4495671.3	Bacteria	Rothia	1
+4495671.3	Bacteria	Nocardioides	1
+4495671.3	Bacteria	Porphyromonas	1
+4495671.3	Bacteria	Tannerella	1
+4495671.3	Bacteria	Prevotella	1
+4495671.3	Bacteria	Hymenobacter	1
+4495671.3	Bacteria	Bacillus	1
+4495671.3	Bacteria	Gemella	1
+4495671.3	Bacteria	Enterococcus	1
+4495671.3	Bacteria	Acetobacterium	1
+4495671.3	Bacteria	Candidatus Desulforudis	1
+4495671.3	Bacteria	Thermincola	1
+4495671.3	Bacteria	unclassified (derived from Rhodospirillaceae)	1
+4495671.3	Bacteria	Sphingomonas	1
+4495671.3	Bacteria	Acidovorax	1
+4495671.3	Bacteria	Enterobacter	1
+4495671.3	Bacteria	Klebsiella	1
+4495670.3	Bacteria	Faecalibacterium	36352
+4495670.3	Bacteria	Blautia	30883
+4495670.3	Bacteria	unclassified (derived from Clostridiales)	10978
+4495670.3	Bacteria	Butyrivibrio	10079
+4495670.3	Bacteria	Clostridium	9883
+4495670.3	Bacteria	Ruminococcus	9079
+4495670.3	Bacteria	Eubacterium	9010
+4495670.3	Bacteria	Bifidobacterium	3456
+4495670.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2421
+4495670.3	Bacteria	unclassified (derived from Lachnospiraceae)	2199
+4495670.3	Bacteria	Bacteroides	1778
+4495670.3	Bacteria	Anaerostipes	1654
+4495670.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	1586
+4495670.3	Bacteria	unclassified (derived from Bacteria)	1323
+4495670.3	Bacteria	Shuttleworthia	495
+4495670.3	Bacteria	Hespellia	397
+4495670.3	Bacteria	Subdoligranulum	352
+4495670.3	Bacteria	Butyricicoccus	214
+4495670.3	Bacteria	Aeriscardovia	190
+4495670.3	Bacteria	Roseburia	167
+4495670.3	Bacteria	Anaerotruncus	162
+4495670.3	Bacteria	Lactobacillus	140
+4495670.3	Bacteria	Acetobacterium	102
+4495670.3	Bacteria	unclassified (derived from Ruminococcaceae)	97
+4495670.3	Bacteria	Peptococcus	84
+4495670.3	Bacteria	Sarcina	77
+4495670.3	Bacteria	Dorea	74
+4495670.3	Bacteria	Pseudomonas	67
+4495670.3	Bacteria	Oribacterium	62
+4495670.3	Bacteria	Carnobacterium	59
+4495670.3	Bacteria	Parabacteroides	57
+4495670.3	Bacteria	Gardnerella	56
+4495670.3	Bacteria	Veillonella	53
+4495670.3	Bacteria	Ureibacillus	45
+4495670.3	Bacteria	Barnesiella	41
+4495670.3	Bacteria	Alistipes	38
+4495670.3	Bacteria	Acidaminococcus	37
+4495670.3	Bacteria	Collinsella	36
+4495670.3	Bacteria	Phascolarctobacterium	36
+4495670.3	Bacteria	Prevotella	26
+4495670.3	Bacteria	Megamonas	24
+4495670.3	Bacteria	Selenomonas	20
+4495670.3	Bacteria	Lachnospira	17
+4495670.3	Bacteria	Arsenophonus	17
+4495670.3	Bacteria	Enterobacter	14
+4495670.3	Bacteria	Actinomyces	11
+4495670.3	Bacteria	Streptococcus	9
+4495670.3	Bacteria	Achromobacter	8
+4495670.3	Bacteria	Corynebacterium	7
+4495670.3	Bacteria	Akkermansia	7
+4495670.3	Bacteria	Rothia	6
+4495670.3	Bacteria	Enterococcus	5
+4495670.3	Bacteria	Coprobacillus	5
+4495670.3	Bacteria	Lactococcus	4
+4495670.3	Bacteria	Rhodococcus	3
+4495670.3	Bacteria	Hydrogenobaculum	3
+4495670.3	Bacteria	Bacillus	3
+4495670.3	Bacteria	Bradyrhizobium	3
+4495670.3	Bacteria	Marinilabilia	2
+4495670.3	Bacteria	Porphyromonas	2
+4495670.3	Bacteria	Rikenella	2
+4495670.3	Bacteria	Finegoldia	2
+4495670.3	Bacteria	Acetitomaculum	2
+4495670.3	Bacteria	Peptostreptococcus	2
+4495670.3	Bacteria	Megasphaera	2
+4495670.3	Bacteria	Acidovorax	2
+4495670.3	Bacteria	Aeromonas	2
+4495670.3	Bacteria	Proteus	2
+4495670.3	Bacteria	Kytococcus	1
+4495670.3	Bacteria	Atopobium	1
+4495670.3	Bacteria	Sphingobacterium	1
+4495670.3	Bacteria	Abiotrophia	1
+4495670.3	Bacteria	Alkaliphilus	1
+4495670.3	Bacteria	Pseudobutyrivibrio	1
+4495670.3	Bacteria	Robinsoniella	1
+4495670.3	Bacteria	Thermincola	1
+4495670.3	Bacteria	Ethanoligenens	1
+4495670.3	Bacteria	Ammonifex	1
+4495670.3	Bacteria	Erysipelothrix	1
+4495670.3	Bacteria	Holdemania	1
+4495670.3	Bacteria	Dialister	1
+4495670.3	Bacteria	Pectinatus	1
+4495670.3	Bacteria	Aminobacter	1
+4495670.3	Bacteria	Phyllobacterium	1
+4495670.3	Bacteria	Phaeobacter	1
+4495670.3	Bacteria	Desulfovibrio	1
+4495670.3	Bacteria	Helicobacter	1
+4495670.3	Bacteria	Escherichia	1
+4495670.3	Bacteria	Pasteurella	1
+4495670.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495670.3	Bacteria	unclassified (derived from Proteobacteria)	1
+4495669.3	Bacteria	Faecalibacterium	20058
+4495669.3	Bacteria	Blautia	15551
+4495669.3	Bacteria	Butyrivibrio	6686
+4495669.3	Bacteria	Clostridium	5249
+4495669.3	Bacteria	Eubacterium	4772
+4495669.3	Bacteria	unclassified (derived from Clostridiales)	4708
+4495669.3	Bacteria	Ruminococcus	2211
+4495669.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1662
+4495669.3	Bacteria	Bifidobacterium	1490
+4495669.3	Bacteria	Bacteroides	1309
+4495669.3	Bacteria	Hespellia	1159
+4495669.3	Bacteria	unclassified (derived from Lachnospiraceae)	869
+4495669.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	430
+4495669.3	Bacteria	Veillonella	360
+4495669.3	Bacteria	Lachnospira	272
+4495669.3	Bacteria	unclassified (derived from Bacteria)	259
+4495669.3	Bacteria	Oribacterium	108
+4495669.3	Bacteria	Pseudomonas	91
+4495669.3	Bacteria	unclassified (derived from Ruminococcaceae)	74
+4495669.3	Bacteria	Anaerostipes	66
+4495669.3	Bacteria	Roseburia	63
+4495669.3	Bacteria	Carnobacterium	62
+4495669.3	Bacteria	Lactobacillus	55
+4495669.3	Bacteria	Acetitomaculum	55
+4495669.3	Bacteria	Butyricicoccus	52
+4495669.3	Bacteria	Parabacteroides	38
+4495669.3	Bacteria	Selenomonas	38
+4495669.3	Bacteria	Anaerotruncus	35
+4495669.3	Bacteria	Dorea	34
+4495669.3	Bacteria	Acidaminococcus	31
+4495669.3	Bacteria	Phascolarctobacterium	27
+4495669.3	Bacteria	Shuttleworthia	25
+4495669.3	Bacteria	Acetobacterium	20
+4495669.3	Bacteria	Alistipes	19
+4495669.3	Bacteria	Pseudobutyrivibrio	19
+4495669.3	Bacteria	Subdoligranulum	19
+4495669.3	Bacteria	Candidatus Desulforudis	17
+4495669.3	Bacteria	Megamonas	17
+4495669.3	Bacteria	Collinsella	10
+4495669.3	Bacteria	Phyllobacterium	10
+4495669.3	Bacteria	Ureibacillus	8
+4495669.3	Bacteria	Barnesiella	7
+4495669.3	Bacteria	Rothia	6
+4495669.3	Bacteria	Atopobium	5
+4495669.3	Bacteria	Weissella	5
+4495669.3	Bacteria	Syntrophococcus	5
+4495669.3	Bacteria	Trichococcus	4
+4495669.3	Bacteria	Actinomyces	3
+4495669.3	Bacteria	Corynebacterium	3
+4495669.3	Bacteria	Granulicatella	3
+4495669.3	Bacteria	Streptococcus	3
+4495669.3	Bacteria	Ethanoligenens	3
+4495669.3	Bacteria	Akkermansia	3
+4495669.3	Bacteria	Odoribacter	2
+4495669.3	Bacteria	Porphyromonas	2
+4495669.3	Bacteria	Prevotella	2
+4495669.3	Bacteria	Bacillus	2
+4495669.3	Bacteria	Sarcina	2
+4495669.3	Bacteria	Desulfotomaculum	2
+4495669.3	Bacteria	Thermincola	2
+4495669.3	Bacteria	Leclercia	2
+4495669.3	Bacteria	Brevibacterium	1
+4495669.3	Bacteria	Aeriscardovia	1
+4495669.3	Bacteria	Gardnerella	1
+4495669.3	Bacteria	Hydrogenobaculum	1
+4495669.3	Bacteria	Tannerella	1
+4495669.3	Bacteria	Rikenella	1
+4495669.3	Bacteria	Abiotrophia	1
+4495669.3	Bacteria	Enterococcus	1
+4495669.3	Bacteria	Tetragenococcus	1
+4495669.3	Bacteria	Pediococcus	1
+4495669.3	Bacteria	Lactococcus	1
+4495669.3	Bacteria	Alkaliphilus	1
+4495669.3	Bacteria	Gallicola	1
+4495669.3	Bacteria	Sedimentibacter	1
+4495669.3	Bacteria	Acetivibrio	1
+4495669.3	Bacteria	Megasphaera	1
+4495669.3	Bacteria	Aminobacter	1
+4495669.3	Bacteria	Achromobacter	1
+4495669.3	Bacteria	Burkholderia	1
+4495669.3	Bacteria	unclassified (derived from Comamonadaceae)	1
+4495669.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495669.3	Bacteria	Helicobacter	1
+4495669.3	Bacteria	Thiohalospira	1
+4495669.3	Bacteria	Enterobacter	1
+4495669.3	Bacteria	Escherichia	1
+4495669.3	Bacteria	Pasteurella	1
+4495669.3	Bacteria	Azotobacter	1
+4495669.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495669.3	Bacteria	Acholeplasma	1
+4495668.3	Bacteria	Blautia	14805
+4495668.3	Bacteria	Faecalibacterium	10588
+4495668.3	Bacteria	Eubacterium	8490
+4495668.3	Bacteria	Clostridium	4984
+4495668.3	Bacteria	unclassified (derived from Clostridiales)	3910
+4495668.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1420
+4495668.3	Bacteria	Butyrivibrio	1195
+4495668.3	Bacteria	Bifidobacterium	1174
+4495668.3	Bacteria	Bacteroides	934
+4495668.3	Bacteria	Ruminococcus	914
+4495668.3	Bacteria	unclassified (derived from Lachnospiraceae)	634
+4495668.3	Bacteria	Dorea	474
+4495668.3	Bacteria	unclassified (derived from Bacteria)	204
+4495668.3	Bacteria	Veillonella	203
+4495668.3	Bacteria	Hespellia	153
+4495668.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	131
+4495668.3	Bacteria	unclassified (derived from Ruminococcaceae)	123
+4495668.3	Bacteria	Anaerostipes	97
+4495668.3	Bacteria	Lactobacillus	93
+4495668.3	Bacteria	Anaerotruncus	67
+4495668.3	Bacteria	Oribacterium	65
+4495668.3	Bacteria	Carnobacterium	45
+4495668.3	Bacteria	Pseudomonas	41
+4495668.3	Bacteria	Roseburia	34
+4495668.3	Bacteria	Butyricicoccus	32
+4495668.3	Bacteria	Alistipes	25
+4495668.3	Bacteria	Parabacteroides	23
+4495668.3	Bacteria	Ureibacillus	18
+4495668.3	Bacteria	Peptococcus	17
+4495668.3	Bacteria	Thermincola	17
+4495668.3	Bacteria	Alkaliphilus	16
+4495668.3	Bacteria	Barnesiella	15
+4495668.3	Bacteria	Collinsella	13
+4495668.3	Bacteria	Megamonas	11
+4495668.3	Bacteria	Enterobacter	11
+4495668.3	Bacteria	Holdemania	9
+4495668.3	Bacteria	Phascolarctobacterium	9
+4495668.3	Bacteria	Shuttleworthia	8
+4495668.3	Bacteria	Acidaminococcus	8
+4495668.3	Bacteria	Porphyromonas	7
+4495668.3	Bacteria	Lachnospira	7
+4495668.3	Bacteria	Actinomyces	5
+4495668.3	Bacteria	Akkermansia	5
+4495668.3	Bacteria	Streptococcus	4
+4495668.3	Bacteria	Ethanoligenens	4
+4495668.3	Bacteria	Helicobacter	4
+4495668.3	Bacteria	Enterococcus	3
+4495668.3	Bacteria	Selenomonas	3
+4495668.3	Bacteria	unclassified (derived from Gammaproteobacteria)	3
+4495668.3	Bacteria	Rothia	2
+4495668.3	Bacteria	Hydrogenobaculum	2
+4495668.3	Bacteria	Granulicatella	2
+4495668.3	Bacteria	Candidatus Desulforudis	2
+4495668.3	Bacteria	Coprobacillus	2
+4495668.3	Bacteria	Leptotrichia	2
+4495668.3	Bacteria	Escherichia	2
+4495668.3	Bacteria	Candidatus Rhodoluna	1
+4495668.3	Bacteria	Marinilabilia	1
+4495668.3	Bacteria	Cytophaga	1
+4495668.3	Bacteria	Staphylococcus	1
+4495668.3	Bacteria	Tetragenococcus	1
+4495668.3	Bacteria	Leuconostoc	1
+4495668.3	Bacteria	Lactococcus	1
+4495668.3	Bacteria	Acetobacterium	1
+4495668.3	Bacteria	Anaerofustis	1
+4495668.3	Bacteria	Carboxydothermus	1
+4495668.3	Bacteria	Megasphaera	1
+4495668.3	Bacteria	Methylobacterium	1
+4495668.3	Bacteria	Aminobacter	1
+4495668.3	Bacteria	Halorhodospira	1
+4495668.3	Bacteria	Photorhabdus	1
+4495667.3	Bacteria	Eubacterium	25009
+4495667.3	Bacteria	Bifidobacterium	18823
+4495667.3	Bacteria	Faecalibacterium	11573
+4495667.3	Bacteria	Bacteroides	8136
+4495667.3	Bacteria	Blautia	5766
+4495667.3	Bacteria	Parabacteroides	3650
+4495667.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2301
+4495667.3	Bacteria	Clostridium	2152
+4495667.3	Bacteria	Carnobacterium	1889
+4495667.3	Bacteria	Roseburia	1848
+4495667.3	Bacteria	unclassified (derived from Bacteria)	1608
+4495667.3	Bacteria	unclassified (derived from Ruminococcaceae)	1148
+4495667.3	Bacteria	unclassified (derived from Lachnospiraceae)	953
+4495667.3	Bacteria	Lachnospira	949
+4495667.3	Bacteria	unclassified (derived from Clostridiales)	747
+4495667.3	Bacteria	Butyrivibrio	733
+4495667.3	Bacteria	Ruminococcus	448
+4495667.3	Bacteria	Gemella	292
+4495667.3	Bacteria	Odoribacter	278
+4495667.3	Bacteria	Atopobium	200
+4495667.3	Bacteria	Barnesiella	184
+4495667.3	Bacteria	Pseudobutyrivibrio	172
+4495667.3	Bacteria	Escherichia	162
+4495667.3	Bacteria	Lactobacillus	157
+4495667.3	Bacteria	Acidaminococcus	148
+4495667.3	Bacteria	Veillonella	131
+4495667.3	Bacteria	Alistipes	123
+4495667.3	Bacteria	Actinomyces	114
+4495667.3	Bacteria	Enterococcus	114
+4495667.3	Bacteria	unclassified (derived from Bacteroidetes)	110
+4495667.3	Bacteria	Dialister	105
+4495667.3	Bacteria	Anaerotruncus	63
+4495667.3	Bacteria	Arcanobacterium	60
+4495667.3	Bacteria	Tannerella	58
+4495667.3	Bacteria	Dorea	51
+4495667.3	Bacteria	Butyricicoccus	50
+4495667.3	Bacteria	Selenomonas	49
+4495667.3	Bacteria	Pseudomonas	49
+4495667.3	Bacteria	Butyricimonas	41
+4495667.3	Bacteria	Acetobacterium	35
+4495667.3	Bacteria	Lactococcus	34
+4495667.3	Bacteria	Megasphaera	28
+4495667.3	Bacteria	Hespellia	24
+4495667.3	Bacteria	Streptococcus	23
+4495667.3	Bacteria	Porphyromonas	21
+4495667.3	Bacteria	Peptoniphilus	20
+4495667.3	Bacteria	Marinilabilia	18
+4495667.3	Bacteria	Enterobacter	18
+4495667.3	Bacteria	Anaerofustis	17
+4495667.3	Bacteria	Phascolarctobacterium	17
+4495667.3	Bacteria	Eggerthella	15
+4495667.3	Bacteria	Megamonas	15
+4495667.3	Bacteria	Leuconostoc	14
+4495667.3	Bacteria	Helicobacter	13
+4495667.3	Bacteria	Prevotella	12
+4495667.3	Bacteria	Methylobacterium	11
+4495667.3	Bacteria	Phyllobacterium	11
+4495667.3	Bacteria	Gardnerella	9
+4495667.3	Bacteria	Achromobacter	9
+4495667.3	Bacteria	Collinsella	8
+4495667.3	Bacteria	Bacillus	7
+4495667.3	Bacteria	Ochrobactrum	6
+4495667.3	Bacteria	Shuttleworthia	5
+4495667.3	Bacteria	Corynebacterium	4
+4495667.3	Bacteria	Enterorhabdus	4
+4495667.3	Bacteria	Anaerococcus	4
+4495667.3	Bacteria	Acetivibrio	4
+4495667.3	Bacteria	Subdoligranulum	4
+4495667.3	Bacteria	Marinobacter	4
+4495667.3	Bacteria	Brevibacterium	3
+4495667.3	Bacteria	Rikenella	3
+4495667.3	Bacteria	Chryseobacterium	3
+4495667.3	Bacteria	Ureibacillus	3
+4495667.3	Bacteria	Abiotrophia	3
+4495667.3	Bacteria	Peptococcus	3
+4495667.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	3
+4495667.3	Archaea	Methanobrevibacter	3
+4495667.3	Bacteria	Rothia	2
+4495667.3	Bacteria	Alloscardovia	2
+4495667.3	Bacteria	Pedobacter	2
+4495667.3	Bacteria	Granulicatella	2
+4495667.3	Bacteria	Anaerostipes	2
+4495667.3	Bacteria	Candidatus Desulforudis	2
+4495667.3	Bacteria	Holdemania	2
+4495667.3	Bacteria	Rhodopseudomonas	2
+4495667.3	Bacteria	Ralstonia	2
+4495667.3	Bacteria	unclassified (derived from Burkholderiales)	2
+4495667.3	Bacteria	Thioalkalivibrio	2
+4495667.3	Bacteria	Klebsiella	2
+4495667.3	Bacteria	unclassified (derived from Gammaproteobacteria)	2
+4495667.3	Bacteria	Akkermansia	2
+4495667.3	Bacteria	Gordonia	1
+4495667.3	Bacteria	Kribbella	1
+4495667.3	Bacteria	Cellulosimicrobium	1
+4495667.3	Bacteria	Aeriscardovia	1
+4495667.3	Bacteria	Thermoleophilum	1
+4495667.3	Bacteria	Hydrogenobaculum	1
+4495667.3	Bacteria	Sphingobacterium	1
+4495667.3	Bacteria	Pediococcus	1
+4495667.3	Bacteria	Weissella	1
+4495667.3	Bacteria	Alkaliphilus	1
+4495667.3	Bacteria	Caloramator	1
+4495667.3	Bacteria	Anaerobranca	1
+4495667.3	Bacteria	Acetitomaculum	1
+4495667.3	Bacteria	Syntrophococcus	1
+4495667.3	Bacteria	Thermincola	1
+4495667.3	Bacteria	Ethanoligenens	1
+4495667.3	Bacteria	Erysipelothrix	1
+4495667.3	Bacteria	Aminobacter	1
+4495667.3	Bacteria	Mesorhizobium	1
+4495667.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495667.3	Bacteria	Campylobacter	1
+4495667.3	Bacteria	Stenotrophomonas	1
+4495667.3	Bacteria	Xanthomonas	1
+4495667.3	Bacteria	Mycoplasma	1
+4495666.3	Bacteria	Blautia	47882
+4495666.3	Bacteria	Faecalibacterium	19173
+4495666.3	Bacteria	Clostridium	17133
+4495666.3	Bacteria	unclassified (derived from Clostridiales)	15532
+4495666.3	Bacteria	Eubacterium	14726
+4495666.3	Bacteria	Ruminococcus	9513
+4495666.3	Bacteria	Butyrivibrio	5839
+4495666.3	Bacteria	Bacteroides	4961
+4495666.3	Bacteria	Akkermansia	2208
+4495666.3	Bacteria	unclassified (derived from Bacteria)	2100
+4495666.3	Bacteria	Hespellia	1645
+4495666.3	Bacteria	unclassified (derived from Lachnospiraceae)	1597
+4495666.3	Bacteria	Veillonella	781
+4495666.3	Bacteria	Bifidobacterium	703
+4495666.3	Bacteria	Dorea	568
+4495666.3	Bacteria	Anaerotruncus	551
+4495666.3	Bacteria	Selenomonas	474
+4495666.3	Bacteria	Bacillus	402
+4495666.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	374
+4495666.3	Bacteria	Butyricicoccus	280
+4495666.3	Bacteria	Anaerostipes	245
+4495666.3	Bacteria	Ethanoligenens	229
+4495666.3	Bacteria	unclassified (derived from Ruminococcaceae)	203
+4495666.3	Bacteria	Alkaliphilus	132
+4495666.3	Bacteria	Dialister	110
+4495666.3	Bacteria	Lachnospira	78
+4495666.3	Bacteria	Syntrophococcus	77
+4495666.3	Bacteria	unclassified (derived from Gammaproteobacteria)	75
+4495666.3	Bacteria	unclassified (derived from Alphaproteobacteria)	60
+4495666.3	Bacteria	Collinsella	57
+4495666.3	Bacteria	Megamonas	55
+4495666.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	41
+4495666.3	Bacteria	Streptococcus	40
+4495666.3	Bacteria	Alistipes	39
+4495666.3	Bacteria	Actinomyces	37
+4495666.3	Bacteria	Barnesiella	32
+4495666.3	Bacteria	Roseburia	31
+4495666.3	Bacteria	Pseudobutyrivibrio	30
+4495666.3	Bacteria	Odoribacter	29
+4495666.3	Bacteria	Robinsoniella	28
+4495666.3	Bacteria	Parabacteroides	25
+4495666.3	Bacteria	Ureibacillus	22
+4495666.3	Bacteria	Desulfosporosinus	22
+4495666.3	Bacteria	Chloroherpeton	21
+4495666.3	Bacteria	Oribacterium	21
+4495666.3	Bacteria	Acidaminococcus	20
+4495666.3	Bacteria	Atopobium	18
+4495666.3	Bacteria	Acetitomaculum	14
+4495666.3	Bacteria	Phascolarctobacterium	13
+4495666.3	Bacteria	Pseudomonas	12
+4495666.3	Bacteria	Hydrogenobaculum	10
+4495666.3	Bacteria	Lactococcus	10
+4495666.3	Bacteria	Acetobacterium	10
+4495666.3	Bacteria	Marinilabilia	9
+4495666.3	Bacteria	Phyllobacterium	9
+4495666.3	Bacteria	Lactobacillus	8
+4495666.3	Bacteria	Fusibacter	7
+4495666.3	Bacteria	Sphingobacterium	5
+4495666.3	Bacteria	Peptostreptococcus	5
+4495666.3	Bacteria	Enterococcus	4
+4495666.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	4
+4495666.3	Bacteria	Desulfotomaculum	4
+4495666.3	Bacteria	Holdemania	4
+4495666.3	Bacteria	Candidatus Phytoplasma	4
+4495666.3	Bacteria	Corynebacterium	3
+4495666.3	Bacteria	Aneurinibacillus	3
+4495666.3	Bacteria	Laceyella	3
+4495666.3	Bacteria	Sedimentibacter	3
+4495666.3	Bacteria	Enterobacter	3
+4495666.3	Bacteria	Gardnerella	2
+4495666.3	Bacteria	Porphyromonas	2
+4495666.3	Bacteria	Prevotella	2
+4495666.3	Bacteria	Wautersiella	2
+4495666.3	Bacteria	Gemella	2
+4495666.3	Bacteria	Caloramator	2
+4495666.3	Bacteria	Sarcina	2
+4495666.3	Bacteria	Streptobacillus	2
+4495666.3	Bacteria	Desulfovibrio	2
+4495666.3	Bacteria	Allochromatium	2
+4495666.3	Bacteria	Aeriscardovia	1
+4495666.3	Bacteria	Hydrogenobacter	1
+4495666.3	Bacteria	Tannerella	1
+4495666.3	Bacteria	Rikenella	1
+4495666.3	Bacteria	Abiotrophia	1
+4495666.3	Bacteria	Carnobacterium	1
+4495666.3	Bacteria	Candidatus Arthromitus	1
+4495666.3	Bacteria	Anaerofustis	1
+4495666.3	Bacteria	Shuttleworthia	1
+4495666.3	Bacteria	Candidatus Desulforudis	1
+4495666.3	Bacteria	Desulfitobacterium	1
+4495666.3	Bacteria	Peptococcus	1
+4495666.3	Bacteria	Thermincola	1
+4495666.3	Bacteria	Carboxydothermus	1
+4495666.3	Bacteria	Caulobacter	1
+4495666.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495666.3	Bacteria	unclassified (derived from Deltaproteobacteria)	1
+4495666.3	Bacteria	Escherichia	1
+4495666.3	Bacteria	Leptospira	1
+4495665.3	Bacteria	Eubacterium	19890
+4495665.3	Bacteria	Bifidobacterium	18141
+4495665.3	Bacteria	Faecalibacterium	10784
+4495665.3	Bacteria	Clostridium	6375
+4495665.3	Bacteria	Bacteroides	5599
+4495665.3	Bacteria	Blautia	4886
+4495665.3	Bacteria	Roseburia	3690
+4495665.3	Bacteria	Parabacteroides	2832
+4495665.3	Bacteria	Lachnospira	1699
+4495665.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1398
+4495665.3	Bacteria	unclassified (derived from Ruminococcaceae)	1097
+4495665.3	Bacteria	Carnobacterium	998
+4495665.3	Bacteria	unclassified (derived from Lachnospiraceae)	831
+4495665.3	Bacteria	unclassified (derived from Clostridiales)	809
+4495665.3	Bacteria	unclassified (derived from Bacteria)	806
+4495665.3	Bacteria	Butyrivibrio	791
+4495665.3	Bacteria	Anaerotruncus	386
+4495665.3	Bacteria	Ruminococcus	376
+4495665.3	Bacteria	Atopobium	268
+4495665.3	Bacteria	Gemella	214
+4495665.3	Bacteria	Escherichia	198
+4495665.3	Bacteria	Barnesiella	191
+4495665.3	Bacteria	Odoribacter	154
+4495665.3	Bacteria	Actinomyces	150
+4495665.3	Bacteria	Acidaminococcus	120
+4495665.3	Bacteria	Phascolarctobacterium	113
+4495665.3	Bacteria	Lactobacillus	98
+4495665.3	Bacteria	Acetobacterium	68
+4495665.3	Bacteria	Butyricicoccus	62
+4495665.3	Bacteria	Pseudobutyrivibrio	60
+4495665.3	Bacteria	Veillonella	56
+4495665.3	Bacteria	Pseudomonas	47
+4495665.3	Bacteria	Anaerostipes	44
+4495665.3	Bacteria	Shuttleworthia	43
+4495665.3	Bacteria	Alistipes	42
+4495665.3	Bacteria	Selenomonas	42
+4495665.3	Bacteria	Butyricimonas	39
+4495665.3	Bacteria	Megamonas	26
+4495665.3	Bacteria	Lactococcus	21
+4495665.3	Bacteria	Bacillus	20
+4495665.3	Bacteria	Streptococcus	18
+4495665.3	Bacteria	Porphyromonas	17
+4495665.3	Bacteria	Syntrophococcus	16
+4495665.3	Bacteria	Helicobacter	16
+4495665.3	Bacteria	Marinilabilia	14
+4495665.3	Bacteria	Tannerella	14
+4495665.3	Bacteria	Ethanoligenens	14
+4495665.3	Bacteria	Dorea	12
+4495665.3	Bacteria	Hespellia	11
+4495665.3	Bacteria	Aeriscardovia	10
+4495665.3	Bacteria	Collinsella	9
+4495665.3	Bacteria	Anaerofustis	9
+4495665.3	Bacteria	Acinetobacter	9
+4495665.3	Bacteria	Sedimentibacter	8
+4495665.3	Bacteria	Enterococcus	7
+4495665.3	Bacteria	Methylobacterium	7
+4495665.3	Bacteria	Eggerthella	6
+4495665.3	Archaea	Methanobrevibacter	5
+4495665.3	Bacteria	Prevotella	4
+4495665.3	Bacteria	Acetivibrio	4
+4495665.3	Bacteria	Leptotrichia	4
+4495665.3	Bacteria	Gardnerella	3
+4495665.3	Bacteria	Weissella	3
+4495665.3	Bacteria	Oribacterium	3
+4495665.3	Bacteria	unclassified (derived from Gammaproteobacteria)	3
+4495665.3	Bacteria	Akkermansia	3
+4495665.3	Bacteria	Arcanobacterium	2
+4495665.3	Bacteria	Nocardiopsis	2
+4495665.3	Bacteria	Enterorhabdus	2
+4495665.3	Bacteria	Alkaliphilus	2
+4495665.3	Bacteria	Acetitomaculum	2
+4495665.3	Bacteria	Erysipelothrix	2
+4495665.3	Bacteria	Holdemania	2
+4495665.3	Bacteria	Mycoplasma	2
+4495665.3	Bacteria	Slackia	1
+4495665.3	Bacteria	Paraprevotella	1
+4495665.3	Bacteria	Rikenella	1
+4495665.3	Bacteria	Chloroherpeton	1
+4495665.3	Bacteria	Sphaerobacter	1
+4495665.3	Bacteria	Ureibacillus	1
+4495665.3	Bacteria	Abiotrophia	1
+4495665.3	Bacteria	Tetragenococcus	1
+4495665.3	Bacteria	Pediococcus	1
+4495665.3	Bacteria	Peptoniphilus	1
+4495665.3	Bacteria	Sulfobacillus	1
+4495665.3	Bacteria	Desulfotomaculum	1
+4495665.3	Bacteria	Thermincola	1
+4495665.3	Bacteria	Peptostreptococcus	1
+4495665.3	Bacteria	Mesorhizobium	1
+4495665.3	Bacteria	Methylobacillus	1
+4495665.3	Bacteria	Enterobacter	1
+4495665.3	Bacteria	Klebsiella	1
+4495665.3	Bacteria	Serratia	1
+4495664.3	Bacteria	Eubacterium	25264
+4495664.3	Bacteria	Bifidobacterium	21438
+4495664.3	Bacteria	Faecalibacterium	14395
+4495664.3	Bacteria	Bacteroides	14075
+4495664.3	Bacteria	Blautia	9385
+4495664.3	Bacteria	Parabacteroides	5072
+4495664.3	Bacteria	Clostridium	4888
+4495664.3	Bacteria	Tannerella	3396
+4495664.3	Bacteria	Ruminococcus	3225
+4495664.3	Bacteria	Butyrivibrio	2155
+4495664.3	Bacteria	unclassified (derived from Ruminococcaceae)	2047
+4495664.3	Bacteria	unclassified (derived from Bacteria)	1708
+4495664.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1523
+4495664.3	Bacteria	unclassified (derived from Clostridiales)	1503
+4495664.3	Bacteria	Roseburia	1206
+4495664.3	Bacteria	unclassified (derived from Lachnospiraceae)	809
+4495664.3	Bacteria	Lachnospira	613
+4495664.3	Bacteria	Anaerotruncus	380
+4495664.3	Bacteria	Dorea	335
+4495664.3	Bacteria	Atopobium	319
+4495664.3	Bacteria	Hespellia	234
+4495664.3	Bacteria	Odoribacter	233
+4495664.3	Bacteria	Escherichia	170
+4495664.3	Bacteria	Acidaminococcus	167
+4495664.3	Bacteria	Pseudobutyrivibrio	154
+4495664.3	Bacteria	Actinomyces	145
+4495664.3	Bacteria	Thioalkalivibrio	136
+4495664.3	Bacteria	Butyricicoccus	108
+4495664.3	Bacteria	Lactobacillus	95
+4495664.3	Bacteria	Veillonella	87
+4495664.3	Bacteria	Alistipes	83
+4495664.3	Bacteria	Gemella	80
+4495664.3	Bacteria	Barnesiella	79
+4495664.3	Bacteria	Carnobacterium	77
+4495664.3	Bacteria	Peptococcus	61
+4495664.3	Bacteria	Bacillus	56
+4495664.3	Bacteria	Streptococcus	43
+4495664.3	Bacteria	Collinsella	39
+4495664.3	Bacteria	Megamonas	35
+4495664.3	Bacteria	Butyricimonas	34
+4495664.3	Bacteria	Ethanoligenens	24
+4495664.3	Bacteria	Selenomonas	24
+4495664.3	Bacteria	Acetobacterium	23
+4495664.3	Bacteria	Marinilabilia	21
+4495664.3	Bacteria	Enterococcus	21
+4495664.3	Bacteria	Porphyromonas	20
+4495664.3	Bacteria	Sedimentibacter	19
+4495664.3	Bacteria	Anaerofustis	18
+4495664.3	Bacteria	Oribacterium	18
+4495664.3	Bacteria	Phascolarctobacterium	16
+4495664.3	Bacteria	Aminobacter	16
+4495664.3	Bacteria	Anaerostipes	15
+4495664.3	Bacteria	Helicobacter	15
+4495664.3	Bacteria	Pseudomonas	15
+4495664.3	Bacteria	Finegoldia	13
+4495664.3	Bacteria	Dialister	12
+4495664.3	Bacteria	Leuconostoc	11
+4495664.3	Bacteria	Eggerthella	8
+4495664.3	Bacteria	Shuttleworthia	8
+4495664.3	Bacteria	Candidatus Desulforudis	8
+4495664.3	Bacteria	Lactococcus	7
+4495664.3	Bacteria	Rhizobium	6
+4495664.3	Bacteria	unclassified (derived from Comamonadaceae)	6
+4495664.3	Bacteria	unclassified (derived from Gammaproteobacteria)	6
+4495664.3	Bacteria	Laceyella	5
+4495664.3	Bacteria	Subdoligranulum	5
+4495664.3	Bacteria	Prevotella	4
+4495664.3	Bacteria	Sphingobacterium	4
+4495664.3	Bacteria	Ureibacillus	4
+4495664.3	Bacteria	Acetitomaculum	4
+4495664.3	Bacteria	Erysipelothrix	4
+4495664.3	Bacteria	Mycoplasma	4
+4495664.3	Bacteria	Arcanobacterium	3
+4495664.3	Bacteria	Corynebacterium	3
+4495664.3	Bacteria	Thermincola	3
+4495664.3	Bacteria	Acetivibrio	3
+4495664.3	Bacteria	Ralstonia	3
+4495664.3	Bacteria	Akkermansia	3
+4495664.3	Bacteria	Aeriscardovia	2
+4495664.3	Bacteria	Trichococcus	2
+4495664.3	Bacteria	Alkaliphilus	2
+4495664.3	Bacteria	Anaerococcus	2
+4495664.3	Bacteria	Bulleidia	2
+4495664.3	Bacteria	Megasphaera	2
+4495664.3	Bacteria	Achromobacter	2
+4495664.3	Bacteria	unclassified (derived from Betaproteobacteria)	2
+4495664.3	Bacteria	Candidatus Aquiluna	1
+4495664.3	Bacteria	Rothia	1
+4495664.3	Bacteria	Mycobacterium	1
+4495664.3	Bacteria	Rhodococcus	1
+4495664.3	Bacteria	Cellulosimicrobium	1
+4495664.3	Bacteria	Enterorhabdus	1
+4495664.3	Bacteria	Paraprevotella	1
+4495664.3	Bacteria	Abiotrophia	1
+4495664.3	Bacteria	Tissierella	1
+4495664.3	Bacteria	Desulfotomaculum	1
+4495664.3	Bacteria	Dethiobacter	1
+4495664.3	Bacteria	Leptotrichia	1
+4495664.3	Bacteria	Brevundimonas	1
+4495664.3	Bacteria	Bradyrhizobium	1
+4495664.3	Bacteria	Campylobacter	1
+4495664.3	Bacteria	Allochromatium	1
+4495664.3	Bacteria	Edwardsiella	1
+4495664.3	Bacteria	Enterobacter	1
+4495663.3	Bacteria	Eubacterium	14235
+4495663.3	Bacteria	Bifidobacterium	8215
+4495663.3	Bacteria	Faecalibacterium	7889
+4495663.3	Bacteria	Bacteroides	4276
+4495663.3	Bacteria	Blautia	2174
+4495663.3	Bacteria	Parabacteroides	1944
+4495663.3	Bacteria	Clostridium	1934
+4495663.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1466
+4495663.3	Bacteria	Carnobacterium	1069
+4495663.3	Bacteria	Butyrivibrio	995
+4495663.3	Bacteria	unclassified (derived from Clostridiales)	793
+4495663.3	Bacteria	unclassified (derived from Ruminococcaceae)	648
+4495663.3	Bacteria	Ruminococcus	371
+4495663.3	Bacteria	unclassified (derived from Lachnospiraceae)	347
+4495663.3	Bacteria	unclassified (derived from Bacteria)	323
+4495663.3	Bacteria	Lachnospira	266
+4495663.3	Bacteria	Roseburia	246
+4495663.3	Bacteria	Atopobium	231
+4495663.3	Bacteria	Anaerotruncus	219
+4495663.3	Bacteria	Pseudobutyrivibrio	200
+4495663.3	Bacteria	Actinomyces	168
+4495663.3	Bacteria	Tannerella	152
+4495663.3	Bacteria	Selenomonas	144
+4495663.3	Bacteria	Gemella	129
+4495663.3	Bacteria	Barnesiella	103
+4495663.3	Bacteria	Acidaminococcus	86
+4495663.3	Bacteria	Phascolarctobacterium	82
+4495663.3	Bacteria	Escherichia	66
+4495663.3	Bacteria	Marinilabilia	65
+4495663.3	Bacteria	Porphyromonas	65
+4495663.3	Bacteria	unclassified (derived from Gammaproteobacteria)	52
+4495663.3	Bacteria	Alistipes	44
+4495663.3	Bacteria	Lactobacillus	40
+4495663.3	Bacteria	Acetobacterium	40
+4495663.3	Bacteria	Bacillus	34
+4495663.3	Bacteria	Butyricimonas	30
+4495663.3	Bacteria	Lactococcus	25
+4495663.3	Bacteria	Butyricicoccus	24
+4495663.3	Bacteria	Veillonella	24
+4495663.3	Bacteria	Megamonas	21
+4495663.3	Bacteria	Streptococcus	18
+4495663.3	Bacteria	Hespellia	12
+4495663.3	Bacteria	Enterococcus	10
+4495663.3	Bacteria	Collinsella	9
+4495663.3	Bacteria	Dorea	9
+4495663.3	Bacteria	Pseudomonas	9
+4495663.3	Bacteria	Brevundimonas	8
+4495663.3	Bacteria	Anaerofustis	7
+4495663.3	Bacteria	Shuttleworthia	7
+4495663.3	Bacteria	unclassified (derived from Comamonadaceae)	7
+4495663.3	Bacteria	Thioalkalivibrio	7
+4495663.3	Bacteria	Arcanobacterium	6
+4495663.3	Bacteria	Hydrogenobaculum	6
+4495663.3	Bacteria	Acetivibrio	6
+4495663.3	Bacteria	Eggerthella	5
+4495663.3	Bacteria	Achromobacter	5
+4495663.3	Bacteria	Helicobacter	5
+4495663.3	Bacteria	Acinetobacter	5
+4495663.3	Bacteria	Aeriscardovia	4
+4495663.3	Bacteria	Prevotella	4
+4495663.3	Bacteria	Leuconostoc	4
+4495663.3	Bacteria	Anaerostipes	4
+4495663.3	Bacteria	Dialister	4
+4495663.3	Bacteria	Enterorhabdus	3
+4495663.3	Bacteria	Odoribacter	3
+4495663.3	Bacteria	Oribacterium	3
+4495663.3	Bacteria	Blattabacterium	2
+4495663.3	Bacteria	Granulicatella	2
+4495663.3	Bacteria	Ethanoligenens	2
+4495663.3	Bacteria	Bulleidia	2
+4495663.3	Bacteria	Holdemania	2
+4495663.3	Bacteria	Corynebacterium	1
+4495663.3	Bacteria	Rathayibacter	1
+4495663.3	Bacteria	Rothia	1
+4495663.3	Bacteria	Rhodococcus	1
+4495663.3	Bacteria	Rikenella	1
+4495663.3	Bacteria	Sphingobacterium	1
+4495663.3	Bacteria	Laceyella	1
+4495663.3	Bacteria	Pediococcus	1
+4495663.3	Bacteria	Caloramator	1
+4495663.3	Bacteria	Desulfotomaculum	1
+4495663.3	Bacteria	Thermincola	1
+4495663.3	Bacteria	Methylobacterium	1
+4495663.3	Bacteria	Ralstonia	1
+4495663.3	Bacteria	Nitrococcus	1
+4495663.3	Bacteria	Thermanaerovibrio	1
+4495663.3	Bacteria	Akkermansia	1
+4495662.3	Bacteria	Blautia	14761
+4495662.3	Bacteria	Faecalibacterium	10883
+4495662.3	Bacteria	Butyrivibrio	6761
+4495662.3	Bacteria	Clostridium	6325
+4495662.3	Bacteria	Eubacterium	5596
+4495662.3	Bacteria	Ruminococcus	4431
+4495662.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1164
+4495662.3	Bacteria	Carnobacterium	1049
+4495662.3	Bacteria	Bacteroides	895
+4495662.3	Bacteria	unclassified (derived from Bacteria)	797
+4495662.3	Bacteria	Bifidobacterium	774
+4495662.3	Bacteria	unclassified (derived from Clostridiales)	758
+4495662.3	Bacteria	unclassified (derived from Lachnospiraceae)	540
+4495662.3	Bacteria	Lactobacillus	478
+4495662.3	Bacteria	Barnesiella	416
+4495662.3	Bacteria	Roseburia	407
+4495662.3	Bacteria	Hespellia	306
+4495662.3	Bacteria	unclassified (derived from Ruminococcaceae)	296
+4495662.3	Bacteria	Parabacteroides	286
+4495662.3	Bacteria	Alistipes	161
+4495662.3	Bacteria	Pseudobutyrivibrio	153
+4495662.3	Bacteria	Dorea	141
+4495662.3	Bacteria	Oribacterium	112
+4495662.3	Bacteria	Anaerostipes	96
+4495662.3	Bacteria	Escherichia	78
+4495662.3	Bacteria	Enterobacter	74
+4495662.3	Bacteria	Prevotella	72
+4495662.3	Bacteria	Lachnospira	60
+4495662.3	Bacteria	Streptococcus	53
+4495662.3	Bacteria	Acidovorax	53
+4495662.3	Bacteria	Marinilabilia	44
+4495662.3	Bacteria	Atopobium	27
+4495662.3	Bacteria	Acinetobacter	27
+4495662.3	Bacteria	Anaerotruncus	26
+4495662.3	Bacteria	Sphingobacterium	24
+4495662.3	Bacteria	Helicobacter	24
+4495662.3	Bacteria	Porphyromonas	23
+4495662.3	Bacteria	Veillonella	23
+4495662.3	Bacteria	Butyricicoccus	20
+4495662.3	Bacteria	Lactococcus	18
+4495662.3	Bacteria	Pseudomonas	18
+4495662.3	Bacteria	Selenomonas	16
+4495662.3	Bacteria	Staphylococcus	12
+4495662.3	Bacteria	unclassified (derived from Sphingobacteriaceae)	9
+4495662.3	Bacteria	Fusobacterium	9
+4495662.3	Bacteria	Ethanoligenens	8
+4495662.3	Bacteria	Acidaminococcus	8
+4495662.3	Bacteria	Megamonas	8
+4495662.3	Bacteria	unclassified (derived from Gammaproteobacteria)	8
+4495662.3	Bacteria	Actinomyces	7
+4495662.3	Bacteria	Corynebacterium	6
+4495662.3	Bacteria	Phascolarctobacterium	5
+4495662.3	Bacteria	Agrobacterium	5
+4495662.3	Bacteria	Marinomonas	5
+4495662.3	Bacteria	Paraprevotella	4
+4495662.3	Bacteria	Enterococcus	4
+4495662.3	Bacteria	Alkaliphilus	4
+4495662.3	Bacteria	Aminobacter	4
+4495662.3	Bacteria	Micrococcus	3
+4495662.3	Bacteria	Hydrogenobaculum	3
+4495662.3	Bacteria	Bacillus	3
+4495662.3	Bacteria	Aneurinibacillus	3
+4495662.3	Bacteria	Aerococcus	3
+4495662.3	Bacteria	Butyricimonas	2
+4495662.3	Bacteria	Odoribacter	2
+4495662.3	Bacteria	Tannerella	2
+4495662.3	Bacteria	Rikenella	2
+4495662.3	Bacteria	Anaerofustis	2
+4495662.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	2
+4495662.3	Bacteria	Dialister	2
+4495662.3	Bacteria	Megasphaera	2
+4495662.3	Bacteria	Ochrobactrum	2
+4495662.3	Bacteria	Gordonia	1
+4495662.3	Bacteria	Rothia	1
+4495662.3	Bacteria	Mycobacterium	1
+4495662.3	Bacteria	Smaragdicoccus	1
+4495662.3	Bacteria	Gardnerella	1
+4495662.3	Bacteria	Sulfurihydrogenibium	1
+4495662.3	Bacteria	Gemella	1
+4495662.3	Bacteria	Acetobacterium	1
+4495662.3	Bacteria	Desulfosporosinus	1
+4495662.3	Bacteria	Phyllobacterium	1
+4495662.3	Bacteria	Achromobacter	1
+4495662.3	Bacteria	Comamonas	1
+4495662.3	Bacteria	Mycoplasma	1
+4495661.3	Bacteria	Blautia	19558
+4495661.3	Bacteria	Eubacterium	10823
+4495661.3	Bacteria	Butyrivibrio	8166
+4495661.3	Bacteria	Faecalibacterium	7502
+4495661.3	Bacteria	Clostridium	5796
+4495661.3	Bacteria	Ruminococcus	2953
+4495661.3	Bacteria	Roseburia	1533
+4495661.3	Bacteria	Bacteroides	823
+4495661.3	Bacteria	unclassified (derived from Clostridiales)	774
+4495661.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	672
+4495661.3	Bacteria	Bifidobacterium	642
+4495661.3	Bacteria	Carnobacterium	595
+4495661.3	Bacteria	Hespellia	511
+4495661.3	Bacteria	unclassified (derived from Ruminococcaceae)	325
+4495661.3	Bacteria	unclassified (derived from Lachnospiraceae)	313
+4495661.3	Bacteria	Parabacteroides	260
+4495661.3	Bacteria	Laceyella	179
+4495661.3	Bacteria	unclassified (derived from Bacteria)	134
+4495661.3	Bacteria	Oribacterium	65
+4495661.3	Bacteria	Veillonella	42
+4495661.3	Bacteria	Atopobium	33
+4495661.3	Bacteria	Barnesiella	32
+4495661.3	Bacteria	Lactobacillus	32
+4495661.3	Bacteria	Pseudobutyrivibrio	31
+4495661.3	Bacteria	Anaerotruncus	29
+4495661.3	Bacteria	Butyricicoccus	23
+4495661.3	Bacteria	Marinilabilia	22
+4495661.3	Bacteria	Odoribacter	16
+4495661.3	Bacteria	Acetivibrio	15
+4495661.3	Bacteria	Alistipes	14
+4495661.3	Bacteria	Anaerostipes	14
+4495661.3	Bacteria	Megamonas	11
+4495661.3	Bacteria	Alkaliphilus	8
+4495661.3	Bacteria	Lachnospira	8
+4495661.3	Bacteria	Shuttleworthia	8
+4495661.3	Bacteria	Escherichia	8
+4495661.3	Bacteria	Streptococcus	6
+4495661.3	Bacteria	Thioalkalivibrio	6
+4495661.3	Bacteria	Porphyromonas	5
+4495661.3	Bacteria	Bacillus	5
+4495661.3	Bacteria	Acetobacterium	5
+4495661.3	Bacteria	Anaerofustis	5
+4495661.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	5
+4495661.3	Bacteria	Acidaminococcus	5
+4495661.3	Bacteria	Hydrogenobaculum	4
+4495661.3	Bacteria	Lactococcus	4
+4495661.3	Bacteria	Actinomyces	3
+4495661.3	Bacteria	Enterococcus	3
+4495661.3	Bacteria	Selenomonas	3
+4495661.3	Bacteria	Mesorhizobium	3
+4495661.3	Bacteria	Enterobacter	3
+4495661.3	Bacteria	Butyricimonas	2
+4495661.3	Bacteria	Prevotella	2
+4495661.3	Bacteria	Finegoldia	2
+4495661.3	Bacteria	Dorea	2
+4495661.3	Bacteria	Pseudomonas	2
+4495661.3	Bacteria	Rhodococcus	1
+4495661.3	Bacteria	Staphylococcus	1
+4495661.3	Bacteria	Leuconostoc	1
+4495661.3	Bacteria	Peptococcus	1
+4495661.3	Bacteria	Subdoligranulum	1
+4495661.3	Bacteria	Phascolarctobacterium	1
+4495661.3	Bacteria	Bradyrhizobium	1
+4495661.3	Bacteria	Methylobacterium	1
+4495661.3	Bacteria	Rhizobium	1
+4495661.3	Bacteria	Helicobacter	1
+4495661.3	Bacteria	Actinobacillus	1
+4495661.3	Bacteria	Acinetobacter	1
+4495661.3	Bacteria	Anaerobaculum	1
+4495660.3	Bacteria	Blautia	18407
+4495660.3	Bacteria	Faecalibacterium	15328
+4495660.3	Bacteria	Butyrivibrio	8930
+4495660.3	Bacteria	Eubacterium	8677
+4495660.3	Bacteria	Clostridium	6646
+4495660.3	Bacteria	Ruminococcus	2162
+4495660.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1510
+4495660.3	Bacteria	Bacteroides	1393
+4495660.3	Bacteria	unclassified (derived from Clostridiales)	886
+4495660.3	Bacteria	Bifidobacterium	763
+4495660.3	Bacteria	unclassified (derived from Lachnospiraceae)	658
+4495660.3	Bacteria	Hespellia	427
+4495660.3	Bacteria	Parabacteroides	360
+4495660.3	Bacteria	unclassified (derived from Bacteria)	201
+4495660.3	Bacteria	Anaerostipes	161
+4495660.3	Bacteria	unclassified (derived from Ruminococcaceae)	146
+4495660.3	Bacteria	Roseburia	142
+4495660.3	Bacteria	Lachnospira	127
+4495660.3	Bacteria	Carnobacterium	103
+4495660.3	Bacteria	Dorea	91
+4495660.3	Bacteria	Selenomonas	86
+4495660.3	Bacteria	Pseudobutyrivibrio	54
+4495660.3	Bacteria	Barnesiella	41
+4495660.3	Bacteria	Atopobium	40
+4495660.3	Bacteria	Lactobacillus	36
+4495660.3	Bacteria	Trichococcus	32
+4495660.3	Bacteria	Shuttleworthia	30
+4495660.3	Bacteria	Butyricicoccus	29
+4495660.3	Bacteria	Acidaminococcus	29
+4495660.3	Bacteria	Phascolarctobacterium	28
+4495660.3	Bacteria	Streptococcus	23
+4495660.3	Bacteria	Odoribacter	22
+4495660.3	Bacteria	Alistipes	22
+4495660.3	Bacteria	Coprobacillus	21
+4495660.3	Bacteria	Veillonella	21
+4495660.3	Bacteria	Escherichia	19
+4495660.3	Bacteria	Porphyromonas	13
+4495660.3	Bacteria	Anaerotruncus	13
+4495660.3	Bacteria	Actinomyces	12
+4495660.3	Bacteria	Pseudomonas	10
+4495660.3	Bacteria	Tannerella	9
+4495660.3	Bacteria	Oribacterium	8
+4495660.3	Bacteria	Methylobacterium	8
+4495660.3	Bacteria	Marinilabilia	6
+4495660.3	Bacteria	Achromobacter	5
+4495660.3	Bacteria	Bacillus	4
+4495660.3	Bacteria	Enterococcus	4
+4495660.3	Bacteria	Leuconostoc	4
+4495660.3	Bacteria	Rothia	3
+4495660.3	Bacteria	Butyricimonas	3
+4495660.3	Bacteria	Megamonas	3
+4495660.3	Bacteria	Acinetobacter	3
+4495660.3	Bacteria	Acetobacterium	2
+4495660.3	Bacteria	Anaerofustis	2
+4495660.3	Bacteria	Thermosinus	2
+4495660.3	Bacteria	Gordonia	1
+4495660.3	Bacteria	Collinsella	1
+4495660.3	Bacteria	Enterorhabdus	1
+4495660.3	Bacteria	Rikenella	1
+4495660.3	Bacteria	Gemella	1
+4495660.3	Bacteria	Abiotrophia	1
+4495660.3	Bacteria	Granulicatella	1
+4495660.3	Bacteria	Caloramator	1
+4495660.3	Bacteria	Acetitomaculum	1
+4495660.3	Bacteria	Syntrophococcus	1
+4495660.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	1
+4495660.3	Bacteria	Ethanoligenens	1
+4495660.3	Bacteria	Bulleidia	1
+4495660.3	Bacteria	Holdemania	1
+4495660.3	Bacteria	Ochrobactrum	1
+4495660.3	Bacteria	Aminobacter	1
+4495660.3	Bacteria	Acidovorax	1
+4495660.3	Bacteria	unclassified (derived from Comamonadaceae)	1
+4495660.3	Bacteria	Helicobacter	1
+4495660.3	Bacteria	Nitrococcus	1
+4495660.3	Bacteria	Thioalkalivibrio	1
+4495660.3	Bacteria	Enterobacter	1
+4495660.3	Bacteria	Klebsiella	1
+4495660.3	Bacteria	Pectobacterium	1
+4495660.3	Bacteria	Xanthomonas	1
+4495660.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495659.3	Bacteria	Faecalibacterium	23576
+4495659.3	Bacteria	Eubacterium	21138
+4495659.3	Bacteria	Butyrivibrio	19659
+4495659.3	Bacteria	Blautia	19211
+4495659.3	Bacteria	Clostridium	13938
+4495659.3	Bacteria	Ruminococcus	4751
+4495659.3	Bacteria	Bacteroides	3191
+4495659.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2806
+4495659.3	Bacteria	unclassified (derived from Clostridiales)	2588
+4495659.3	Bacteria	unclassified (derived from Lachnospiraceae)	2383
+4495659.3	Bacteria	Carnobacterium	2022
+4495659.3	Bacteria	Bifidobacterium	1178
+4495659.3	Bacteria	Roseburia	1115
+4495659.3	Bacteria	Hespellia	625
+4495659.3	Bacteria	unclassified (derived from Bacteria)	575
+4495659.3	Bacteria	unclassified (derived from Ruminococcaceae)	361
+4495659.3	Bacteria	Porphyromonas	318
+4495659.3	Bacteria	Pseudobutyrivibrio	200
+4495659.3	Bacteria	Streptococcus	146
+4495659.3	Bacteria	Dorea	137
+4495659.3	Bacteria	Enterococcus	95
+4495659.3	Bacteria	Atopobium	88
+4495659.3	Bacteria	Parabacteroides	86
+4495659.3	Bacteria	Lachnospira	74
+4495659.3	Bacteria	Lactobacillus	52
+4495659.3	Bacteria	Oribacterium	48
+4495659.3	Bacteria	Acidaminococcus	45
+4495659.3	Bacteria	Barnesiella	44
+4495659.3	Bacteria	Shuttleworthia	41
+4495659.3	Bacteria	Selenomonas	41
+4495659.3	Bacteria	Escherichia	41
+4495659.3	Bacteria	Veillonella	39
+4495659.3	Bacteria	Phascolarctobacterium	35
+4495659.3	Bacteria	Odoribacter	26
+4495659.3	Bacteria	Butyricicoccus	24
+4495659.3	Bacteria	Acetitomaculum	20
+4495659.3	Bacteria	Megamonas	19
+4495659.3	Bacteria	Actinomyces	16
+4495659.3	Bacteria	Collinsella	14
+4495659.3	Bacteria	Alistipes	12
+4495659.3	Bacteria	Thermincola	12
+4495659.3	Bacteria	Subdoligranulum	12
+4495659.3	Bacteria	Nitrococcus	12
+4495659.3	Bacteria	Rothia	11
+4495659.3	Bacteria	Anaerostipes	11
+4495659.3	Bacteria	Bacillus	10
+4495659.3	Bacteria	Anaerotruncus	10
+4495659.3	Bacteria	Pseudomonas	9
+4495659.3	Bacteria	Granulicatella	8
+4495659.3	Bacteria	Syntrophococcus	8
+4495659.3	Bacteria	unclassified (derived from Gammaproteobacteria)	8
+4495659.3	Bacteria	Hydrogenobaculum	7
+4495659.3	Bacteria	Ethanoligenens	7
+4495659.3	Bacteria	Brevundimonas	7
+4495659.3	Bacteria	Marinilabilia	6
+4495659.3	Bacteria	Tannerella	6
+4495659.3	Bacteria	Anaerofustis	6
+4495659.3	Bacteria	Helicobacter	5
+4495659.3	Bacteria	Butyricimonas	4
+4495659.3	Bacteria	Sphingobacterium	4
+4495659.3	Bacteria	Alkaliphilus	4
+4495659.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	4
+4495659.3	Bacteria	Holdemania	4
+4495659.3	Bacteria	Aeriscardovia	3
+4495659.3	Bacteria	Eggerthella	3
+4495659.3	Bacteria	Gemella	3
+4495659.3	Bacteria	Methylobacterium	3
+4495659.3	Bacteria	Achromobacter	3
+4495659.3	Bacteria	Sedimentibacter	2
+4495659.3	Bacteria	Desulfotomaculum	2
+4495659.3	Bacteria	Bulleidia	2
+4495659.3	Bacteria	Megasphaera	2
+4495659.3	Bacteria	Acidovorax	2
+4495659.3	Bacteria	Enterobacter	2
+4495659.3	Bacteria	Spiroplasma	2
+4495659.3	Bacteria	Arcanobacterium	1
+4495659.3	Bacteria	Corynebacterium	1
+4495659.3	Bacteria	Gordonia	1
+4495659.3	Bacteria	Candidatus Rhodoluna	1
+4495659.3	Bacteria	Gardnerella	1
+4495659.3	Bacteria	Prevotella	1
+4495659.3	Bacteria	Aneurinibacillus	1
+4495659.3	Bacteria	Abiotrophia	1
+4495659.3	Bacteria	Aerococcus	1
+4495659.3	Bacteria	Lactococcus	1
+4495659.3	Bacteria	Caloramator	1
+4495659.3	Bacteria	Candidatus Desulforudis	1
+4495659.3	Bacteria	Coprobacillus	1
+4495659.3	Bacteria	Thermosinus	1
+4495659.3	Bacteria	Thioclava	1
+4495659.3	Bacteria	unclassified (derived from Comamonadaceae)	1
+4495659.3	Bacteria	Allochromatium	1
+4495659.3	Bacteria	Yersinia	1
+4495659.3	Bacteria	Thermanaerovibrio	1
+4495658.3	Bacteria	Blautia	32245
+4495658.3	Bacteria	Faecalibacterium	27273
+4495658.3	Bacteria	Eubacterium	22392
+4495658.3	Bacteria	Butyrivibrio	20211
+4495658.3	Bacteria	Ruminococcus	12835
+4495658.3	Bacteria	Clostridium	10279
+4495658.3	Bacteria	unclassified (derived from Clostridiales)	2874
+4495658.3	Bacteria	Roseburia	2641
+4495658.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2068
+4495658.3	Bacteria	Bifidobacterium	1883
+4495658.3	Bacteria	Bacteroides	1838
+4495658.3	Bacteria	unclassified (derived from Lachnospiraceae)	1793
+4495658.3	Bacteria	Lachnospira	1632
+4495658.3	Bacteria	Carnobacterium	1062
+4495658.3	Bacteria	unclassified (derived from Ruminococcaceae)	934
+4495658.3	Bacteria	Parabacteroides	763
+4495658.3	Bacteria	Shuttleworthia	623
+4495658.3	Bacteria	Hespellia	573
+4495658.3	Bacteria	unclassified (derived from Bacteria)	529
+4495658.3	Bacteria	Dorea	295
+4495658.3	Bacteria	Tannerella	265
+4495658.3	Bacteria	Barnesiella	100
+4495658.3	Bacteria	Hydrogenobaculum	91
+4495658.3	Bacteria	Acidaminococcus	71
+4495658.3	Bacteria	Phascolarctobacterium	71
+4495658.3	Bacteria	Lactobacillus	67
+4495658.3	Bacteria	Anaerotruncus	65
+4495658.3	Bacteria	Megamonas	63
+4495658.3	Bacteria	Acetitomaculum	61
+4495658.3	Bacteria	Pseudobutyrivibrio	59
+4495658.3	Bacteria	Thermincola	54
+4495658.3	Bacteria	Atopobium	53
+4495658.3	Bacteria	Veillonella	45
+4495658.3	Bacteria	Selenomonas	41
+4495658.3	Bacteria	Oxobacter	40
+4495658.3	Bacteria	Nitrococcus	40
+4495658.3	Bacteria	Butyricicoccus	35
+4495658.3	Bacteria	Alkaliphilus	33
+4495658.3	Bacteria	Alistipes	32
+4495658.3	Bacteria	Gemella	30
+4495658.3	Bacteria	Anaerostipes	29
+4495658.3	Bacteria	unclassified (derived from Bacteroidetes)	28
+4495658.3	Bacteria	Streptococcus	27
+4495658.3	Bacteria	Enterobacter	22
+4495658.3	Bacteria	Porphyromonas	21
+4495658.3	Bacteria	Actinomyces	17
+4495658.3	Bacteria	Oribacterium	16
+4495658.3	Bacteria	Bacillus	13
+4495658.3	Bacteria	Subdoligranulum	13
+4495658.3	Bacteria	Marinilabilia	12
+4495658.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	11
+4495658.3	Bacteria	Odoribacter	10
+4495658.3	Bacteria	unclassified (derived from Gammaproteobacteria)	9
+4495658.3	Bacteria	Thermanaerovibrio	9
+4495658.3	Bacteria	Ethanoligenens	8
+4495658.3	Bacteria	Trichococcus	7
+4495658.3	Bacteria	Enterococcus	7
+4495658.3	Bacteria	Acetobacterium	7
+4495658.3	Bacteria	Helicobacter	6
+4495658.3	Bacteria	Escherichia	6
+4495658.3	Bacteria	Anaerofustis	5
+4495658.3	Bacteria	Pseudomonas	5
+4495658.3	Bacteria	Collinsella	4
+4495658.3	Bacteria	Butyricimonas	4
+4495658.3	Bacteria	Lactococcus	4
+4495658.3	Bacteria	unclassified (derived from Burkholderiales)	4
+4495658.3	Bacteria	Sedimentibacter	3
+4495658.3	Bacteria	Dialister	3
+4495658.3	Bacteria	Corynebacterium	2
+4495658.3	Bacteria	Brochothrix	2
+4495658.3	Bacteria	Abiotrophia	2
+4495658.3	Bacteria	Granulicatella	2
+4495658.3	Bacteria	Methylobacterium	2
+4495658.3	Bacteria	Aminobacter	2
+4495658.3	Bacteria	Sinorhizobium	2
+4495658.3	Bacteria	Mycoplasma	2
+4495658.3	Bacteria	Dietzia	1
+4495658.3	Bacteria	Rothia	1
+4495658.3	Bacteria	Lechevalieria	1
+4495658.3	Bacteria	Enterorhabdus	1
+4495658.3	Bacteria	Alkalibacterium	1
+4495658.3	Bacteria	Leuconostoc	1
+4495658.3	Bacteria	Caloramator	1
+4495658.3	Bacteria	Sarcina	1
+4495658.3	Bacteria	Peptoniphilus	1
+4495658.3	Bacteria	Desulfitibacter	1
+4495658.3	Bacteria	Acetivibrio	1
+4495658.3	Bacteria	Coprobacillus	1
+4495658.3	Bacteria	Holdemania	1
+4495658.3	Bacteria	Megasphaera	1
+4495658.3	Bacteria	Phyllobacterium	1
+4495658.3	Bacteria	Sphingobium	1
+4495658.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495658.3	Bacteria	Acidovorax	1
+4495658.3	Bacteria	Desulfocella	1
+4495658.3	Bacteria	Halorhodospira	1
+4495658.3	Bacteria	Chthoniobacter	1
+4495658.3	Bacteria	Akkermansia	1
+4495657.3	Bacteria	Butyrivibrio	25460
+4495657.3	Bacteria	Blautia	19656
+4495657.3	Bacteria	Faecalibacterium	19061
+4495657.3	Bacteria	Clostridium	13846
+4495657.3	Bacteria	Eubacterium	12815
+4495657.3	Bacteria	Ruminococcus	7849
+4495657.3	Bacteria	Hespellia	3737
+4495657.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2051
+4495657.3	Bacteria	unclassified (derived from Clostridiales)	1709
+4495657.3	Bacteria	unclassified (derived from Lachnospiraceae)	1384
+4495657.3	Bacteria	Bacteroides	1254
+4495657.3	Bacteria	unclassified (derived from Bacteria)	1200
+4495657.3	Bacteria	Carnobacterium	1117
+4495657.3	Bacteria	Bifidobacterium	1034
+4495657.3	Bacteria	Roseburia	478
+4495657.3	Bacteria	unclassified (derived from Ruminococcaceae)	360
+4495657.3	Bacteria	Parabacteroides	274
+4495657.3	Bacteria	Acetitomaculum	204
+4495657.3	Bacteria	Anaerostipes	128
+4495657.3	Bacteria	Selenomonas	114
+4495657.3	Bacteria	Veillonella	111
+4495657.3	Bacteria	Dorea	90
+4495657.3	Bacteria	Oribacterium	81
+4495657.3	Bacteria	Lachnospira	75
+4495657.3	Bacteria	Pseudobutyrivibrio	56
+4495657.3	Bacteria	Streptococcus	55
+4495657.3	Bacteria	Atopobium	47
+4495657.3	Bacteria	Butyricicoccus	44
+4495657.3	Bacteria	Shuttleworthia	43
+4495657.3	Bacteria	Hydrogenobaculum	42
+4495657.3	Bacteria	Barnesiella	42
+4495657.3	Bacteria	Lactobacillus	32
+4495657.3	Bacteria	Escherichia	22
+4495657.3	Bacteria	Acidaminococcus	18
+4495657.3	Bacteria	Porphyromonas	17
+4495657.3	Bacteria	Alistipes	17
+4495657.3	Bacteria	Alkalibacterium	17
+4495657.3	Bacteria	Bacillus	16
+4495657.3	Bacteria	Granulicatella	16
+4495657.3	Bacteria	Phascolarctobacterium	16
+4495657.3	Bacteria	unclassified (derived from Bacteroidetes)	15
+4495657.3	Bacteria	Pseudomonas	15
+4495657.3	Bacteria	Thermincola	14
+4495657.3	Bacteria	Anaerotruncus	14
+4495657.3	Bacteria	Enterococcus	13
+4495657.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	13
+4495657.3	Bacteria	Ureibacillus	9
+4495657.3	Bacteria	Odoribacter	8
+4495657.3	Bacteria	Desulfotomaculum	8
+4495657.3	Bacteria	Subdoligranulum	8
+4495657.3	Bacteria	Aminobacter	8
+4495657.3	Bacteria	Actinomyces	7
+4495657.3	Bacteria	Marinilabilia	6
+4495657.3	Bacteria	Gemella	5
+4495657.3	Bacteria	Abiotrophia	5
+4495657.3	Bacteria	Butyricimonas	4
+4495657.3	Bacteria	Staphylococcus	4
+4495657.3	Bacteria	Phyllobacterium	4
+4495657.3	Bacteria	Achromobacter	4
+4495657.3	Bacteria	Thioalkalivibrio	4
+4495657.3	Bacteria	Rothia	3
+4495657.3	Bacteria	Eggerthella	3
+4495657.3	Bacteria	Sedimentibacter	3
+4495657.3	Bacteria	Anaerofustis	3
+4495657.3	Bacteria	unclassified (derived from Deltaproteobacteria)	3
+4495657.3	Bacteria	Helicobacter	3
+4495657.3	Bacteria	Aeriscardovia	2
+4495657.3	Bacteria	Collinsella	2
+4495657.3	Bacteria	Tannerella	2
+4495657.3	Bacteria	Finegoldia	2
+4495657.3	Bacteria	Peptostreptococcus	2
+4495657.3	Bacteria	Holdemania	2
+4495657.3	Bacteria	Megamonas	2
+4495657.3	Bacteria	Nitrococcus	2
+4495657.3	Bacteria	Acinetobacter	2
+4495657.3	Bacteria	Kytococcus	1
+4495657.3	Bacteria	Gordonia	1
+4495657.3	Bacteria	Mycobacterium	1
+4495657.3	Bacteria	Enterorhabdus	1
+4495657.3	Bacteria	Trichococcus	1
+4495657.3	Bacteria	Lactococcus	1
+4495657.3	Bacteria	Alkaliphilus	1
+4495657.3	Bacteria	Acetobacterium	1
+4495657.3	Bacteria	Bulleidia	1
+4495657.3	Bacteria	Fusobacterium	1
+4495657.3	Bacteria	Bradyrhizobium	1
+4495657.3	Bacteria	Methylobacterium	1
+4495657.3	Bacteria	Ralstonia	1
+4495657.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495656.3	Bacteria	Blautia	27994
+4495656.3	Bacteria	Butyrivibrio	15991
+4495656.3	Bacteria	Faecalibacterium	14490
+4495656.3	Bacteria	Clostridium	13293
+4495656.3	Bacteria	Eubacterium	10582
+4495656.3	Bacteria	Ruminococcus	5180
+4495656.3	Bacteria	Bifidobacterium	4257
+4495656.3	Bacteria	unclassified (derived from Clostridiales)	3526
+4495656.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2689
+4495656.3	Bacteria	Bacteroides	2623
+4495656.3	Bacteria	Carnobacterium	1846
+4495656.3	Bacteria	unclassified (derived from Bacteria)	1541
+4495656.3	Bacteria	unclassified (derived from Lachnospiraceae)	775
+4495656.3	Bacteria	Roseburia	615
+4495656.3	Bacteria	Parabacteroides	541
+4495656.3	Bacteria	Hespellia	359
+4495656.3	Bacteria	unclassified (derived from Ruminococcaceae)	331
+4495656.3	Bacteria	Lachnospira	289
+4495656.3	Bacteria	Actinomyces	111
+4495656.3	Bacteria	Selenomonas	107
+4495656.3	Bacteria	Streptococcus	105
+4495656.3	Bacteria	Barnesiella	101
+4495656.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	97
+4495656.3	Bacteria	Lactobacillus	69
+4495656.3	Bacteria	Atopobium	63
+4495656.3	Bacteria	Veillonella	60
+4495656.3	Bacteria	unclassified (derived from Bacteroidetes)	49
+4495656.3	Bacteria	Pseudomonas	49
+4495656.3	Bacteria	Alistipes	47
+4495656.3	Bacteria	Anaerotruncus	42
+4495656.3	Bacteria	Butyricicoccus	39
+4495656.3	Bacteria	Escherichia	34
+4495656.3	Bacteria	Acidaminococcus	33
+4495656.3	Bacteria	Phascolarctobacterium	32
+4495656.3	Bacteria	Hydrogenobaculum	31
+4495656.3	Bacteria	Anaerostipes	30
+4495656.3	Bacteria	Collinsella	22
+4495656.3	Bacteria	Dorea	22
+4495656.3	Bacteria	Acetitomaculum	19
+4495656.3	Bacteria	Oribacterium	19
+4495656.3	Bacteria	Odoribacter	18
+4495656.3	Bacteria	Shuttleworthia	16
+4495656.3	Bacteria	Ethanoligenens	16
+4495656.3	Bacteria	Rothia	13
+4495656.3	Bacteria	Bacillus	13
+4495656.3	Bacteria	Lactococcus	13
+4495656.3	Bacteria	Pseudobutyrivibrio	13
+4495656.3	Bacteria	Enterococcus	12
+4495656.3	Bacteria	Butyricimonas	10
+4495656.3	Bacteria	Gemella	10
+4495656.3	Bacteria	Porphyromonas	9
+4495656.3	Bacteria	Aminobacter	9
+4495656.3	Bacteria	Corynebacterium	8
+4495656.3	Bacteria	Tannerella	8
+4495656.3	Bacteria	Anaerofustis	8
+4495656.3	Bacteria	Methylobacterium	8
+4495656.3	Bacteria	Acetivibrio	7
+4495656.3	Bacteria	Holdemania	7
+4495656.3	Bacteria	Achromobacter	6
+4495656.3	Bacteria	Cryptobacterium	5
+4495656.3	Bacteria	Dialister	5
+4495656.3	Bacteria	Eggerthella	4
+4495656.3	Bacteria	Marinilabilia	4
+4495656.3	Bacteria	Prevotella	4
+4495656.3	Bacteria	Granulicatella	4
+4495656.3	Bacteria	Leuconostoc	4
+4495656.3	Bacteria	Thermincola	4
+4495656.3	Bacteria	Acetobacterium	3
+4495656.3	Bacteria	Peptococcus	3
+4495656.3	Bacteria	Erysipelothrix	3
+4495656.3	Bacteria	Helicobacter	3
+4495656.3	Bacteria	Acinetobacter	3
+4495656.3	Bacteria	Aerococcus	2
+4495656.3	Bacteria	Sedimentibacter	2
+4495656.3	Bacteria	Megamonas	2
+4495656.3	Bacteria	Mycoplasma	2
+4495656.3	Bacteria	Arcanobacterium	1
+4495656.3	Bacteria	Micrococcus	1
+4495656.3	Bacteria	Mycobacterium	1
+4495656.3	Bacteria	Rhodococcus	1
+4495656.3	Bacteria	Persephonella	1
+4495656.3	Bacteria	Cytophaga	1
+4495656.3	Bacteria	Rhodothermus	1
+4495656.3	Bacteria	Alkaliphilus	1
+4495656.3	Bacteria	Cellulosilyticum	1
+4495656.3	Bacteria	Subdoligranulum	1
+4495656.3	Bacteria	Brevundimonas	1
+4495656.3	Bacteria	Phaeobacter	1
+4495656.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495656.3	Bacteria	Alcaligenes	1
+4495656.3	Bacteria	Desulfovibrio	1
+4495656.3	Bacteria	Enterobacter	1
+4495656.3	Bacteria	Klebsiella	1
+4495656.3	Bacteria	Pantoea	1
+4495656.3	Bacteria	Providencia	1
+4495656.3	Bacteria	Azorhizophilus	1
+4495655.3	Bacteria	Blautia	27612
+4495655.3	Bacteria	Faecalibacterium	19755
+4495655.3	Bacteria	Clostridium	16928
+4495655.3	Bacteria	Ruminococcus	14103
+4495655.3	Bacteria	Eubacterium	12304
+4495655.3	Bacteria	unclassified (derived from Clostridiales)	12218
+4495655.3	Bacteria	Butyrivibrio	5039
+4495655.3	Bacteria	Bacteroides	4430
+4495655.3	Bacteria	unclassified (derived from Bacteria)	3913
+4495655.3	Bacteria	unclassified (derived from Lachnospiraceae)	2152
+4495655.3	Bacteria	Hespellia	1580
+4495655.3	Bacteria	Akkermansia	1337
+4495655.3	Bacteria	Bifidobacterium	963
+4495655.3	Bacteria	Desulfotomaculum	645
+4495655.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	609
+4495655.3	Bacteria	Veillonella	559
+4495655.3	Bacteria	Anaerotruncus	458
+4495655.3	Bacteria	Selenomonas	284
+4495655.3	Bacteria	Dorea	282
+4495655.3	Bacteria	Anaerostipes	249
+4495655.3	Bacteria	Bacillus	237
+4495655.3	Bacteria	unclassified (derived from Ruminococcaceae)	218
+4495655.3	Bacteria	Butyricicoccus	106
+4495655.3	Bacteria	Alkaliphilus	103
+4495655.3	Bacteria	Collinsella	96
+4495655.3	Bacteria	Megamonas	65
+4495655.3	Bacteria	Ethanoligenens	64
+4495655.3	Bacteria	Robinsoniella	63
+4495655.3	Bacteria	Dialister	55
+4495655.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	47
+4495655.3	Bacteria	Atopobium	39
+4495655.3	Bacteria	Actinomyces	38
+4495655.3	Bacteria	Alistipes	37
+4495655.3	Bacteria	Shuttleworthia	37
+4495655.3	Bacteria	Barnesiella	32
+4495655.3	Bacteria	Syntrophococcus	31
+4495655.3	Bacteria	Ureibacillus	24
+4495655.3	Bacteria	Marinilabilia	22
+4495655.3	Bacteria	Odoribacter	21
+4495655.3	Bacteria	Streptococcus	20
+4495655.3	Bacteria	Hydrogenobaculum	14
+4495655.3	Bacteria	Thermosinus	14
+4495655.3	Bacteria	Roseburia	12
+4495655.3	Bacteria	Lachnospira	10
+4495655.3	Bacteria	Acetobacterium	8
+4495655.3	Bacteria	Escherichia	8
+4495655.3	Bacteria	Lactococcus	7
+4495655.3	Bacteria	Pseudomonas	7
+4495655.3	Bacteria	Persephonella	6
+4495655.3	Bacteria	Parabacteroides	6
+4495655.3	Bacteria	Oribacterium	6
+4495655.3	Bacteria	Peptostreptococcus	6
+4495655.3	Bacteria	unclassified (derived from Alphaproteobacteria)	6
+4495655.3	Bacteria	Trichococcus	5
+4495655.3	Bacteria	Acidaminococcus	5
+4495655.3	Bacteria	Aneurinibacillus	4
+4495655.3	Bacteria	Granulicatella	4
+4495655.3	Bacteria	Enterococcus	4
+4495655.3	Bacteria	Desulfitibacter	4
+4495655.3	Bacteria	Prevotella	3
+4495655.3	Bacteria	Sphingobacterium	3
+4495655.3	Bacteria	Chloroherpeton	3
+4495655.3	Bacteria	Laceyella	3
+4495655.3	Bacteria	Carnobacterium	3
+4495655.3	Bacteria	Sedimentibacter	3
+4495655.3	Bacteria	Coprococcus	3
+4495655.3	Bacteria	Desulfosporosinus	3
+4495655.3	Bacteria	Erysipelothrix	3
+4495655.3	Bacteria	Corynebacterium	2
+4495655.3	Bacteria	Aeriscardovia	2
+4495655.3	Bacteria	Sulfurihydrogenibium	2
+4495655.3	Bacteria	Lactobacillus	2
+4495655.3	Bacteria	Methylobacterium	2
+4495655.3	Bacteria	Mobiluncus	1
+4495655.3	Bacteria	Porphyromonas	1
+4495655.3	Bacteria	Pedobacter	1
+4495655.3	Bacteria	Abiotrophia	1
+4495655.3	Bacteria	Pseudobutyrivibrio	1
+4495655.3	Bacteria	Natranaerobius	1
+4495655.3	Bacteria	Coprobacillus	1
+4495655.3	Bacteria	Phascolarctobacterium	1
+4495655.3	Bacteria	Bradyrhizobium	1
+4495655.3	Bacteria	Aminobacter	1
+4495655.3	Bacteria	Ralstonia	1
+4495655.3	Bacteria	Enterobacter	1
+4495655.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495655.3	Bacteria	Candidatus Phytoplasma	1
+4495655.3	Bacteria	Prosthecobacter	1
+4495654.3	Bacteria	Blautia	30212
+4495654.3	Bacteria	Faecalibacterium	12199
+4495654.3	Bacteria	Eubacterium	10757
+4495654.3	Bacteria	Clostridium	8849
+4495654.3	Bacteria	Butyrivibrio	6782
+4495654.3	Bacteria	Bifidobacterium	3525
+4495654.3	Bacteria	unclassified (derived from Clostridiales)	2404
+4495654.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2122
+4495654.3	Bacteria	Bacteroides	1676
+4495654.3	Bacteria	Carnobacterium	1633
+4495654.3	Bacteria	unclassified (derived from Bacteria)	1354
+4495654.3	Bacteria	Ruminococcus	720
+4495654.3	Bacteria	Lachnospira	581
+4495654.3	Bacteria	unclassified (derived from Lachnospiraceae)	564
+4495654.3	Bacteria	Hespellia	448
+4495654.3	Bacteria	Parabacteroides	334
+4495654.3	Bacteria	unclassified (derived from Ruminococcaceae)	283
+4495654.3	Bacteria	Roseburia	168
+4495654.3	Bacteria	Actinomyces	156
+4495654.3	Bacteria	Streptococcus	143
+4495654.3	Bacteria	Veillonella	79
+4495654.3	Bacteria	Barnesiella	68
+4495654.3	Bacteria	Dorea	68
+4495654.3	Bacteria	Atopobium	62
+4495654.3	Bacteria	Anaerotruncus	54
+4495654.3	Bacteria	Lactobacillus	46
+4495654.3	Bacteria	unclassified (derived from Bacteroidetes)	42
+4495654.3	Bacteria	Pseudomonas	32
+4495654.3	Bacteria	Acidaminococcus	31
+4495654.3	Bacteria	Lactococcus	28
+4495654.3	Bacteria	Phascolarctobacterium	25
+4495654.3	Bacteria	Butyricicoccus	23
+4495654.3	Bacteria	Escherichia	21
+4495654.3	Bacteria	Anaerostipes	17
+4495654.3	Bacteria	Odoribacter	16
+4495654.3	Bacteria	Alistipes	14
+4495654.3	Bacteria	Ethanoligenens	13
+4495654.3	Bacteria	Selenomonas	11
+4495654.3	Bacteria	Porphyromonas	10
+4495654.3	Bacteria	Aerococcus	10
+4495654.3	Bacteria	Enterococcus	10
+4495654.3	Bacteria	Acetobacterium	10
+4495654.3	Bacteria	Rothia	9
+4495654.3	Bacteria	Bacillus	9
+4495654.3	Bacteria	Megamonas	9
+4495654.3	Bacteria	Oribacterium	8
+4495654.3	Bacteria	Anaerofustis	7
+4495654.3	Bacteria	Hydrogenobaculum	6
+4495654.3	Bacteria	Gemella	6
+4495654.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	6
+4495654.3	Bacteria	Methylobacterium	6
+4495654.3	Bacteria	Corynebacterium	5
+4495654.3	Bacteria	Kytococcus	5
+4495654.3	Bacteria	Eggerthella	5
+4495654.3	Bacteria	Butyricimonas	5
+4495654.3	Bacteria	Thioalkalivibrio	5
+4495654.3	Bacteria	Acetitomaculum	4
+4495654.3	Bacteria	Helicobacter	4
+4495654.3	Bacteria	Collinsella	3
+4495654.3	Bacteria	Granulicatella	3
+4495654.3	Bacteria	Sedimentibacter	3
+4495654.3	Bacteria	Phyllobacterium	3
+4495654.3	Bacteria	Arcanobacterium	2
+4495654.3	Bacteria	unclassified (derived from Actinobacteria (class))	2
+4495654.3	Bacteria	Tannerella	2
+4495654.3	Bacteria	Prevotella	2
+4495654.3	Bacteria	Dietzia	1
+4495654.3	Bacteria	Gordonia	1
+4495654.3	Bacteria	Micrococcus	1
+4495654.3	Bacteria	Nocardioides	1
+4495654.3	Bacteria	Sphingobacterium	1
+4495654.3	Bacteria	Staphylococcus	1
+4495654.3	Bacteria	Laceyella	1
+4495654.3	Bacteria	Abiotrophia	1
+4495654.3	Bacteria	Alkaliphilus	1
+4495654.3	Bacteria	Sarcina	1
+4495654.3	Bacteria	Pseudobutyrivibrio	1
+4495654.3	Bacteria	Syntrophococcus	1
+4495654.3	Bacteria	Thermincola	1
+4495654.3	Bacteria	Peptostreptococcus	1
+4495654.3	Bacteria	Acetivibrio	1
+4495654.3	Bacteria	Subdoligranulum	1
+4495654.3	Bacteria	Erysipelothrix	1
+4495654.3	Bacteria	Dialister	1
+4495654.3	Bacteria	Brevundimonas	1
+4495654.3	Bacteria	Agrobacterium	1
+4495654.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495654.3	Bacteria	Alcaligenes	1
+4495654.3	Bacteria	Nitrococcus	1
+4495653.3	Bacteria	Faecalibacterium	22435
+4495653.3	Bacteria	Blautia	15715
+4495653.3	Bacteria	Eubacterium	13788
+4495653.3	Bacteria	Clostridium	10102
+4495653.3	Bacteria	Ruminococcus	8760
+4495653.3	Bacteria	Butyrivibrio	8019
+4495653.3	Bacteria	Bifidobacterium	5548
+4495653.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	4168
+4495653.3	Bacteria	Bacteroides	3490
+4495653.3	Bacteria	unclassified (derived from Clostridiales)	2915
+4495653.3	Bacteria	Carnobacterium	2214
+4495653.3	Bacteria	unclassified (derived from Bacteria)	2061
+4495653.3	Bacteria	Parabacteroides	1502
+4495653.3	Bacteria	Lachnospira	1275
+4495653.3	Bacteria	unclassified (derived from Lachnospiraceae)	659
+4495653.3	Bacteria	Hespellia	606
+4495653.3	Bacteria	Pseudobutyrivibrio	560
+4495653.3	Bacteria	Streptococcus	547
+4495653.3	Bacteria	unclassified (derived from Ruminococcaceae)	421
+4495653.3	Bacteria	Roseburia	205
+4495653.3	Bacteria	Anaerotruncus	159
+4495653.3	Bacteria	Actinomyces	158
+4495653.3	Bacteria	Barnesiella	106
+4495653.3	Bacteria	Atopobium	95
+4495653.3	Bacteria	Alistipes	71
+4495653.3	Bacteria	Veillonella	62
+4495653.3	Bacteria	Lactobacillus	60
+4495653.3	Bacteria	Acidaminococcus	55
+4495653.3	Bacteria	Phascolarctobacterium	54
+4495653.3	Bacteria	Dorea	51
+4495653.3	Bacteria	Tannerella	49
+4495653.3	Bacteria	Odoribacter	44
+4495653.3	Bacteria	Escherichia	44
+4495653.3	Bacteria	Butyricicoccus	41
+4495653.3	Bacteria	Selenomonas	39
+4495653.3	Bacteria	Aeriscardovia	30
+4495653.3	Bacteria	Pseudomonas	24
+4495653.3	Bacteria	Anaerostipes	19
+4495653.3	Bacteria	Bacillus	17
+4495653.3	Bacteria	Enterococcus	16
+4495653.3	Bacteria	Lactococcus	14
+4495653.3	Bacteria	Acetitomaculum	14
+4495653.3	Bacteria	Oribacterium	13
+4495653.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	13
+4495653.3	Bacteria	Ethanoligenens	13
+4495653.3	Bacteria	Holdemania	12
+4495653.3	Bacteria	Granulicatella	11
+4495653.3	Bacteria	Megamonas	11
+4495653.3	Bacteria	Acetivibrio	10
+4495653.3	Bacteria	Hydrogenobaculum	9
+4495653.3	Bacteria	Abiotrophia	9
+4495653.3	Bacteria	Anaerofustis	8
+4495653.3	Bacteria	Corynebacterium	7
+4495653.3	Bacteria	Rothia	7
+4495653.3	Bacteria	Gemella	7
+4495653.3	Bacteria	Leuconostoc	7
+4495653.3	Bacteria	Butyricimonas	6
+4495653.3	Bacteria	unclassified (derived from Gammaproteobacteria)	6
+4495653.3	Bacteria	Arcanobacterium	5
+4495653.3	Bacteria	Eggerthella	5
+4495653.3	Bacteria	Marinilabilia	5
+4495653.3	Bacteria	Porphyromonas	5
+4495653.3	Bacteria	Laceyella	5
+4495653.3	Bacteria	Acetobacterium	5
+4495653.3	Bacteria	Robinsoniella	5
+4495653.3	Bacteria	Methylobacterium	5
+4495653.3	Bacteria	Helicobacter	5
+4495653.3	Bacteria	Streptomyces	4
+4495653.3	Bacteria	Candidatus Desulforudis	4
+4495653.3	Bacteria	Subdoligranulum	4
+4495653.3	Bacteria	Alloscardovia	3
+4495653.3	Bacteria	Metascardovia	3
+4495653.3	Bacteria	Collinsella	3
+4495653.3	Bacteria	Alkaliphilus	3
+4495653.3	Bacteria	Desulfotomaculum	3
+4495653.3	Bacteria	Carboxydothermus	3
+4495653.3	Bacteria	Nitrococcus	3
+4495653.3	Bacteria	Cellulomonas	2
+4495653.3	Bacteria	Gordonia	2
+4495653.3	Bacteria	Kocuria	2
+4495653.3	Bacteria	Prevotella	2
+4495653.3	Bacteria	Rikenella	2
+4495653.3	Bacteria	Sedimentibacter	2
+4495653.3	Bacteria	Shuttleworthia	2
+4495653.3	Bacteria	Thermincola	2
+4495653.3	Bacteria	Dethiobacter	2
+4495653.3	Bacteria	Mycoplasma	2
+4495653.3	Bacteria	Mycobacterium	1
+4495653.3	Bacteria	Rhodococcus	1
+4495653.3	Bacteria	Sulfurihydrogenibium	1
+4495653.3	Bacteria	Waddlia	1
+4495653.3	Bacteria	Trichococcus	1
+4495653.3	Bacteria	Pediococcus	1
+4495653.3	Bacteria	Peptostreptococcus	1
+4495653.3	Bacteria	Coprobacillus	1
+4495653.3	Bacteria	Erysipelothrix	1
+4495653.3	Bacteria	Dialister	1
+4495653.3	Bacteria	Bradyrhizobium	1
+4495653.3	Bacteria	Mesorhizobium	1
+4495653.3	Bacteria	Marinobacterium	1
+4495653.3	Bacteria	Mesoplasma	1
+4495653.3	Bacteria	Akkermansia	1
+4495652.3	Bacteria	Blautia	37631
+4495652.3	Bacteria	Faecalibacterium	33178
+4495652.3	Bacteria	Eubacterium	30748
+4495652.3	Bacteria	Clostridium	14966
+4495652.3	Bacteria	Butyrivibrio	7912
+4495652.3	Bacteria	Bifidobacterium	6155
+4495652.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	5248
+4495652.3	Bacteria	Bacteroides	3830
+4495652.3	Bacteria	Ruminococcus	3378
+4495652.3	Bacteria	unclassified (derived from Clostridiales)	2657
+4495652.3	Bacteria	unclassified (derived from Bacteria)	1747
+4495652.3	Bacteria	Hespellia	1263
+4495652.3	Bacteria	unclassified (derived from Lachnospiraceae)	1077
+4495652.3	Bacteria	Carnobacterium	926
+4495652.3	Bacteria	Parabacteroides	811
+4495652.3	Bacteria	unclassified (derived from Ruminococcaceae)	744
+4495652.3	Bacteria	Lachnospira	743
+4495652.3	Bacteria	Roseburia	579
+4495652.3	Bacteria	Barnesiella	177
+4495652.3	Bacteria	Alkaliphilus	175
+4495652.3	Bacteria	Veillonella	166
+4495652.3	Bacteria	Actinomyces	151
+4495652.3	Bacteria	Lactobacillus	131
+4495652.3	Bacteria	Atopobium	113
+4495652.3	Bacteria	Streptococcus	95
+4495652.3	Bacteria	Selenomonas	87
+4495652.3	Bacteria	Marinilabilia	84
+4495652.3	Bacteria	Azotobacter	81
+4495652.3	Bacteria	Pseudobutyrivibrio	77
+4495652.3	Bacteria	Escherichia	74
+4495652.3	Bacteria	Acidaminococcus	73
+4495652.3	Bacteria	Trichococcus	69
+4495652.3	Bacteria	Shuttleworthia	64
+4495652.3	Bacteria	Phascolarctobacterium	63
+4495652.3	Bacteria	Acetivibrio	59
+4495652.3	Bacteria	Anaerotruncus	56
+4495652.3	Bacteria	Coprobacillus	53
+4495652.3	Bacteria	Alistipes	52
+4495652.3	Bacteria	Butyricicoccus	52
+4495652.3	Bacteria	Leuconostoc	48
+4495652.3	Bacteria	Acetobacterium	47
+4495652.3	Bacteria	Pseudomonas	47
+4495652.3	Bacteria	Oribacterium	45
+4495652.3	Bacteria	Thioalkalivibrio	44
+4495652.3	Bacteria	Lactococcus	37
+4495652.3	Bacteria	Bacillus	36
+4495652.3	Bacteria	Odoribacter	35
+4495652.3	Bacteria	Porphyromonas	32
+4495652.3	Bacteria	Anaerostipes	31
+4495652.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	30
+4495652.3	Bacteria	Corynebacterium	24
+4495652.3	Bacteria	Dorea	23
+4495652.3	Bacteria	Gemella	16
+4495652.3	Bacteria	Enterococcus	15
+4495652.3	Bacteria	Erysipelothrix	13
+4495652.3	Bacteria	Helicobacter	13
+4495652.3	Bacteria	Rothia	11
+4495652.3	Bacteria	Butyricimonas	11
+4495652.3	Bacteria	Acinetobacter	10
+4495652.3	Bacteria	Acidovorax	9
+4495652.3	Bacteria	Eggerthella	8
+4495652.3	Bacteria	Abiotrophia	8
+4495652.3	Bacteria	Nitrococcus	8
+4495652.3	Bacteria	Prevotella	7
+4495652.3	Bacteria	Rikenella	7
+4495652.3	Bacteria	Granulicatella	7
+4495652.3	Bacteria	Megamonas	7
+4495652.3	Bacteria	Anaerofustis	6
+4495652.3	Bacteria	Acetitomaculum	6
+4495652.3	Bacteria	Subdoligranulum	6
+4495652.3	Bacteria	unclassified (derived from Gammaproteobacteria)	6
+4495652.3	Bacteria	Aeriscardovia	5
+4495652.3	Bacteria	Aerococcus	5
+4495652.3	Bacteria	Enterobacter	5
+4495652.3	Bacteria	Rhodococcus	3
+4495652.3	Bacteria	Hydrogenobaculum	3
+4495652.3	Bacteria	Sulfurihydrogenibium	3
+4495652.3	Bacteria	Paraprevotella	3
+4495652.3	Bacteria	Pediococcus	3
+4495652.3	Bacteria	Dialister	3
+4495652.3	Bacteria	Tannerella	2
+4495652.3	Bacteria	Cytophaga	2
+4495652.3	Bacteria	Blattabacterium	2
+4495652.3	Bacteria	Cellulosilyticum	2
+4495652.3	Bacteria	Ethanoligenens	2
+4495652.3	Bacteria	Holdemania	2
+4495652.3	Bacteria	Brevundimonas	2
+4495652.3	Bacteria	Mesorhizobium	2
+4495652.3	Bacteria	Ralstonia	2
+4495652.3	Bacteria	unclassified (derived from Proteobacteria)	2
+4495652.3	Bacteria	Mobiluncus	1
+4495652.3	Bacteria	Brevibacterium	1
+4495652.3	Bacteria	Gardnerella	1
+4495652.3	Bacteria	Collinsella	1
+4495652.3	Bacteria	Cryptobacterium	1
+4495652.3	Bacteria	Sphingobacterium	1
+4495652.3	Bacteria	Caloramator	1
+4495652.3	Bacteria	Peptoniphilus	1
+4495652.3	Bacteria	Sedimentibacter	1
+4495652.3	Bacteria	Candidatus Desulforudis	1
+4495652.3	Bacteria	Desulfotomaculum	1
+4495652.3	Bacteria	Fusobacterium	1
+4495652.3	Bacteria	Anaplasma	1
+4495652.3	Bacteria	Verminephrobacter	1
+4495652.3	Bacteria	Campylobacter	1
+4495652.3	Bacteria	Serratia	1
+4495652.3	Bacteria	Stenotrophomonas	1
+4495652.3	Bacteria	Acholeplasma	1
+4495652.3	Bacteria	Mycoplasma	1
+4495651.3	Bacteria	Blautia	21793
+4495651.3	Bacteria	Faecalibacterium	19700
+4495651.3	Bacteria	Eubacterium	13690
+4495651.3	Bacteria	Clostridium	11769
+4495651.3	Bacteria	Butyrivibrio	9221
+4495651.3	Bacteria	Bifidobacterium	4106
+4495651.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	3951
+4495651.3	Bacteria	unclassified (derived from Clostridiales)	3738
+4495651.3	Bacteria	Bacteroides	3426
+4495651.3	Bacteria	Carnobacterium	2822
+4495651.3	Bacteria	Ruminococcus	1987
+4495651.3	Bacteria	unclassified (derived from Bacteria)	1353
+4495651.3	Bacteria	unclassified (derived from Lachnospiraceae)	803
+4495651.3	Bacteria	Roseburia	647
+4495651.3	Bacteria	Parabacteroides	595
+4495651.3	Bacteria	Veillonella	394
+4495651.3	Bacteria	Hespellia	346
+4495651.3	Bacteria	Lachnospira	203
+4495651.3	Bacteria	Anaerostipes	183
+4495651.3	Bacteria	unclassified (derived from Ruminococcaceae)	172
+4495651.3	Bacteria	Streptococcus	158
+4495651.3	Bacteria	Barnesiella	117
+4495651.3	Bacteria	Selenomonas	113
+4495651.3	Bacteria	Atopobium	107
+4495651.3	Bacteria	Actinomyces	106
+4495651.3	Bacteria	Pseudomonas	95
+4495651.3	Bacteria	Anaerotruncus	84
+4495651.3	Bacteria	Shuttleworthia	76
+4495651.3	Bacteria	Pseudobutyrivibrio	73
+4495651.3	Bacteria	Tannerella	72
+4495651.3	Bacteria	Hydrogenobaculum	68
+4495651.3	Bacteria	Thioalkalivibrio	65
+4495651.3	Bacteria	Oribacterium	62
+4495651.3	Bacteria	Escherichia	55
+4495651.3	Bacteria	Acidaminococcus	46
+4495651.3	Bacteria	Phascolarctobacterium	39
+4495651.3	Bacteria	Bacillus	38
+4495651.3	Bacteria	Lactobacillus	37
+4495651.3	Bacteria	Coprobacillus	36
+4495651.3	Bacteria	Butyricicoccus	35
+4495651.3	Bacteria	Acetobacterium	29
+4495651.3	Bacteria	Alistipes	27
+4495651.3	Bacteria	Lactococcus	23
+4495651.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	23
+4495651.3	Bacteria	Nitrococcus	21
+4495651.3	Bacteria	Dorea	18
+4495651.3	Bacteria	Corynebacterium	17
+4495651.3	Bacteria	Marinilabilia	13
+4495651.3	Bacteria	Porphyromonas	12
+4495651.3	Bacteria	Butyricimonas	11
+4495651.3	Bacteria	Alkaliphilus	9
+4495651.3	Bacteria	Gemella	7
+4495651.3	Bacteria	Thermincola	7
+4495651.3	Bacteria	Brevundimonas	7
+4495651.3	Bacteria	Cellulosimicrobium	6
+4495651.3	Bacteria	Prevotella	6
+4495651.3	Bacteria	Trichococcus	6
+4495651.3	Bacteria	Holdemania	6
+4495651.3	Bacteria	Aminobacter	6
+4495651.3	Bacteria	Aeriscardovia	5
+4495651.3	Bacteria	Enterococcus	5
+4495651.3	Bacteria	Anaerofustis	5
+4495651.3	Bacteria	Megamonas	5
+4495651.3	Bacteria	Fusobacterium	5
+4495651.3	Bacteria	Helicobacter	5
+4495651.3	Bacteria	Arcanobacterium	4
+4495651.3	Bacteria	Rothia	4
+4495651.3	Bacteria	Collinsella	4
+4495651.3	Bacteria	Granulicatella	4
+4495651.3	Bacteria	Acetitomaculum	4
+4495651.3	Bacteria	Acetivibrio	4
+4495651.3	Bacteria	Ethanoligenens	4
+4495651.3	Bacteria	Subdoligranulum	4
+4495651.3	Bacteria	Bradyrhizobium	4
+4495651.3	Bacteria	Spiroplasma	4
+4495651.3	Bacteria	Kytococcus	3
+4495651.3	Bacteria	Sedimentibacter	3
+4495651.3	Bacteria	Dialister	3
+4495651.3	Bacteria	Phyllobacterium	3
+4495651.3	Bacteria	Gardnerella	2
+4495651.3	Bacteria	Eggerthella	2
+4495651.3	Bacteria	Chloroherpeton	2
+4495651.3	Bacteria	Staphylococcus	2
+4495651.3	Bacteria	Anaerococcus	2
+4495651.3	Bacteria	Finegoldia	2
+4495651.3	Bacteria	Peptoniphilus	2
+4495651.3	Bacteria	Acinetobacter	2
+4495651.3	Bacteria	Candidatus Rhodoluna	1
+4495651.3	Bacteria	Rhodococcus	1
+4495651.3	Bacteria	Ureibacillus	1
+4495651.3	Bacteria	Leuconostoc	1
+4495651.3	Bacteria	Weissella	1
+4495651.3	Bacteria	Sarcina	1
+4495651.3	Bacteria	Tissierella	1
+4495651.3	Bacteria	Bulleidia	1
+4495651.3	Bacteria	Erysipelothrix	1
+4495651.3	Bacteria	Ralstonia	1
+4495651.3	Bacteria	Desulfovibrio	1
+4495651.3	Bacteria	Klebsiella	1
+4495651.3	Bacteria	Stenotrophomonas	1
+4495651.3	Bacteria	Thermanaerovibrio	1
+4495651.3	Bacteria	Akkermansia	1
+4495650.3	Bacteria	Blautia	48256
+4495650.3	Bacteria	Faecalibacterium	45133
+4495650.3	Bacteria	Eubacterium	42153
+4495650.3	Bacteria	Butyrivibrio	24755
+4495650.3	Bacteria	Clostridium	22620
+4495650.3	Bacteria	Ruminococcus	8504
+4495650.3	Bacteria	Bifidobacterium	7082
+4495650.3	Bacteria	unclassified (derived from Clostridiales)	5504
+4495650.3	Bacteria	Bacteroides	4333
+4495650.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2747
+4495650.3	Bacteria	unclassified (derived from Lachnospiraceae)	2459
+4495650.3	Bacteria	Hespellia	2434
+4495650.3	Bacteria	unclassified (derived from Bacteria)	2038
+4495650.3	Bacteria	unclassified (derived from Ruminococcaceae)	1114
+4495650.3	Bacteria	Carnobacterium	974
+4495650.3	Bacteria	Lachnospira	510
+4495650.3	Bacteria	Shuttleworthia	489
+4495650.3	Bacteria	Parabacteroides	385
+4495650.3	Bacteria	Selenomonas	227
+4495650.3	Bacteria	Roseburia	202
+4495650.3	Bacteria	Anaerotruncus	180
+4495650.3	Bacteria	Barnesiella	176
+4495650.3	Bacteria	Lactobacillus	171
+4495650.3	Bacteria	Dorea	135
+4495650.3	Bacteria	Veillonella	127
+4495650.3	Bacteria	Aeriscardovia	126
+4495650.3	Bacteria	Atopobium	120
+4495650.3	Bacteria	Coprobacillus	107
+4495650.3	Bacteria	Oribacterium	106
+4495650.3	Bacteria	Butyricicoccus	97
+4495650.3	Bacteria	Odoribacter	82
+4495650.3	Bacteria	Megamonas	81
+4495650.3	Bacteria	Streptococcus	80
+4495650.3	Bacteria	Acidaminococcus	78
+4495650.3	Bacteria	Phascolarctobacterium	71
+4495650.3	Bacteria	Alistipes	68
+4495650.3	Bacteria	Pseudomonas	60
+4495650.3	Bacteria	Marinilabilia	58
+4495650.3	Bacteria	Escherichia	55
+4495650.3	Bacteria	Actinomyces	42
+4495650.3	Bacteria	Enterococcus	40
+4495650.3	Bacteria	Thioalkalivibrio	37
+4495650.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	32
+4495650.3	Bacteria	Bacillus	29
+4495650.3	Bacteria	Thermincola	29
+4495650.3	Bacteria	Anaerostipes	24
+4495650.3	Bacteria	Desulfotomaculum	24
+4495650.3	Bacteria	Pseudobutyrivibrio	23
+4495650.3	Bacteria	Butyricimonas	16
+4495650.3	Bacteria	Prevotella	16
+4495650.3	Bacteria	Lactococcus	16
+4495650.3	Bacteria	Holdemania	16
+4495650.3	Bacteria	Porphyromonas	15
+4495650.3	Bacteria	Methylobacterium	15
+4495650.3	Bacteria	Helicobacter	15
+4495650.3	Bacteria	Gemella	10
+4495650.3	Bacteria	Peptoniphilus	9
+4495650.3	Bacteria	Corynebacterium	8
+4495650.3	Bacteria	Tannerella	8
+4495650.3	Bacteria	Anaerofustis	8
+4495650.3	Bacteria	Sedimentibacter	7
+4495650.3	Bacteria	Collinsella	6
+4495650.3	Bacteria	Alkaliphilus	6
+4495650.3	Bacteria	Acetitomaculum	6
+4495650.3	Bacteria	unclassified (derived from Comamonadaceae)	6
+4495650.3	Bacteria	Brevibacterium	5
+4495650.3	Bacteria	Leuconostoc	5
+4495650.3	Bacteria	Acetobacterium	5
+4495650.3	Bacteria	Mycoplasma	5
+4495650.3	Bacteria	Tetragenococcus	4
+4495650.3	Bacteria	Acetivibrio	4
+4495650.3	Bacteria	Dialister	4
+4495650.3	Bacteria	unclassified (derived from Gammaproteobacteria)	4
+4495650.3	Bacteria	Gordonia	3
+4495650.3	Bacteria	Rothia	3
+4495650.3	Bacteria	Rhodococcus	3
+4495650.3	Bacteria	Pediococcus	3
+4495650.3	Bacteria	Megasphaera	3
+4495650.3	Bacteria	Nitrococcus	3
+4495650.3	Bacteria	Hydrogenobaculum	2
+4495650.3	Bacteria	Rikenella	2
+4495650.3	Bacteria	Sphingobacterium	2
+4495650.3	Bacteria	Paenibacillus	2
+4495650.3	Bacteria	Subdoligranulum	2
+4495650.3	Bacteria	Erysipelothrix	2
+4495650.3	Bacteria	Aminobacter	2
+4495650.3	Bacteria	Mesorhizobium	2
+4495650.3	Bacteria	Campylobacter	2
+4495650.3	Bacteria	Thermobaculum	2
+4495650.3	Bacteria	Kytococcus	1
+4495650.3	Bacteria	Arthrobacter	1
+4495650.3	Bacteria	Nocardia	1
+4495650.3	Bacteria	Enterorhabdus	1
+4495650.3	Bacteria	Sphaerobacter	1
+4495650.3	Bacteria	Aneurinibacillus	1
+4495650.3	Bacteria	Granulicatella	1
+4495650.3	Bacteria	Syntrophococcus	1
+4495650.3	Bacteria	Carboxydothermus	1
+4495650.3	Bacteria	Caldicellulosiruptor	1
+4495650.3	Bacteria	Catenibacterium	1
+4495650.3	Bacteria	Ochrobactrum	1
+4495650.3	Bacteria	Phyllobacterium	1
+4495650.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495650.3	Bacteria	Enterobacter	1
+4495650.3	Bacteria	Raoultella	1
+4495650.3	Bacteria	Acinetobacter	1
+4495649.3	Bacteria	Faecalibacterium	31434
+4495649.3	Bacteria	Eubacterium	29912
+4495649.3	Bacteria	Blautia	24229
+4495649.3	Bacteria	Clostridium	15565
+4495649.3	Bacteria	Butyrivibrio	10498
+4495649.3	Bacteria	Bifidobacterium	4139
+4495649.3	Bacteria	unclassified (derived from Clostridiales)	3026
+4495649.3	Bacteria	Ruminococcus	2844
+4495649.3	Bacteria	Bacteroides	2775
+4495649.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2456
+4495649.3	Bacteria	Carnobacterium	1932
+4495649.3	Bacteria	Hespellia	963
+4495649.3	Bacteria	unclassified (derived from Lachnospiraceae)	950
+4495649.3	Bacteria	unclassified (derived from Bacteria)	861
+4495649.3	Bacteria	Parabacteroides	342
+4495649.3	Bacteria	Tannerella	249
+4495649.3	Bacteria	Anaerotruncus	243
+4495649.3	Bacteria	Shuttleworthia	227
+4495649.3	Bacteria	unclassified (derived from Ruminococcaceae)	214
+4495649.3	Bacteria	Oribacterium	190
+4495649.3	Bacteria	Atopobium	122
+4495649.3	Bacteria	Veillonella	119
+4495649.3	Bacteria	Selenomonas	110
+4495649.3	Bacteria	Barnesiella	92
+4495649.3	Bacteria	Lachnospira	92
+4495649.3	Bacteria	Lactobacillus	87
+4495649.3	Bacteria	Acidaminococcus	77
+4495649.3	Bacteria	Phascolarctobacterium	65
+4495649.3	Bacteria	Roseburia	60
+4495649.3	Bacteria	Streptococcus	56
+4495649.3	Bacteria	Alistipes	48
+4495649.3	Bacteria	unclassified (derived from Bacteroidetes)	39
+4495649.3	Bacteria	Megamonas	38
+4495649.3	Bacteria	Pseudobutyrivibrio	35
+4495649.3	Bacteria	Butyricicoccus	32
+4495649.3	Bacteria	Hydrogenobaculum	30
+4495649.3	Bacteria	Alkaliphilus	28
+4495649.3	Bacteria	Anaerostipes	28
+4495649.3	Bacteria	Actinomyces	24
+4495649.3	Bacteria	Odoribacter	21
+4495649.3	Bacteria	Bacillus	20
+4495649.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	18
+4495649.3	Bacteria	Erysipelothrix	18
+4495649.3	Bacteria	Pseudomonas	18
+4495649.3	Bacteria	Enterococcus	16
+4495649.3	Archaea	Methanobrevibacter	15
+4495649.3	Bacteria	Proteus	14
+4495649.3	Bacteria	Marinilabilia	12
+4495649.3	Bacteria	Granulicatella	12
+4495649.3	Bacteria	unclassified (derived from Gammaproteobacteria)	11
+4495649.3	Bacteria	Porphyromonas	8
+4495649.3	Bacteria	Trichococcus	8
+4495649.3	Bacteria	Escherichia	8
+4495649.3	Bacteria	Coprobacillus	7
+4495649.3	Bacteria	Rothia	6
+4495649.3	Bacteria	Prevotella	6
+4495649.3	Bacteria	Ureibacillus	6
+4495649.3	Bacteria	Dialister	6
+4495649.3	Bacteria	Helicobacter	6
+4495649.3	Bacteria	Subdoligranulum	5
+4495649.3	Bacteria	Collinsella	4
+4495649.3	Bacteria	Butyricimonas	4
+4495649.3	Bacteria	Acetobacterium	4
+4495649.3	Bacteria	Desulfotomaculum	4
+4495649.3	Bacteria	Ethanoligenens	4
+4495649.3	Bacteria	Corynebacterium	3
+4495649.3	Bacteria	Finegoldia	3
+4495649.3	Bacteria	Anaerofustis	3
+4495649.3	Bacteria	Bradyrhizobium	3
+4495649.3	Bacteria	Enterobacter	3
+4495649.3	Bacteria	Mycobacterium	2
+4495649.3	Bacteria	Smaragdicoccus	2
+4495649.3	Bacteria	Aeriscardovia	2
+4495649.3	Bacteria	Enterorhabdus	2
+4495649.3	Bacteria	Sulfurihydrogenibium	2
+4495649.3	Bacteria	Staphylococcus	2
+4495649.3	Bacteria	Gemella	2
+4495649.3	Bacteria	Leuconostoc	2
+4495649.3	Bacteria	Lactococcus	2
+4495649.3	Bacteria	Peptostreptococcus	2
+4495649.3	Bacteria	Acetivibrio	2
+4495649.3	Bacteria	Pectinatus	2
+4495649.3	Bacteria	Aminobacter	2
+4495649.3	Bacteria	Mesorhizobium	2
+4495649.3	Bacteria	unclassified (derived from Comamonadaceae)	2
+4495649.3	Bacteria	Nitrococcus	2
+4495649.3	Bacteria	Rhodococcus	1
+4495649.3	Bacteria	Gardnerella	1
+4495649.3	Bacteria	Brochothrix	1
+4495649.3	Bacteria	Laceyella	1
+4495649.3	Bacteria	Caloramator	1
+4495649.3	Bacteria	Peptoniphilus	1
+4495649.3	Bacteria	Dorea	1
+4495649.3	Bacteria	Robinsoniella	1
+4495649.3	Bacteria	Syntrophococcus	1
+4495649.3	Bacteria	Thermincola	1
+4495649.3	Bacteria	Caldicellulosiruptor	1
+4495649.3	Bacteria	Holdemania	1
+4495649.3	Bacteria	Megasphaera	1
+4495649.3	Bacteria	unclassified (derived from Bradyrhizobiaceae)	1
+4495649.3	Bacteria	unclassified (derived from Alphaproteobacteria)	1
+4495649.3	Bacteria	Achromobacter	1
+4495649.3	Bacteria	Edwardsiella	1
+4495649.3	Bacteria	Akkermansia	1
+4495648.3	Bacteria	Faecalibacterium	35818
+4495648.3	Bacteria	Blautia	29085
+4495648.3	Bacteria	Eubacterium	29055
+4495648.3	Bacteria	Butyrivibrio	14532
+4495648.3	Bacteria	Clostridium	11633
+4495648.3	Bacteria	unclassified (derived from Clostridiales)	4743
+4495648.3	Bacteria	Bifidobacterium	4738
+4495648.3	Bacteria	Bacteroides	3241
+4495648.3	Bacteria	Ruminococcus	3000
+4495648.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1890
+4495648.3	Bacteria	unclassified (derived from Lachnospiraceae)	1461
+4495648.3	Bacteria	unclassified (derived from Ruminococcaceae)	1297
+4495648.3	Bacteria	unclassified (derived from Bacteria)	960
+4495648.3	Bacteria	Hespellia	948
+4495648.3	Bacteria	Lachnospira	738
+4495648.3	Bacteria	Anaerotruncus	498
+4495648.3	Bacteria	Subdoligranulum	405
+4495648.3	Bacteria	Shuttleworthia	312
+4495648.3	Bacteria	Parabacteroides	308
+4495648.3	Bacteria	Oribacterium	220
+4495648.3	Bacteria	Thermincola	129
+4495648.3	Bacteria	Atopobium	122
+4495648.3	Bacteria	Roseburia	119
+4495648.3	Bacteria	Dorea	112
+4495648.3	Bacteria	Selenomonas	104
+4495648.3	Bacteria	Streptococcus	101
+4495648.3	Bacteria	Barnesiella	93
+4495648.3	Bacteria	Hydrogenobaculum	86
+4495648.3	Bacteria	Collinsella	67
+4495648.3	Bacteria	Carnobacterium	63
+4495648.3	Bacteria	Butyricicoccus	55
+4495648.3	Bacteria	Anaerostipes	54
+4495648.3	Bacteria	Megamonas	50
+4495648.3	Bacteria	Lactobacillus	49
+4495648.3	Bacteria	Acidaminococcus	49
+4495648.3	Bacteria	unclassified (derived from Bacteroidetes)	48
+4495648.3	Bacteria	Odoribacter	45
+4495648.3	Bacteria	Alistipes	44
+4495648.3	Bacteria	Phascolarctobacterium	44
+4495648.3	Bacteria	Pseudomonas	44
+4495648.3	Bacteria	Actinomyces	35
+4495648.3	Bacteria	Enterococcus	32
+4495648.3	Bacteria	Veillonella	29
+4495648.3	Bacteria	Dialister	28
+4495648.3	Bacteria	Pseudobutyrivibrio	24
+4495648.3	Bacteria	Escherichia	24
+4495648.3	Bacteria	Trichococcus	22
+4495648.3	Bacteria	Lactococcus	20
+4495648.3	Bacteria	Alkaliphilus	18
+4495648.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	16
+4495648.3	Bacteria	Holdemania	14
+4495648.3	Bacteria	Porphyromonas	12
+4495648.3	Bacteria	Acetobacterium	10
+4495648.3	Bacteria	Butyricimonas	9
+4495648.3	Bacteria	Aeriscardovia	8
+4495648.3	Bacteria	Marinilabilia	8
+4495648.3	Bacteria	Acetitomaculum	8
+4495648.3	Bacteria	Methylobacterium	8
+4495648.3	Bacteria	Coprobacillus	6
+4495648.3	Bacteria	unclassified (derived from Gammaproteobacteria)	6
+4495648.3	Bacteria	Bacillus	5
+4495648.3	Bacteria	Anaerofustis	5
+4495648.3	Bacteria	Achromobacter	5
+4495648.3	Bacteria	Rhodococcus	4
+4495648.3	Bacteria	Ochrobactrum	4
+4495648.3	Bacteria	Tannerella	3
+4495648.3	Bacteria	Desulfotomaculum	3
+4495648.3	Bacteria	Ethanoligenens	3
+4495648.3	Bacteria	unclassified (derived from Firmicutes)	3
+4495648.3	Bacteria	Staphylococcus	2
+4495648.3	Bacteria	Gemella	2
+4495648.3	Bacteria	Granulicatella	2
+4495648.3	Bacteria	Symbiobacterium	2
+4495648.3	Bacteria	Acetivibrio	2
+4495648.3	Bacteria	Nitrococcus	2
+4495648.3	Bacteria	Enterobacter	2
+4495648.3	Bacteria	Acholeplasma	2
+4495648.3	Bacteria	Akkermansia	2
+4495648.3	Bacteria	Corynebacterium	1
+4495648.3	Bacteria	Gordonia	1
+4495648.3	Bacteria	Rothia	1
+4495648.3	Bacteria	Enterorhabdus	1
+4495648.3	Bacteria	Prevotella	1
+4495648.3	Bacteria	Caloramator	1
+4495648.3	Bacteria	Erysipelothrix	1
+4495648.3	Bacteria	Mesorhizobium	1
+4495648.3	Bacteria	Phyllobacterium	1
+4495648.3	Bacteria	unclassified (derived from Comamonadaceae)	1
+4495648.3	Bacteria	Helicobacter	1
+4495648.3	Bacteria	Methylosoma	1
+4495648.3	Bacteria	Acinetobacter	1
+4495648.3	Bacteria	Stenotrophomonas	1
+4495648.3	Bacteria	Candidatus Phytoplasma	1
+4495647.3	Bacteria	Blautia	33511
+4495647.3	Bacteria	Faecalibacterium	23710
+4495647.3	Bacteria	Eubacterium	23329
+4495647.3	Bacteria	Butyrivibrio	21246
+4495647.3	Bacteria	Clostridium	12973
+4495647.3	Bacteria	Bifidobacterium	3999
+4495647.3	Bacteria	unclassified (derived from Clostridiales)	3003
+4495647.3	Bacteria	Bacteroides	2239
+4495647.3	Bacteria	Hydrogenobaculum	1882
+4495647.3	Bacteria	Ruminococcus	1882
+4495647.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	1422
+4495647.3	Bacteria	unclassified (derived from Bacteria)	1063
+4495647.3	Bacteria	unclassified (derived from Lachnospiraceae)	572
+4495647.3	Bacteria	Shuttleworthia	537
+4495647.3	Bacteria	Hespellia	315
+4495647.3	Bacteria	unclassified (derived from Ruminococcaceae)	282
+4495647.3	Bacteria	Parabacteroides	206
+4495647.3	Bacteria	Lachnospira	206
+4495647.3	Bacteria	Oribacterium	198
+4495647.3	Bacteria	Robinsoniella	148
+4495647.3	Bacteria	Anaerotruncus	141
+4495647.3	Bacteria	Roseburia	124
+4495647.3	Bacteria	Atopobium	91
+4495647.3	Bacteria	Carnobacterium	83
+4495647.3	Bacteria	Acidaminococcus	66
+4495647.3	Bacteria	Phascolarctobacterium	56
+4495647.3	Bacteria	Lactobacillus	55
+4495647.3	Bacteria	Streptococcus	54
+4495647.3	Bacteria	Pseudomonas	53
+4495647.3	Bacteria	Porphyromonas	51
+4495647.3	Bacteria	Selenomonas	51
+4495647.3	Bacteria	Butyricicoccus	41
+4495647.3	Bacteria	Odoribacter	40
+4495647.3	Bacteria	Megamonas	39
+4495647.3	Bacteria	Veillonella	35
+4495647.3	Bacteria	Pseudobutyrivibrio	31
+4495647.3	Bacteria	Escherichia	26
+4495647.3	Bacteria	Barnesiella	24
+4495647.3	Bacteria	Alistipes	22
+4495647.3	Bacteria	Ethanoligenens	18
+4495647.3	Bacteria	Anaerostipes	15
+4495647.3	Bacteria	Alkaliphilus	14
+4495647.3	Bacteria	Arcanobacterium	12
+4495647.3	Bacteria	Dorea	11
+4495647.3	Bacteria	Actinomyces	10
+4495647.3	Bacteria	Coprobacillus	10
+4495647.3	Bacteria	Holdemania	10
+4495647.3	Bacteria	Marinilabilia	9
+4495647.3	Bacteria	Butyricimonas	9
+4495647.3	Bacteria	Bacillus	9
+4495647.3	Bacteria	Enterococcus	9
+4495647.3	Bacteria	Gemella	8
+4495647.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	8
+4495647.3	Bacteria	Phyllobacterium	7
+4495647.3	Bacteria	Thioalkalivibrio	7
+4495647.3	Bacteria	Rhodothermus	6
+4495647.3	Bacteria	Mesorhizobium	6
+4495647.3	Bacteria	Hydrogenobacter	5
+4495647.3	Bacteria	Tannerella	5
+4495647.3	Bacteria	Anaerofustis	5
+4495647.3	Bacteria	Corynebacterium	4
+4495647.3	Bacteria	Lactococcus	4
+4495647.3	Bacteria	Sedimentibacter	4
+4495647.3	Bacteria	Acetivibrio	4
+4495647.3	Bacteria	Helicobacter	4
+4495647.3	Bacteria	Rhodococcus	3
+4495647.3	Bacteria	Laceyella	3
+4495647.3	Bacteria	Erysipelothrix	3
+4495647.3	Bacteria	Brevundimonas	3
+4495647.3	Bacteria	Gordonia	2
+4495647.3	Bacteria	Prevotella	2
+4495647.3	Bacteria	Desulfotomaculum	2
+4495647.3	Bacteria	unclassified (derived from Comamonadaceae)	2
+4495647.3	Bacteria	unclassified (derived from Gammaproteobacteria)	2
+4495647.3	Bacteria	Spiroplasma	2
+4495647.3	Bacteria	Cellulomonas	1
+4495647.3	Bacteria	Dietzia	1
+4495647.3	Bacteria	Candidatus Rhodoluna	1
+4495647.3	Bacteria	Rathayibacter	1
+4495647.3	Bacteria	Sanguibacter	1
+4495647.3	Bacteria	Aeriscardovia	1
+4495647.3	Bacteria	Gardnerella	1
+4495647.3	Bacteria	Collinsella	1
+4495647.3	Bacteria	Eggerthella	1
+4495647.3	Bacteria	Acetobacterium	1
+4495647.3	Bacteria	Acetitomaculum	1
+4495647.3	Bacteria	Thermincola	1
+4495647.3	Bacteria	Megasphaera	1
+4495647.3	Bacteria	Sphingobium	1
+4495647.3	Bacteria	Acidovorax	1
+4495647.3	Bacteria	Enterobacter	1
+4495647.3	Bacteria	Stenotrophomonas	1
+4495647.3	Bacteria	Mycoplasma	1
+4495643.3	Bacteria	Faecalibacterium	27103
+4495643.3	Bacteria	Blautia	18719
+4495643.3	Bacteria	Eubacterium	18518
+4495643.3	Bacteria	Butyrivibrio	17953
+4495643.3	Bacteria	Clostridium	12078
+4495643.3	Bacteria	unclassified (derived from Clostridiales)	3787
+4495643.3	Bacteria	Bifidobacterium	3310
+4495643.3	Bacteria	unclassified (derived from Lachnospiraceae)	2512
+4495643.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	2345
+4495643.3	Bacteria	Ruminococcus	2236
+4495643.3	Bacteria	Bacteroides	1932
+4495643.3	Bacteria	Carnobacterium	1844
+4495643.3	Bacteria	unclassified (derived from Bacteria)	1078
+4495643.3	Bacteria	Hespellia	645
+4495643.3	Bacteria	unclassified (derived from Ruminococcaceae)	320
+4495643.3	Bacteria	Parabacteroides	208
+4495643.3	Bacteria	Roseburia	208
+4495643.3	Bacteria	Anaerotruncus	163
+4495643.3	Bacteria	Oribacterium	161
+4495643.3	Bacteria	Dorea	160
+4495643.3	Bacteria	Hydrogenobaculum	152
+4495643.3	Bacteria	Lachnospira	128
+4495643.3	Bacteria	Atopobium	109
+4495643.3	Bacteria	Streptococcus	100
+4495643.3	Bacteria	Selenomonas	100
+4495643.3	Bacteria	Barnesiella	86
+4495643.3	Bacteria	Shuttleworthia	69
+4495643.3	Bacteria	Veillonella	67
+4495643.3	Bacteria	Desulfotomaculum	63
+4495643.3	Bacteria	Anaerostipes	57
+4495643.3	Bacteria	Acidaminococcus	56
+4495643.3	Bacteria	Pseudomonas	55
+4495643.3	Bacteria	unclassified (derived from Bacteroidetes)	50
+4495643.3	Bacteria	Lactobacillus	49
+4495643.3	Bacteria	Phascolarctobacterium	49
+4495643.3	Bacteria	Actinomyces	41
+4495643.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	31
+4495643.3	Bacteria	unclassified (derived from Gammaproteobacteria)	28
+4495643.3	Bacteria	Butyricicoccus	27
+4495643.3	Bacteria	Escherichia	25
+4495643.3	Bacteria	Bacillus	17
+4495643.3	Bacteria	Megasphaera	17
+4495643.3	Bacteria	Odoribacter	16
+4495643.3	Bacteria	Alistipes	16
+4495643.3	Bacteria	Megamonas	16
+4495643.3	Bacteria	Acetitomaculum	14
+4495643.3	Bacteria	Alcaligenes	12
+4495643.3	Bacteria	Acetobacterium	9
+4495643.3	Bacteria	Marinilabilia	8
+4495643.3	Bacteria	Porphyromonas	8
+4495643.3	Bacteria	Laceyella	8
+4495643.3	Bacteria	Pseudobutyrivibrio	8
+4495643.3	Bacteria	Enterococcus	7
+4495643.3	Bacteria	Alkaliphilus	7
+4495643.3	Bacteria	Dialister	7
+4495643.3	Bacteria	Sulfurihydrogenibium	5
+4495643.3	Bacteria	Lactococcus	5
+4495643.3	Bacteria	Phaeobacter	5
+4495643.3	Bacteria	Butyricimonas	4
+4495643.3	Bacteria	Comamonas	4
+4495643.3	Bacteria	Helicobacter	4
+4495643.3	Bacteria	Yersinia	4
+4495643.3	Bacteria	Gordonia	3
+4495643.3	Bacteria	Collinsella	3
+4495643.3	Bacteria	Thermincola	3
+4495643.3	Bacteria	Acetivibrio	3
+4495643.3	Bacteria	Ethanoligenens	3
+4495643.3	Bacteria	Erysipelothrix	3
+4495643.3	Bacteria	Rhodococcus	2
+4495643.3	Bacteria	Aeriscardovia	2
+4495643.3	Bacteria	Sphingobacterium	2
+4495643.3	Bacteria	Granulicatella	2
+4495643.3	Bacteria	Anaerococcus	2
+4495643.3	Bacteria	Peptoniphilus	2
+4495643.3	Bacteria	Holdemania	2
+4495643.3	Bacteria	Leptotrichia	2
+4495643.3	Bacteria	Enterobacter	2
+4495643.3	Bacteria	Acinetobacter	2
+4495643.3	Bacteria	Arcanobacterium	1
+4495643.3	Bacteria	Corynebacterium	1
+4495643.3	Bacteria	Rothia	1
+4495643.3	Bacteria	Hydrogenobacter	1
+4495643.3	Bacteria	Tannerella	1
+4495643.3	Bacteria	Kurthia	1
+4495643.3	Bacteria	Sarcina	1
+4495643.3	Bacteria	Finegoldia	1
+4495643.3	Bacteria	Anaerobranca	1
+4495643.3	Bacteria	Anaerofustis	1
+4495643.3	Bacteria	Ammonifex	1
+4495643.3	Bacteria	Mesorhizobium	1
+4495643.3	Bacteria	Phyllobacterium	1
+4495643.3	Bacteria	Nitrococcus	1
+4495643.3	Bacteria	Aggregatibacter	1
+4495643.3	Bacteria	Stenotrophomonas	1
+4495643.3	Bacteria	Pyramidobacter	1
+4495632.3	Bacteria	Bacteroides	39933
+4495632.3	Bacteria	Bifidobacterium	14740
+4495632.3	Bacteria	Ruminococcus	14206
+4495632.3	Bacteria	Eubacterium	13352
+4495632.3	Bacteria	Blautia	6442
+4495632.3	Bacteria	Akkermansia	2511
+4495632.3	Bacteria	Clostridium	2493
+4495632.3	Bacteria	Anaerotruncus	2366
+4495632.3	Bacteria	unclassified (derived from Bacteria)	2225
+4495632.3	Bacteria	Faecalibacterium	1627
+4495632.3	Bacteria	Roseburia	1520
+4495632.3	Bacteria	unclassified (derived from Clostridiales)	1092
+4495632.3	Bacteria	Bacillus	951
+4495632.3	Bacteria	Ethanoligenens	873
+4495632.3	Bacteria	unclassified (derived from Lachnospiraceae)	414
+4495632.3	Bacteria	Butyrivibrio	397
+4495632.3	Bacteria	unclassified (derived from Ruminococcaceae)	330
+4495632.3	Bacteria	Selenomonas	316
+4495632.3	Bacteria	Alistipes	268
+4495632.3	Bacteria	Butyricicoccus	237
+4495632.3	Bacteria	Odoribacter	217
+4495632.3	Bacteria	Robinsoniella	210
+4495632.3	Bacteria	Fusibacter	192
+4495632.3	Bacteria	Barnesiella	155
+4495632.3	Bacteria	Megamonas	151
+4495632.3	Bacteria	Prevotella	145
+4495632.3	Bacteria	Alkaliphilus	122
+4495632.3	Bacteria	Dorea	122
+4495632.3	Bacteria	Collinsella	119
+4495632.3	Bacteria	Lachnospira	118
+4495632.3	Bacteria	Marinilabilia	107
+4495632.3	Bacteria	Aeriscardovia	101
+4495632.3	Bacteria	Parabacteroides	96
+4495632.3	Bacteria	Acetobacterium	92
+4495632.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	55
+4495632.3	Bacteria	Acidaminococcus	50
+4495632.3	Bacteria	Dialister	48
+4495632.3	Bacteria	Veillonella	39
+4495632.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	29
+4495632.3	Bacteria	Sphingobacterium	28
+4495632.3	Bacteria	Hespellia	28
+4495632.3	Bacteria	Laceyella	20
+4495632.3	Bacteria	unclassified (derived from Comamonadaceae)	20
+4495632.3	Bacteria	Lactobacillus	18
+4495632.3	Bacteria	Thermoanaerobacter	16
+4495632.3	Bacteria	Catenibacterium	16
+4495632.3	Bacteria	Tissierella	15
+4495632.3	Bacteria	Escherichia	15
+4495632.3	Bacteria	Gordonibacter	12
+4495632.3	Bacteria	Actinomyces	9
+4495632.3	Bacteria	Oribacterium	8
+4495632.3	Bacteria	Atopobium	7
+4495632.3	Bacteria	Hydrogenobaculum	7
+4495632.3	Bacteria	Phyllobacterium	7
+4495632.3	Bacteria	Phascolarctobacterium	6
+4495632.3	Bacteria	Pseudomonas	6
+4495632.3	Bacteria	Lactococcus	5
+4495632.3	Bacteria	Anaerostipes	4
+4495632.3	Bacteria	Syntrophococcus	4
+4495632.3	Bacteria	Nitrococcus	4
+4495632.3	Bacteria	unclassified (derived from Gammaproteobacteria)	4
+4495632.3	Bacteria	Tannerella	3
+4495632.3	Bacteria	Brochothrix	3
+4495632.3	Bacteria	Caloramator	3
+4495632.3	Bacteria	Pseudobutyrivibrio	3
+4495632.3	Bacteria	Aminobacter	3
+4495632.3	Bacteria	unclassified (derived from Alphaproteobacteria)	3
+4495632.3	Bacteria	Desulfovibrio	3
+4495632.3	Bacteria	Arthrobacter	2
+4495632.3	Bacteria	Cellulosimicrobium	2
+4495632.3	Bacteria	Porphyromonas	2
+4495632.3	Bacteria	Alicyclobacillus	2
+4495632.3	Bacteria	Paenibacillus	2
+4495632.3	Bacteria	Ureibacillus	2
+4495632.3	Bacteria	Streptococcus	2
+4495632.3	Bacteria	Sedimentibacter	2
+4495632.3	Bacteria	Anaerofustis	2
+4495632.3	Bacteria	Burkholderia	2
+4495632.3	Bacteria	Allochromatium	2
+4495632.3	Bacteria	Mobiluncus	1
+4495632.3	Bacteria	Corynebacterium	1
+4495632.3	Bacteria	Agrococcus	1
+4495632.3	Bacteria	Candidatus Rhodoluna	1
+4495632.3	Bacteria	Leifsonia	1
+4495632.3	Bacteria	Rothia	1
+4495632.3	Bacteria	Mycobacterium	1
+4495632.3	Bacteria	Rhodococcus	1
+4495632.3	Bacteria	Smaragdicoccus	1
+4495632.3	Bacteria	Eggerthella	1
+4495632.3	Bacteria	Rikenella	1
+4495632.3	Bacteria	Chloroherpeton	1
+4495632.3	Bacteria	Aneurinibacillus	1
+4495632.3	Bacteria	Gemella	1
+4495632.3	Bacteria	Leuconostoc	1
+4495632.3	Bacteria	Oxobacter	1
+4495632.3	Bacteria	Desulfitibacter	1
+4495632.3	Bacteria	Desulfotomaculum	1
+4495632.3	Bacteria	Erysipelothrix	1
+4495632.3	Bacteria	Holdemania	1
+4495632.3	Bacteria	Sphingobium	1
+4495632.3	Bacteria	Achromobacter	1
+4495632.3	Bacteria	Ralstonia	1
+4495632.3	Bacteria	Comamonas	1
+4495632.3	Bacteria	unclassified (derived from Burkholderiales)	1
+4495632.3	Bacteria	Aquaspirillum	1
+4495632.3	Bacteria	unclassified (derived from Deltaproteobacteria)	1
+4495632.3	Bacteria	Helicobacter	1
+4495632.3	Bacteria	Stenotrophomonas	1
+4495632.3	Bacteria	Pyramidobacter	1
+4495631.3	Bacteria	Blautia	7226
+4495631.3	Bacteria	unclassified (derived from Clostridiales)	3782
+4495631.3	Bacteria	Faecalibacterium	3699
+4495631.3	Bacteria	Clostridium	3599
+4495631.3	Bacteria	Eubacterium	2346
+4495631.3	Bacteria	Ruminococcus	1498
+4495631.3	Bacteria	unclassified (derived from Bacteria)	1488
+4495631.3	Bacteria	Bacteroides	999
+4495631.3	Bacteria	Butyrivibrio	848
+4495631.3	Bacteria	Veillonella	412
+4495631.3	Bacteria	unclassified (derived from Lachnospiraceae)	303
+4495631.3	Bacteria	Hespellia	228
+4495631.3	Bacteria	Bifidobacterium	167
+4495631.3	Bacteria	Akkermansia	121
+4495631.3	Bacteria	Bacillus	90
+4495631.3	Bacteria	Ethanoligenens	84
+4495631.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	79
+4495631.3	Bacteria	Anaerotruncus	77
+4495631.3	Bacteria	Butyricicoccus	47
+4495631.3	Bacteria	unclassified (derived from Ruminococcaceae)	45
+4495631.3	Bacteria	Selenomonas	41
+4495631.3	Bacteria	Collinsella	28
+4495631.3	Bacteria	Alkaliphilus	20
+4495631.3	Bacteria	Syntrophococcus	20
+4495631.3	Bacteria	Roseburia	17
+4495631.3	Bacteria	Actinomyces	15
+4495631.3	Bacteria	Lachnospira	14
+4495631.3	Bacteria	Dialister	14
+4495631.3	Bacteria	Anaerostipes	11
+4495631.3	Bacteria	Coprococcus	11
+4495631.3	Bacteria	Alistipes	10
+4495631.3	Bacteria	Dorea	10
+4495631.3	Bacteria	unclassified (derived from Gammaproteobacteria)	10
+4495631.3	Bacteria	Atopobium	8
+4495631.3	Bacteria	Barnesiella	8
+4495631.3	Bacteria	Oribacterium	7
+4495631.3	Bacteria	Robinsoniella	7
+4495631.3	Bacteria	Acidaminococcus	6
+4495631.3	Bacteria	Phascolarctobacterium	6
+4495631.3	Bacteria	Ureibacillus	5
+4495631.3	Bacteria	Marinilabilia	4
+4495631.3	Bacteria	Lactobacillus	4
+4495631.3	Bacteria	Acetobacterium	4
+4495631.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	4
+4495631.3	Bacteria	Megamonas	4
+4495631.3	Bacteria	unclassified (derived from Alphaproteobacteria)	4
+4495631.3	Bacteria	Peptostreptococcus	3
+4495631.3	Bacteria	Phyllobacterium	3
+4495631.3	Bacteria	Pseudomonas	3
+4495631.3	Bacteria	Hydrogenobaculum	2
+4495631.3	Bacteria	Streptococcus	2
+4495631.3	Bacteria	Fusibacter	2
+4495631.3	Bacteria	Halothermothrix	2
+4495631.3	Bacteria	Actinobaculum	1
+4495631.3	Bacteria	Cellulosimicrobium	1
+4495631.3	Bacteria	Parabacteroides	1
+4495631.3	Bacteria	Porphyromonas	1
+4495631.3	Bacteria	Prevotella	1
+4495631.3	Bacteria	Abiotrophia	1
+4495631.3	Bacteria	Enterococcus	1
+4495631.3	Bacteria	Paralactobacillus	1
+4495631.3	Bacteria	Desulfitobacterium	1
+4495621.3	Bacteria	Bacteroides	11634
+4495621.3	Bacteria	Bifidobacterium	6190
+4495621.3	Bacteria	Ruminococcus	4674
+4495621.3	Bacteria	Eubacterium	4670
+4495621.3	Bacteria	Blautia	1844
+4495621.3	Bacteria	Clostridium	1238
+4495621.3	Bacteria	unclassified (derived from Bacteria)	736
+4495621.3	Bacteria	Faecalibacterium	328
+4495621.3	Bacteria	unclassified (derived from Clostridiales)	298
+4495621.3	Bacteria	Akkermansia	283
+4495621.3	Bacteria	Bacillus	244
+4495621.3	Bacteria	Butyricicoccus	197
+4495621.3	Bacteria	Anaerotruncus	197
+4495621.3	Bacteria	Butyrivibrio	193
+4495621.3	Bacteria	unclassified (derived from Ruminococcaceae)	116
+4495621.3	Bacteria	unclassified (derived from Lachnospiraceae)	101
+4495621.3	Bacteria	Roseburia	90
+4495621.3	Bacteria	Desulfotomaculum	65
+4495621.3	Bacteria	Selenomonas	60
+4495621.3	Bacteria	Megamonas	58
+4495621.3	Bacteria	Dorea	55
+4495621.3	Bacteria	Collinsella	44
+4495621.3	Bacteria	Ethanoligenens	39
+4495621.3	Bacteria	Odoribacter	36
+4495621.3	Bacteria	Veillonella	36
+4495621.3	Bacteria	Alistipes	32
+4495621.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	22
+4495621.3	Bacteria	Acetobacterium	20
+4495621.3	Bacteria	Phascolarctobacterium	14
+4495621.3	Bacteria	Robinsoniella	13
+4495621.3	Bacteria	Acidaminococcus	13
+4495621.3	Bacteria	Barnesiella	12
+4495621.3	Bacteria	Gordonibacter	10
+4495621.3	Bacteria	Parabacteroides	10
+4495621.3	Bacteria	Hespellia	10
+4495621.3	Bacteria	Rikenella	7
+4495621.3	Bacteria	Carnobacterium	7
+4495621.3	Bacteria	Actinomyces	6
+4495621.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	6
+4495621.3	Bacteria	Halothermothrix	6
+4495621.3	Bacteria	Dialister	6
+4495621.3	Bacteria	Oribacterium	5
+4495621.3	Bacteria	Lactobacillus	4
+4495621.3	Bacteria	Alkaliphilus	3
+4495621.3	Bacteria	Lachnospira	3
+4495621.3	Bacteria	Pseudomonas	3
+4495621.3	Bacteria	Prevotella	2
+4495621.3	Bacteria	Catenibacterium	2
+4495621.3	Bacteria	Aminobacter	2
+4495621.3	Bacteria	unclassified (derived from Alphaproteobacteria)	2
+4495621.3	Bacteria	Escherichia	2
+4495621.3	Bacteria	Corynebacterium	1
+4495621.3	Bacteria	Kytococcus	1
+4495621.3	Bacteria	Amycolatopsis	1
+4495621.3	Bacteria	Turicella	1
+4495621.3	Bacteria	Marinilabilia	1
+4495621.3	Bacteria	Paraprevotella	1
+4495621.3	Bacteria	Chloroherpeton	1
+4495621.3	Bacteria	Aneurinibacillus	1
+4495621.3	Bacteria	Staphylococcus	1
+4495621.3	Bacteria	Vagococcus	1
+4495621.3	Bacteria	Streptococcus	1
+4495621.3	Bacteria	Caloramator	1
+4495621.3	Bacteria	Peptococcus	1
+4495621.3	Bacteria	Megasphaera	1
+4495621.3	Bacteria	Brevundimonas	1
+4495621.3	Bacteria	Burkholderia	1
+4495621.3	Bacteria	Ralstonia	1
+4495621.3	Bacteria	Helicobacter	1
+4495621.3	Bacteria	Pyramidobacter	1
+4495610.3	Bacteria	Bacteroides	48003
+4495610.3	Bacteria	Bifidobacterium	27331
+4495610.3	Bacteria	Eubacterium	24327
+4495610.3	Bacteria	Ruminococcus	21540
+4495610.3	Bacteria	Blautia	10483
+4495610.3	Bacteria	Clostridium	6219
+4495610.3	Bacteria	unclassified (derived from Bacteria)	3419
+4495610.3	Bacteria	unclassified (derived from Clostridiales)	3060
+4495610.3	Bacteria	Roseburia	2927
+4495610.3	Bacteria	Anaerotruncus	2036
+4495610.3	Bacteria	Faecalibacterium	1940
+4495610.3	Bacteria	Akkermansia	1621
+4495610.3	Bacteria	Bacillus	1004
+4495610.3	Bacteria	unclassified (derived from Lachnospiraceae)	769
+4495610.3	Bacteria	Butyrivibrio	699
+4495610.3	Bacteria	Hespellia	648
+4495610.3	Bacteria	Butyricicoccus	566
+4495610.3	Bacteria	Dorea	539
+4495610.3	Bacteria	unclassified (derived from Ruminococcaceae)	461
+4495610.3	Bacteria	Parabacteroides	321
+4495610.3	Bacteria	Prevotella	295
+4495610.3	Bacteria	Ethanoligenens	261
+4495610.3	Bacteria	Megamonas	224
+4495610.3	Bacteria	Selenomonas	214
+4495610.3	Bacteria	Odoribacter	207
+4495610.3	Bacteria	Dialister	200
+4495610.3	Bacteria	Collinsella	174
+4495610.3	Bacteria	Lachnospira	160
+4495610.3	Bacteria	Acetobacterium	139
+4495610.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	123
+4495610.3	Bacteria	Alistipes	120
+4495610.3	Bacteria	Aneurinibacillus	119
+4495610.3	Bacteria	Actinomyces	112
+4495610.3	Bacteria	Barnesiella	91
+4495610.3	Bacteria	Peptococcus	80
+4495610.3	Bacteria	Laceyella	65
+4495610.3	Bacteria	Acidaminococcus	65
+4495610.3	Bacteria	Phascolarctobacterium	65
+4495610.3	Bacteria	Veillonella	64
+4495610.3	Bacteria	Alkaliphilus	63
+4495610.3	Bacteria	Marinilabilia	62
+4495610.3	Bacteria	Syntrophococcus	59
+4495610.3	Bacteria	Lactobacillus	43
+4495610.3	Bacteria	unclassified (derived from Gammaproteobacteria)	29
+4495610.3	Bacteria	Carnobacterium	25
+4495610.3	Bacteria	Gordonibacter	22
+4495610.3	Bacteria	Fusibacter	22
+4495610.3	Bacteria	Robinsoniella	21
+4495610.3	Bacteria	Pseudomonas	21
+4495610.3	Bacteria	Hydrogenobaculum	17
+4495610.3	Bacteria	Oribacterium	15
+4495610.3	Bacteria	unclassified (derived from Alphaproteobacteria)	15
+4495610.3	Bacteria	Aeriscardovia	14
+4495610.3	Bacteria	Rikenella	11
+4495610.3	Bacteria	Aminobacter	11
+4495610.3	Bacteria	Sedimentibacter	10
+4495610.3	Bacteria	Caloramator	8
+4495610.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	7
+4495610.3	Bacteria	Mesorhizobium	7
+4495610.3	Bacteria	Lactococcus	6
+4495610.3	Bacteria	Brochothrix	5
+4495610.3	Bacteria	Paenibacillus	5
+4495610.3	Bacteria	Streptococcus	4
+4495610.3	Bacteria	Anaerofustis	4
+4495610.3	Bacteria	Desulfitibacter	4
+4495610.3	Bacteria	Megasphaera	4
+4495610.3	Bacteria	Escherichia	4
+4495610.3	Bacteria	unclassified (derived from Proteobacteria)	4
+4495610.3	Bacteria	Eggerthella	3
+4495610.3	Bacteria	Sphingobacterium	3
+4495610.3	Bacteria	Granulicatella	3
+4495610.3	Bacteria	Desulfotomaculum	3
+4495610.3	Bacteria	Thermoanaerobacter	3
+4495610.3	Bacteria	Corynebacterium	2
+4495610.3	Bacteria	Enterorhabdus	2
+4495610.3	Bacteria	Porphyromonas	2
+4495610.3	Bacteria	Gemella	2
+4495610.3	Bacteria	Anaerostipes	2
+4495610.3	Bacteria	Shuttleworthia	2
+4495610.3	Bacteria	Erysipelothrix	2
+4495610.3	Bacteria	Corallococcus	2
+4495610.3	Bacteria	unclassified (derived from Deltaproteobacteria)	2
+4495610.3	Bacteria	Enterobacter	2
+4495610.3	Bacteria	Bogoriella	1
+4495610.3	Bacteria	Rhodococcus	1
+4495610.3	Bacteria	Kribbella	1
+4495610.3	Bacteria	Conexibacter	1
+4495610.3	Bacteria	Paraprevotella	1
+4495610.3	Bacteria	Microscilla	1
+4495610.3	Bacteria	Chloroherpeton	1
+4495610.3	Bacteria	Sphaerobacter	1
+4495610.3	Bacteria	Alicyclobacillus	1
+4495610.3	Bacteria	Cohnella	1
+4495610.3	Bacteria	Leuconostoc	1
+4495610.3	Bacteria	Weissella	1
+4495610.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	1
+4495610.3	Bacteria	Coprococcus	1
+4495610.3	Bacteria	Desulfitobacterium	1
+4495610.3	Bacteria	Desulfosporosinus	1
+4495610.3	Bacteria	Methylobacterium	1
+4495610.3	Bacteria	Phyllobacterium	1
+4495610.3	Bacteria	Ralstonia	1
+4495610.3	Bacteria	Desulfobacterium	1
+4495610.3	Bacteria	Desulfovibrio	1
+4495599.3	Bacteria	Bacteroides	20951
+4495599.3	Bacteria	Bifidobacterium	10501
+4495599.3	Bacteria	Eubacterium	9105
+4495599.3	Bacteria	Ruminococcus	7032
+4495599.3	Bacteria	Blautia	3265
+4495599.3	Bacteria	Clostridium	2428
+4495599.3	Bacteria	unclassified (derived from Bacteria)	1600
+4495599.3	Bacteria	Faecalibacterium	691
+4495599.3	Bacteria	Bacillus	555
+4495599.3	Bacteria	unclassified (derived from Clostridiales)	503
+4495599.3	Bacteria	Anaerotruncus	461
+4495599.3	Bacteria	Butyrivibrio	425
+4495599.3	Bacteria	Butyricicoccus	374
+4495599.3	Bacteria	Akkermansia	367
+4495599.3	Bacteria	Selenomonas	214
+4495599.3	Bacteria	unclassified (derived from Lachnospiraceae)	208
+4495599.3	Bacteria	unclassified (derived from Ruminococcaceae)	185
+4495599.3	Bacteria	Collinsella	179
+4495599.3	Bacteria	Roseburia	175
+4495599.3	Bacteria	Odoribacter	149
+4495599.3	Bacteria	Megamonas	120
+4495599.3	Bacteria	Ethanoligenens	114
+4495599.3	Bacteria	Acetobacterium	106
+4495599.3	Bacteria	Desulfobacterium	81
+4495599.3	Bacteria	Barnesiella	75
+4495599.3	Bacteria	Alistipes	66
+4495599.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	59
+4495599.3	Bacteria	Marinilabilia	52
+4495599.3	Bacteria	Dorea	47
+4495599.3	Bacteria	Lachnospira	46
+4495599.3	Bacteria	Lactobacillus	35
+4495599.3	Bacteria	Alkaliphilus	35
+4495599.3	Bacteria	Hespellia	35
+4495599.3	Bacteria	Acidaminococcus	35
+4495599.3	Bacteria	Phascolarctobacterium	32
+4495599.3	Bacteria	Veillonella	32
+4495599.3	Bacteria	Actinomyces	30
+4495599.3	Bacteria	Aeriscardovia	30
+4495599.3	Bacteria	Parabacteroides	27
+4495599.3	Bacteria	Dialister	25
+4495599.3	Bacteria	Carnobacterium	19
+4495599.3	Bacteria	Prevotella	15
+4495599.3	Bacteria	Oribacterium	13
+4495599.3	Bacteria	Streptococcus	12
+4495599.3	Bacteria	Cellulosilyticum	8
+4495599.3	Bacteria	Pseudomonas	8
+4495599.3	Bacteria	Hydrogenobaculum	6
+4495599.3	Bacteria	Pseudobutyrivibrio	6
+4495599.3	Bacteria	Enterococcus	5
+4495599.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	5
+4495599.3	Bacteria	unclassified (derived from Comamonadaceae)	5
+4495599.3	Bacteria	Rikenella	4
+4495599.3	Bacteria	Ureibacillus	4
+4495599.3	Bacteria	Robinsoniella	4
+4495599.3	Bacteria	Syntrophococcus	4
+4495599.3	Bacteria	Escherichia	3
+4495599.3	Bacteria	Rhodococcus	2
+4495599.3	Bacteria	Gordonibacter	2
+4495599.3	Bacteria	Porphyromonas	2
+4495599.3	Bacteria	Finegoldia	2
+4495599.3	Bacteria	Anaerostipes	2
+4495599.3	Bacteria	Erysipelothrix	2
+4495599.3	Bacteria	Holdemania	2
+4495599.3	Bacteria	unclassified (derived from Alphaproteobacteria)	2
+4495599.3	Bacteria	Achromobacter	2
+4495599.3	Bacteria	unclassified (derived from Deltaproteobacteria)	2
+4495599.3	Bacteria	Shewanella	2
+4495599.3	Bacteria	Xanthomonas	2
+4495599.3	Bacteria	Renibacterium	1
+4495599.3	Bacteria	Gardnerella	1
+4495599.3	Bacteria	Tannerella	1
+4495599.3	Bacteria	Staphylococcus	1
+4495599.3	Bacteria	Granulicatella	1
+4495599.3	Bacteria	Sedimentibacter	1
+4495599.3	Bacteria	Fusibacter	1
+4495599.3	Bacteria	Anaerobranca	1
+4495599.3	Bacteria	Candidatus Desulforudis	1
+4495599.3	Bacteria	Bulleidia	1
+4495599.3	Bacteria	Aminobacter	1
+4495599.3	Bacteria	Paracoccus	1
+4495599.3	Bacteria	Bordetella	1
+4495599.3	Bacteria	Acidovorax	1
+4495599.3	Bacteria	Enterobacter	1
+4495599.3	Bacteria	Klebsiella	1
+4495599.3	Bacteria	Pyramidobacter	1
+4495588.3	Bacteria	Bacteroides	60747
+4495588.3	Bacteria	Bifidobacterium	38075
+4495588.3	Bacteria	Ruminococcus	37882
+4495588.3	Bacteria	Eubacterium	25832
+4495588.3	Bacteria	Anaerotruncus	12630
+4495588.3	Bacteria	Blautia	8294
+4495588.3	Bacteria	Clostridium	7367
+4495588.3	Bacteria	Roseburia	3000
+4495588.3	Bacteria	unclassified (derived from Bacteria)	2760
+4495588.3	Bacteria	Akkermansia	2538
+4495588.3	Bacteria	unclassified (derived from Clostridiales)	2385
+4495588.3	Bacteria	Butyrivibrio	2270
+4495588.3	Bacteria	Faecalibacterium	2034
+4495588.3	Bacteria	Bacillus	1200
+4495588.3	Bacteria	Butyricicoccus	715
+4495588.3	Bacteria	Selenomonas	686
+4495588.3	Bacteria	Dorea	568
+4495588.3	Bacteria	unclassified (derived from Lachnospiraceae)	464
+4495588.3	Bacteria	Megamonas	334
+4495588.3	Bacteria	unclassified (derived from Ruminococcaceae)	262
+4495588.3	Bacteria	Ethanoligenens	259
+4495588.3	Bacteria	Parabacteroides	245
+4495588.3	Bacteria	Barnesiella	241
+4495588.3	Bacteria	Collinsella	233
+4495588.3	Bacteria	Alistipes	204
+4495588.3	Bacteria	unclassified (derived from Gammaproteobacteria)	202
+4495588.3	Bacteria	Odoribacter	181
+4495588.3	Bacteria	Marinilabilia	174
+4495588.3	Bacteria	Actinomyces	155
+4495588.3	Bacteria	Alkaliphilus	131
+4495588.3	Bacteria	Acetobacterium	121
+4495588.3	Bacteria	Lachnospira	121
+4495588.3	Bacteria	Cellulosilyticum	109
+4495588.3	Bacteria	Pseudomonas	108
+4495588.3	Bacteria	Prevotella	96
+4495588.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	84
+4495588.3	Bacteria	Aeriscardovia	77
+4495588.3	Bacteria	Pseudobutyrivibrio	77
+4495588.3	Bacteria	Hespellia	76
+4495588.3	Bacteria	Dialister	55
+4495588.3	Bacteria	Lactobacillus	48
+4495588.3	Bacteria	Robinsoniella	48
+4495588.3	Bacteria	Veillonella	46
+4495588.3	Bacteria	Escherichia	39
+4495588.3	Bacteria	Phascolarctobacterium	36
+4495588.3	Bacteria	Acidaminococcus	35
+4495588.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	33
+4495588.3	Bacteria	Carnobacterium	23
+4495588.3	Bacteria	Streptococcus	19
+4495588.3	Bacteria	Hydrogenobaculum	14
+4495588.3	Bacteria	Fusibacter	12
+4495588.3	Bacteria	unclassified (derived from Alphaproteobacteria)	10
+4495588.3	Bacteria	Sphingobacterium	9
+4495588.3	Bacteria	Oribacterium	7
+4495588.3	Bacteria	Atopobium	6
+4495588.3	Bacteria	Laceyella	6
+4495588.3	Bacteria	Peptococcus	5
+4495588.3	Bacteria	Acetivibrio	5
+4495588.3	Bacteria	Caloramator	4
+4495588.3	Bacteria	Anaerostipes	4
+4495588.3	Bacteria	Desulfitibacter	4
+4495588.3	Bacteria	Methylobacterium	4
+4495588.3	Bacteria	unclassified (derived from Comamonadaceae)	4
+4495588.3	Bacteria	Cellulosimicrobium	3
+4495588.3	Bacteria	Eggerthella	3
+4495588.3	Bacteria	Porphyromonas	3
+4495588.3	Bacteria	Pediococcus	3
+4495588.3	Bacteria	Desulfotomaculum	3
+4495588.3	Bacteria	Geodermatophilus	2
+4495588.3	Bacteria	Rhodococcus	2
+4495588.3	Bacteria	Enterorhabdus	2
+4495588.3	Bacteria	Alicyclobacillus	2
+4495588.3	Bacteria	Cohnella	2
+4495588.3	Bacteria	Paenibacillus	2
+4495588.3	Bacteria	Ureibacillus	2
+4495588.3	Bacteria	Gemella	2
+4495588.3	Bacteria	Enterococcus	2
+4495588.3	Bacteria	Sedimentibacter	2
+4495588.3	Bacteria	Thermoanaerobacter	2
+4495588.3	Bacteria	Mobiluncus	1
+4495588.3	Bacteria	Cellulomonas	1
+4495588.3	Bacteria	Leifsonia	1
+4495588.3	Bacteria	Brochothrix	1
+4495588.3	Bacteria	Trichococcus	1
+4495588.3	Bacteria	Anaerofustis	1
+4495588.3	Bacteria	Syntrophococcus	1
+4495588.3	Bacteria	Desulfitobacterium	1
+4495588.3	Bacteria	Halothermothrix	1
+4495588.3	Bacteria	Bradyrhizobium	1
+4495588.3	Bacteria	Aminobacter	1
+4495588.3	Bacteria	Phyllobacterium	1
+4495588.3	Bacteria	Alicycliphilus	1
+4495588.3	Bacteria	unclassified (derived from Deltaproteobacteria)	1
+4495588.3	Bacteria	Nitrococcus	1
+4495588.3	Bacteria	Enterobacter	1
+4495588.3	Bacteria	Pyramidobacter	1
+4495588.3	Bacteria	Prosthecobacter	1
+4495577.3	Bacteria	Blautia	47188
+4495577.3	Bacteria	Faecalibacterium	29227
+4495577.3	Bacteria	unclassified (derived from Clostridiales)	25821
+4495577.3	Bacteria	Eubacterium	17728
+4495577.3	Bacteria	Clostridium	15716
+4495577.3	Bacteria	Butyrivibrio	11430
+4495577.3	Bacteria	Ruminococcus	8452
+4495577.3	Bacteria	Bacteroides	5844
+4495577.3	Bacteria	unclassified (derived from Lachnospiraceae)	3997
+4495577.3	Bacteria	Veillonella	3492
+4495577.3	Bacteria	unclassified (derived from Bacteria)	1826
+4495577.3	Bacteria	Hespellia	1186
+4495577.3	Bacteria	Dorea	1175
+4495577.3	Bacteria	Akkermansia	1028
+4495577.3	Bacteria	Bacillus	545
+4495577.3	Bacteria	Bifidobacterium	473
+4495577.3	Bacteria	unclassified (derived from Ruminococcaceae)	429
+4495577.3	Bacteria	Anaerostipes	307
+4495577.3	Bacteria	Collinsella	285
+4495577.3	Bacteria	Butyricicoccus	180
+4495577.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	161
+4495577.3	Bacteria	Robinsoniella	127
+4495577.3	Bacteria	Fusibacter	115
+4495577.3	Bacteria	Ethanoligenens	110
+4495577.3	Bacteria	Roseburia	101
+4495577.3	Bacteria	Selenomonas	93
+4495577.3	Bacteria	Streptococcus	91
+4495577.3	Bacteria	Hydrogenobaculum	85
+4495577.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	74
+4495577.3	Bacteria	Anaerotruncus	70
+4495577.3	Bacteria	Alkaliphilus	67
+4495577.3	Bacteria	Actinomyces	64
+4495577.3	Bacteria	Syntrophococcus	63
+4495577.3	Bacteria	Barnesiella	59
+4495577.3	Bacteria	Alistipes	56
+4495577.3	Bacteria	Megamonas	56
+4495577.3	Bacteria	Acetobacterium	54
+4495577.3	Bacteria	Dialister	54
+4495577.3	Bacteria	Odoribacter	50
+4495577.3	Bacteria	Marinilabilia	36
+4495577.3	Bacteria	Lachnospira	32
+4495577.3	Bacteria	Thermincola	25
+4495577.3	Bacteria	unclassified (derived from Gammaproteobacteria)	23
+4495577.3	Bacteria	Escherichia	20
+4495577.3	Bacteria	Prevotella	18
+4495577.3	Bacteria	Ureibacillus	18
+4495577.3	Bacteria	Atopobium	14
+4495577.3	Bacteria	Carnobacterium	13
+4495577.3	Bacteria	Parabacteroides	12
+4495577.3	Bacteria	Sphingobacterium	12
+4495577.3	Bacteria	unclassified (derived from Alphaproteobacteria)	12
+4495577.3	Bacteria	Sedimentibacter	11
+4495577.3	Bacteria	Acidaminococcus	11
+4495577.3	Bacteria	Lactobacillus	10
+4495577.3	Bacteria	Lactococcus	10
+4495577.3	Bacteria	Oribacterium	9
+4495577.3	Bacteria	Phascolarctobacterium	9
+4495577.3	Bacteria	Abiotrophia	7
+4495577.3	Bacteria	Corynebacterium	5
+4495577.3	Bacteria	Acetitomaculum	5
+4495577.3	Bacteria	Desulfotomaculum	5
+4495577.3	Bacteria	Porphyromonas	4
+4495577.3	Bacteria	Chloroherpeton	4
+4495577.3	Bacteria	Enterococcus	4
+4495577.3	Bacteria	Peptostreptococcus	4
+4495577.3	Bacteria	Paenibacillus	3
+4495577.3	Bacteria	Pseudobutyrivibrio	3
+4495577.3	Bacteria	Megasphaera	3
+4495577.3	Bacteria	Achromobacter	3
+4495577.3	Bacteria	Gardnerella	2
+4495577.3	Bacteria	Gemella	2
+4495577.3	Bacteria	Peptoniphilus	2
+4495577.3	Bacteria	Thermaerobacter	2
+4495577.3	Bacteria	Candidatus Desulforudis	2
+4495577.3	Bacteria	Erysipelothrix	2
+4495577.3	Bacteria	Helicobacter	2
+4495577.3	Bacteria	Arcanobacterium	1
+4495577.3	Bacteria	Brevibacterium	1
+4495577.3	Bacteria	Arthrobacter	1
+4495577.3	Bacteria	Rothia	1
+4495577.3	Bacteria	Staphylococcus	1
+4495577.3	Bacteria	Caloramator	1
+4495577.3	Bacteria	Desulfosporosinus	1
+4495577.3	Bacteria	Acetivibrio	1
+4495577.3	Bacteria	Natranaerobius	1
+4495577.3	Bacteria	Carboxydothermus	1
+4495577.3	Bacteria	Caldicellulosiruptor	1
+4495577.3	Bacteria	Methylobacterium	1
+4495577.3	Bacteria	Sphingomonas	1
+4495577.3	Bacteria	Acidovorax	1
+4495577.3	Bacteria	Nitrococcus	1
+4495577.3	Bacteria	Thioalkalivibrio	1
+4495577.3	Bacteria	Yersinia	1
+4495577.3	Bacteria	Acinetobacter	1
+4495577.3	Bacteria	Pseudomonas	1
+4495572.3	Bacteria	Blautia	46354
+4495572.3	Bacteria	Faecalibacterium	21598
+4495572.3	Bacteria	unclassified (derived from Clostridiales)	16875
+4495572.3	Bacteria	Clostridium	14307
+4495572.3	Bacteria	Eubacterium	13899
+4495572.3	Bacteria	Butyrivibrio	9498
+4495572.3	Bacteria	Bacteroides	8582
+4495572.3	Bacteria	Ruminococcus	6993
+4495572.3	Bacteria	unclassified (derived from Bacteria)	2800
+4495572.3	Bacteria	unclassified (derived from Lachnospiraceae)	2661
+4495572.3	Bacteria	Akkermansia	1521
+4495572.3	Bacteria	Hespellia	1381
+4495572.3	Bacteria	Veillonella	918
+4495572.3	Bacteria	Dorea	808
+4495572.3	Bacteria	Bacillus	566
+4495572.3	Bacteria	Bifidobacterium	564
+4495572.3	Bacteria	unclassified (derived from Ruminococcaceae)	465
+4495572.3	Bacteria	Selenomonas	384
+4495572.3	Bacteria	Collinsella	382
+4495572.3	Bacteria	Anaerostipes	270
+4495572.3	Bacteria	Syntrophococcus	221
+4495572.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	202
+4495572.3	Bacteria	unclassified (derived from Alphaproteobacteria)	192
+4495572.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	166
+4495572.3	Bacteria	Butyricicoccus	155
+4495572.3	Bacteria	Ethanoligenens	154
+4495572.3	Bacteria	Anaerotruncus	123
+4495572.3	Bacteria	Roseburia	122
+4495572.3	Bacteria	Alkaliphilus	85
+4495572.3	Bacteria	Barnesiella	74
+4495572.3	Bacteria	Actinomyces	70
+4495572.3	Bacteria	Dialister	69
+4495572.3	Bacteria	Odoribacter	64
+4495572.3	Bacteria	Parabacteroides	63
+4495572.3	Bacteria	Alistipes	60
+4495572.3	Bacteria	Leuconostoc	52
+4495572.3	Bacteria	Prevotella	50
+4495572.3	Bacteria	Pseudobutyrivibrio	48
+4495572.3	Bacteria	Escherichia	39
+4495572.3	Bacteria	Oribacterium	37
+4495572.3	Bacteria	Streptococcus	34
+4495572.3	Bacteria	Peptococcus	31
+4495572.3	Bacteria	Megamonas	26
+4495572.3	Bacteria	Acidovorax	24
+4495572.3	Bacteria	Enterococcus	21
+4495572.3	Bacteria	Atopobium	19
+4495572.3	Bacteria	Lachnospira	19
+4495572.3	Bacteria	Acidaminococcus	18
+4495572.3	Bacteria	Coprococcus	17
+4495572.3	Bacteria	Erysipelothrix	16
+4495572.3	Bacteria	Phascolarctobacterium	16
+4495572.3	Bacteria	Granulicatella	15
+4495572.3	Bacteria	Abiotrophia	14
+4495572.3	Bacteria	Acetobacterium	13
+4495572.3	Bacteria	Pseudomonas	13
+4495572.3	Bacteria	Sphingobacterium	12
+4495572.3	Bacteria	unclassified (derived from Gammaproteobacteria)	12
+4495572.3	Bacteria	Robinsoniella	10
+4495572.3	Bacteria	Chloroherpeton	9
+4495572.3	Bacteria	Gemella	9
+4495572.3	Bacteria	Lactobacillus	8
+4495572.3	Bacteria	Desulfotomaculum	7
+4495572.3	Bacteria	Ureibacillus	6
+4495572.3	Bacteria	Sedimentibacter	6
+4495572.3	Bacteria	Megasphaera	6
+4495572.3	Bacteria	Comamonas	6
+4495572.3	Bacteria	Marinilabilia	5
+4495572.3	Bacteria	Lactococcus	5
+4495572.3	Bacteria	Holdemania	5
+4495572.3	Bacteria	Acinetobacter	5
+4495572.3	Bacteria	Helicobacter	4
+4495572.3	Bacteria	Hydrogenobaculum	3
+4495572.3	Bacteria	Porphyromonas	3
+4495572.3	Bacteria	Tissierella	3
+4495572.3	Bacteria	Fusibacter	3
+4495572.3	Bacteria	Shuttleworthia	3
+4495572.3	Bacteria	Peptostreptococcus	3
+4495572.3	Bacteria	Ralstonia	3
+4495572.3	Bacteria	Aeriscardovia	2
+4495572.3	Bacteria	Geobacillus	2
+4495572.3	Bacteria	Brochothrix	2
+4495572.3	Bacteria	Aneurinibacillus	2
+4495572.3	Bacteria	Carnobacterium	2
+4495572.3	Bacteria	Trichococcus	2
+4495572.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	2
+4495572.3	Bacteria	Desulfitibacter	2
+4495572.3	Bacteria	Desulfitobacterium	2
+4495572.3	Bacteria	Desulfosporosinus	2
+4495572.3	Bacteria	Thermosinus	2
+4495572.3	Bacteria	unclassified (derived from Comamonadaceae)	2
+4495572.3	Bacteria	Methylobacillus	2
+4495572.3	Bacteria	Desulfovibrio	2
+4495572.3	Bacteria	unclassified (derived from Deltaproteobacteria)	2
+4495572.3	Bacteria	Thermobaculum	2
+4495572.3	Bacteria	Brevibacterium	1
+4495572.3	Bacteria	Dietzia	1
+4495572.3	Bacteria	Arthrobacter	1
+4495572.3	Bacteria	Micrococcus	1
+4495572.3	Bacteria	Eggerthella	1
+4495572.3	Bacteria	Staphylococcus	1
+4495572.3	Bacteria	Pediococcus	1
+4495572.3	Bacteria	Weissella	1
+4495572.3	Bacteria	Thermaerobacter	1
+4495572.3	Bacteria	Anaerofustis	1
+4495572.3	Bacteria	Candidatus Desulforudis	1
+4495572.3	Bacteria	Caldicellulosiruptor	1
+4495572.3	Bacteria	Coprobacillus	1
+4495572.3	Bacteria	Phyllobacterium	1
+4495572.3	Bacteria	Achromobacter	1
+4495572.3	Bacteria	Verminephrobacter	1
+4495572.3	Bacteria	Chromobacterium	1
+4495572.3	Bacteria	Oceanimonas	1
+4495572.3	Bacteria	Shewanella	1
+4495572.3	Bacteria	Edwardsiella	1
+4495572.3	Bacteria	Serratia	1
+4495561.3	Bacteria	Blautia	54475
+4495561.3	Bacteria	Faecalibacterium	33680
+4495561.3	Bacteria	Eubacterium	30028
+4495561.3	Bacteria	unclassified (derived from Clostridiales)	26818
+4495561.3	Bacteria	Clostridium	22724
+4495561.3	Bacteria	Ruminococcus	14000
+4495561.3	Bacteria	Bacteroides	13612
+4495561.3	Bacteria	Butyrivibrio	11215
+4495561.3	Bacteria	unclassified (derived from Bacteria)	5793
+4495561.3	Bacteria	unclassified (derived from Lachnospiraceae)	3895
+4495561.3	Bacteria	Veillonella	2720
+4495561.3	Bacteria	Dorea	2467
+4495561.3	Bacteria	Akkermansia	2172
+4495561.3	Bacteria	Hespellia	1825
+4495561.3	Bacteria	Bifidobacterium	1231
+4495561.3	Bacteria	unclassified (derived from Alphaproteobacteria)	825
+4495561.3	Bacteria	unclassified (derived from Ruminococcaceae)	814
+4495561.3	Bacteria	Collinsella	667
+4495561.3	Bacteria	Bacillus	596
+4495561.3	Bacteria	Selenomonas	593
+4495561.3	Bacteria	Butyricicoccus	266
+4495561.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	260
+4495561.3	Bacteria	Ethanoligenens	257
+4495561.3	Bacteria	Halothermothrix	257
+4495561.3	Bacteria	Anaerostipes	229
+4495561.3	Bacteria	Peptostreptococcus	212
+4495561.3	Bacteria	Roseburia	210
+4495561.3	Bacteria	Syntrophococcus	171
+4495561.3	Bacteria	Anaerotruncus	166
+4495561.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	136
+4495561.3	Bacteria	Alkaliphilus	128
+4495561.3	Bacteria	Lachnospira	117
+4495561.3	Bacteria	Barnesiella	110
+4495561.3	Bacteria	Actinomyces	109
+4495561.3	Bacteria	Alistipes	104
+4495561.3	Bacteria	Dialister	103
+4495561.3	Bacteria	Parabacteroides	95
+4495561.3	Bacteria	Odoribacter	86
+4495561.3	Bacteria	Megamonas	78
+4495561.3	Bacteria	Peptococcus	67
+4495561.3	Bacteria	Acetobacterium	56
+4495561.3	Bacteria	Robinsoniella	50
+4495561.3	Bacteria	Streptococcus	48
+4495561.3	Bacteria	Carnobacterium	36
+4495561.3	Bacteria	Thermosinus	32
+4495561.3	Bacteria	Atopobium	28
+4495561.3	Bacteria	Ureibacillus	25
+4495561.3	Bacteria	Prevotella	24
+4495561.3	Bacteria	Sphingobacterium	22
+4495561.3	Bacteria	Thermincola	22
+4495561.3	Bacteria	Escherichia	21
+4495561.3	Bacteria	Acidaminococcus	16
+4495561.3	Bacteria	Sedimentibacter	15
+4495561.3	Bacteria	Candidatus Desulforudis	14
+4495561.3	Bacteria	Oribacterium	13
+4495561.3	Bacteria	Holdemania	13
+4495561.3	Bacteria	Phascolarctobacterium	10
+4495561.3	Bacteria	Lactobacillus	9
+4495561.3	Bacteria	unclassified (derived from Gammaproteobacteria)	9
+4495561.3	Bacteria	Gemella	8
+4495561.3	Bacteria	Enterococcus	8
+4495561.3	Bacteria	Thermoanaerobacter	7
+4495561.3	Bacteria	Candidatus Phytoplasma	7
+4495561.3	Bacteria	Brochothrix	6
+4495561.3	Bacteria	Fusibacter	6
+4495561.3	Bacteria	Carboxydothermus	6
+4495561.3	Bacteria	Desulfovibrio	6
+4495561.3	Bacteria	Nitrococcus	6
+4495561.3	Bacteria	Pseudomonas	6
+4495561.3	Bacteria	Aeriscardovia	5
+4495561.3	Bacteria	Hydrogenobaculum	5
+4495561.3	Bacteria	Aneurinibacillus	5
+4495561.3	Bacteria	Abiotrophia	5
+4495561.3	Bacteria	Lactococcus	5
+4495561.3	Bacteria	Marinilabilia	4
+4495561.3	Bacteria	Laceyella	4
+4495561.3	Bacteria	Desulfosporosinus	4
+4495561.3	Bacteria	Catenibacterium	4
+4495561.3	Bacteria	Granulicatella	3
+4495561.3	Bacteria	Tetragenococcus	3
+4495561.3	Bacteria	Thermaerobacter	3
+4495561.3	Bacteria	Desulfotomaculum	3
+4495561.3	Bacteria	Porphyromonas	2
+4495561.3	Bacteria	Chloroherpeton	2
+4495561.3	Bacteria	Cohnella	2
+4495561.3	Bacteria	Paenibacillus	2
+4495561.3	Bacteria	Leuconostoc	2
+4495561.3	Bacteria	Coprococcus	2
+4495561.3	Bacteria	Pseudobutyrivibrio	2
+4495561.3	Bacteria	Bulleidia	2
+4495561.3	Bacteria	Sporomusa	2
+4495561.3	Bacteria	Aminobacter	2
+4495561.3	Bacteria	Anaeromyxobacter	2
+4495561.3	Bacteria	unclassified (derived from Deltaproteobacteria)	2
+4495561.3	Bacteria	Sulfurihydrogenibium	1
+4495561.3	Bacteria	Trichococcus	1
+4495561.3	Bacteria	Acetitomaculum	1
+4495561.3	Bacteria	Shuttleworthia	1
+4495561.3	Bacteria	Acetivibrio	1
+4495561.3	Bacteria	Erysipelothrix	1
+4495561.3	Bacteria	unclassified (derived from Comamonadaceae)	1
+4495561.3	Bacteria	unclassified (derived from Burkholderiales)	1
+4495561.3	Bacteria	unclassified (derived from Betaproteobacteria)	1
+4495561.3	Bacteria	Desulfobacterium	1
+4495561.3	Bacteria	Myxococcus	1
+4495561.3	Bacteria	Helicobacter	1
+4495561.3	Bacteria	Piscirickettsia	1
+4495561.3	Bacteria	Pyramidobacter	1
+4495550.3	Bacteria	Blautia	22153
+4495550.3	Bacteria	Clostridium	6718
+4495550.3	Bacteria	Faecalibacterium	6478
+4495550.3	Bacteria	Eubacterium	6338
+4495550.3	Bacteria	unclassified (derived from Clostridiales)	6095
+4495550.3	Bacteria	Bacteroides	4022
+4495550.3	Bacteria	Butyrivibrio	3083
+4495550.3	Bacteria	Ruminococcus	2428
+4495550.3	Bacteria	unclassified (derived from Bacteria)	1221
+4495550.3	Bacteria	unclassified (derived from Lachnospiraceae)	925
+4495550.3	Bacteria	Hespellia	828
+4495550.3	Bacteria	Selenomonas	757
+4495550.3	Bacteria	Veillonella	584
+4495550.3	Bacteria	Akkermansia	265
+4495550.3	Bacteria	Bifidobacterium	262
+4495550.3	Bacteria	unclassified (derived from Ruminococcaceae)	160
+4495550.3	Bacteria	Collinsella	137
+4495550.3	Bacteria	Aneurinibacillus	101
+4495550.3	Bacteria	Syntrophococcus	101
+4495550.3	Bacteria	Dorea	81
+4495550.3	Bacteria	Butyricicoccus	70
+4495550.3	Bacteria	Bacillus	59
+4495550.3	Bacteria	Ethanoligenens	58
+4495550.3	Bacteria	Anaerostipes	55
+4495550.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	55
+4495550.3	Bacteria	Streptococcus	39
+4495550.3	Bacteria	Desulfovibrio	35
+4495550.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	33
+4495550.3	Bacteria	Dialister	33
+4495550.3	Bacteria	Alistipes	32
+4495550.3	Bacteria	Actinomyces	29
+4495550.3	Bacteria	Roseburia	29
+4495550.3	Bacteria	Allochromatium	29
+4495550.3	Bacteria	Anaerotruncus	28
+4495550.3	Bacteria	Parabacteroides	25
+4495550.3	Bacteria	Barnesiella	23
+4495550.3	Bacteria	Alkaliphilus	21
+4495550.3	Bacteria	Pseudomonas	14
+4495550.3	Bacteria	Megamonas	13
+4495550.3	Bacteria	Lachnospira	12
+4495550.3	Bacteria	Acetobacterium	11
+4495550.3	Bacteria	Escherichia	11
+4495550.3	Bacteria	Lactobacillus	10
+4495550.3	Bacteria	Ureibacillus	7
+4495550.3	Bacteria	Laceyella	7
+4495550.3	Bacteria	Atopobium	6
+4495550.3	Bacteria	Porphyromonas	6
+4495550.3	Bacteria	Odoribacter	4
+4495550.3	Bacteria	Pseudobutyrivibrio	4
+4495550.3	Bacteria	Peptococcus	4
+4495550.3	Bacteria	Holdemania	4
+4495550.3	Bacteria	unclassified (derived from Alphaproteobacteria)	4
+4495550.3	Bacteria	Hydrogenobaculum	3
+4495550.3	Bacteria	Acidaminococcus	3
+4495550.3	Bacteria	Rhodococcus	2
+4495550.3	Bacteria	Chloroherpeton	2
+4495550.3	Bacteria	Alicyclobacillus	2
+4495550.3	Bacteria	Oribacterium	2
+4495550.3	Bacteria	Robinsoniella	2
+4495550.3	Bacteria	Catenibacterium	2
+4495550.3	Bacteria	Mobiluncus	1
+4495550.3	Bacteria	Corynebacterium	1
+4495550.3	Bacteria	Cellulosimicrobium	1
+4495550.3	Bacteria	Gardnerella	1
+4495550.3	Bacteria	Rikenella	1
+4495550.3	Bacteria	Staphylococcus	1
+4495550.3	Bacteria	Gemella	1
+4495550.3	Bacteria	Granulicatella	1
+4495550.3	Bacteria	Trichococcus	1
+4495550.3	Bacteria	Sedimentibacter	1
+4495550.3	Bacteria	Anaerobranca	1
+4495550.3	Bacteria	Candidatus Desulforudis	1
+4495550.3	Bacteria	Desulfosporosinus	1
+4495550.3	Bacteria	Desulfotomaculum	1
+4495550.3	Bacteria	Phascolarctobacterium	1
+4495550.3	Bacteria	Thermosinus	1
+4495550.3	Bacteria	unclassified (derived from Firmicutes)	1
+4495550.3	Bacteria	Acinetobacter	1
+4495550.3	Bacteria	unclassified (derived from Gammaproteobacteria)	1
+4495550.3	Bacteria	unclassified (derived from Proteobacteria)	1
+4495550.3	Bacteria	Acholeplasma	1
+4495539.3	Bacteria	Blautia	49204
+4495539.3	Bacteria	Eubacterium	24231
+4495539.3	Bacteria	Bacteroides	17244
+4495539.3	Bacteria	Clostridium	14685
+4495539.3	Bacteria	Ruminococcus	13888
+4495539.3	Bacteria	Faecalibacterium	13539
+4495539.3	Bacteria	unclassified (derived from Clostridiales)	11890
+4495539.3	Bacteria	Butyrivibrio	4245
+4495539.3	Bacteria	unclassified (derived from Bacteria)	3443
+4495539.3	Bacteria	Akkermansia	2664
+4495539.3	Bacteria	Bifidobacterium	2458
+4495539.3	Bacteria	unclassified (derived from Lachnospiraceae)	2271
+4495539.3	Bacteria	Roseburia	1539
+4495539.3	Bacteria	Hespellia	1169
+4495539.3	Bacteria	Veillonella	982
+4495539.3	Bacteria	Anaerotruncus	963
+4495539.3	Bacteria	unclassified (derived from Ruminococcaceae)	818
+4495539.3	Bacteria	Selenomonas	752
+4495539.3	Bacteria	Collinsella	742
+4495539.3	Bacteria	Dorea	665
+4495539.3	Bacteria	Bacillus	655
+4495539.3	Bacteria	Butyricicoccus	541
+4495539.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	228
+4495539.3	Bacteria	Alkaliphilus	147
+4495539.3	Bacteria	Ethanoligenens	135
+4495539.3	Bacteria	Lachnospira	129
+4495539.3	Bacteria	Barnesiella	121
+4495539.3	Bacteria	Alistipes	116
+4495539.3	Bacteria	Alcanivorax	105
+4495539.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	100
+4495539.3	Bacteria	Marinilabilia	85
+4495539.3	Bacteria	Anaerostipes	81
+4495539.3	Bacteria	Odoribacter	78
+4495539.3	Bacteria	Dialister	77
+4495539.3	Bacteria	Actinomyces	75
+4495539.3	Bacteria	Parabacteroides	66
+4495539.3	Bacteria	Megamonas	66
+4495539.3	Bacteria	Chloroherpeton	60
+4495539.3	Bacteria	Acetobacterium	52
+4495539.3	Bacteria	Robinsoniella	35
+4495539.3	Bacteria	Prevotella	33
+4495539.3	Bacteria	Fusibacter	31
+4495539.3	Bacteria	Hydrogenobaculum	28
+4495539.3	Bacteria	Enterobacter	28
+4495539.3	Bacteria	Pseudobutyrivibrio	25
+4495539.3	Bacteria	Candidatus Desulforudis	25
+4495539.3	Bacteria	Corynebacterium	24
+4495539.3	Bacteria	Streptococcus	24
+4495539.3	Bacteria	Oribacterium	24
+4495539.3	Bacteria	Lactobacillus	21
+4495539.3	Bacteria	Lactococcus	21
+4495539.3	Bacteria	Sulfurihydrogenibium	20
+4495539.3	Bacteria	Megasphaera	20
+4495539.3	Bacteria	Escherichia	20
+4495539.3	Bacteria	Sedimentibacter	18
+4495539.3	Bacteria	Coprococcus	18
+4495539.3	Bacteria	unclassified (derived from Gammaproteobacteria)	16
+4495539.3	Bacteria	Caloramator	14
+4495539.3	Bacteria	Peptococcus	14
+4495539.3	Bacteria	Peptostreptococcus	14
+4495539.3	Bacteria	unclassified (derived from Alphaproteobacteria)	13
+4495539.3	Bacteria	Pseudomonas	12
+4495539.3	Bacteria	Catenibacterium	11
+4495539.3	Bacteria	Nitrococcus	11
+4495539.3	Bacteria	Acetitomaculum	9
+4495539.3	Bacteria	Acetivibrio	9
+4495539.3	Bacteria	Atopobium	8
+4495539.3	Bacteria	Acidaminococcus	8
+4495539.3	Bacteria	Nitrosococcus	8
+4495539.3	Bacteria	Syntrophococcus	7
+4495539.3	Bacteria	Phascolarctobacterium	6
+4495539.3	Bacteria	Aeriscardovia	5
+4495539.3	Bacteria	Carnobacterium	5
+4495539.3	Bacteria	Mesorhizobium	5
+4495539.3	Bacteria	Peptoniphilus	4
+4495539.3	Bacteria	Agrobacterium	4
+4495539.3	Bacteria	unclassified (derived from Comamonadaceae)	4
+4495539.3	Bacteria	Ureibacillus	3
+4495539.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	3
+4495539.3	Bacteria	Thermaerobacter	3
+4495539.3	Bacteria	Desulfitibacter	3
+4495539.3	Bacteria	Erysipelothrix	3
+4495539.3	Bacteria	unclassified (derived from Proteobacteria)	3
+4495539.3	Bacteria	Porphyromonas	2
+4495539.3	Bacteria	Abiotrophia	2
+4495539.3	Bacteria	Granulicatella	2
+4495539.3	Bacteria	Trichococcus	2
+4495539.3	Bacteria	Pediococcus	2
+4495539.3	Bacteria	Leuconostoc	2
+4495539.3	Bacteria	Anaerococcus	2
+4495539.3	Bacteria	Subdoligranulum	2
+4495539.3	Bacteria	Achromobacter	2
+4495539.3	Bacteria	unclassified (derived from Deltaproteobacteria)	2
+4495539.3	Bacteria	Photorhabdus	2
+4495539.3	Bacteria	Cellulomonas	1
+4495539.3	Bacteria	Metascardovia	1
+4495539.3	Bacteria	unclassified (derived from Actinobacteria (class))	1
+4495539.3	Bacteria	Aneurinibacillus	1
+4495539.3	Bacteria	Laceyella	1
+4495539.3	Bacteria	Gemella	1
+4495539.3	Bacteria	Desulfitobacterium	1
+4495539.3	Bacteria	Desulfosporosinus	1
+4495539.3	Bacteria	Thermoanaerobacter	1
+4495539.3	Bacteria	Holdemania	1
+4495539.3	Bacteria	Thermosinus	1
+4495539.3	Bacteria	unclassified (derived from Burkholderiales)	1
+4495529.3	Bacteria	unclassified (derived from Clostridiales)	21134
+4495529.3	Bacteria	Eubacterium	20265
+4495529.3	Bacteria	Blautia	15359
+4495529.3	Bacteria	Clostridium	13333
+4495529.3	Bacteria	Faecalibacterium	10531
+4495529.3	Bacteria	Butyrivibrio	8992
+4495529.3	Bacteria	Ruminococcus	7081
+4495529.3	Bacteria	Bacteroides	6416
+4495529.3	Bacteria	unclassified (derived from Lachnospiraceae)	4417
+4495529.3	Bacteria	Veillonella	3344
+4495529.3	Bacteria	unclassified (derived from Bacteria)	2165
+4495529.3	Bacteria	Akkermansia	1691
+4495529.3	Bacteria	Bifidobacterium	1526
+4495529.3	Bacteria	Roseburia	1152
+4495529.3	Bacteria	unclassified (derived from Peptostreptococcaceae)	904
+4495529.3	Bacteria	Collinsella	816
+4495529.3	Bacteria	Dorea	728
+4495529.3	Bacteria	Syntrophococcus	679
+4495529.3	Bacteria	Bacillus	487
+4495529.3	Bacteria	Selenomonas	357
+4495529.3	Bacteria	Hespellia	209
+4495529.3	Bacteria	unclassified (derived from Ruminococcaceae)	156
+4495529.3	Bacteria	Ethanoligenens	150
+4495529.3	Bacteria	Butyricicoccus	146
+4495529.3	Bacteria	Pseudobutyrivibrio	130
+4495529.3	Bacteria	Anaerotruncus	127
+4495529.3	Bacteria	Actinomyces	112
+4495529.3	Bacteria	Anaerostipes	101
+4495529.3	Bacteria	Alistipes	91
+4495529.3	Bacteria	unclassified (derived from Erysipelotrichaceae)	86
+4495529.3	Bacteria	Brochothrix	83
+4495529.3	Bacteria	Parabacteroides	81
+4495529.3	Bacteria	Streptococcus	81
+4495529.3	Bacteria	Alkaliphilus	76
+4495529.3	Bacteria	Ureibacillus	68
+4495529.3	Bacteria	Robinsoniella	66
+4495529.3	Bacteria	Dialister	52
+4495529.3	Bacteria	Barnesiella	50
+4495529.3	Bacteria	Lachnospira	48
+4495529.3	Bacteria	Atopobium	45
+4495529.3	Bacteria	Fusibacter	45
+4495529.3	Bacteria	Megasphaera	32
+4495529.3	Bacteria	Marinilabilia	31
+4495529.3	Bacteria	Lactobacillus	26
+4495529.3	Bacteria	Lactococcus	25
+4495529.3	Bacteria	Odoribacter	23
+4495529.3	Bacteria	Acetitomaculum	21
+4495529.3	Bacteria	Sphingobacterium	19
+4495529.3	Bacteria	Granulicatella	18
+4495529.3	Bacteria	Megamonas	16
+4495529.3	Bacteria	unclassified (derived from Alphaproteobacteria)	16
+4495529.3	Bacteria	Thermincola	10
+4495529.3	Bacteria	Escherichia	10
+4495529.3	Bacteria	Chloroherpeton	8
+4495529.3	Bacteria	Acidaminococcus	8
+4495529.3	Bacteria	Phascolarctobacterium	8
+4495529.3	Bacteria	unclassified (derived from Gammaproteobacteria)	8
+4495529.3	Bacteria	Desulfovibrio	6
+4495529.3	Bacteria	Hydrogenobaculum	5
+4495529.3	Bacteria	Acetobacterium	5
+4495529.3	Bacteria	Pseudomonas	5
+4495529.3	Bacteria	Paenibacillus	4
+4495529.3	Bacteria	Sedimentibacter	4
+4495529.3	Bacteria	Oribacterium	4
+4495529.3	Bacteria	Holdemania	3
+4495529.3	Bacteria	Corynebacterium	2
+4495529.3	Bacteria	Gordonibacter	2
+4495529.3	Bacteria	Enterococcus	2
+4495529.3	Bacteria	unclassified (derived from Clostridiales Family XI. Incertae Sedis)	2
+4495529.3	Bacteria	Anaerofustis	2
+4495529.3	Bacteria	Candidatus Desulforudis	2
+4495529.3	Bacteria	Bulleidia	2
+4495529.3	Bacteria	Enterobacter	2
+4495529.3	Bacteria	Halomonas	2
+4495529.3	Bacteria	Mobiluncus	1
+4495529.3	Bacteria	Brevibacterium	1
+4495529.3	Bacteria	Oerskovia	1
+4495529.3	Bacteria	Mycobacterium	1
+4495529.3	Bacteria	Aeriscardovia	1
+4495529.3	Bacteria	Prevotella	1
+4495529.3	Bacteria	Trichococcus	1
+4495529.3	Bacteria	Caloramator	1
+4495529.3	Bacteria	Desulfotomaculum	1
+4495529.3	Bacteria	Peptococcus	1
+4495529.3	Bacteria	Thermoanaerobacter	1
+4495529.3	Bacteria	Erysipelothrix	1
+4495529.3	Bacteria	Desulfobacterium	1
+4495529.3	Bacteria	Prosthecobacter	1

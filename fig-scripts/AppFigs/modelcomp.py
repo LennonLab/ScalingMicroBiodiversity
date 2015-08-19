@@ -22,7 +22,7 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 mydir2 = os.path.expanduser("~/")
 
 sys.path.append(mydir2 + "GitHub/DiversityTools/metrics")
@@ -34,26 +34,25 @@ def modelcomparison():
     OUT = open(mydir + 'output/model_comparison.txt','w+')
 
     datasets = []
-    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC']
     GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
-    for name in os.listdir(mydir2 +'data/micro'):
+    for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
         print>>OUT, name, num_lines
 
-    for name in os.listdir(mydir2 +'data/macro'):
+    for name in os.listdir(mydir +'data/macro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -83,13 +82,12 @@ def modelcomparison():
         ESimp = mets.e_simpson(rad)
         FS_ev.append(np.log10(ESimp))
 
-    FSlists = [FS_rarity, FS_dom, FS_ev, FS_S]
     metrics = ['Rarity', 'Dominance', 'Evenness', 'Richness']
 
     for index, i in enumerate(metrics):
 
-        metric = i
-        fs = 10 # font size used across figures
+        #metric = i
+        #fs = 10 # font size used across figures
 
         loglogR2s, linlogR2s, linearR2s, loglinR2s = [[],[],[],[]]
         loglogAICs, linlogAICs, linearAICs, loglinAICs = [[],[],[],[]]
@@ -164,8 +162,8 @@ def modelcomparison():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)

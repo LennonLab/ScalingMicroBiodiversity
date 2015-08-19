@@ -1,0 +1,127 @@
+Category	Label	Value
+Project	project_name	Archaeal and Bacterial diversity of geographically and geologically distinct deep-sea hydrothermal vent mineral deposits
+Project	mgrast_id	mgp327
+Project	PI_organization_country	USA
+Project	PI_firstname	Anna-Louise
+Project	STUDY_CENTER	Portland_State_University
+Project	organization_country	USA
+Project	project_funding	This research was supported by the United States National Science Foundation (OCE-0728391 and OCE-0937404 to Anna-Louise Reysenbach and an IGERT fellowship to Gilberto E. Flores) with all sequencing performed at Oak Ridge National Laboratory, managed by UT-Battelle, LLC for the U.S. Department of Energy under contract no. DE-AC05-00OR22725.
+Project	PI_organization_address	PO Box 751, Portland, OR 97207-0751
+Project	organization_url	http://cires.colorado.edu/
+Project	lastname	Flores
+Project	email	flores.gilbert.e@gmail.com
+Project	PI_organization_url	http://alrlab.pdx.edu/
+Project	firstname	Gilberto E.
+Project	organization	Cooperative Institute for Research in Environmental Sciences, University of Colorado
+Project	organization_address	216 UCB, Boulder, CO 80309-0216
+Project	PI_organization	Department of Biology, Center for Life in Extreme Environments, Portland State University
+Project	project_description	Deep-sea hydrothermal vent deposits host diverse microbial communities. How these communities vary in different geologic settings remains largely unknown. Here, using barcoded pyrosequencing of the variable region 4 (V4) of the 16S rRNA gene we explored the archaeal and bacterial diversity of deposits from numerous vents sites around the globe. Vent fields surveyed include deposits from the Mid-Atlantic Ridge, Eastern Lau Spreading Center and Guaymas Basin. Results of these various studies have been published in the following articles:
+
+Flores, G.E., Campbell, J., Kirshtein, J., Meneghin, J., Podar, M., Steinberg, J.I. Tivey, M.K., Voytek, M., Yang, Z.K. and Reysenbach, A.-L. (2011) Microbial community structure of hydrothermal deposits from geochemically different vent fields along the Mid-Atlantic Ridge. Environmental Microbiology. 13: 2158-2171.
+
+Flores G.E., Wagner I.D., Liu Y. and Reysenbach, A.-L. (2012) Distribution, abundance, and diversity patterns of the thermoacidophilic �deep-sea hydrothermal vent euryarchaeota 2�. Front. Microbio. 3:47. doi: 10.3389/fmicb.2012.00047
+
+Flores, G.E., Shakya, M., Meneghin, J., Yang, Z.K., Seewald, J.S., Wheat, C.G., Podar, M. and Reysenbach, A.-L. (Accepted) Inter-field variability in the microbial communities of hydrothermal vent deposits from a back-arc basin. Geobiology.
+Project	PI_lastname	Reysenbach
+Project	PI_email	reysenbacha@pdx.edu
+Sample	sample_name	mar016
+Sample	mgrast_id	mgs17982
+Sample	ANONYMIZED_NAME	TAG-16
+Sample	samp_size	"3.2,grams"
+Sample	multiplex_ident	CATGAG
+Sample	env_package	plant-associated
+Sample	vent_basin	Mid_Atlantic_Ridge
+Sample	material	Volcanic rock
+Sample	biome	black smoker
+Sample	altitude	0
+Sample	depth	3622
+Sample	PLATFORM	TITANIUM
+Sample	samp_collect_device	Jason_2
+Sample	LINKER	GCCTCCCTCGCGCCATCAG/GCCTTGCCAGCCCGCTCAG
+Sample	feature	hydrothermal vent
+Sample	elevation	0
+Sample	assigned_from_geo	n
+Sample	nucl_acid_ext	PMID: 16871216
+Sample	KEY_SEQ	TCAG
+Sample	collection_date	2008
+Sample	latitude	26.136738
+Sample	longitude	44.825472
+Sample	country	TAG vent Field
+Sample	sample_alias	TAG-16
+Sample	TAXON_ID	2
+Sample	sample_name	mar016
+Sample	vent_field	TAG
+Sample	public	y
+Sample	REGION	B
+Sample	nucl_acid_amp	PMID: 21418499
+Sample	DESCRIPTION	"Actively venting hydrothermal vent mineral deposits were collected during four separate cruises over the course of 5 years. Samples lau001-lau062 were collected in 2009 from the Eastern Lau Spreading Center. Samples lebeled ""lau05T408, lau05166 and lau05247"" were collected in 2005 from the Eastern Lau Spreading Center. Samples mar001-mar015 were collected in 2008 from the Mid-Atlantic Ridge. Samples gua031-gua441 were collected in 2009 from the Guyamas Basin."
+Sample	SAMPLE_CENTER	Portland_State_University
+Sample	TITLE	Bacterial_diversity_of_deep_sea_hydrothermal_vent_deposits
+Library: mimarks-survey	library_name	mar016
+Library: mimarks-survey	mgrast_id	mgl1652
+Library: mimarks-survey	pcr_replicates               	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_extension_temp         	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	library_notes                	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	pcr_notes                    	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	BSA_final_conc               	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	RUN_DATE	2/14/11
+Library: mimarks-survey	denaturation_temp_initial    	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	denaturation_duration_initial	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	polymerase_units             	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	RUN_PREFIX	GXTPYB402
+Library: mimarks-survey	target_subfragment	V4
+Library: mimarks-survey	cycle_count                  	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	thermocycler                 	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	dCTP_final_conc              	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	EXPERIMENT_DESIGN_DESCRIPTION	"Actively venting hydrothermal vent mineral deposits were collected during four separate cruises over the course of 5 years. Samples lau001-lau062 were collected in 2009 from the Eastern Lau Spreading Center. Samples lebeled ""lau05T408, lau05166 and lau05247"" were collected in 2005 from the Eastern Lau Spreading Center. Samples mar001-mar015 were collected in 2008 from the Mid-Atlantic Ridge. Samples gua031-gua441 were collected in 2009 from the Guyamas Basin."
+Library: mimarks-survey	extension_duration_final     	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	investigation_type	mimarks-survey
+Library: mimarks-survey	run_machine_type             	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	pcr_clean_up_methods         	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	LIBRARY_CONSTRUCTION_PROTOCOL	"The amplicon products were purified using AMPure paramagnetic beads followed by analysis of their concentration and size using DNA 1000 chips on an Agilent 2100 Bioanalyzer. Amplicon libraries were prepared for unidirectional sequencing using the emPCR Kit II followed by sequencing on a 454 Life Sciences Genome Sequencer FLX. Based on the use of identifying key tags, 20 individual samples were pooled and sequenced on each of the two sides of the picotitre plate."
+Library: mimarks-survey	file_name	mar016.fasta
+Library: mimarks-survey	tail_polymerase	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	pcr_buffer_pH	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_annealing_duration     	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	other_additives              	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_annealing_method       	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	EXPERIMENT_TITLE	Bacterial_diversity_of_deep_sea_hydrothermal_vent_deposits
+Library: mimarks-survey	file_checksum	5c8b80f71efe458cb4aaf9785380a7e6
+Library: mimarks-survey	dGTP_final_conc              	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	forward_primer_final_conc    	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	gelatin_final_conc           	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	metagenome_name	Bacterial, mar016
+Library: mimarks-survey	seq_meth	pyrosequencing
+Library: mimarks-survey	cycle_extension_duration     	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	target_gene	16S_rRNA
+Library: mimarks-survey	reverse_primer_final_conc    	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cloning_kit                  	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	MgCl2_final_conc             	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	dTTP_final_conc              	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	forward_primers	"FWD:gcctccctcgcgccatcagnnnnnnAYTGGGYDTAAAGNG REV:GCCTTGCCAGCCCGCTCAG:TACCRGGGTHTCTAATCC,:TACCAGAGTATCTAATTC,:CTACDSRGGTMTCTAATC and :TACNVGGGTATCTAATCC in a 6:1:2:12 ratio"
+Library: mimarks-survey	local_NAP_ids                	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	BARCODE	CATGAG
+Library: mimarks-survey	PRIMER	GCCTTGCCAGCCCGCTCAG
+Library: mimarks-survey	extension_temp_final         	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	dATP_final_conc              	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	KCl_final_conc               	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	pcr_clean_up_kits            	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_denaturation_temp      	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_denaturation_duration  	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	amp_polymerase               	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	cycle_annealing_temp         	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	host_cells                   	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	NAP_volume                   	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	library_institute            	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	tail_duration                	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	Tris_HCl_final_conc          	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	EXPERIMENT_CENTER	Oak_Ridge_National_Lab
+Library: mimarks-survey	sample_name	mar016
+Library: mimarks-survey	RUN_CENTER	Oak_Ridge_National_Lab
+Library: mimarks-survey	metagenome_id	4483664.3
+Library: mimarks-survey	reverse_primers	"FWD:gcctccctcgcgccatcagnnnnnnAYTGGGYDTAAAGNG REV:GCCTTGCCAGCCCGCTCAG:TACCRGGGTHTCTAATCC,:TACCAGAGTATCTAATTC,:CTACDSRGGTMTCTAATC and :TACNVGGGTATCTAATCC in a 6:1:2:12 ratio"
+Library: mimarks-survey	pcr_volume                   	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Library: mimarks-survey	tail_temp	initial_denaturation=95degC_2min;27_cylces_of:denaturation=95degC_15sec;annealing=55degC_45sec:extension=68degC_45sec:final_extension=68degC_3min
+Enviromental Package: plant-associated	mgrast_id	mge30982
+Enviromental Package: plant-associated	env_package	plant-associated
+Enviromental Package: plant-associated	sample_name	mar016

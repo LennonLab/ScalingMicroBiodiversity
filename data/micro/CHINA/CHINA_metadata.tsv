@@ -1,0 +1,47 @@
+Category	Label	Value
+Project	project_name	Lake water, lake sediments, soils, biofilms and subsurface environments in China
+Project	mgrast_id	mgp2758
+Project	project_funding	973, NSFC, NIGLAS, Jiangsu NSF
+Project	PI_organization_address	73, East Beijing Road, Nanjing, China, 210008
+Project	PI_email	jjwang@niglas.ac.cn
+Project	PI_lastname	Wang
+Project	organization_country	China
+Project	project_description	Here we examine the relative influence of deterministic and stochastic processes for bacterial communities from subsurface environments, as well as stream biofilm, lake water, lake sediment and soil using pyrosequencing of 16S rRNA gene. We show that there is a general pattern in phylogenetic signal in species ecological niches across recent evolutionary time for all studied habitats, enabling us to infer the influences of community assembly processes from patterns of phylogenetic turnover in community composition. The phylogenetic dissimilarities among habitat types were significantly higher than within them, and the communities were clustered according to their original habitat types. For communities within habitat types, the highest phylogenetic turnover rate through space was observed in subsurface environments, followed by stream biofilm on mountainsides, whereas the sediment assemblages across regional scales showed the lowest turnover rate. Quantifying phylogenetic turnover as the deviation from a null expectation suggested that measured environmental variables imposed strong selection on bacterial communities for nearly all sample groups. For three sample groups, spatial distance reflected unmeasured environmental variables that impose selection, as opposed to spatial isolation. Such characterization of spatial and environmental variables proved essential for proper interpretation of partial Mantel results based on observed beta diversity metrics. In summary, our results clearly indicate a dominant role of deterministic processes on bacterial assemblages and highlight that bacteria show strong habitat associations that have likely emerged through evolutionary adaptation. Reference: Wang, J. et al, 2013. Phylogenetic beta diversity in bacterial assemblages across ecosystems: deterministic versus stochastic processes. ISME J 7(7):1310-1321 doi:10.1038/ismej.2013.30.
+Project	email	jjwang@niglas.ac.cn
+Project	lastname	Wang
+Project	organization_url	http://www.niglas.ac.cn
+Project	organization_address	73, East Beijing Road, Nanjing, China, 210008
+Project	organization	State Key Laboratory of Lake Science and Environment, Nanjing Institute of Geography and Limnology, Chinese Academy of Sciences
+Project	firstname	Jianjun
+Project	PI_organization_country	China
+Project	PI_organization	State Key Laboratory of Lake Science and Environment, Nanjing Institute of Geography and Limnology, Chinese Academy of Sciences
+Project	PI_firstname	Jianjun
+Project	PI_organization_url	http://www.niglas.ac.cn
+Sample	sample_name	HX_Soils_01
+Sample	mgrast_id	mgs89186
+Sample	longitude	92.974157
+Sample	material	soil
+Sample	continent	asia
+Sample	country	China
+Sample	latitude	35.782719
+Sample	feature	terrestrial habitat
+Sample	sample_name	HX_Soils_01
+Sample	collection_timezone	UTC-8
+Sample	sample_id	HX_Soils_01
+Sample	location	Kusai_Lake
+Sample	collection_time	12:00:00
+Sample	env_package	soil
+Sample	biome	terrestrial biome
+Sample	collection_date	2010-10-01
+Library: metagenome	library_name	HX_Soils_01
+Library: metagenome	mgrast_id	mgl89188
+Library: metagenome	metagenome_id	4508203.3
+Library: metagenome	seq_meth	454
+Library: metagenome	file_name	mgrast/HX_Soils_01.fna
+Library: metagenome	investigation_type	metagenome
+Library: metagenome	file_checksum	8304102a3c29d4efa9f2b5827aa90ebe
+Library: metagenome	sample_name	HX_Soils_01
+Library: metagenome	metagenome_name	HX_Soils_01
+Enviromental Package: soil	mgrast_id	mge89187
+Enviromental Package: soil	sample_name	HX_Soils_01
+Enviromental Package: soil	env_package	soil

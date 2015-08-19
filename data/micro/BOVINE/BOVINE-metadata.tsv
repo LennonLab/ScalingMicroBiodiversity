@@ -1,0 +1,39 @@
+Category	Label	Value
+Project	project_name	Bovine Necrotic Vulvovaginitis (BNVV)
+Project	mgrast_id	mgp14132
+Project	PI_organization_address	Rehovot
+Project	PI_organization_country	Israel
+Project	PI_lastname	Shpigel
+Project	PI_organization	Hebrew University of Jerusalem
+Project	PI_firstname	Nahum
+Project	PI_email	nahum.shpigel@mail.huji.ac.il
+Sample	sample_name	gr44
+Sample	mgrast_id	mgs313562
+Sample	country	Israel
+Sample	longitude	34.851612
+Sample	location	Israel
+Sample	collection_date	2012-01-01
+Sample	feature	livestock-associated habitat
+Sample	collection_time	01:00:00
+Sample	env_package	host-associated
+Sample	latitude	31.046051
+Sample	sample_name	gr44
+Sample	biome	Mediterranean forests, woodlands, and shrub biome
+Sample	collection_timezone	UTC2
+Sample	material	anthropogenic environmental material
+Library: mimarks-survey	library_name	gr44
+Library: mimarks-survey	mgrast_id	mgl313564
+Library: mimarks-survey	metagenome_id	4640035.3
+Library: mimarks-survey	seq_meth	454
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	seq_make	454 Life Sciences, a Roche Company
+Library: mimarks-survey	metagenome_name	gr44
+Library: mimarks-survey	file_name	gr44.fna
+Library: mimarks-survey	file_checksum	5a7d484d5bc303c496ed712ff035ba2e
+Library: mimarks-survey	sample_name	gr44
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: host-associated	mgrast_id	mge313563
+Enviromental Package: host-associated	disease_stat	BNVV
+Enviromental Package: host-associated	env_package	host-associated
+Enviromental Package: host-associated	body_habitat	Vagina
+Enviromental Package: host-associated	sample_name	gr44
