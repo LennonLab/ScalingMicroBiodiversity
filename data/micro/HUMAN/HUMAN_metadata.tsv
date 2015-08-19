@@ -1,0 +1,91 @@
+Category	Label	Value
+Project	project_name	Human gut microbiome viewed across age and geography (16S)
+Project	mgrast_id	mgp401
+Project	sample_count	529
+Project	project_description	Human gut microbiome differentiation viewed across cultures, ages and families.
+
+Publication: Human gut microbiome viewed across age and geography
+
+Nature (2012), doi:10.1038/nature11053, 
+Yatsunenko et. al.
+
+The annotations viewed and downloaded from this site are a product of the MG-RAST analysis of the sequence data submitted by the authors and will differ from the results in this publication.
+Project	sff_complete	y
+Project	STUDY_CENTER	CGS-GL
+Project	study_description	Human gut microbiome differentiation viewed across cultures, ages and families.
+Project	study_alias	Human gut microbiome viewed across age and geography
+Project	study_abstract	Human gut microbiome differentiation viewed across cultures, ages and families.
+Project	qiime_id	qiime:850
+Project	includes_timeseries	0
+Project	miens_compliant	y
+Project	study_title	Human gut microbiome differentiation viewed across cultures, ages and families.
+Project	sample_collection_id	27633
+Project	investigation_type	mimarks-survey
+Project	study_center	CGS-GL
+Project	metadata_complete	y
+Project	submit_to_insdc	n
+Sample	sample_name	k278M.1
+Sample	mgrast_id	mgs20914
+Sample	altitude	0
+Sample	env_package	host-associated
+Sample	public	n
+Sample	LINKER	CC
+Sample	elevation	2991
+Sample	PLATFORM	Illumina
+Sample	collection_date	unknown
+Sample	feature	human-associated habitat
+Sample	SAMPLE_CENTER	CGS-GL
+Sample	depth	0
+Sample	DESCRIPTION	"Human gut microbiome differentiation viewed across cultures, ages and families"
+Sample	country	Malawi
+Sample	NewIlluminaDataGenerated	y
+Sample	FLXdata_published	n
+Sample	samp_size	"0.01, g"
+Sample	TAXON_ID	408170
+Sample	assigned_from_geo	n
+Sample	common_name	human gut metagenome
+Sample	biome	human-associated habitat
+Sample	ANONYMIZED_NAME	ggs114
+Sample	age_unit	years
+Sample	latitude	-15.38
+Sample	longitude	35.3
+Sample	REGION	12
+Sample	material	feces
+Sample	TITLE	"Human gut microbiome differentiation viewed across cultures, ages and families"
+Sample	sample_name	k278M.1
+Library: mimarks-survey	library_name	k278M.1
+Library: mimarks-survey	mgrast_id	mgl4453
+Library: mimarks-survey	file_checksum	72c13b8ee7ab50f4385ce36c8fa75aa0
+Library: mimarks-survey	target_subfragment	V4
+Library: mimarks-survey	EXPERIMENT_TITLE	yatsunenko_global_gut
+Library: mimarks-survey	BARCODE	GTGACCTGATGT
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	run	565
+Library: mimarks-survey	EXPERIMENT_DESIGN_DESCRIPTION	PMID: 20534432; samples were amplified with a total of 96 barcoded primers; 14 pools were constructed and sequenced using HiSeq illumina paired end
+Library: mimarks-survey	seq_meth	pyrosequencing
+Library: mimarks-survey	LIBRARY_CONSTRUCTION_PROTOCOL	PMID: 20534432
+Library: mimarks-survey	investigation_type	mimarks-survey
+Library: mimarks-survey	RUN_PREFIX	s_12_1_withindex_sequence
+Library: mimarks-survey	RUN_CENTER	CGS-GL
+Library: mimarks-survey	metagenome_id	4489926.3
+Library: mimarks-survey	sample_name	k278M.1
+Library: mimarks-survey	reverse_primers	FWD:TTACCGCGGCKGCTGGCAC;REV:GGACTACHVGGGTWTCTAAT
+Library: mimarks-survey	file_name	k278M.1.418667.fasta
+Library: mimarks-survey	EXPERIMENT_CENTER	CGS-GL
+Library: mimarks-survey	forward_primers	FWD:TTACCGCGGCKGCTGGCAC;REV:GGACTACHVGGGTWTCTAAT
+Library: mimarks-survey	metagenome_name	h278M.418667
+Library: mimarks-survey	RUN_DATE	8/1/11
+Library: mimarks-survey	run_lane	Run_565_lane_2
+Library: mimarks-survey	PRIMER	GGACTACHVGGGTWTCTAAT
+Enviromental Package: host-associated	mgrast_id	mge33783
+Enviromental Package: host-associated	body_habitat	UBERON:feces
+Enviromental Package: host-associated	env_package	host-associated
+Enviromental Package: host-associated	family_relationship	Mother
+Enviromental Package: host-associated	body_site	UBERON:feces
+Enviromental Package: host-associated	host_common_name	human
+Enviromental Package: host-associated	age	unknown
+Enviromental Package: host-associated	host_subject_id	ggs114
+Enviromental Package: host-associated	sex	female
+Enviromental Package: host-associated	host_taxid	9606
+Enviromental Package: host-associated	body_product	UBERON:feces
+Enviromental Package: host-associated	sample_name	k278M.1

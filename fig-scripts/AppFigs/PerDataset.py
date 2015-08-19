@@ -22,9 +22,7 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/")
-
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 
 def Fig1():
@@ -35,28 +33,33 @@ def Fig1():
         analyses. """
 
     datasets = []
-    BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
-    for name in os.listdir(mydir2 +'data/micro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/micro'):
+        if name in GoodNames: pass
+        else: continue
 
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
+        print name, num_lines
 
-    for name in os.listdir(mydir2 +'data/macro'):
-        if name in BadNames: continue
+    for name in os.listdir(mydir +'data/macro'):
+        if name in GoodNames: pass
+        else: continue
 
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
+        print name, num_lines
+
 
     metlist = []
-    metrics = ['Rarity','Dominance', 'Evenness','Richness']
+    metrics = ['Rarity', 'Dominance', 'Evenness','Richness']
     for metric in metrics:
 
         fig = plt.figure()
@@ -76,8 +79,8 @@ def Fig1():
                 lines = []
                 lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)

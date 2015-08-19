@@ -23,9 +23,7 @@ import pandas as pd
 #import patsy
 import linecache
 
-mydir = os.path.expanduser("~/Desktop/Repos/rare-bio/")
-mydir2 = os.path.expanduser("~/Desktop/")
-
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 """
     ASSUMPTIONS OF LINEAR REGRESSION
@@ -234,14 +232,14 @@ def Fig1():
             ct = 0
             radDATA = []
             datasets = []
-            BadNames = ['.DS_Store', 'EMPclosed', 'BCI', 'AGSOIL', 'SLUDGE', 'FECES']
+            GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
             mlist = ['micro', 'macro']
             for m in mlist:
-                for name in os.listdir(mydir2 +'data/'+m):
-                        if name in BadNames: continue
-                        #else: print name
-                        path = mydir2+'data/'+m+'/'+name+'/'+name+'-SADMetricData.txt'
+                for name in os.listdir(mydir +'data/'+m):
+                        if name in GoodNames: pass
+                        else: continue
+                        path = mydir+'data/'+m+'/'+name+'/'+name+'-SADMetricData.txt'
                         num_lines = sum(1 for line in open(path))
                         datasets.append([name, m, num_lines])
 
@@ -258,7 +256,7 @@ def Fig1():
                 if numlines > SampSize: lines = random.sample(range(1, numlines+1), SampSize)
                 else: lines = random.sample(range(1, numlines+1), 40)
 
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)

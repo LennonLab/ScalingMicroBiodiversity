@@ -1,0 +1,58 @@
+Category	Label	Value
+Project	project_name	chu_arctic_soils
+Project	mgrast_id	mgp69
+Project	sff_complete	y
+Project	sample_collection_id	980
+Project	project_description	The severe environmental stresses of the Arctic may have promoted unique soil bacterial communities compared to those found in lower latitude environments. Here, we present the most comprehensive analysis of the biogeography of soil bacterial communities in the Arctic using a high resolution bar-coded pyrosequencing technique. We also compared bacterial communities within arctic soils to soils from a wide range of more temperate biomes to predict variability in soil bacterial communities across the globe. We show that arctic soil bacterial community composition and diversity are structured according to local variation in soil pH rather than geographical proximity to neighboring sites, suggesting that local environmental heterogeneity is far more important than dispersal limitation in determining community-level differences. Furthermore, bacterial community composition varied as much within arctic soils as across soils from a wide range of lower latitude biomes, and diversity levels were also similar, indicating global similarities in the structure of soil bacterial communities. These results contrast with the well-established latitudinal gradients in animal and plant diversity, suggesting that the controls on bacterial community distributions are fundamentally different from those observed for macro-organisms and that our biome definitions are not useful for predicting variability in soil bacterial communities across the globe.
+Project	submit_to_insdc	n
+Project	PI_organization_address	St. Lucia, Queensland
+Project	sample_count	52
+Project	qiime_id	qiime:104
+Project	PI_lastname	Chu
+Project	PI_organization	Department of Biology, Queen�s University
+Project	center_name	ENGENCORE
+Project	study_title	Soil bacterial diversity in the Arctic is not fundamentally different from that found in other biomes
+Project	study_alias	chu_arctic_soils
+Project	study_abstract	The severe environmental stresses of the Arctic may have promoted unique soil bacterial communities compared to those found in lower latitude environments. Here, we present the most comprehensive analysis of the biogeography of soil bacterial communities in the Arctic using a high resolution bar-coded pyrosequencing technique. We also compared bacterial communities within arctic soils to soils from a wide range of more temperate biomes to predict variability in soil bacterial communities across the globe. We show that arctic soil bacterial community composition and diversity are structured according to local variation in soil pH rather than geographical proximity to neighboring sites, suggesting that local environmental heterogeneity is far more important than dispersal limitation in determining community-level differences. Furthermore, bacterial community composition varied as much within arctic soils as across soils from a wide range of lower latitude biomes, and diversity levels were also similar, indicating global similarities in the structure of soil bacterial communities. These results contrast with the well-established latitudinal gradients in animal and plant diversity, suggesting that the controls on bacterial community distributions are fundamentally different from those observed for macro-organisms and that our biome definitions are not useful for predicting variability in soil bacterial communities across the globe.
+Project	study_description	targeted gene survey, 16S rRNA
+Project	PI_firstname	Haiyan
+Project	PI_email	chuh@queensu.ca
+Project	study_type	metagenome
+Project	metadata_complete	y
+Project	miens_compliant	y
+Project	pmid	20561020
+Project	investigation_type	bacteria_archaea
+Project	PI_organization_url	http://www.queensu.ca/biology/index.html
+Project	PI_organization_country	Canada
+Sample	sample_name	mgs28543
+Sample	mgrast_id	mgs28543
+Sample	altitude	0.0
+Sample	sample_id	qiime:144640
+Sample	assigned_from_geo	n
+Sample	public	y
+Sample	latitude	73.15
+Sample	feature	soil
+Sample	COMMON_NAME	Byl2
+Sample	env_package	sediment
+Sample	depth	0-5
+Sample	country	Canada
+Sample	collection_date	7-28-2008
+Sample	biome	Tundra communities and barren Arctic deserts
+Sample	TITLE	Soil bacterial diversity in the Arctic is not fundamentally different from that found in other biomes
+Sample	samp_size	20
+Sample	ANONYMIZED_NAME	sample36
+Sample	longitude	-79.96667
+Sample	sample_name	Byl2
+Sample	elevation	100.0
+Sample	material	soil
+Library: mimarks-survey	library_name	mgl10143
+Library: mimarks-survey	mgrast_id	mgl10143
+Library: mimarks-survey	sample_name	Byl2
+Library: mimarks-survey	metagenome_id	4455826.3
+Library: mimarks-survey	metagenome_name	929
+Library: mimarks-survey	investigation_type	mimarks-survey
+Library: mimarks-survey	file_checksum	e28fa9a4ce5776977d219b87e8aec412
+Enviromental Package: sediment	mgrast_id	mge39473
+Enviromental Package: sediment	env_package	sediment
+Enviromental Package: sediment	sample_name	Byl2
+Enviromental Package: sediment	ph	5.6

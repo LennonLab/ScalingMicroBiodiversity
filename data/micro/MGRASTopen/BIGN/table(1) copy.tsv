@@ -1,0 +1,49 @@
+Category	Label	Value
+Project	project_name	Amplicon_cheese_rind
+Project	mgrast_id	mgp8988
+Project	firstname	Benjamin
+Project	PI_firstname	Rachel
+Project	PI_organization_url	http://sysbio.harvard.edu/csb/
+Project	lastname	Wolfe
+Project	organization_url	http://sysbio.harvard.edu/csb/
+Project	email	bewolfe@gmail.com
+Project	PI_organization_address	52 Oxford Street, Cambridge, MA
+Project	organization_country	USA
+Project	PI_lastname	Dutton
+Project	PI_email	rdutton@cgr.harvard.edu
+Project	organization	Harvard University
+Project	project_funding	NIH - National Institutes of Health
+Project	PI_organization	Harvard University
+Project	PI_organization_country	USA
+Project	organization_address	52 Oxford Street, Cambridge, MA
+Project	project_description	This project was carried out by the Dutton lab to determine the bacterial and fungal diversity of cheese rinds.  Cheese rind biofilm samples from 137 cheeses, produced in 10 different countries, were analyzed by Illumina sequencing of the bacterial 16S rDNA (V4 region) and the fungal ITS1 region.
+Sample	sample_name	Cheese_survey_combined_ITS
+Sample	mgrast_id	mgs177697
+Sample	country	USA
+Sample	longitude	-71.116042
+Sample	location	Massachusetts
+Sample	collection_date	2012-12-30
+Sample	feature	biofilm
+Sample	collection_time	12:00:00
+Sample	env_package	microbial mat|biofilm
+Sample	latitude	42.378993
+Sample	sample_name	Cheese_survey_combined_ITS
+Sample	biome	Temperate broadleaf and mixed forest biome
+Sample	collection_timezone	UTC-5
+Sample	material	cheese product
+Library: mimarks-survey	library_name	concatsurveyITS_nogut
+Library: mimarks-survey	mgrast_id	mgl177699
+Library: mimarks-survey	metagenome_id	4562555.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	seq_make	HiSeq
+Library: mimarks-survey	target_gene	ITS1 region
+Library: mimarks-survey	file_name	concatsurveyITS_nogut.fna
+Library: mimarks-survey	metagenome_name	concatsurveyITS_nogut
+Library: mimarks-survey	seq_direction	forward
+Library: mimarks-survey	file_checksum	f18115858584669caae5e669d95f7811
+Library: mimarks-survey	sample_name	Cheese_survey_combined_ITS
+Library: mimarks-survey	seq_model	2000
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: microbial mat|biofilm	mgrast_id	mge177698
+Enviromental Package: microbial mat|biofilm	env_package	microbial mat|biofilm
+Enviromental Package: microbial mat|biofilm	sample_name	Cheese_survey_combined_ITS

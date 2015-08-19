@@ -1,0 +1,16 @@
+Category	Label	Value
+Project	project_name	Gut microbiota in the Irish Elderly and its links to health and diet
+Project	mgrast_id	mgp154
+Project	firstname	Marcus
+Project	PI_organization	University College Cork
+Project	PI_firstname	Paul W
+Project	PI_organization_url	http://eldermet.ucc.ie
+Project	lastname	Claesson
+Project	organization_url	http://eldermet.ucc.ie
+Project	email	mclaesson@bioinfo.ucc.ie
+Project	PI_organization_address	Department of Microbiology
+Project	PI_organization_country	Republic of Ireland
+Project	PI_lastname	O'Toole
+Project	project_description	This study is based on pyrosequencing of 16S rDNA amplicons from faecal samples collected from 178 elderly Irish citizens and 13 healthy young control subjects. A subset of these samples were also subjected to shotgun sequencing using Illumina HiSeq 2000 2x91bp reads. Antibiotic treatment was an exclusion criterion.
+Project	PI_email	pwotoole@ucc.ie
+Project	organization	University College Cork

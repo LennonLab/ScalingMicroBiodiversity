@@ -1,0 +1,114 @@
+Category	Label	Value
+Project	project_name	lauber_88_soils
+Project	mgrast_id	mgp68
+Project	study_abstract	Soils harbor enormously diverse bacterial populations, and soil bacterial communities can vary greatly in composition across space. However, our understanding of the specific changes in soil bacterial community structure that occur across larger spatial scales is limited because most previous work has focused on either surveying a relatively small number of soils in detail or analyzing a larger number of soils with techniques that provide little detail about the phylogenetic structure of the bacterial communities. Here we used a bar-coded pyrosequencing technique to characterize bacterial communities in 88 soils from across North and South America, obtaining an average of 1,501 sequences per soil. We found that overall bacterial community composition, as measured by pairwise UniFrac distances, was significantly correlated with differences in soil pH (r = 0.79), largely driven by changes in the relative abundances of Acidobacteria, Actinobacteria, and Bacteroidetes across the range of soil pHs. In addition, soil pH explains a significant portion of the variability associated with observed changes in the phylogenetic structure within each dominant lineage. The overall phylogenetic diversity of the bacterial communities was also correlated with soil pH (R2 = 0.50), with peak diversity in soils with near-neutral pHs. Together, these results suggest that the structure of soil bacterial communities is predictable, to some degree, across larger spatial scales, and the effect of soil pH on bacterial community composition is evident at even relatively coarse levels of taxonomic resolution.
+Project	study_title	Pyrosequencing_based_assessment_of_soil_pH_as_a_predictor_of_soil_bacterial_community_structure_at_the_continental_scale
+Project	sample_count	89
+Project	study_alias	Lauber88Soils
+Project	project_funding	National Science Foundation (MCB0610970 and DBI0301773) and the Andrew W. Mellon Foundation.
+Project	study_description	targeted gene survey
+Project	study_type	metagenome
+Project	PI_lastname	Lauber
+Project	metadata_complete	y
+Project	project_description	Soils harbor enormously diverse bacterial populations, and soil bacterial communities can vary greatly in composition across space. However, our understanding of the specific changes in soil bacterial community structure that occur across larger spatial scales is limited because most previous work has focused on either surveying a relatively small number of soils in detail or analyzing a larger number of soils with techniques that provide little detail about the phylogenetic structure of the bacterial communities. Here we used a bar-coded pyrosequencing technique to characterize bacterial communities in 88 soils from across North and South America, obtaining an average of 1,501 sequences per soil. We found that overall bacterial community composition, as measured by pairwise UniFrac distances, was significantly correlated with differences in soil pH (r = 0.79), largely driven by changes in the relative abundances of Acidobacteria, Actinobacteria, and Bacteroidetes across the range of soil pHs. In addition, soil pH explains a significant portion of the variability associated with observed changes in the phylogenetic structure within each dominant lineage. The overall phylogenetic diversity of the bacterial communities was also correlated with soil pH (R2 = 0.50), with peak diversity in soils with near-neutral pHs. Together, these results suggest that the structure of soil bacterial communities is predictable, to some degree, across larger spatial scales, and the effect of soil pH on bacterial community composition is evident at even relatively coarse levels of taxonomic resolution.
+Project	qiime_id	qiime:103
+Project	PI_organization_address	Boulder, CO
+Project	PI_organization_country	USA
+Project	PI_organization	Cooperative Institute for Research in Environmental Sciences, University of Colorado
+Project	miens_compliant	y
+Project	pmid	19502440
+Project	PI_firstname	Christian
+Project	sff_complete	y
+Project	submit_to_insdc	n
+Project	center_name	CCME
+Project	PI_email	Christian.lauber@colorado.edu
+Project	investigation_type	bacteria_archaea
+Project	PI_organization_url	http://cires.colorado.edu
+Project	center_project_name	Pyrosequencing_based_assessment_of_soil_pH_as_a_predictor_of_soil_bacterial_community_structure_at_the_continental_scale
+Project	sample_collection_id	928
+Sample	sample_name	mgs27555
+Sample	mgrast_id	mgs27555
+Sample	isol_growth_condt	16407148
+Sample	longitude	-74.1
+Sample	env_package	soil
+Sample	collection_timezone	UTC
+Sample	specific_location	Catskills, NY USA
+Sample	ANONYMIZED_NAME	CF3
+Sample	feature	soil
+Sample	DESCRIPTION	soil
+Sample	altitude	800 ; Meter
+Sample	material	soil
+Sample	collection_date	0
+Sample	temperature	5.3 ; Celsius
+Sample	samp_size	5
+Sample	COMMON_NAME	soil
+Sample	latitude	42.11666667
+Sample	sample_name	CF3
+Sample	Cmin_rate	2.912
+Sample	biome	soil
+Sample	elevation	800 ; Meter
+Sample	sample_id	qiime:146310
+Sample	depth	0-5
+Sample	TITLE	Pyrosequencing-Based Assessment of Soil pH as a Predictor of Soil Bacterial Community Structure at the Continental Scale
+Sample	samp_collect_device	A total of 98 soil samples that were distinct with respect to soil and site characteristics were collected from a wide array of ecosystem types in North and South America (see Table 3). Only soils unsaturated for the majority of the year were examined. Soils were collected near the height of the plant growing season at each location. To examine whether seasonal variation was important, an additional set of soil samples was collected 6 months after the initial collection at a subset of sites. At each site, the upper 5 cm of mineral soil was collected from 5-10 locations within a given plot of ≈100 m2 and composited into a single bulk sample. All soil samples were shipped to the University of California, Santa Barbara, within a few days of collection, where they were sieved to 4 mm, homogenized, and archived at -80C.
+
+Approximately 10 g of soil from each site was homogenized in a mortar and pestle with liquid N2, and DNAs were extracted from a 0.5-g subsample by use of a MoBio PowerSoil DNA extraction kit following the manufacturer's instructions, with an additional incubation step at 65C for 10 min followed by 2 min of bead beating to limit DNA shearing. Eluted DNAs were stored at −20C.
+Sample	public	n
+Sample	assigned_from_geo	n
+Sample	TAXON_ID	410658
+Sample	ph	3.56 ; pH
+Sample	silt_clay	77
+Sample	country	United States of America
+Sample	tot_org_nitro	0
+Sample	location	Catskills, NY
+Sample	continent	north_america
+Library: mimarks-survey	library_name	mgl10054
+Library: mimarks-survey	mgrast_id	mgl10054
+Library: mimarks-survey	investigation_type	mimarks-survey
+Library: mimarks-survey	pcr_clean_up_kits	Mobio UltraClean-htp PCR Clean-up kit (Mobio Laboratories)
+Library: mimarks-survey	forward_primers	5′-GCCTTGCCAGCCCGCTCAGTCAGAGTTTGATCCTGGCTCAG-3′
+Library: mimarks-survey	target_gene	V1 and V2
+Library: mimarks-survey	sequences_sequences_filtered	low-quality sequences were removed (those sequences of 25)
+Library: mimarks-survey	file_checksum	215d7302415b1b87bc2f3ba3b2ee1001
+Library: mimarks-survey	seq_meth	454
+Library: mimarks-survey	metagenome_name	840
+Library: mimarks-survey	extension_duration_final	001000
+Library: mimarks-survey	reverse_primers	5′-GCCTCCCTCGCGCCATCAGNNNNNNNNNNNNCATGCTGCCTCCCGTAGGAGT-3′
+Library: mimarks-survey	pubmed_id	19502440
+Library: mimarks-survey	reverse_barcodes	338R primer contained a 12-bp bar-code sequence, a TC linker, and a Roche 454 B sequencing adapter
+Library: mimarks-survey	other_additives	Platinum PCR SuperMix (Invitrogen) ; 22.5 micro ; Liter
+Library: mimarks-survey	cycle_denaturation_temp	94 ; Celsius
+Library: mimarks-survey	forward_barcodes	modified 27F
+Library: mimarks-survey	forward_primer_final_conc	30 ; Micromolar
+Library: mimarks-survey	cycle_annealing_duration	000030
+Library: mimarks-survey	pcr_replicates	Triplicate reactions were pooled for each sample
+Library: mimarks-survey	cycle_count	35 ; Cycle
+Library: mimarks-survey	metagenome_id	4455737.3
+Library: mimarks-survey	sample_name	CF3
+Library: mimarks-survey	cycle_annealing_temp	50 ; Celsius
+Library: mimarks-survey	cycle_extension_temp	72 ; Celsius
+Library: mimarks-survey	extension_temp_final	72 ; Celsius
+Library: mimarks-survey	denaturation_temp_initial	94 ; Celsius
+Library: mimarks-survey	reverse_primer_final_conc	30 ; Micromolar
+Library: mimarks-survey	cycle_extension_duration	000130
+Library: mimarks-survey	denaturation_duration_initial	000300
+Library: mimarks-survey	pcr_volume	26 ; Microliter
+Library: mimarks-survey	cycle_denaturation_duration	000045
+Library: mimarks-survey	seq_center	Environmental Genomics Core Facility.
+Library: mimarks-survey	sequences_sequences_predicted_genes	Phylotypes were identified using Megablast, with a phylotype defined at the 97% sequence similarity level. A representative sequence from each phylotype was aligned using NAST
+Enviromental Package: soil	mgrast_id	mge39384
+Enviromental Package: soil	pool_dna_extracts	triplicate reactions pooled
+Enviromental Package: soil	soil_type	inceptisol
+Enviromental Package: soil	sample_name	CF3
+Enviromental Package: soil	ph	3.56
+Enviromental Package: soil	_moisture_deficit	-858.7
+Enviromental Package: soil	carb_nitro_ratio	17.0
+Enviromental Package: soil	annual_season_precpt	1300.0 mm
+Enviromental Package: soil	_tot_org_c	4.33 %
+Enviromental Package: soil	texture	silt loam
+Enviromental Package: soil	samp_weight_dna_ext	5 g
+Enviromental Package: soil	tot_org_carb	43.3
+Enviromental Package: soil	env_package	soil
+Enviromental Package: soil	store_cond	frozen
+Enviromental Package: soil	cur_vegetation	Tsuga canadensis
+Enviromental Package: soil	annual_season_temp	5.3

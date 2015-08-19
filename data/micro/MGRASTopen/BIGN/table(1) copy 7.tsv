@@ -1,0 +1,42 @@
+Category	Label	Value
+Project	project_name	Ciprofloxacin_Nitrofurantoin
+Project	mgrast_id	mgp9628
+Project	PI_organization_address	Rue Gabrielle-Perret-Gentil 4, 1211 Geneva
+Project	PI_organization_country	Switzerland
+Project	PI_lastname	Lazarevic
+Project	PI_organization	Geneva University Hospital
+Project	PI_firstname	Vladimir
+Project	PI_organization_url	www.genomic.ch
+Project	project_description	This project explores the faecal microbiota from a total of 42 subjects, analysed by 16S rDNA amplicon sequencing.
+
+We selected four groups of 10 patients from the cohort: (i) Urinary tract (UTI) patients treated with ciprofloxacin (CP); (ii) UTI patients treated with nitrofurantoin (NF); (iii) patients without antibiotic treatment (CT), and; (iv) one adult household contact for each patient treated with ciprofloxacin (CTCP). In addition, we included two UTI patients treated with fosfomycin (F). All participants provided three stool samples: (i) at baseline (1); (ii) at completion of antibiotic therapy (2), and; (iii) four weeks  after the second sample (3).
+Project	PI_email	vladimir.lazarevic@genomic.ch
+Sample	sample_name	Sample1
+Sample	mgrast_id	mgs187149
+Sample	country	Switzerland
+Sample	longitude	6.1291
+Sample	location	Geneva
+Sample	collection_date	2013-04-21
+Sample	feature	human-associated habitat
+Sample	collection_time	21:55:00
+Sample	env_package	human-gut
+Sample	latitude	46.1937
+Sample	sample_name	Sample1
+Sample	biome	terrestrial biome
+Sample	collection_timezone	UTC1
+Sample	material	feces
+Library: mimarks-survey	library_name	fecal_42subjects
+Library: mimarks-survey	mgrast_id	mgl187151
+Library: mimarks-survey	metagenome_id	4568378.3
+Library: mimarks-survey	seq_meth	454
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	seq_center	LGC, Germany
+Library: mimarks-survey	seq_make	454 Life Sciences, a Roche Company
+Library: mimarks-survey	metagenome_name	fecal_42subjects
+Library: mimarks-survey	file_name	fecal_42subjects.fastq
+Library: mimarks-survey	file_checksum	1d4e6943177ab98a810d0108d9930edc
+Library: mimarks-survey	sample_name	Sample1
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: human-gut	mgrast_id	mge187150
+Enviromental Package: human-gut	env_package	human-gut
+Enviromental Package: human-gut	sample_name	Sample1

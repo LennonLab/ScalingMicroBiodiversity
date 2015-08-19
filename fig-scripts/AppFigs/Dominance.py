@@ -23,32 +23,30 @@ from math import log10
 import linecache
 
 mydir = os.path.expanduser("~/GitHub/rare-bio/")
-mydir2 = os.path.expanduser("~/")
-
 
 
 def Fig1():
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
-    for name in os.listdir(mydir2 +'data/micro'):
+    for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
         print name, num_lines
 
-    for name in os.listdir(mydir2 +'data/macro'):
+    for name in os.listdir(mydir +'data/macro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -90,8 +88,8 @@ def Fig1():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
