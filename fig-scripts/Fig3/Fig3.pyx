@@ -94,10 +94,6 @@ def Fig3():
     datasets = []
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'FECES', 'MGRAST', 'EMPopen']
-    #BadNames.extend(['BIGN', 'BOVINE', 'SED', 'CHINA', 'HMP', 'HUMAN'])
-    #GoodNames = ['EMPclosed', 'HMP', 'MGRAST', 'BIGN', 'BOVINE', 'SED', 'CHINA', 'HMP', 'HUMAN', 'CHU', 'HYDRO', 'CATLIN', 'LAUB', 'EMPopen', 'FECES', 'FUNGI', 'SLUDGE']
-
     GoodNames = ['EMPclosed', 'HMP', 'MGRAST', ]
     for name in os.listdir(mydir2 +'data/micro'):
         #if name in BadNames: continue
@@ -246,10 +242,10 @@ def Fig3():
     #SAR11 = [2.9*(10**27), 2.4*(10**28)] # estimated bacteria on Earth; Kallmeyer et al. 2012
 
 
-    HGx =10**14 # estimated bacteria in Human gut; add reference
-    HGy = [1.06*(10**13), 1.22*(10**13)] # estimated most abundant bacteria in Human gut; add reference # 0.0053
+    HGx =10**14 # estimated bacteria in Human gut; Berg (1996)
+    HGy = [1.06*(10**13), 1.22*(10**13)] # estimated most abundant bacteria in Human gut; Turnbaugh (2009) & Dethlefsen et al. (2008)
     COWx = 2.226*10**15 # estimated bacteria in Cow rumen; add reference
-    COWy = (0.52/80)*(2.226*10**15) # estimated dominance in Cow rumen; add reference #0.5/80
+    COWy = (0.52/80)*(2.226*10**15) # estimated dominance in Cow rumen; Stevenson and Weimer (2006)
 
     # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
     guess = 0.1019

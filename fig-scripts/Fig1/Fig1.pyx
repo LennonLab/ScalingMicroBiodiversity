@@ -22,17 +22,16 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 mydir2 = os.path.expanduser("~/")
 
-sys.path.append(mydir2 + "tools/metrics")
+sys.path.append(mydir2 + "GitHub/DiversityTools/metrics")
 import metrics as mets
 
 
 def Fig1():
 
     datasets = []
-    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'NABC', 'FECES', 'MGRAST', 'EMPclosed', 'BIGN', 'BOVINE', 'SED', 'FUNGI']
     GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir2 +'data/micro'):

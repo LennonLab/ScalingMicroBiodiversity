@@ -40,7 +40,6 @@ def Fig2():
     fs = 10 # font size used across figures
     Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
-    #BadNames = ['.DS_Store', 'EMPclosed', 'AGSOIL', 'SLUDGE', 'FECES', 'FUNGI']
     GoodNames = ['MGRAST', 'HMP', 'EMPclosed']
 
     for name in os.listdir(mydir2 +'data/micro'):
@@ -138,11 +137,11 @@ def Fig2():
     Earth = np.log10([9.2*(10**29), 31.7*(10**29)]) # estimated bacteria on Earth; Kallmeyer et al. 2012
     SAR11 = np.log10([2.0*(10**28), 2.0*(10**28)]) # estimated percent abundance of SAR11; Morris et al. (2002)
 
-    HGx = np.log10([0.5*(10**14), 1.5*(10**14)]) # estimated bacteria in Human gut; ADD REFERENCE
-    HGy = np.log10([0.05*(10**min(HGx)), 0.15*(10**max(HGx))]) # estimated most abundant bacteria in Human gut; Turnbaugh et al. (2009)
+    HGx = np.log10([0.5*(10**14), 1.5*(10**14)]) # estimated bacteria in Human gut; Berg (1996)
+    HGy = np.log10([0.05*(10**min(HGx)), 0.15*(10**max(HGx))]) # estimated most abundant bacteria in Human gut; Turnbaugh et al. (2009), & Dethlefsen et al. (2008)
 
     COWx = np.log10([0.5*2.226*(10**15), 1.5*2.226*(10**15)]) # estimated bacteria in Cow rumen; LOW:   HIGH: Whitman et al. (1998)
-    COWy = np.log10([0.09*(10**min(COWx)), .15*(10**max(COWx))]) # estimated dominance in Cow rumen;
+    COWy = np.log10([0.09*(10**min(COWx)), .15*(10**max(COWx))]) # estimated dominance in Cow rumen; Stevenson and Weimer (2006)
 
     c = '0.2'
     ## EARTH
