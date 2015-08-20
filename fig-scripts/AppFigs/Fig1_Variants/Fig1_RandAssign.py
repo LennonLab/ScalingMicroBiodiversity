@@ -41,8 +41,8 @@ def Fig1():
         #if name in BadNames: continue
         #else: pass
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -55,8 +55,8 @@ def Fig1():
         #if name in BadNames: continue
         #else: pass
 
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -98,8 +98,8 @@ def Fig1():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
                 else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
 
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -281,9 +281,9 @@ def Fig1():
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
     #plt.close()
