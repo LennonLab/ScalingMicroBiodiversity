@@ -94,9 +94,9 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 166
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
-                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
+                    lines = np.random.choice(range(1, numlines+1), 200, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 200, replace=True) #167
+                else: lines = np.random.choice(range(1, numlines+1), 120, replace=True) # 100
 
                 #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -234,7 +234,7 @@ def Fig1():
 
         if index == 0:
             plt.ylim(-0.1, 2.0)
-            plt.xlim(1, 6)
+            plt.xlim(1, 7)
             plt.text(1.35, 1.7, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
             plt.text(1.35, 1.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 1.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
@@ -248,7 +248,7 @@ def Fig1():
             plt.plot([0,7],[0,7], ls = '--', lw=1, c='0.7')
             #ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
             plt.ylim(0, 6)
-            plt.xlim(1, 6)
+            plt.xlim(1, 7)
 
             plt.text(1.35, 5.1, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
             plt.text(1.35, 4.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
@@ -256,7 +256,7 @@ def Fig1():
 
         elif index == 2:
             plt.ylim(-3.0, 0.0)
-            plt.xlim(1, 6)
+            plt.xlim(1, 7)
 
             plt.text(1.35, -2.8, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
             plt.text(1.35, -2.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
@@ -264,7 +264,7 @@ def Fig1():
 
         elif index == 3:
             plt.ylim(0.9, 4.5)
-            plt.xlim(1, 6)
+            plt.xlim(1, 7)
 
             plt.text(1.35, 3.9, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
             plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
@@ -279,9 +279,9 @@ def Fig1():
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
-    plt.show()
+    #plt.show()
     #plt.close()
 
     return
