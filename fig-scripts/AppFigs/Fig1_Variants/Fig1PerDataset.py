@@ -41,8 +41,8 @@ def Fig1():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -52,8 +52,8 @@ def Fig1():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -65,8 +65,8 @@ def Fig1():
             'Evenness, ' +r'$log_{10}$',
             'Richness, ' +r'$log_{10}$']
 
-    OUT = open(mydir + 'output/SummaryPerDataset_NoMicrobe1s.txt','w+')
-    #OUT = open(mydir + 'output/SummaryPerDataset.txt','w+')
+    #OUT = open(mydir + 'output/SummaryPerDataset_NoMicrobe1s.txt','w+')
+    OUT = open(mydir + 'output/SummaryPerDataset.txt','w+')
 
     for dataset in datasets:
 
@@ -81,23 +81,20 @@ def Fig1():
             Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-            its = 1000
+            its = 1
             f = list()
             for n in range(its):
 
                 #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
                 Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
 
-                numMac = 0
-                numMic = 0
                 radDATA = []
-
                 name, kind, numlines = dataset
                 lines = []
-                lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
 
-                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -167,7 +164,7 @@ def Fig1():
             x = min(Nlist)
             y = 1.1*max(metlist)
 
-            plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= metric+' = '+str(round(Int,2))+'+'+str(round(Coef, 2))+'*'+r'$N$'+'\n'+r'$R^2$' + '=' +str(R2) +' (n='+str(len(PIx))+')')
+            plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= metric+' = '+str(round(Int,2))+'*'+r'$N$'+'$^{'+str(round(Coef,2))+'}$'+'\n'+r'$R^2$' + '=' +str(R2) +' (n='+str(len(PIx))+')')
 
             if index == 2:
                 leg = plt.legend(loc=3,prop={'size':fs-1})
@@ -184,15 +181,17 @@ def Fig1():
             plt.ylabel(metric, fontsize=fs)
             plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
+
             metrix = ['rarity', 'dominance', 'evenness', 'richness']
             print>>OUT, name, kind, metrix[index], np.mean(PIx), np.mean(Slist), Int, Coef
 
+        fig.suptitle(dataset[0], fontsize=fs+2)
         #plt.subplots_adjust(wspace=0.4, hspace=0.4)
         plt.savefig(mydir+'/figs/appendix/Fig1/PerDataset/Locey_Lennon_2015_'+name+'_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
         #plt.show()
         print name
 
-        plt.close()
+        #plt.close()
     OUT.close()
     return
 
