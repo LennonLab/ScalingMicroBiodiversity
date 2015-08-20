@@ -6,51 +6,27 @@ CBC 1999
 FIA 10355
 GENTRY 222
 MCDB 103
+Rarity :   R-squared   :   AIC  :   BIC
+averages from power-law 0.625        -292.092        -274.504
+averages from semilog 0.457        3530.146        3547.733
+averages from exponential 0.508        -129.035        -111.447
+averages from linear 0.345        3642.024        3659.612 
 
-results r-square aic bic
-FS log-log 0.493 -1648.82 -1638.744
-FS log-lin 0.133 -1038.476 -1028.4
-FS lin-log 0.498 2976.438 2986.514
-FS linear 0.16 3562.824 3572.9 
+Dominance :   R-squared   :   AIC  :   BIC
+averages from power-law 0.938        304.839        322.427
+averages from semilog 0.548        15516.828        15534.416
+averages from exponential 0.679        1286.795        1304.383
+averages from linear 0.832        14901.395        14918.983 
 
-averages from log-log 0.621 -477.296 -457.665
-averages from lin-log 0.453 5904.064 5923.695
-averages from log-lin 0.489 -176.94 -157.309
-averages from linear 0.333 6102.746 6122.377 
+Evenness :   R-squared   :   AIC  :   BIC
+averages from power-law 0.734        133.599        151.187
+averages from semilog 0.75        -1068.973        -1051.385
+averages from exponential 0.582        405.159        422.747
+averages from linear 0.531        -690.923        -673.335 
 
-
-results r-square aic bic
-FS log-log 0.959 -1380.616 -1370.54
-FS log-lin 0.383 1711.901 1721.977
-FS lin-log 0.636 15416.165 15426.241
-FS linear 0.834 14518.286 14528.362 
-
-averages from log-log 0.937 508.203 527.834
-averages from lin-log 0.504 26207.945 26227.576
-averages from log-lin 0.661 2180.192 2199.823
-averages from linear 0.858 24871.065 24890.696 
-
-
-results r-square aic bic
-FS log-log 0.624 -1713.934 -1703.858
-FS log-lin 0.205 -859.363 -849.288
-FS lin-log 0.598 -1992.946 -1982.87
-FS linear 0.154 -1145.632 -1135.556 
-
-averages from log-log 0.73 235.995 255.626
-averages from lin-log 0.741 -1748.134 -1728.503
-averages from log-lin 0.576 686.214 705.845
-averages from linear 0.53 -1152.516 -1132.885 
-
-
-results r-square aic bic
-FS log-log 0.959 -1411.016 -1400.94
-FS log-lin 0.386 1672.029 1682.104
-FS lin-log 0.645 15362.671 15372.746
-FS linear 0.828 14540.844 14550.92 
-
-averages from log-log 0.596 1156.438 1176.069
-averages from lin-log 0.253 15387.313 15406.944
-averages from log-lin 0.432 1497.321 1516.952
-averages from linear 0.164 15499.721 15519.352 
+Richness :   R-squared   :   AIC  :   BIC
+averages from power-law 0.602        690.997        708.585
+averages from semilog 0.254        9232.117        9249.705
+averages from exponential 0.442        893.132        910.72
+averages from linear 0.163        9301.414        9319.002 
 

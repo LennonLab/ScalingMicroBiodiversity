@@ -58,109 +58,36 @@ def modelcomparison():
         datasets.append([name, 'macro', num_lines])
         print>>OUT, name, num_lines
 
-    FS_rarity = []
-    FS_dom = []
-    FS_ev = []
-    FS_S = []
-    FS_Nlist = []
-
-    IN = mydir+'/output/partitions.txt'
-    num_lines = sum(1 for line in open(IN))
-
-    for line in open(IN):
-        rad = eval(line)
-
-        skew = stats.skew(rad)
-        # log-modulo transformation of skewnness
-        lms = np.log10(np.abs(skew) + 1)
-        if skew < 0: lms = lms * -1
-        FS_rarity.append(lms)
-
-        FS_S.append(np.log10(len(rad)))
-        FS_Nlist.append(np.log10(sum(rad)))
-        FS_dom.append(np.log10(max(rad)))
-        ESimp = mets.e_simpson(rad)
-        FS_ev.append(np.log10(ESimp))
+    rarity = []
+    dominance = []
+    evenness = []
+    richness = []
+    Nlist = []
 
     metrics = ['Rarity', 'Dominance', 'Evenness', 'Richness']
-
     for index, i in enumerate(metrics):
 
-        #metric = i
-        #fs = 10 # font size used across figures
+        print i, ':   R-squared   :   AIC  :   BIC'
+        print>>OUT, i, ':   R-squared   :   AIC  :   BIC'
 
         loglogR2s, linlogR2s, linearR2s, loglinR2s = [[],[],[],[]]
         loglogAICs, linlogAICs, linearAICs, loglinAICs = [[],[],[],[]]
         loglogBICs, linlogBICs, linearBICs, loglinBICs = [[],[],[],[]]
 
-        metlist = []
-        if index == 0: metlist = list(FS_rarity)
-        elif index == 1: metlist = list(FS_dom)
-        elif index == 2: metlist = list(FS_ev)
-        elif index == 3: metlist = list(FS_S)
-
-        # Multiple regression
-        d = pd.DataFrame({'N': list(FS_Nlist)})
-        d['y'] = list(metlist)
-        loglog = smf.ols('y ~ N', d).fit()
-
-        print>>OUT,'\n', 'results', 'r-square', 'aic', 'bic'
-
-        print 'FS log-log:', round(loglog.rsquared,3), round(loglog.aic,3), round(loglog.bic, 3)
-        print>>OUT,'FS log-log', round(loglog.rsquared,3), round(loglog.aic,3), round(loglog.bic, 3)
-
-        # Multiple regression
-        xlist = 10**np.array(FS_Nlist)
-        d = pd.DataFrame({'N': list(xlist)})
-        d['y'] = list(metlist)
-        loglin = smf.ols('y ~ N', d).fit()
-
-        print 'FS log-lin:', round(loglin.rsquared,3), round(loglin.aic,3), round(loglin.bic,3)
-        print>>OUT, 'FS log-lin', round(loglin.rsquared,3), round(loglin.aic,3), round(loglin.bic,3)
-
-        # Multiple regression
-        ylist = 10**np.array(metlist)
-        d = pd.DataFrame({'N': list(FS_Nlist)})
-        d['y'] = list(ylist)
-        linlog = smf.ols('y ~ N', d).fit()
-
-        print 'FS lin-log:', round(linlog.rsquared, 3), round(linlog.aic,3), round(linlog.bic,3)
-        print>>OUT,'FS lin-log', round(linlog.rsquared, 3), round(linlog.aic,3), round(linlog.bic,3)
-
-        # Multiple regression
-        ylist = 10**np.array(metlist)
-        xlist = 10**np.array(FS_Nlist)
-        d = pd.DataFrame({'N': list(xlist)})
-        d['y'] = list(ylist)
-        linear = smf.ols('y ~ N', d).fit()
-
-        print 'FS linear:',  round(linear.rsquared,3), round(linear.aic,3), round(linear.bic,3),'\n'
-        print>>OUT, 'FS linear',  round(linear.rsquared,3), round(linear.aic,3), round(linear.bic,3),'\n'
-
-        Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
-
-        if index == 0: metlist = list(rareSkews)
-        elif index == 1: metlist = list(NmaxList)
-        elif index == 2: metlist = list(ESimplist)
-        elif index == 3: metlist = list(Slist)
-
-        its = 1000
+        its = 10
         for n in range(its):
 
             Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
 
-            numMac = 0
-            numMic = 0
             radDATA = []
-
             for dataset in datasets:
 
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
 
                 #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -245,12 +172,9 @@ def modelcomparison():
 
 
         st, data, ss2 = summary_table(linear, alpha=0.05)
-        # ss2: Obs, Dep Var Population, Predicted Value, Std Error Mean Predict,
-        # Mean ci 95% low, Mean ci 95% upp, Predict ci 95% low, Predict ci 95% upp,
-        # Residual, Std Error Residual, Student Residual, Cook's D
 
-        fittedvalues = data[:,2]
-        predict_mean_se = data[:,3]
+        #fittedvalues = data[:,2]
+        #predict_mean_se = data[:,3]
         predict_mean_ci_low, predict_mean_ci_upp = data[:,4:6].T
         predict_ci_low, predict_ci_upp = data[:,6:8].T
 
@@ -271,17 +195,17 @@ def modelcomparison():
         avgloglinBIC = round(np.mean(loglinBICs),3)
 
 
-        print 'averages from log-log', avgloglogR2, avgloglogAIC, avgloglogBIC
-        print>>OUT, 'averages from log-log', avgloglogR2, avgloglogAIC, avgloglogBIC
+        print 'power-law:   ', avgloglogR2,'      ', avgloglogAIC,'      ', avgloglogBIC
+        print>>OUT, 'averages from power-law', avgloglogR2,'      ',avgloglogAIC,'      ', avgloglogBIC
 
-        print 'averages from lin-log', avglinlogR2, avglinlogAIC, avglinlogBIC
-        print>>OUT,'averages from lin-log', avglinlogR2, avglinlogAIC, avglinlogBIC
+        print 'semilog:     ', avglinlogR2,'      ', avglinlogAIC,'      ', avglinlogBIC
+        print>>OUT,'averages from semilog', avglinlogR2,'      ', avglinlogAIC,'      ', avglinlogBIC
 
-        print 'averages from log-lin', avgloglinR2, avgloglinAIC, avgloglinBIC
-        print>>OUT,'averages from log-lin', avgloglinR2, avgloglinAIC, avgloglinBIC
+        print 'exponential: ', avgloglinR2,'      ', avgloglinAIC,'      ', avgloglinBIC
+        print>>OUT,'averages from exponential', avgloglinR2,'      ', avgloglinAIC,'      ', avgloglinBIC
 
-        print 'averages from linear',  avglinearR2, avglinearAIC, avglinearBIC,'\n'
-        print>>OUT,'averages from linear',  avglinearR2, avglinearAIC, avglinearBIC,'\n'
+        print 'linear:      ',  avglinearR2,'      ', avglinearAIC,'      ', avglinearBIC,'\n'
+        print>>OUT,'averages from linear',  avglinearR2,'      ', avglinearAIC,'      ', avglinearBIC,'\n'
 
     OUT.close()
     return

@@ -28,7 +28,7 @@ mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 def Fig1():
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
@@ -84,9 +84,9 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
 
                 #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -249,10 +249,10 @@ def Fig1():
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
-    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenRef.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
     plt.close()
 
     return
