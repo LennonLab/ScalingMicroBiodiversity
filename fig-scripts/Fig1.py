@@ -256,11 +256,11 @@ def Fig1():
 
         elif index == 2:
             plt.ylim(-3.0, 0.0)
-            plt.xlim(1, 7)
+            plt.xlim(0, 7)
 
-            plt.text(1.35, -2.8, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, -2.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.35, -2.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(0.35, -2.8, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, -2.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, -2.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 3:
             plt.ylim(0.9, 4.5)

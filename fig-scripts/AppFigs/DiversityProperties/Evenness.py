@@ -28,14 +28,14 @@ mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 def Evenness():
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -45,8 +45,8 @@ def Evenness():
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -84,12 +84,12 @@ def Evenness():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
 
-                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -252,10 +252,10 @@ def Evenness():
         plt.tick_params(axis='both', which='major', labelsize=fs-1)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenReference.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenRef_NoMicrobe1.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenRef.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
 
     plt.close()
 

@@ -34,13 +34,17 @@ def Fig1():
 
     datasets = []
     GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    #BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPopen', 'BOVINE', 'FECES', 'MGRASTopen', 'MGRAST', 'NABC', 'FUNGI']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #if name in BadNames: continue
+        #else: pass
+
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -50,8 +54,11 @@ def Fig1():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #if name in BadNames: continue
+        #else: pass
+
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -77,7 +84,10 @@ def Fig1():
 
                 name, kind, numlines = dataset
                 lines = []
-                lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
+                if numlines > 1000:
+                    lines = np.random.choice(range(1, numlines+1), 1000, replace=False)
+                else:
+                    lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
 
                 #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -89,7 +99,7 @@ def Fig1():
                 for data in radDATA:
 
                     data = data.split()
-                    name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+                    name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
                     N = float(N)
                     S = float(S)
@@ -119,6 +129,9 @@ def Fig1():
                 d['y'] = list(metlist)
                 f = smf.ols('y ~ N', d).fit()
 
+                if f.params[0] > 1.0:
+                    print name
+
                 IntList.append(f.params[0])
                 CoefList.append(f.params[1])
                 R2List.append(f.rsquared)
@@ -139,10 +152,10 @@ def Fig1():
 
             if i == 0 or i == 2:
                 Ylist = list(IntList)
-                ylabel = 'OLS intercept'
+                ylabel = 'Intercept'
             else:
                 Ylist = list(CoefList)
-                ylabel = 'OLS coefficient'
+                ylabel = 'Scaling exponent'
 
             # correlation
             r, r_pval = stats.pearsonr(Xlist, Ylist)
@@ -168,28 +181,37 @@ def Fig1():
             plt.scatter(macxlist, macylist, color = 'LightCoral', alpha= 1,
                         s = 20, linewidths=0.9, edgecolor='Crimson')
 
-            #elif i == 1 or i == 3: plt.ylim(min(Ylist), max(Ylist))
-            #elif i == 0 or i == 2: plt.ylim(min(Ylist), max(Ylist))
 
             txt = r'$r$'+' = '+str(round(r,2))+', '+'$p$'+' = '+str(round(r_pval,3))
-            txt = txt +'\n'+r'$rho$'+' = '+str(round(rho,2))+', '+'$p$'+' = '+str(round(rho_pval,3))
+            #txt = txt +'\n'+r'$rho$'+' = '+str(round(rho,2))+', '+'$p$'+' = '+str(round(rho_pval,3))
 
-            plt.scatter([0],[min(Ylist)], alpha = 0, s=0, label=txt)
-            leg = plt.legend(loc=1, prop={'size':fs-1}, numpoints=1)
-            leg.draw_frame(False)
+            plt.scatter(np.mean(Xlist),np.mean(Ylist), alpha = 0, s=0, label=txt)
 
-            plt.xlim(min(Xlist), max(Xlist)*1.5)
+            plt.legend(bbox_to_anchor=(-0.01, 1.01, 1.02, .2), loc=10, ncol=1,
+                                mode="expand",prop={'size':fs}, numpoints=1)
+
+            titletext = "The relationship of "+metric+" to sample abundance should not be\n"
+            titletext += "influenced by sample abundance. Blue dots are microbial datasets.\n"
+            titletext += "Red dots are datasets of trees, birds, and mammals."
+
+            if i == 0:
+                fig.suptitle(titletext, y=1.07)
+
+            #plt.ylim(0.95*min(Ylist), 1.05*max(Ylist))
+            #plt.xlim(0.95*min(Xlist), 1.05*max(Xlist))
             plt.xlabel(xlabel, fontsize=fs)
             plt.ylabel(ylabel, fontsize=fs)
             plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
         print metric
-        plt.subplots_adjust(wspace=0.4, hspace=0.4)
-        #plt.savefig(mydir+'/figs/appendix/'+metric+'.png', dpi=600, bbox_inches = "tight")
-        #sys.exit()
-        plt.show()
+        plt.subplots_adjust(wspace=0.4, hspace=0.5)
+        #plt.savefig(mydir+'/figs/appendix/OLSmodel_Checks_PerDataset/'+metric+'_OpenRef.png', dpi=600, bbox_inches = "tight")
+        #plt.savefig(mydir+'/figs/appendix/OLSmodel_Checks_PerDataset/'+metric+'_OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/appendix/OLSmodel_Checks_PerDataset/'+metric+'_ClosedRef.png', dpi=600, bbox_inches = "tight")
+        #plt.savefig(mydir+'/figs/appendix/OLSmodel_Checks_PerDataset/'+metric+'_ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+        #plt.show()
 
-    plt.close()
+    #plt.close()
 
     return
 
