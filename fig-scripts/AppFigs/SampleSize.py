@@ -57,32 +57,49 @@ def Fig1():
     #color = str()
     #OrC = 'open'
 
-    SampSizes = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70 ,75, 80]
+    SampSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
     Iterations = 1000
 
     fig = plt.figure(figsize=(12, 8))
 
     # MODEL PARAMETERS
-    RareNCoeffList = [] # List to hold N coefficients
-    RareNCoeffpValList = [] # List to hold N coefficient p-values
-    DomNCoeffList = [] # List to hold N coefficients
-    DomNCoeffpValList = [] # List to hold N coefficient p-values
-    EvenNCoeffList = [] # List to hold N coefficients
-    EvenNCoeffpValList = [] # List to hold N coefficient p-values
+    Rare_MacIntercept_pVals = [] # List to hold coefficient p-values
+    Rare_MacIntercept_Coeffs = [] # List to hold coefficients
 
-    RareMicCoeffList = [] # List to hold dummy variable cofficients
-    RareMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
-    DomMicCoeffList = [] # List to hold dummy variable cofficients
-    DomMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
-    EvenMicCoeffList = [] # List to hold dummy variable cofficients
-    EvenMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
+    Dom_MacIntercept_pVals = []
+    Dom_MacIntercept_Coeffs = []
 
-    RareIntCoeffList = [] # List to hold Interaction Coefficients
-    RareIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
-    DomIntCoeffList = [] # List to hold Interaction Coefficients
-    DomIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
-    EvenIntCoeffList = [] # List to hold Interaction Coefficients
-    EvenIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
+    Even_MacIntercept_pVals = []
+    Even_MacIntercept_Coeffs = []
+
+    Rare_MicIntercept_pVals = []
+    Rare_MicIntercept_Coeffs = []
+
+    Dom_MicIntercept_pVals = []
+    Dom_MicIntercept_Coeffs = []
+
+    Even_MicIntercept_pVals = []
+    Even_MicIntercept_Coeffs = []
+
+
+    Rare_MacSlope_pVals = []
+    Rare_MacSlope_Coeffs = []
+
+    Dom_MacSlope_pVals = []
+    Dom_MacSlope_Coeffs = []
+
+    Even_MacSlope_pVals = []
+    Even_MacSlope_Coeffs = []
+
+    Rare_MicSlope_pVals = []
+    Rare_MicSlope_Coeffs = []
+
+    Dom_MicSlope_pVals = []
+    Dom_MicSlope_Coeffs = []
+
+    Even_MicSlope_pVals = []
+    Even_MicSlope_Coeffs = []
+
 
     RareR2List = [] # List to hold model R2
     RarepFList = [] # List to hold significance of model R2
@@ -144,26 +161,43 @@ def Fig1():
 
     for SampSize in SampSizes:
 
-        sRareNCoeffList = [] # List to hold N coefficients
-        sRareNCoeffpValList = [] # List to hold N coefficient p-values
-        sDomNCoeffList = [] # List to hold N coefficients
-        sDomNCoeffpValList = [] # List to hold N coefficient p-values
-        sEvenNCoeffList = [] # List to hold N coefficients
-        sEvenNCoeffpValList = [] # List to hold N coefficient p-values
+        sRare_MacIntercept_pVals = [] # List to hold coefficient p-values
+        sRare_MacIntercept_Coeffs = [] # List to hold coefficients
 
-        sRareMicCoeffList = [] # List to hold dummy variable cofficients
-        sRareMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
-        sDomMicCoeffList = [] # List to hold dummy variable cofficients
-        sDomMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
-        sEvenMicCoeffList = [] # List to hold dummy variable cofficients
-        sEvenMicCoeffpValList = [] # List to hold dummy variable cofficient p-values
+        sDom_MacIntercept_pVals = []
+        sDom_MacIntercept_Coeffs = []
 
-        sRareIntCoeffList = [] # List to hold Interaction Coefficients
-        sRareIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
-        sDomIntCoeffList = [] # List to hold Interaction Coefficients
-        sDomIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
-        sEvenIntCoeffList = [] # List to hold Interaction Coefficients
-        sEvenIntCoeffpValList = [] # List to hold Interaction Coefficient p-values
+        sEven_MacIntercept_pVals = []
+        sEven_MacIntercept_Coeffs = []
+
+        sRare_MicIntercept_pVals = []
+        sRare_MicIntercept_Coeffs = []
+
+        sDom_MicIntercept_pVals = []
+        sDom_MicIntercept_Coeffs = []
+
+        sEven_MicIntercept_pVals = []
+        sEven_MicIntercept_Coeffs = []
+
+
+        sRare_MacSlope_pVals = []
+        sRare_MacSlope_Coeffs = []
+
+        sDom_MacSlope_pVals = []
+        sDom_MacSlope_Coeffs = []
+
+        sEven_MacSlope_pVals = []
+        sEven_MacSlope_Coeffs = []
+
+        sRare_MicSlope_pVals = []
+        sRare_MicSlope_Coeffs = []
+
+        sDom_MicSlope_pVals = []
+        sDom_MicSlope_Coeffs = []
+
+        sEven_MicSlope_pVals = []
+        sEven_MicSlope_Coeffs = []
+
 
         sRareR2List = [] # List to hold model R2
         sRarepFList = [] # List to hold significance of model R2
@@ -226,7 +260,7 @@ def Fig1():
 
             Nlist, Slist, Evarlist, ESimplist, ENeelist, EHeiplist, EQlist = [[], [], [], [], [], [], []]
             klist, Shanlist, BPlist, SimpDomlist, SinglesList, tenlist, onelist = [[], [], [], [], [], [], []]
-            NmaxList, rareOnesList, rareRelList, rarePairList, rareSkews, KindList = [[], [], [], [], [], []]
+            NmaxList, rareSkews, KindList = [[], [], []]
             NSlist = []
 
             ct = 0
@@ -237,11 +271,11 @@ def Fig1():
             mlist = ['micro', 'macro']
             for m in mlist:
                 for name in os.listdir(mydir +'data/'+m):
-                        if name in GoodNames: pass
-                        else: continue
-                        path = mydir+'data/'+m+'/'+name+'/'+name+'-SADMetricData.txt'
-                        num_lines = sum(1 for line in open(path))
-                        datasets.append([name, m, num_lines])
+                    if name in GoodNames: pass
+                    else: continue
+                    path = mydir+'data/'+m+'/'+name+'/'+name+'-SADMetricData.txt'
+                    num_lines = sum(1 for line in open(path))
+                    datasets.append([name, m, num_lines])
 
             numMac = 0
             numMic = 0
@@ -252,9 +286,7 @@ def Fig1():
 
                 name, kind, numlines = d
                 lines = []
-
-                if numlines > SampSize: lines = random.sample(range(1, numlines+1), SampSize)
-                else: lines = random.sample(range(1, numlines+1), 40)
+                lines = np.random.choice(range(1, numlines+1), SampSize, replace=True)
 
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
@@ -271,7 +303,8 @@ def Fig1():
                     print 'no data'
                     continue
 
-                name, kind, N, S, Evar, ESimp, ENee, EHeip, EQ, EPielou, BP, SimpDom, rareRel, rareOnes, skew = data
+                name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+
 
                 N = float(N)
                 S = float(S)
@@ -289,9 +322,6 @@ def Fig1():
                 BPlist.append(float(BP))
                 NmaxList.append(float(np.log(float(BP)*float(N))))
                 EHeiplist.append(float(EHeip))
-
-                rareOnesList.append(float(rareOnes))
-                rareRelList.append(float(rareOnes)/S)
 
                 # lines for the log-modulo transformation of skewnness
                 skew = float(skew)
@@ -325,7 +355,7 @@ def Fig1():
             d['Kind'] = list(KindList)
 
             DomResults = smf.ols('Dominance ~ N * Kind', d).fit() # Fit the dummy variable regression model
-            #print RarityResults.summary(), '\n'
+            #print DomResults.summary(), '\n'
 
             # Multiple regression for Evenness
             d = pd.DataFrame({'N': list(Nlist)})
@@ -361,31 +391,70 @@ def Fig1():
             Dompvals = DomResults.pvalues
             Dompvals = Dompvals.tolist()
 
+            #print Domparams
+            #sys.exit()
+
             Evenparams = EvenResults.params
             Evenparams = Evenparams.tolist()
             Evenpvals = EvenResults.pvalues
             Evenpvals = Evenpvals.tolist()
 
-            sRareMicCoeffList.append(Rareparams[1])
-            sRareMicCoeffpValList.append(Rarepvals[1])
-            sDomMicCoeffList.append(Domparams[1])
-            sDomMicCoeffpValList.append(Dompvals[1])
-            sEvenMicCoeffList.append(Evenparams[1])
-            sEvenMicCoeffpValList.append(Evenpvals[1])
+            sRare_MacIntercept_pVals.append(Rarepvals[0])
+            sRare_MacIntercept_Coeffs.append(Rareparams[0])
 
-            sRareNCoeffList.append(Rareparams[2])
-            sRareNCoeffpValList.append(Rarepvals[2])
-            sDomNCoeffList.append(Domparams[2])
-            sDomNCoeffpValList.append(Dompvals[2])
-            sEvenNCoeffList.append(Evenparams[2])
-            sEvenNCoeffpValList.append(Evenpvals[2])
+            sDom_MacIntercept_pVals.append(Dompvals[0])
+            sDom_MacIntercept_Coeffs.append(Domparams[0])
 
-            sRareIntCoeffList.append(Rareparams[3])
-            sRareIntCoeffpValList.append(Rarepvals[3])
-            sDomIntCoeffList.append(Domparams[3])
-            sDomIntCoeffpValList.append(Dompvals[3])
-            sEvenIntCoeffList.append(Evenparams[3])
-            sEvenIntCoeffpValList.append(Evenpvals[3])
+            sEven_MacIntercept_pVals.append(Evenpvals[0])
+            sEven_MacIntercept_Coeffs.append(Evenparams[0])
+
+            sRare_MicIntercept_pVals.append(Rarepvals[1])
+            if Rarepvals[1] > 0.05:
+                sRare_MicIntercept_Coeffs.append(Rareparams[1])
+            else:
+                sRare_MicIntercept_Coeffs.append(Rareparams[1])
+
+            sDom_MicIntercept_pVals.append(Dompvals[1])
+            if Dompvals[1] > 0.05:
+                sDom_MicIntercept_Coeffs.append(Domparams[1])
+            else:
+                sDom_MicIntercept_Coeffs.append(Domparams[1])
+
+
+            sEven_MicIntercept_pVals.append(Evenpvals[1])
+            if Evenpvals[1] > 0.05:
+                sEven_MicIntercept_Coeffs.append(Evenparams[1])
+            else:
+                sEven_MicIntercept_Coeffs.append(Evenparams[1])
+
+
+            sRare_MacSlope_pVals.append(Rarepvals[2])
+            sRare_MacSlope_Coeffs.append(Rareparams[2])
+
+            sDom_MacSlope_pVals.append(Dompvals[2])
+            sDom_MacSlope_Coeffs.append(Domparams[2])
+
+            sEven_MacSlope_pVals.append(Evenpvals[2])
+            sEven_MacSlope_Coeffs.append(Evenparams[2])
+
+
+            sRare_MicSlope_pVals.append(Rarepvals[3])
+            if Rarepvals[3] > 0.05:
+                sRare_MicSlope_Coeffs.append(Rareparams[3])
+            else:
+                sRare_MicSlope_Coeffs.append(Rareparams[3])
+
+            sDom_MicSlope_pVals.append(Dompvals[3])
+            if Dompvals[3] > 0.05:
+                sDom_MicSlope_Coeffs.append(Domparams[3])
+            else:
+                sDom_MicSlope_Coeffs.append(Domparams[3])
+
+            sEven_MicSlope_pVals.append(Evenpvals[3])
+            if Evenpvals[3] > 0.05:
+                sEven_MicSlope_Coeffs.append(Evenparams[3])
+            else:
+                sEven_MicSlope_Coeffs.append(Evenparams[3])
 
             sRareR2List.append(Rarer2)
             sRarepFList.append(RareFpval)
@@ -421,21 +490,21 @@ def Fig1():
             sEvenpLinListLM.append(LM[1])
 
             # INDEPENDENCE OF OBSERVATIONS (no serial correlation in residuals)
-            #BGtest = smd.acorr_breush_godfrey(RarityResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
+            BGtest = smd.acorr_breush_godfrey(RarityResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
                                 # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
-            BGtest = smd.acorr_ljungbox(RareResids, lags=None, boxpierce=True)
+            #BGtest = smd.acorr_ljungbox(RareResids, lags=None, boxpierce=True)
             sRarepCorrListBG.append(BGtest[1])
             sRarepCorrListF.append(BGtest[3])
 
-            #BGtest = smd.acorr_breush_godfrey(DomResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
+            BGtest = smd.acorr_breush_godfrey(DomResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
                                 # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
-            BGtest = smd.acorr_ljungbox(DomResids, lags=None, boxpierce=True)
+            #BGtest = smd.acorr_ljungbox(DomResids, lags=None, boxpierce=True)
             sDompCorrListBG.append(BGtest[1])
             sDompCorrListF.append(BGtest[3])
 
-            #BGtest = smd.acorr_breush_godfrey(EvenResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
+            BGtest = smd.acorr_breush_godfrey(EvenResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
                                 # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
-            BGtest = smd.acorr_ljungbox(EvenResids, lags=None, boxpierce=True)
+            #BGtest = smd.acorr_ljungbox(EvenResids, lags=None, boxpierce=True)
             sEvenpCorrListBG.append(BGtest[1])
             sEvenpCorrListF.append(BGtest[3])
 
@@ -496,26 +565,42 @@ def Fig1():
 
         NLIST.append(numMic+numMac)
 
-        RareNCoeffList.append(np.mean(sRareNCoeffList))
-        RareNCoeffpValList.append(np.mean(sRareNCoeffpValList))
-        DomNCoeffList.append(np.mean(sDomNCoeffList))
-        DomNCoeffpValList.append(np.mean(sDomNCoeffpValList))
-        EvenNCoeffList.append(np.mean(sEvenNCoeffList))
-        EvenNCoeffpValList.append(np.mean(sEvenNCoeffpValList))
+        Rare_MacIntercept_pVals.append(np.mean(sRare_MacIntercept_pVals)) # List to hold coefficient p-values
+        Rare_MacIntercept_Coeffs.append(np.mean(sRare_MacIntercept_Coeffs)) # List to hold coefficients
 
-        RareMicCoeffList.append(np.mean(sRareMicCoeffList))
-        RareMicCoeffpValList.append(np.mean(sRareMicCoeffpValList))
-        DomMicCoeffList.append(np.mean(sDomMicCoeffList))
-        DomMicCoeffpValList.append(np.mean(sDomMicCoeffpValList))
-        EvenMicCoeffList.append(np.mean(sEvenMicCoeffList))
-        EvenMicCoeffpValList.append(np.mean(sEvenMicCoeffpValList))
+        Dom_MacIntercept_pVals.append(np.mean(sDom_MacIntercept_pVals))
+        Dom_MacIntercept_Coeffs.append(np.mean(sDom_MacIntercept_Coeffs))
 
-        RareIntCoeffList.append(np.mean(sRareIntCoeffList))
-        RareIntCoeffpValList.append(np.mean(sRareIntCoeffpValList))
-        DomIntCoeffList.append(np.mean(sDomIntCoeffList))
-        DomIntCoeffpValList.append(np.mean(sDomIntCoeffpValList))
-        EvenIntCoeffList.append(np.mean(sEvenIntCoeffList))
-        EvenIntCoeffpValList.append(np.mean(sEvenIntCoeffpValList))
+        Even_MacIntercept_pVals.append(np.mean(sEven_MacIntercept_pVals))
+        Even_MacIntercept_Coeffs.append(np.mean(sEven_MacIntercept_Coeffs))
+
+        Rare_MicIntercept_pVals.append(np.mean(sRare_MicIntercept_pVals))
+        Rare_MicIntercept_Coeffs.append(np.mean(sRare_MicIntercept_Coeffs))
+
+        Dom_MicIntercept_pVals.append(np.mean(sDom_MicIntercept_pVals))
+        Dom_MicIntercept_Coeffs.append(np.mean(sDom_MicIntercept_Coeffs))
+
+        Even_MicIntercept_pVals.append(np.mean(sEven_MicIntercept_pVals))
+        Even_MicIntercept_Coeffs.append(np.mean(sEven_MicIntercept_Coeffs))
+
+        Rare_MacSlope_pVals.append(np.mean(sRare_MacSlope_pVals)) # List to hold coefficient p-values
+        Rare_MacSlope_Coeffs.append(np.mean(sRare_MacSlope_Coeffs)) # List to hold coefficients
+
+        Dom_MacSlope_pVals.append(np.mean(sDom_MacSlope_pVals))
+        Dom_MacSlope_Coeffs.append(np.mean(sDom_MacSlope_Coeffs))
+
+        Even_MacSlope_pVals.append(np.mean(sEven_MacSlope_pVals))
+        Even_MacSlope_Coeffs.append(np.mean(sEven_MacSlope_Coeffs))
+
+        Rare_MicSlope_pVals.append(np.mean(sRare_MicSlope_pVals))
+        Rare_MicSlope_Coeffs.append(np.mean(sRare_MicSlope_Coeffs))
+
+        Dom_MicSlope_pVals.append(np.mean(sDom_MicSlope_pVals))
+        Dom_MicSlope_Coeffs.append(np.mean(sDom_MicSlope_Coeffs))
+
+        Even_MicSlope_pVals.append(np.mean(sEven_MicSlope_pVals))
+        Even_MicSlope_Coeffs.append(np.mean(sEven_MicSlope_Coeffs))
+
 
         RareR2List.append(np.mean(sRareR2List))
         RarepFList.append(np.mean(sRarepFList))
@@ -579,7 +664,7 @@ def Fig1():
     plt.ylim(0,1)
     plt.xscale('log')
     # Rarity    R2 vs. Sample Size
-    plt.plot(NLIST,RareR2List,  c='0.2', ls='--', label=r'$R^2$')
+    plt.plot(NLIST,RareR2List,  c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
     plt.text(18, 0.5, 'Rarity', rotation='vertical', fontsize=20)
 
@@ -591,12 +676,12 @@ def Fig1():
     plt.xlim(60,1100)
     plt.xscale('log')
     # Rarity    Coeffs vs. Sample Size
-    plt.plot(NLIST,RareMicCoeffList, c='r', label='Microbe')
-    plt.plot(NLIST,RareNCoeffList,  c='b', label='N')
-    plt.plot(NLIST,RareIntCoeffList, c='g', label='Interaction')
+    plt.plot(NLIST, Rare_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
+    plt.plot(NLIST, Rare_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
+    #plt.plot(NLIST, RareIntCoeffList, c='g', label='Interaction')
     plt.ylabel('Coefficient')
 
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':10})
     leg.draw_frame(False)
 
 
@@ -637,7 +722,7 @@ def Fig1():
     plt.ylim(0,1)
     plt.xlim(60,1100)
     # Dominance     R2 vs. Sample Size
-    plt.plot(NLIST, DomR2List, c='0.2', ls='--', label=r'$R^2$')
+    plt.plot(NLIST, DomR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
     plt.text(18, 0.7, 'Dominance', rotation='vertical', fontsize=20)
 
@@ -648,12 +733,12 @@ def Fig1():
     plt.xscale('log')
     plt.xlim(60,1100)
     # Dominance     Coeffs vs. Sample Size
-    plt.plot(NLIST, DomMicCoeffList, c='r', label='Microbe')
-    plt.plot(NLIST, DomNCoeffList,  c='b', label='N')
-    plt.plot(NLIST, DomIntCoeffList, c='g', label='Interaction')
+    plt.plot(NLIST, Dom_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
+    plt.plot(NLIST, Dom_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
+    #plt.plot(NLIST, DomIntCoeffList, c='g', label='Interaction')
     plt.ylabel('Coefficient')
 
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':10})
     leg.draw_frame(False)
 
     fig.add_subplot(3, 3, 6)
@@ -696,7 +781,7 @@ def Fig1():
     plt.ylim(0,1)
     plt.xlim(60,1100)
     # Evenness      R2 vs. Sample Size
-    plt.plot(NLIST, EvenR2List, c='0.2', ls='--', label=r'$R^2$')
+    plt.plot(NLIST, EvenR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.xlabel('Sample size')
     plt.ylabel(r'$R^2$', fontsize=14)
     plt.text(18, 0.7, 'Evenness', rotation='vertical', fontsize=20)
@@ -708,13 +793,13 @@ def Fig1():
     plt.xscale('log')
     plt.xlim(60,1100)
     # Evenness      Coeffs vs. Sample Size
-    plt.plot(NLIST, EvenMicCoeffList, c='r', label='Microbe')
-    plt.plot(NLIST, EvenNCoeffList,  c='b', label='N')
-    plt.plot(NLIST, EvenIntCoeffList, c='g', label='Interaction')
+    plt.plot(NLIST, Even_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
+    plt.plot(NLIST, Even_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
+    #plt.plot(NLIST, EvenIntCoeffList, c='g', label='Interaction')
     plt.xlabel('Sample size')
-    plt.ylabel('Coefficients')
+    plt.ylabel('Coefficient')
 
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':10})
     leg.draw_frame(False)
 
     fig.add_subplot(3, 3, 9)
@@ -752,9 +837,9 @@ def Fig1():
 
     #plt.tick_params(axis='both', which='major', labelsize=fs-3)
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/ResamplingOverRegression-open_REF.png', dpi=600, bbox_inches = "tight")
-    plt.close()
-    plt.show()
+    plt.savefig(mydir+'figs/appendix/SampleSize/SampleSizeEffects.png', dpi=600, bbox_inches = "tight")
+    #plt.close()
+    #plt.show()
 
     return
 

@@ -22,7 +22,7 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 
 def Fig1():

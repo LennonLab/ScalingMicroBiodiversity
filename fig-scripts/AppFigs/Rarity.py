@@ -53,7 +53,7 @@ def Fig1():
         print name, num_lines
 
 
-    metrics = ['log-modulo skewness$', 'log-skew']
+    metrics = ['log-modulo skewness', 'log-skew']
 
     fig = plt.figure()
     for index, i in enumerate(metrics):
@@ -67,9 +67,9 @@ def Fig1():
         EvarList, EQList, OList = [[],[],[]]
         SkewList, LogSkewList = [[],[]]
 
-        its = 100
+        its = 1000
         for n in range(its):
-            print n, metric
+            #print n, metric
 
             Nlist, Slist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList = [[], [], [], [], [], [], [], [], []]
             EvarList, EQList, OList = [[],[],[]]
@@ -84,9 +84,9 @@ def Fig1():
                 name, kind, numlines = dataset
                 lines = []
                 if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 166, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
 
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -100,11 +100,12 @@ def Fig1():
                 data = data.split()
                 name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
+
                 KindList.append(kind)
                 N = float(N)
                 S = float(S)
 
-                if S < 2 or N < 10: continue # Min species richness
+                if S < 10 or N < 10: continue # Min species richness
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
@@ -167,14 +168,11 @@ def Fig1():
         macCiH, macCiL, micCiH, micCiL = [[],[],[],[]]
 
         lm = smf.ols('y ~ N * Kind', d).fit()
-        print metric, '\n', lm.summary()
-        f1 = smf.ols('y ~ N', d).fit()
-        print metric, '\n', f1.summary()
+        #print metric, '\n', lm.summary()
+        #f1 = smf.ols('y ~ N', d).fit()
+        #print metric, '\n', f1.summary()
 
         st, data, ss2 = summary_table(lm, alpha=0.05)
-        # ss2: Obs, Dep Var Population, Predicted Value, Std Error Mean Predict,
-        # Mean ci 95% low, Mean ci 95% upp, Predict ci 95% low, Predict ci 95% upp,
-        # Residual, Std Error Residual, Student Residual, Cook's D
 
         fittedvalues = data[:,2]
         predict_mean_se = data[:,3]
@@ -214,19 +212,19 @@ def Fig1():
         r2 = round(np.mean(R2List), 2)
 
         if index == 0:
-            #plt.ylim(0, 6)
-            plt.xlim(1, 7)
-            #plt.text(1.5, 5.3, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            #plt.text(1.5, 4.7, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            #plt.text(1.5, 4.0,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
+            plt.ylim(0, 2.5)
+            plt.xlim(0, 7)
+            plt.text(0.3, 2.2, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs-1, color='Steelblue')
+            plt.text(0.3, 2.0, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs-1, color='Crimson')
+            plt.text(0.3, 1.8,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
 
         if index == 1:
-            #plt.ylim(0, 120)
-            plt.xlim(1, 7)
-            #plt.text(4.0, 110, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            #plt.text(4.0, 100, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            #plt.text(5.0, 90,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
+            plt.ylim(-1, 4.5)
+            plt.xlim(0, 7)
+            plt.text(0.3, 4.0, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs-1, color='Steelblue')
+            plt.text(0.3, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs-1, color='Crimson')
+            plt.text(0.3, 2.9,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
 
         plt.xlabel('Number of reads or individuals, '+ '$log$'+r'$_{10}$', fontsize=fs)
@@ -235,8 +233,8 @@ def Fig1():
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
-    plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-OpenReference.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/appendix/Rarity/SupplementaryRarityFig-ClosedReference.png', dpi=600, bbox_inches = "tight")
     plt.close()

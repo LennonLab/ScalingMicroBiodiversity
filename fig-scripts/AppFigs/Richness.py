@@ -58,32 +58,30 @@ def Fig1():
         fig.add_subplot(2, 2, index+1)
         fs = 10 # font size used across figures
 
-        MicIntList, MicCoefList, MacIntList, MacCoefList = [[], [], [], []]
-        Nlist, Slist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList = [[], [], [], [], [], [], [], [], []]
-        SimpDomList, McNList, LogSkewList, POnesList = [[],[],[],[]]
-        ChaoList, AceList, JKnifeList, PrestonList, MargList = [[],[],[],[],[]]
+        MicIntList, MicCoefList, MacIntList, MacCoefList, R2list = [[], [], [], [], []]
 
-        its = 100
+        its = 1000
         for n in range(its):
 
             Nlist, Slist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList = [[], [], [], [], [], [], [], [], []]
             SimpDomList, McNList, LogSkewList, POnesList = [[],[],[],[]]
             ChaoList, AceList, JKnifeList, PrestonList, MargList = [[],[],[],[],[]]
 
-            numMac = 0
-            numMic = 0
+            #numMac = 0
+            #numMic = 0
             radDATA = []
 
             for dataset in datasets:
 
                 name, kind, numlines = dataset
                 lines = []
+                if name == 'EMPclosed' or name == 'EMPopen':
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 166
+                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
+                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
 
-                if numlines > 40: lines = random.sample(range(1, numlines+1), 40)
-                else: lines = random.sample(range(1, numlines+1), 40)
-
-                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -92,8 +90,7 @@ def Fig1():
             for data in radDATA:
 
                 data = data.split()
-                #name, kind, N, S, Evar, Camargo, ESimp, EQ, O, Camargo, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, p_ones, p_zpt1, preston = data
-                name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
+                name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
                 KindList.append(kind)
                 N = float(N)
@@ -140,35 +137,35 @@ def Fig1():
 
             MacIntList.append(f.params[0])
             MacCoefList.append(f.params[2])
-            MicIntList.append(f.params[1] + f.params[0])
-            MicCoefList.append(f.params[3] + f.params[2])
 
             r2 = f.rsquared
-            pvals = f.pvalues
+            R2list.append(r2)
+
+            if f.pvalues[1] < 0.05:
+                MicIntList.append(f.params[1] + f.params[0])
+            else:
+                MicIntList.append(f.params[0])
+
+            if f.pvalues[3] < 0.05:
+                MicCoefList.append(f.params[3] + f.params[2])
+            else:
+                MicCoefList.append(f.params[2])
+
 
         MacPIx, MacFitted, MicPIx, MicFitted = [[],[],[],[]]
         macCiH, macCiL, micCiH, micCiL = [[],[],[],[]]
 
-        lm = smf.ols('y ~ N * Kind', d).fit()
-        print '\n\n\n', metric, lm.summary()
-        f1 = smf.ols('y ~ N', d).fit()
-        print metric, f1.summary()
+        d = pd.DataFrame({'N': list(Nlist)})
+        d['y'] = list(metlist)
+        d['Kind'] = list(KindList)
 
+        lm = smf.ols('y ~ N * Kind', d).fit()
         st, data, ss2 = summary_table(lm, alpha=0.05)
-        # ss2: Obs, Dep Var Population, Predicted Value, Std Error Mean Predict,
-        # Mean ci 95% low, Mean ci 95% upp, Predict ci 95% low, Predict ci 95% upp,
-        # Residual, Std Error Residual, Student Residual, Cook's D
 
         fittedvalues = data[:,2]
         predict_mean_se = data[:,3]
         predict_mean_ci_low, predict_mean_ci_upp = data[:,4:6].T
         predict_ci_low, predict_ci_upp = data[:,6:8].T
-
-        MacInt = lm.params[0]
-        MacCoef = lm.params[2]
-        MicInt = lm.params[1] + MacInt
-        MicCoef = lm.params[3] + MacCoef
-
 
         for j, kval in enumerate(KindList):
             if kval == 'macro':
@@ -200,43 +197,22 @@ def Fig1():
         MicCoef = round(np.mean(MicCoefList), 2)
         MacInt = round(np.mean(MacIntList), 2)
         MacCoef = round(np.mean(MacCoefList), 2)
+        R2 = round(np.mean(R2list), 2)
 
-        if index == 0:
-            #plt.ylim(-1.4, 0.1)
-            #plt.xlim(1, 7)
-            plt.text(.2, 4.1, r'$y_{micro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(.2, 4.22, r'$y_{macro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
-            plt.text(.2, 4.33,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
+        plt.xlim(0,8)
+        plt.ylim(0,5)
 
-
-        if index == 1:
-            #plt.ylim(0, 100)
-            #plt.xlim(1, 8)
-            plt.text(.2, 4.8, r'$y_{micro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(.2, 4.1, r'$y_{macro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
-            plt.text(.2, 4.4,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
-
-        if index == 2:
-            #plt.ylim(0, 1)
-            #plt.xlim(1, 7)
-            plt.text(.2, 4.3, r'$y_{micro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(.2, 4.5, r'$y_{macro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
-            plt.text(.2, 4.8,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
-
-        if index == 3:
-            #plt.ylim(-1.4, 0)
-            #plt.xlim(1, 7)
-            plt.text(.2, 4.0, r'$y_{micro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Steelblue')
-            plt.text(.2, 4.12, r'$y_{macro}$'+ ' = '+str(round(MacInt,2))+'+'+str(round(MacCoef,2))+'*'+r'$N$', fontsize=fs-1, color='Crimson')
-            plt.text(.2, 4.24,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
-
+        plt.text(.3, 4.1, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs-1, color='Steelblue')
+        plt.text(.3, 4.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs-1, color='Crimson')
+        plt.text(.3, 3.6,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
         plt.xlabel('Total abundance, ' + r'$log_{10}$', fontsize=fs-2)
         plt.ylabel(metric, fontsize=fs-2)
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    plt.savefig(mydir+'/figs/appendix/Richness/AppendixRichnessFig_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Richness/AppendixRichness.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Richness/AppendixRichness_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
     plt.close()
 
     return

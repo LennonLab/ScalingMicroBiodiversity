@@ -22,7 +22,7 @@ import pandas as pd
 from math import log10
 import linecache
 
-mydir = os.path.expanduser("~/GitHub/rare-bio/")
+mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 
 def Evenness():
@@ -34,8 +34,8 @@ def Evenness():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
@@ -45,8 +45,8 @@ def Evenness():
         if name in GoodNames: pass
         else: continue
 
-        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -88,8 +88,8 @@ def Evenness():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 167, replace=True)
                 else: lines = np.random.choice(range(1, numlines+1), 100, replace=True)
 
-                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -253,9 +253,9 @@ def Evenness():
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
     plt.close()
 
