@@ -25,17 +25,19 @@ import linecache
 mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 
-def Fig1():
+def Fig1(ref, Ones):
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    if ref == 'ClosedRef': GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    if ref == 'OpenRef': GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
-        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
+        if Ones == 'N': path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        elif Ones == 'Y': path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
 
@@ -43,8 +45,9 @@ def Fig1():
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt' # _NoMicrobe1s
-        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt' # _NoMicrobe1s
+        if Ones == 'N': path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        elif Ones == 'Y': path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
 
@@ -60,7 +63,7 @@ def Fig1():
 
         MicIntList, MicCoefList, MacIntList, MacCoefList, R2list = [[], [], [], [], []]
 
-        its = 1000
+        its = 100
         for n in range(its):
 
             Nlist, Slist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList = [[], [], [], [], [], [], [], [], []]
@@ -80,8 +83,8 @@ def Fig1():
                 elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
                 else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
 
-                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                if Ones == 'N':   path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                elif Ones == 'Y': path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -211,11 +214,17 @@ def Fig1():
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    #plt.savefig(mydir+'/figs/appendix/Richness/AppendixRichness.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Richness/AppendixRichness_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
-    plt.close()
+    if ref == 'OpenRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Richness/SupplementaryRarityFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'OpenRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Richness/SupplementaryRarityFig-OpenRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Richness/SupplementaryRarityFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Richness/SupplementaryRarityFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+
+    #plt.close()
 
     return
 
 
-Fig1()
+Fig1(ref='ClosedRef', Ones='Y')
+Fig1(ref='ClosedRef', Ones='N')
+Fig1(ref='OpenRef', Ones='Y')
+Fig1(ref='OpenRef', Ones='N')
