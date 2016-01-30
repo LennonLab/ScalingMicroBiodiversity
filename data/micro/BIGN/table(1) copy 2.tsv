@@ -1,0 +1,58 @@
+Category	Label	Value
+Project	project_name	Swiss WWTP metatranscriptomes
+Project	mgrast_id	mgp6015
+Project	project_funding	Eawag
+Project	firstname	David
+Project	PI_organization	Eawag
+Project	PI_firstname	David
+Project	PI_organization_url	http://www.eawag.ch/index_EN
+Project	lastname	Johnson
+Project	organization_url	http://www.eawag.ch/index_EN
+Project	email	david.johnson@eawag.ch
+Project	PI_organization_address	Department of Environmental Microbiology, Ueberlandstrasse 133, P.O. Box 611, Duebendorf, Switzerland CH-8600
+Project	PI_organization_country	Switzerland
+Project	organization_address	Department of Environmental Microbiology, Ueberlandstrasse 133, P.O. Box 611, Duebendorf, Switzerland CH-8600
+Project	organization_country	Switzerland
+Project	PI_lastname	Johnson
+Project	project_description	Metatranscriptome sequencing of enriched mRNAs from the aeration basins of Swiss wastewater treatment plants
+Project	PI_email	david.johnson@eawag.ch
+Project	organization	Eawag
+Sample	sample_name	WWTP_DOM4
+Sample	mgrast_id	mgs133248
+Sample	country	Switzerland
+Sample	longitude	8.60967
+Sample	location	Eawag, Duebendorf
+Sample	collection_date	2010-12-10
+Sample	feature	activated sludge
+Sample	env_package	wastewater|sludge
+Sample	collection_time	11:15:00
+Sample	latitude	47.40483
+Sample	continent	europe
+Sample	biome	activated sludge
+Sample	sample_name	WWTP_DOM4
+Sample	collection_timezone	UTC+1
+Sample	material	activated sludge
+Sample	samp_collect_device	Activated sludge from aeration basin
+Library: metagenome	library_name	WWTP_DOM4
+Library: metagenome	mgrast_id	mgl133250
+Library: metagenome	file_name	BSSE-DSU-2821_D0W7NACXX_ATGTCA_L004_R1_001.txt.fasta
+Library: metagenome	metagenome_name	WWTP_DOM4
+Library: metagenome	file_checksum	52a4ddec74500f06b424b55ea01d06cb
+Library: metagenome	sample_name	WWTP_DOM4
+Library: metagenome	metagenome_id	4491752.3
+Library: metagenome	seq_meth	illumina
+Library: metagenome	investigation_type	metagenome
+Enviromental Package: wastewater|sludge	mgrast_id	mge133249
+Enviromental Package: wastewater|sludge	samp_store_loc	F-floor freezer
+Enviromental Package: wastewater|sludge	sewage_type	municipal
+Enviromental Package: wastewater|sludge	tot_phosphate	0.1 mg/L
+Enviromental Package: wastewater|sludge	ph	8.1
+Enviromental Package: wastewater|sludge	biochem_oxygen_dem	10 mg/L
+Enviromental Package: wastewater|sludge	sludge_retent_time	2.6 d
+Enviromental Package: wastewater|sludge	chem_oxygen_dem	19 mg/L
+Enviromental Package: wastewater|sludge	samp_store_temp	-80
+Enviromental Package: wastewater|sludge	perturbation	none
+Enviromental Package: wastewater|sludge	env_package	wastewater|sludge
+Enviromental Package: wastewater|sludge	sample_name	WWTP_DOM4
+Enviromental Package: wastewater|sludge	suspend_solids	2.3 g/L
+Enviromental Package: wastewater|sludge	samp_store_dur	less than 3 months

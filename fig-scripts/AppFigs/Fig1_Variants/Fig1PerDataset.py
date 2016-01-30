@@ -35,7 +35,9 @@ def Fig1():
         analyses. """
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    #GoodNames = ['TARA', 'HUMAN', 'BOVINE', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'HMP', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA', 'EMPclosed', 'EMPopen']
+
+    GoodNames = ['HMP']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
@@ -91,7 +93,13 @@ def Fig1():
                 radDATA = []
                 name, kind, numlines = dataset
                 lines = []
-                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+
+                lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
+
+                #if numlines > 1000:
+                #    lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
+                #else:
+                #    lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
 
                 #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -100,15 +108,18 @@ def Fig1():
                     data = linecache.getline(path, line)
                     radDATA.append(data)
 
+                tN = 0
                 for data in radDATA:
 
                     data = data.split()
                     name, kind, N, S, Var, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = data
 
+
                     N = float(N)
+                    tN += N
                     S = float(S)
 
-                    if S < 2 or N < 10: continue
+                    #if S < 2 or N < 10: continue
 
                     Nlist.append(float(np.log10(N)))
                     Slist.append(float(np.log10(S)))
@@ -123,6 +134,11 @@ def Fig1():
                     lms = np.log10(np.abs(float(skew)) + 1)
                     if skew < 0: lms = lms * -1
                     rareSkews.append(float(lms))
+
+
+                print 'total number of reads in', name, ':',
+                print '%.3e' % tN
+                sys.exit()
 
                 if index == 0: metlist = list(rareSkews)
                 elif index == 1: metlist = list(NmaxList)
@@ -164,7 +180,7 @@ def Fig1():
             x = min(Nlist)
             y = 1.1*max(metlist)
 
-            plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= metric+' = '+str(round(Int,2))+'*'+r'$N$'+'$^{'+str(round(Coef,2))+'}$'+'\n'+r'$R^2$' + '=' +str(R2) +' (n='+str(len(PIx))+')')
+            plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= metric+' = '+str(round(10**Int, 2))+'*'+r'$N$'+'$^{'+str(round(Coef, 2))+'}$'+'\n'+r'$R^2$' + '=' +str(R2) +' (n='+str(len(PIx))+')')
 
             if index == 2:
                 leg = plt.legend(loc=3,prop={'size':fs-1})
@@ -177,7 +193,7 @@ def Fig1():
             plt.ylim(min(metlist), max(metlist)*1.1)
             plt.xlim(min(Nlist), max(Nlist))
 
-            plt.xlabel('Total abundance, ' + r'$log_{10}$', fontsize=fs)
+            plt.xlabel('Total abundance, ' + r'$log_{10}(N)$', fontsize=fs)
             plt.ylabel(metric, fontsize=fs)
             plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
@@ -187,11 +203,13 @@ def Fig1():
 
         fig.suptitle(dataset[0], fontsize=fs+2)
         #plt.subplots_adjust(wspace=0.4, hspace=0.4)
-        plt.savefig(mydir+'/figs/appendix/Fig1/PerDataset/Locey_Lennon_2015_'+name+'_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
-        #plt.show()
-        print name
 
+        #plt.savefig(mydir+'/figs/appendix/Fig1/PerDataset/Locey_Lennon_2015_'+name+'_NoMicrobeSingletons.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/appendix/Fig1/PerDataset/Locey_Lennon_2015_'+name+'.png', dpi=600, bbox_inches = "tight")
+
+        #plt.show()
         #plt.close()
+
     OUT.close()
     return
 

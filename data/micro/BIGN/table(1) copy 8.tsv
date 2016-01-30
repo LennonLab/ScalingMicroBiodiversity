@@ -1,0 +1,40 @@
+Category	Label	Value
+Project	project_name	Science Focus Area Nitrogen
+Project	mgrast_id	mgp13749
+Project	PI_organization_address	LANL, Bioscience Division M888, Los Alamos, NM 87545
+Project	PI_organization_country	USA
+Project	PI_lastname	Kuske
+Project	PI_organization	Los Alamos National Laboratory
+Project	PI_firstname	Cheryl
+Project	project_description	Long-term experimental nitrogen addition within an arid shrubland, maintained by Jayne Belnap
+Project	PI_email	kuske@lanl.gov
+Sample	sample_name	SFA_Bacteria_LM
+Sample	mgrast_id	mgs306008
+Sample	country	USA
+Sample	longitude	-115.1739
+Sample	location	Nevada
+Sample	collection_date	2013-10-01
+Sample	feature	desert
+Sample	collection_time	12:00:00
+Sample	env_package	soil
+Sample	latitude	36.1215
+Sample	sample_name	SFA_Bacteria_LM
+Sample	biome	terrestrial biome
+Sample	collection_timezone	UTC-7
+Sample	material	soil
+Library: mimarks-survey	library_name	SFA_Bacteria_LM
+Library: mimarks-survey	mgrast_id	mgl306010
+Library: mimarks-survey	metagenome_id	4635375.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	domain	bacteria
+Library: mimarks-survey	seq_center	LANL
+Library: mimarks-survey	seq_quality_check	manual editing
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	metagenome_name	SFA_Bacteria_LM
+Library: mimarks-survey	file_name	SFA_Bacteria_LM.fna
+Library: mimarks-survey	file_checksum	a7ac58958277ad2eb5bb72ed4c44cb6b
+Library: mimarks-survey	sample_name	SFA_Bacteria_LM
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: soil	mgrast_id	mge306009
+Enviromental Package: soil	env_package	soil
+Enviromental Package: soil	sample_name	SFA_Bacteria_LM

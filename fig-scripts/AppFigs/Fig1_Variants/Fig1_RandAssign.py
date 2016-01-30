@@ -32,31 +32,26 @@ import metrics as mets
 def Fig1():
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['EMPclosed', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
         else: continue
 
-        #if name in BadNames: continue
-        #else: pass
-
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'micro', num_lines])
         print name, num_lines
 
-    for name in os.listdir(mydir2 +'data/macro'):
+    for name in os.listdir(mydir +'data/macro'):
         if name in GoodNames: pass
         else: continue
 
-        #if name in BadNames: continue
-        #else: pass
-
-        path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        #path = mydir2+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
+        #path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+        path = mydir+'data/macro/'+name+'/'+name+'-SADMetricData.txt'
 
         num_lines = sum(1 for line in open(path))
         datasets.append([name, 'macro', num_lines])
@@ -79,7 +74,7 @@ def Fig1():
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 100
+        its = 10000
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -93,13 +88,25 @@ def Fig1():
 
                 name, kind, numlines = dataset
                 lines = []
-                if name == 'EMPclosed' or name == 'EMPopen':
-                    lines = np.random.choice(range(1, numlines+1), 100, replace=True) # 166
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True) #167
-                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True) # 100
+                small = ['BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED']
+                big = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
 
-                path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-                #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+                if kind == 'macro':
+                    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
+
+                elif name in small:
+                    lines = np.random.choice(range(1, numlines+1), 20, replace=True)
+
+                elif name in big:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+
+                elif name == 'TARA':
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+                else:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+
+                #path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
+                path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
 
                 for line in lines:
                     data = linecache.getline(path, line)
@@ -113,7 +120,7 @@ def Fig1():
                 N = float(N)
                 S = float(S)
 
-                if S < 10 or N < 11: continue
+                #if S < 10 or N < 11: continue
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
@@ -239,8 +246,8 @@ def Fig1():
         if index == 0:
             plt.ylim(-0.1, 2.0)
             plt.xlim(1, 7)
-            plt.text(1.35, 1.7, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 1.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 1.7, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 1.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 1.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= 'microbes (n='+str(len(MicListY))+')')
@@ -254,24 +261,24 @@ def Fig1():
             plt.ylim(0, 6)
             plt.xlim(1, 7)
 
-            plt.text(1.35, 5.1, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 4.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 5.1, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 4.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 3.75,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 2:
             plt.ylim(-3.0, 0.0)
             plt.xlim(0, 7)
 
-            plt.text(0.35, -2.8, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(0.35, -2.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, -2.8, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, -2.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(0.35, -2.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 3:
             plt.ylim(0.9, 4.5)
             plt.xlim(1, 7)
 
-            plt.text(1.35, 3.9, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 3.9, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 3.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.35, 3.0,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
 

@@ -1,0 +1,45 @@
+Category	Label	Value
+Project	project_name	ARMO_fungi_ITS1
+Project	mgrast_id	mgp6032
+Project	PI_firstname	Brendan
+Project	PI_organization_address	331 Pacific Hall, University of Oregon, Eugene OR 97403
+Project	PI_lastname	Bohannan
+Project	PI_email	bohannan@uoregon.edu
+Project	project_funding	USDA
+Project	PI_organization	University of Oregon
+Project	PI_organization_country	United States of America
+Project	project_description	Soil fungi sampled across a chronosequence of deforestation in the Amazon rainforest
+Sample	sample_name	ARMO_fungi_ITS1
+Sample	mgrast_id	mgs133398
+Sample	country	Brazil
+Sample	longitude	-62.78
+Sample	location	Rhondonia State
+Sample	collection_date	2010-03-25
+Sample	feature	Forest
+Sample	collection_time	12:00:00
+Sample	env_package	soil
+Sample	latitude	-10.17
+Sample	sample_name	ARMO_fungi_ITS1
+Sample	biome	Tropical
+Sample	collection_timezone	UTC-3
+Sample	material	soil
+Library: mimarks-survey	library_name	ARMO_fungi_ITS1
+Library: mimarks-survey	mgrast_id	mgl133400
+Library: mimarks-survey	metagenome_id	4536676.3
+Library: mimarks-survey	target_subfragment	ITS1
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	ITS rRNA
+Library: mimarks-survey	seq_center	University of Oregon
+Library: mimarks-survey	domain	eukarya
+Library: mimarks-survey	seq_make	HiSeq2000
+Library: mimarks-survey	file_name	ARMO_fungi_ITS1.fastq
+Library: mimarks-survey	metagenome_name	ARMO_fungi_ITS1
+Library: mimarks-survey	reverse_primers	ITS2
+Library: mimarks-survey	seq_direction	both
+Library: mimarks-survey	file_checksum	7468a35606ba104ef3768a8f528e2ebd
+Library: mimarks-survey	sample_name	ARMO_fungi_ITS1
+Library: mimarks-survey	forward_primers	ITS1F
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: soil	mgrast_id	mge133399
+Enviromental Package: soil	env_package	soil
+Enviromental Package: soil	sample_name	ARMO_fungi_ITS1

@@ -1,0 +1,85 @@
+Category	Label	Value
+Project	project_name	Ocean acidification mesocosm 2006
+Project	mgrast_id	mgp189
+Project	project_funding	NERC
+Project	firstname	Jack
+Project	PI_organization	Argonne National Laboratory
+Project	PI_firstname	Jack
+Project	PI_organization_url	www.anl.gov
+Project	lastname	Gilbert
+Project	organization_url	www.anl.gov
+Project	email	gilbertjack@gmail.com
+Project	PI_organization_address	9700 S Cass Avenue, Lemont IL, 60439
+Project	PI_organization_country	USA
+Project	organization_address	9700 S Cass Avenue, Lemont IL, 60439
+Project	organization_country	USA
+Project	PI_lastname	Gilbert
+Project	project_description	Water samples were obtained from a replicated mesocosm study
+(two treatments, each in triplicate) established in coastal waters of a
+fjord close to Bergen, Norway (60.27uN: 5.22uE). Each mesocosm
+contained 11,000 L of coastal water and two of the six mesocosms
+were sampled for this study. To induce the phytoplankton bloom,
+nitrate and phosphate were added. Water samples were taken at
+the peak and immediately following the collapse of the
+phytoplankton bloom from both a high CO2 and control
+mesocosm. Water samples were collected in May 2006. Metagenomic and Metatranscriptomics data has already been published. These data presented here are 16S rRNA V3-V4 Illumina amplicon data.
+Project	PI_email	gilbertjack@gmail.com
+Project	organization	Argonne National Laboratory
+Sample	sample_name	mgs29317
+Sample	mgrast_id	mgs29317
+Sample	Alloxanthin	unknown
+Sample	Di-vinyl_chl-a	unknown
+Sample	Lutein	0.08
+Sample	physical_samp_avail_now	y
+Sample	AFC_Bacteria	4574909.487
+Sample	BB_Carotene	0.13
+Sample	ANONYMIZED_NAME	unknown
+Sample	Fluorescence	3.95
+Sample	feature	Marine
+Sample	Prasinoxanthin	unknown
+Sample	TAXON_ID	408172
+Sample	extracted_dna_avail_now	y
+Sample	latitude	60.269444
+Sample	AFC_Coccolithopores	895
+Sample	temperature	11
+Sample	assigned_from_geo	n
+Sample	longitude	5.222222
+Sample	Chl-c2	0.16
+Sample	depth	unknown
+Sample	Hexfucoxanthin	0.28
+Sample	Peridinin	0.02
+Sample	TITLE	marine microbiome
+Sample	Di-vinyl_chl-b	unknown
+Sample	Diatoxanthin	0.03
+Sample	Violaxanthin	0.16
+Sample	DESCRIPTION	Mesocosm Bag 7
+Sample	AFC_Large_Picoeukaryotes	1293
+Sample	AFC_nanoflagellates	538
+Sample	elevation	unknown
+Sample	collection_date	5.10.06
+Sample	Chl-b	0.96
+Sample	Chl-c3	0.08
+Sample	biome	Marine Biome
+Sample	public	y
+Sample	AFC_Small_Picoeukaryotes	34246
+Sample	SampleID	B2 5.10.06
+Sample	Fucoxanthin	0.2
+Sample	altitude	unknown
+Sample	AFC_Synechoccus	4095
+Sample	country	Norway
+Sample	Neoxanthin	unknown
+Sample	chlorophyll_a	2.1
+Sample	Diadinoxanthin	0.16
+Sample	env_package	water
+Sample	AFC_Cryptophytes	49
+Sample	Butfucoxanthin	0.03
+Sample	Zeaxanthin	0.06
+Sample	material	Water
+Enviromental Package: water	mgrast_id	mge57643
+Enviromental Package: water	phosphate	0.99
+Enviromental Package: water	part_org_carb	unknown
+Enviromental Package: water	env_package	water
+Enviromental Package: water	nitrate	14.16
+Enviromental Package: water	salinity	31.3
+Enviromental Package: water	primary_prod	358.2
+Enviromental Package: water	part_org_nitro	65

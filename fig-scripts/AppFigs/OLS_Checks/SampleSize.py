@@ -51,14 +51,14 @@ def get_kdens(summands):
 
 
 
-def Fig1():
+def Fig_OLS_Checks():
 
     #fs = 10 # font size used across figures
     #color = str()
     #OrC = 'open'
 
-    SampSizes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    Iterations = 1000
+    SampSizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    Iterations = 100
 
     fig = plt.figure(figsize=(12, 8))
 
@@ -266,7 +266,8 @@ def Fig1():
             ct = 0
             radDATA = []
             datasets = []
-            GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+            GoodNames = ['EMPclosed', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
 
             mlist = ['micro', 'macro']
             for m in mlist:
@@ -308,8 +309,6 @@ def Fig1():
 
                 N = float(N)
                 S = float(S)
-
-                if S < 2: continue # Min species richness
 
                 Nlist.append(float(np.log(N)))
                 Slist.append(float(np.log(S)))
@@ -563,7 +562,7 @@ def Fig1():
 
             print 'Sample size:',SampSize, 'iteration:',iteration
 
-        NLIST.append(numMic+numMac)
+        NLIST.append(SampSize)
 
         Rare_MacIntercept_pVals.append(np.mean(sRare_MacIntercept_pVals)) # List to hold coefficient p-values
         Rare_MacIntercept_Coeffs.append(np.mean(sRare_MacIntercept_Coeffs)) # List to hold coefficients
@@ -660,21 +659,22 @@ def Fig1():
 
 
     fig.add_subplot(3, 3, 1)
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     plt.ylim(0,1)
     plt.xscale('log')
     # Rarity    R2 vs. Sample Size
     plt.plot(NLIST,RareR2List,  c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
-    plt.text(18, 0.5, 'Rarity', rotation='vertical', fontsize=20)
+    plt.text(0.7, 0.6, 'Rarity', rotation='vertical', fontsize=20)
 
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
 
     fig.add_subplot(3, 3, 2)
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     plt.xscale('log')
+    plt.ylim(0.0, 0.16)
     # Rarity    Coeffs vs. Sample Size
     plt.plot(NLIST, Rare_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
     plt.plot(NLIST, Rare_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
@@ -686,8 +686,8 @@ def Fig1():
 
 
     fig.add_subplot(3, 3, 3)
-    plt.xlim(60,1300)
-    plt.ylim(0, 0.6)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.ylim(0.0, 0.6)
     plt.xscale('log')
     # Rarity    p-vals vs. Sample Size
 
@@ -710,7 +710,7 @@ def Fig1():
     #plt.plot(NLIST,RarepNormListKS,  c='Lime', ls='--', lw=3)
     #plt.plot(NLIST,RarepNormListAD,  c='Lime', ls='--')
 
-    plt.plot([60, 1100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
     plt.ylabel('p-value')
 
     leg = plt.legend(loc=1,prop={'size':10})
@@ -720,18 +720,19 @@ def Fig1():
     fig.add_subplot(3, 3, 4)
     plt.xscale('log')
     plt.ylim(0,1)
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     # Dominance     R2 vs. Sample Size
     plt.plot(NLIST, DomR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
-    plt.text(18, 0.7, 'Dominance', rotation='vertical', fontsize=20)
+    plt.text(0.7, 0.82, 'Dominance', rotation='vertical', fontsize=20)
 
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
     fig.add_subplot(3, 3, 5)
+    plt.ylim(-0.2, 1.2)
     plt.xscale('log')
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     # Dominance     Coeffs vs. Sample Size
     plt.plot(NLIST, Dom_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
     plt.plot(NLIST, Dom_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
@@ -744,7 +745,7 @@ def Fig1():
     fig.add_subplot(3, 3, 6)
     plt.xscale('log')
     #plt.yscale('log')
-    plt.xlim(60,1300)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     plt.ylim(0, 0.6)
     # Dominance     p-vals vs. Sample Size
 
@@ -767,7 +768,7 @@ def Fig1():
     #plt.plot(NLIST, DompNormListKS, c='Lime', ls='--', lw=3)
     #plt.plot(NLIST, DompNormListAD, c='Lime', ls='--')
 
-    plt.plot([60, 1100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
 
     #plt.xlabel('Sample size')
     plt.ylabel('p-value')
@@ -777,21 +778,22 @@ def Fig1():
 
 
     fig.add_subplot(3, 3, 7)
+    plt.text(0.7, 0.7, 'Evenness', rotation='vertical', fontsize=20)
     plt.xscale('log')
     plt.ylim(0,1)
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     # Evenness      R2 vs. Sample Size
     plt.plot(NLIST, EvenR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.xlabel('Sample size')
     plt.ylabel(r'$R^2$', fontsize=14)
-    plt.text(18, 0.7, 'Evenness', rotation='vertical', fontsize=20)
 
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
     fig.add_subplot(3, 3, 8)
+    plt.ylim(-0.25, 0.0)
     plt.xscale('log')
-    plt.xlim(60,1100)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     # Evenness      Coeffs vs. Sample Size
     plt.plot(NLIST, Even_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
     plt.plot(NLIST, Even_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
@@ -804,8 +806,8 @@ def Fig1():
 
     fig.add_subplot(3, 3, 9)
     plt.xscale('log')
-    plt.xlim(60,1300)
-    plt.ylim(0, 0.6)
+    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.ylim(0.0, 0.3)
     # Evenness      p-vals vs. Sample Size
 
     # 3. The relationship is linear
@@ -827,7 +829,7 @@ def Fig1():
     #plt.plot(NLIST, EvenpNormListKS, c='Lime', alpha=0.9, ls='--', lw=3)
     #plt.plot(NLIST, EvenpNormListAD, c='Lime', alpha=0.9, ls='--')
 
-    plt.plot([60, 1100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
 
     plt.xlabel('Sample size')
     plt.ylabel('p-value')
@@ -845,7 +847,5 @@ def Fig1():
 
 
 
-""" The following lines call figure functions to reproduce figures from the
-    Locey and Lennon (2014) manuscript """
 
-Fig1()
+Fig_OLS_Checks()

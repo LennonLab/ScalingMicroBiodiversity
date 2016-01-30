@@ -1,0 +1,47 @@
+Category	Label	Value
+Project	project_name	Next-generation sequencing of 16S V3-V5 PCR amplicons of microbial samples derived from stool of volunteers on thirty day PPI treatment. 
+Project	mgrast_id	mgp10460
+Project	firstname	Charlie
+Project	PI_organization	Mayo Clinic
+Project	PI_firstname	Nicholas
+Project	lastname	Seto
+Project	email	Seto.Charlie@mayo.edu
+Project	PI_organization_address	200 First St SW
+Project	PI_organization_country	USA
+Project	PI_lastname	Chia
+Project	organization_address	200 First St SW
+Project	organization_country	USA
+Project	ncbi_id	PRJNA259188
+Project	PI_email	Chia.Nicholas@mayo.edu
+Project	organization	Mayo Clinic
+Sample	sample_name	Dc05a.M00738_926R_bc304_R2.fastq
+Sample	mgrast_id	mgs205730
+Sample	country	USA
+Sample	longitude	-111.956704
+Sample	location	Scottsdale, AZ
+Sample	collection_date	2004-11-17
+Sample	feature	midden
+Sample	collection_time	19:23:10
+Sample	env_package	human-gut
+Sample	latitude	33.659129
+Sample	sample_name	Dc05a.M00738_926R_bc304_R2.fastq
+Sample	biome	coral reef
+Sample	collection_timezone	UTC-7
+Sample	material	soil
+Library: mimarks-survey	library_name	Dc05a.M00738_926R_bc304_R2
+Library: mimarks-survey	mgrast_id	mgl205732
+Library: mimarks-survey	metagenome_id	4578067.3
+Library: mimarks-survey	seq_chem	SBS
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	seq_make	Illumina
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	file_name	PPI_Dc/Dc05a.M00738_926R_bc304_R2.fastq
+Library: mimarks-survey	metagenome_name	Dc05a.M00738_926R_bc304_R2
+Library: mimarks-survey	seq_direction	both
+Library: mimarks-survey	file_checksum	c931f75213838e82293eef7e52ea43b7
+Library: mimarks-survey	sample_name	Dc05a.M00738_926R_bc304_R2.fastq
+Library: mimarks-survey	seq_model	MiSeq
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: human-gut	mgrast_id	mge205731
+Enviromental Package: human-gut	env_package	human-gut
+Enviromental Package: human-gut	sample_name	Dc05a.M00738_926R_bc304_R2.fastq

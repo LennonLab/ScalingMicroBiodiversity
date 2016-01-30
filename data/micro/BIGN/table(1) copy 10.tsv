@@ -1,0 +1,49 @@
+Category	Label	Value
+Project	project_name	Bacterial biogeography of the human digestive tract
+Project	mgrast_id	mgp1982
+Project	firstname	Michael
+Project	PI_organization	University of Waterloo
+Project	PI_firstname	Josh
+Project	PI_organization_url	www.uwaterloo.ca
+Project	lastname	Lynch
+Project	organization_url	www.uwaterloo.ca
+Project	email	mdjlynch@uwaterloo.ca
+Project	PI_organization_address	200 University Ave. W. Waterloo, Canada, N2L 3G1
+Project	PI_organization_country	Canada
+Project	organization_address	200 University Ave. W., Waterloo, Canada, N2L 3G1
+Project	organization_country	Canada
+Project	PI_lastname	Neufeld
+Project	project_description	doi:10.1038/srep00170
+Project	PI_email	jneufeld@uwaterloo.ca
+Project	organization	University of Waterloo
+Sample	sample_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Sample	mgrast_id	mgs79513
+Sample	country	Canada
+Sample	longitude	-79.340686
+Sample	location	Toronto
+Sample	collection_date	2010-01-01
+Sample	feature	animal-associated habitat
+Sample	collection_time	00:00:00
+Sample	env_package	human-associated
+Sample	continent	north america
+Sample	latitude	43.716589
+Sample	biome	terrestrial biome
+Sample	sample_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Sample	collection_timezone	UTC-5
+Sample	material	organic material
+Library: mimarks-survey	library_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Library: mimarks-survey	mgrast_id	mgl79515
+Library: mimarks-survey	metagenome_id	4471953.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	file_name	h_microbiome.mgrast.3.fasta.AACAACC
+Library: mimarks-survey	metagenome_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Library: mimarks-survey	sample_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Library: mimarks-survey	file_checksum	a91702df0b408bc900c0391cb16a78ff
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: human-associated	mgrast_id	mge79514
+Enviromental Package: human-associated	body_site	Colon sigmoid
+Enviromental Package: human-associated	env_package	human-associated
+Enviromental Package: human-associated	sample_name	Bacterial biogeography of the human digestive tract - Subject 3 (M), Colon (sigmoid)
+Enviromental Package: human-associated	sex	M
+Enviromental Package: human-associated	host_subject_id	3

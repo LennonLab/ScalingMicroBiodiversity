@@ -25,14 +25,14 @@ import linecache
 mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 mydir2 = os.path.expanduser("~/")
 
-sys.path.append(mydir2 + "GitHub/DiversityTools/metrics")
-import metrics as mets
+#sys.path.append(mydir2 + "GitHub/DiversityTools/metrics")
+#import metrics as mets
 
 
 def Fig1():
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
@@ -274,8 +274,8 @@ def Fig1():
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
     #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-OpenReference.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/Fig1/RandomAssign/Locey_Lennon_2015_Pooled-ClosedReference.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
     #plt.close()

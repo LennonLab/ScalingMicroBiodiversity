@@ -28,8 +28,9 @@ mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 def Fig1(ref, Ones):
 
     datasets = []
-    if ref == 'ClosedRef': GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
-    if ref == 'OpenRef': GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    if ref == 'ClosedRef': GoodNames = ['EMPclosed', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
+    if ref == 'OpenRef': GoodNames = ['EMPopen', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
@@ -68,7 +69,7 @@ def Fig1(ref, Ones):
         EvarList, EQList, EHeipList, OList = [[],[],[],[]]
         SimpDomList, McNList, LogSkewList, POnesList = [[],[],[],[]]
 
-        its = 100
+        its = 10000
         for n in range(its):
             print n, metric
 
@@ -84,10 +85,22 @@ def Fig1(ref, Ones):
 
                 name, kind, numlines = dataset
                 lines = []
-                if name == 'EMPclosed' or name == 'EMPopen':
+                small = ['BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED']
+                big = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
+
+                if kind == 'macro':
                     lines = np.random.choice(range(1, numlines+1), 100, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
+
+                elif name in small:
+                    lines = np.random.choice(range(1, numlines+1), 20, replace=True)
+
+                elif name in big:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+
+                elif name == 'TARA':
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+                else:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
 
                 if Ones == 'N':   path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 elif Ones == 'Y': path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -253,10 +266,10 @@ def Fig1(ref, Ones):
         plt.tick_params(axis='both', which='major', labelsize=fs-1)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
-    if ref == 'OpenRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryRarityFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'OpenRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryRarityFig-OpenRef.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'ClosedRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryRarityFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'ClosedRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryRarityFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    if ref == 'OpenRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'OpenRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-OpenRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Evenness/SupplementaryEvennessFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
 
     #plt.close()
 
@@ -265,6 +278,6 @@ def Fig1(ref, Ones):
 
 
 Fig1(ref='ClosedRef', Ones='Y')
-Fig1(ref='ClosedRef', Ones='N')
-Fig1(ref='OpenRef', Ones='Y')
-Fig1(ref='OpenRef', Ones='N')
+#Fig1(ref='ClosedRef', Ones='N')
+#Fig1(ref='OpenRef', Ones='Y')
+#Fig1(ref='OpenRef', Ones='N')

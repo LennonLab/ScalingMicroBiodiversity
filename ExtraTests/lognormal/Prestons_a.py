@@ -11,10 +11,12 @@ import sys
 
 pi = math.pi
 
-GO = 1110*10**26 # estimated open ocean bacteria; add reference
-Pm = 2.9*10**27 # estimated Prochlorococcus marinus; add reference
-SAR11 = 2*10**28 # estimated Pelagibacter ubique; add reference
-Earth = 3.17 * 10**30 # estimated bacteria on Earth; add reference
+GO = [3.6*(10**28), 10.1*(10**28)] # estimated open ocean bacteria; Whitman et al. 1998
+Pm = [2.8*(10**27), 3.0*(10**27)] # estimated Prochlorococcus; Flombaum et al. 2013
+Syn = [6.7*(10**26), 7.3*(10**26)] # estimated Synechococcus; Flombaum et al. 2013
+
+Earth = [9.2*(10**29), 31.7*(10**29)] # estimated bacteria on Earth; Kallmeyer et al. 2012
+SAR11 = [2.0*(10**28), 2.0*(10**28)] # estimated percent abundance of SAR11; Morris et al. (2002)
 
 HGx = 10**14 # estimated bacteria in Human gut; add reference
 HGy = 0.1169*HGx # estimated most abundant bacteria in Human gut; add reference
@@ -47,24 +49,30 @@ def s2(a, Nmax, Nmin):
 def getNmax(N):
     return 10 ** (1.02*(log10(N)) - 0.71)
 
-def empS(N, b=0.85, slope=0.3): # macrobes: b = 0.86, slope = 0.23
+def empS(N, b=log10(3.92), slope=0.4): # macrobes: b = 0.86, slope = 0.23
     return 10 ** (b + slope*(log10(N)))
 
 
-N = float(AvianN)
-Nmax = AvianNmax
-Nmin = 1.0
-Nmax = getNmax(AvianN)
+#N = float(AvianN)
+#Nmax = AvianNmax
+#Nmin = 1.0
+#Nmax = getNmax(AvianN)
 
+N = float(max(GO))
+Nmax = float(max(Syn))
+Nmin = 1.0
+#Nmax = getNmax(N)
 
 ############################################### Assuming Nmin = 1
 
 guess = 0.099
+guess = 0.1019
+
 a = opt.fsolve(alpha2, guess, (N, Nmax, Nmin))[0]
 print guess, a
 
 S2 = s2(a, Nmax, Nmin)
-print 'S2:','%.3e' % S2
+print 'S2:','%.3e' % S2 # predicted from lognormal
 
 S = empS(N)
-print 'empS:','%.3e' % S
+print 'empS:','%.3e' % S # predicted from scaling
