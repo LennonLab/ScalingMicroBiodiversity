@@ -83,7 +83,7 @@ def getS(Nrange, sb, sz, db, dz, guess, NmaxRange = [], predictNmax=True):
 
 
 
-def Fig3():
+def Fig3(condition, ones, sampling):
 
     """ A figure demonstrating a strong richness relationship across 10 or 11
     orders of magnitude in total abundance. Taxonomic richness of a sample
@@ -91,22 +91,22 @@ def Fig3():
     """
 
     fs = 10 # font size used across figures
-    datasets = []
     metric = 'Richness, '+'log'+r'$_{10}$'
 
-    GoodNames = ['EMPclosed', 'HMP', 'MGRAST', ]
-    for name in os.listdir(mydir +'data/micro'):
-        #if name in BadNames: continue
+    tail = str()
+    if ones is False:
+        tail = '-SADMetricData_NoMicrobe1s.txt'
+    elif ones is True:
+        tail = '-SADMetricData.txt'
 
-        if name in GoodNames: pass
-        else: continue
+    datasets = []
+    GoodNames = []
+    emp = str()
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+    if condition == 'open': emp = 'EMPopen'
+    elif condition == 'closed': emp = 'EMPclosed'
 
-        numlines = sum(1 for line in open(path))
-        #print name, numlines
-        datasets.append([name, 'micro', numlines])
+    GoodNames = [emp, 'TARA', 'HMP', 'BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED', 'HUMAN', 'CHINA', 'CATLIN', 'FUNGI']
 
     print '\n'
 
@@ -115,6 +115,18 @@ def Fig3():
     d_zlist = []
     s_blist = []
     s_zlist = []
+
+    for name in os.listdir(mydir +'data/micro'):
+        if name in GoodNames: pass
+        else: continue
+
+        path = mydir+'data/micro/'+name+'/'+name+tail
+        numlines = sum(1 for line in open(path))
+        #print name, numlines
+        datasets.append([name, 'micro', numlines])
+
+    if sampling <= 500: its = 100
+    else: its = 10
 
     for i in range(its):
 
@@ -125,13 +137,21 @@ def Fig3():
             name, kind, numlines = dataset
             lines = []
 
-            if name == 'EMPclosed' or name == 'EMPopen':
-                lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
-            elif kind == 'micro': lines = np.random.choice(range(1, numlines+1),
-                            1000, replace=True)
+            small_mgrast = ['BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED']
+            big_mgrast = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
 
-            #path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-            path = mydir2+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
+            if kind == 'micro':
+                if name in small_mgrast:
+                    lines = np.random.choice(range(1, numlines+1), 160, replace=True) # 40
+
+                elif name in big_mgrast:
+                    lines = np.random.choice(range(1, numlines+1), 400, replace=True) # 100
+
+                else:
+                    lines = np.random.choice(range(1, numlines+1), 400, replace=True) # 100
+
+            path = mydir+'data/micro/'+name+'/'+name+tail
+
             for line in lines:
                 data = linecache.getline(path, line)
                 radDATA.append(data)
@@ -144,10 +164,7 @@ def Fig3():
 
                 N = float(N)
                 S = float(S)
-                #if S > 10**4: print name
                 Nmax = float(Nmax)
-
-                if S < 10 or N < 11: continue # Min species richness
 
                 ct += 1
                 Nlist.append(float(np.log10(N)))
@@ -197,15 +214,15 @@ def Fig3():
     dz = np.mean(d_zlist)
 
     #print 'R2 for Nmax vs. N:', round(dR2, 3)
-    print 'Nmax =', round(db, 2), '*', 'N^', round(dz, 2)
+    print 'Nmax =', round(10**db, 2), '*', 'N^', round(dz, 2)
     #print 'R2 for S vs. N:', round(R2, 3)
-    print 'S =', round(sb, 2), '*', 'N^', round(sz, 2),'\n'
+    print 'S =', round(10**sb, 2), '*', 'N^', round(sz, 2),'\n'
+
 
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
 
-    plt.text(2, 10, r'$S$'+ ' = '+str(round(sb, 2))+'*'+r'$N$'+'$^{'+str(round(sz, 2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
-    plt.text(2, 9,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
+    plt.text(2, 11.2, r'$S$'+ ' = '+str(round(10**sb, 1))+'*'+r'$N$'+'$^{'+str(round(sz, 2))+'},$' + r' $r^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='Crimson', alpha=0.9)
 
     # code for prediction intervals
     X = np.linspace(5, 32, 100)
@@ -228,18 +245,20 @@ def Fig3():
     p = np.poly1d(z)
     xp = np.linspace(0, 32, 1000)
 
-    label1 = 'Microbial richness-abundance ($S$ vs. $N$) scaling relationship'
-    label2 = 'Predicted $S$ from the lognormal, using reported $N$ & predicted $N_{max}$'
+    label1 = 'Richness-abundance scaling relationship, $S$ = 7.6$N^{0.35}$'
+    label2 = 'Predicted $S$ using the lognormal and published $N$ and $N_{max}$'
+    label3 = 'Predicted $S$ using the lognormal, published $N$, and $N_{max}$ = 0.4$N^{0.93}$'
 
     plt.plot(xp, p(xp), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
-    plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 20, bins='log', cmap=plt.cm.Reds_r, label='EMP')
+    plt.scatter(Nlist, Slist, color = 'LightCoral', alpha= 1 , s = 10, linewidths=0.5, edgecolor='Crimson')
+    #plt.hexbin(Nlist, Slist, mincnt=1, gridsize = 80, bins='log', cmap=plt.cm.Reds_r, label='EMP')
 
     # Adding in derived/inferred points
     c = '0.3'
 
-    GO = [360.0*(10**26), 1010.0*(10**26)] # estimated open ocean bacteria; Whitman et al. 1998
+    GO = [3.6*(10**28), 10.1*(10**28)] # estimated open ocean bacteria; Whitman et al. 1998
     Pm = [2.8*(10**27), 3.0*(10**27)] # estimated Prochlorococcus; Flombaum et al. 2013
-    #Syn = np.log10([6.7*(10**26), 7.3*(10**26)] # estimated Synechococcus; Flombaum et al. 2013
+    Syn = [6.7*(10**26), 7.3*(10**26)] # estimated Synechococcus; Flombaum et al. 2013
 
     Earth = [9.2*(10**29), 31.7*(10**29)] # estimated bacteria on Earth; Kallmeyer et al. 2012
     SAR11 = [2.0*(10**28), 2.0*(10**28)] # estimated percent abundance of SAR11; Morris et al. (2002)
@@ -257,10 +276,11 @@ def Fig3():
 
     Ns = []
     Ss = []
+    DomSs = []
 
     # Global Ocean estimates based on Whitman et al. (1998) and P. marinus (2012 paper)
     guess = 0.1019
-    yrange = [min(Pm), max(SAR11)]
+    yrange = [min(Syn), max(Pm)]
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(GO, sb, sz, db, dz, guess, yrange, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
@@ -271,8 +291,9 @@ def Fig3():
     Nmax_sem = stats.sem(Dlist, ddof=1)
     avgN = np.mean(Nlist)
     avgN_sem = stats.sem(Nlist, ddof=1)
+    Ss.append(S_ln)
 
-    print 'scaling law prediction of S for Global Ocean:', '%.3e' % 10**S_SvN
+    print 'scaling law prediction of S for Global Ocean:', '%.3e' % 10**(S_SvN)
     print 'lognormal prediction of S for Global Ocean, using estimated Nmax:', '%.3e' % 10**S_ln
 
     guess = 0.1019
@@ -288,25 +309,26 @@ def Fig3():
     avgN_sem = stats.sem(Nlist, ddof=1)
 
     print 'lognormal prediction of S for Global Ocean, using predicted Nmax:', '%.3e' % 10**S_ln
-    print 'P.m.:', '%.2e' % float(2.9*10**27), 'Nmax:', '%.2e' % 10**Nmax,'\n'
+    #print 'P.m.:', '%.2e' % float(2.9*10**27), 'Nmax:', '%.2e' % 10**Nmax,'\n'
 
     S2 = float(S_ln)
     N = float(avgN)
     S_sem = float(4*S_ln_sem)
     N_sem = float(4*avgN_sem)
 
-    ax.text(18, S2*0.95, 'Global Ocean', fontsize=fs+2, color = 'k')
+    ax.text(15, S2*0.93, 'Global Ocean', fontsize=fs+2, color = 'k')
     ax.axhline(S2, 0, 0.91, ls = '--', c = '0.6')
-    ax.text(N-1, S2*.75, 'Global ocean', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axvline(N, 0, 0.8, ls = '--', c = '0.6')
+    ax.text(N-1, S2*.80, 'Global ocean', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.axvline(N, 0, 0.7, ls = '--', c = '0.6')
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Ns.append(N)
-    Ss.append(S2)
+    DomSs.append(S2)
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
 
 
     # Earth, i.e., Global estimates based on Kallmeyer et al. (2012) and SAR11 (2002 paper)
     guess = 0.1060
+    yrange = [min(Pm), max(SAR11)]
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(Earth, sb, sz, db, dz, guess, yrange, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
@@ -317,11 +339,13 @@ def Fig3():
     Nmax_sem = stats.sem(Dlist, ddof=1)
     avgN = np.mean(Nlist)
     avgN_sem = stats.sem(Nlist, ddof=1)
+    Ss.append(S_ln)
 
-    print 'average N and sem:' '%.3e' % 10**avgN, '%.3e' % 10**avgN_sem
-    print 'average Nmax and sem:' '%.3e' % 10**Nmax, '%.3e' % 10**Nmax_sem
-    print 'scaling law prediction of S for Earth:', '%.3e' % 10**S_SvN, '%.3e' % 10**S_SvN_sem#, '%.3e' % S_SvN_CI
-    print 'lognormal prediction of S for Earth, using estimated Nmax:', '%.3e' % 10**S_ln, '%.3e' % 10**S_ln_sem#, '%.3e' % S_ln_CI
+    #print 'average N and sem:' '%.3e' % 10**avgN, '%.3e' % 10**avgN_sem
+    #print 'average Nmax and sem:' '%.3e' % 10**Nmax, '%.3e' % 10**Nmax_sem
+
+    print '\nscaling law prediction of S for Earth:', '%.3e' % 10**S_SvN #,'%.3e' % 10**S_SvN_sem #, '%.3e' % S_SvN_CI
+    print 'lognormal prediction of S for Earth, using estimated Nmax:', '%.3e' % 10**S_ln #, '%.3e' % 10**S_ln_sem#, '%.3e' % S_ln_CI
 
     guess = 0.1060
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(Earth, sb, sz, db, dz, guess, yrange, predictNmax=True)
@@ -335,7 +359,7 @@ def Fig3():
     avgN = np.mean(Nlist)
     avgN_sem = stats.sem(Nlist, ddof=1)
 
-    print 'lognormal prediction of S for Earth, using predicted Nmax:', '%.3e' % 10**S_ln, '%.3e' % 10**S_ln_sem#, '%.3e' % S_ln_CI
+    print 'lognormal prediction of S for Earth, using predicted Nmax:', '%.3e' % 10**S_ln #, '%.3e' % 10**S_ln_sem#, '%.3e' % S_ln_CI
     #print 'SAR11:', '%.2e' % float(2.4*10**28), 'Nmax:', '%.2e' % Nmax,'\n'
 
     S2 = float(S_ln)
@@ -346,15 +370,28 @@ def Fig3():
     ax.text(25, S2*1.025, 'Earth', fontsize=fs+2, color = 'k')
     ax.axhline(S2, 0, 0.95, ls = '--', c = '0.6')
     ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axvline(N, 0, 0.8, ls = '--', c = '0.6')
+    ax.axvline(N, 0, 0.85, ls = '--', c = '0.6')
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
     Ns.append(N)
-    Ss.append(S2)
+    DomSs.append(S2)
 
 
     # Human Gut
     guess = 0.1509
+    Slist_ln, Slist_SvN, Dlist, Nlist = getS(HGx, sb, sz, db, dz, guess, HGy, predictNmax=False)
+
+    S_ln = np.mean(Slist_ln)
+    S_ln_sem = stats.sem(Slist_ln, ddof=1)
+    S_SvN = np.mean(Slist_SvN)
+    S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
+    Nmax = np.mean(Dlist)
+    Nmax_sem = stats.sem(Dlist, ddof=1)
+    avgN = np.mean(Nlist)
+    avgN_sem = stats.sem(Nlist, ddof=1)
+    Ss.append(S_ln)
+
+
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(HGx, sb, sz, db, dz, guess, HGy, predictNmax=True)
 
     S_ln = np.mean(Slist_ln)
@@ -378,12 +415,24 @@ def Fig3():
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
     Ns.append(N)
-    Ss.append(S2)
+    DomSs.append(S2)
     #print 'predS for Human Gut:', '%.3e' % 10**S2
 
 
     # Cow Rumen
     guess = 0.1
+    Slist_ln, Slist_SvN, Dlist, Nlist = getS(COWx, sb, sz, db, dz, guess, COWy, predictNmax=False)
+
+    S_ln = np.mean(Slist_ln)
+    S_ln_sem = stats.sem(Slist_ln, ddof=1)
+    S_SvN = np.mean(Slist_SvN)
+    S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
+    Nmax = np.mean(Dlist)
+    Nmax_sem = stats.sem(Dlist, ddof=1)
+    avgN = np.mean(Nlist)
+    avgN_sem = stats.sem(Nlist, ddof=1)
+    Ss.append(S_ln)
+
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(COWx, sb, sz, db, dz, guess, COWy, predictNmax=True)
 
     S_ln = np.mean(Slist_ln)
@@ -405,9 +454,10 @@ def Fig3():
     ax.text(N+0.3, 4.2, 'Cow Rumen', fontsize=fs+2, color = 'k', rotation = 90)
     ax.axvline(N, 0, 0.38, ls = '--', c = '0.6')
     Ns.append(N)
-    Ss.append(S2)
+    DomSs.append(S2)
 
-    plt.scatter(Ns, Ss, color = '0.4', alpha= 0.8, s = 50, linewidths=2, edgecolor='k', label=label2)
+    plt.scatter(Ns, Ss, color = '0.4', alpha= 1, s = 50, linewidths=2, edgecolor='k', label=label2)
+    plt.scatter(Ns, DomSs, color = 'SkyBlue', alpha= 1, s = 50, linewidths=2, edgecolor='Steelblue', label=label3)
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
 
     ax.text(3, -1, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
@@ -418,16 +468,24 @@ def Fig3():
     plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
                                 mode="expand",prop={'size':fs+2})
 
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3_OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-OpenReference.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    if ones == False:
+        plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_NoSingletons_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+    if ones == True:
+        plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+
     #plt.show()
 
     return
 
 
 """ The following lines call figure functions to reproduce figures from the
-    Locey and Lennon (2015) manuscript """
+    Locey and Lennon (2014) manuscript """
 
-Fig3()
+EMPcondition = ['closed']
+Singletons = [False]
+Samplings = [1000]
+
+for condition in EMPcondition:
+    for ones in Singletons:
+        for sampling in Samplings:
+            Fig3(condition, ones, sampling)

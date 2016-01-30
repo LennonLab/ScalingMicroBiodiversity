@@ -8,13 +8,20 @@ mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 
 # function for setting the colors of the box plots pairs
 def setBoxColors(bp):
+
+    #print len(bp['caps'])
+    #print bp['fliers'][0]
+    #print bp['fliers'][1]
+    #print bp['fliers'][2]
+    #print bp['fliers'][3]
+
     setp(bp['boxes'][0], color='blue')
     setp(bp['caps'][0], color='blue')
     setp(bp['caps'][1], color='blue')
     setp(bp['whiskers'][0], color='blue')
     setp(bp['whiskers'][1], color='blue')
-    setp(bp['fliers'][0], color='blue')
-    setp(bp['fliers'][1], color='blue')
+    #setp(bp['fliers'][0], color='blue')
+    #setp(bp['fliers'][1], color='blue')
     setp(bp['medians'][0], color='blue')
 
     setp(bp['boxes'][1], color='red')
@@ -22,39 +29,41 @@ def setBoxColors(bp):
     setp(bp['caps'][3], color='red')
     setp(bp['whiskers'][2], color='red')
     setp(bp['whiskers'][3], color='red')
-    setp(bp['fliers'][2], color='red')
-    setp(bp['fliers'][3], color='red')
+    #setp(bp['fliers'][2], color='red')
+    #setp(bp['fliers'][3], color='red')
     setp(bp['medians'][1], color='red')
 
     return
 
 
 datasets = []
-BadNames = ['.DS_Store', 'BCI', 'AGSOIL', 'SLUDGE', 'EMPopen', 'FECES', 'MGRAST', 'NABC', 'FUNGI']
-#GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
 metrics = ['rarity', 'dominance', 'evenness', 'richness']
+
+#GoodNames = ['BIGN', 'SED', 'BOVINE','CHU', 'LAUB', 'CHINA', 'CATLIN', 'FUNGI', 'HUMAN', 'HYDRO', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+GoodNames = ['BCLS', 'CHINA', 'CATLIN', 'HUMAN', 'FUNGI', 'HYDRO', 'EMPopen', 'HMP', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+
 
 for m in metrics:
 
     micNlist, micSlist, micIntList, micCoefList = [[], [], [], []]
     macNlist, macSlist, macIntList, macCoefList = [[], [], [], []]
 
-    IN = open(mydir + 'output/SummaryPerDataset_NoMicrobe1s.txt','r')
     #IN = open(mydir + 'output/SummaryPerDataset_NoMicrobe1s.txt','r')
+    IN = open(mydir + 'output/SummaryPerDataset.txt','r')
 
     for data in IN:
 
         data = data.split()
         name, kind, metric, avgN, avgS, Int, Coef = data
-        if name in BadNames: continue
-        #if name in GoodNames: pass
-        #else: continue
+        if name in GoodNames: pass
+        else: continue
 
         if metric == m and kind == 'micro':
             micNlist.append(float(avgN))
             micSlist.append(float(avgS))
             micIntList.append(float(Int))
             micCoefList.append(float(Coef))
+
         elif metric == m and kind == 'macro':
             macNlist.append(float(avgN))
             macSlist.append(float(avgS))
@@ -72,23 +81,12 @@ for m in metrics:
     # first boxplot pair
     Ints = [micIntList, macIntList]
     bp = plt.boxplot(Ints, positions = [1, 2], widths = 0.6)
-    print bp
     setBoxColors(bp)
 
     # second boxplot pair
     Coefs = [micCoefList, macCoefList]
     bp = plt.boxplot(Coefs, positions = [4, 5], widths = 0.6)
     setBoxColors(bp)
-
-    # third boxplot pair
-    #Ns = [micNlist, macNlist]
-    #bp = plt.boxplot(Ns, positions = [7, 8], widths = 0.6)
-    #setBoxColors(bp)
-
-    # fourth boxplot pair
-    #Ns = [micSlist, macSlist]
-    #bp = plt.boxplot(Ns, positions = [10, 11], widths = 0.6)
-    #setBoxColors(bp)
 
 
     # set axes limits and labels
@@ -109,4 +107,9 @@ for m in metrics:
     hR.set_visible(False)
 
     #plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_NoMicrobeSingletons_ClosedRef.png', dpi=600, bbox_inches = "tight")
+    #plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_NoMicrobeSingletons_OpenRef.png', dpi=600, bbox_inches = "tight")
+
+    #plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_ClosedRef.png', dpi=600, bbox_inches = "tight")
+    plt.savefig(mydir+'/figs/appendix/DatasetComparison/'+m+'_OpenRef.png', dpi=600, bbox_inches = "tight")
+
     plt.show()

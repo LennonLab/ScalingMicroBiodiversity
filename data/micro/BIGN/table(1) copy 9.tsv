@@ -1,0 +1,52 @@
+Category	Label	Value
+Project	project_name	Bacterial Communities Associated with Culex Mosquito Larvae and Two Emergent Aquatic Plants of Bioremediation Importance
+Project	mgrast_id	mgp4984
+Project	firstname	Michael
+Project	PI_organization	University of California Riverside
+Project	PI_firstname	Dagne
+Project	lastname	Hall
+Project	email	hallm2533@gmail.com
+Project	PI_organization_address	900 University Ave., Riverside, CA, 92521
+Project	PI_organization_country	USA
+Project	organization_address	200 University Ave W, Waterloo, ON, N2L3G1
+Project	PI_lastname	Duguma
+Project	organization_country	Canada
+Project	project_description	Water, plant, and insect gut samples
+Project	PI_email	ddemi002@student.ucr.edu
+Project	organization	University of Waterloo
+Sample	sample_name	Duguma_Mosq_9
+Sample	mgrast_id	mgs120637
+Sample	country	USA
+Sample	longitude	117.3404
+Sample	location	Riverside, California
+Sample	collection_date	2011-09-13
+Sample	feature	freshwater wetland
+Sample	collection_time	07:59:59
+Sample	env_package	microbial mat|biofilm
+Sample	continent	north america
+Sample	latitude	33.9632
+Sample	sample_id	Duguma_Mosq_9
+Sample	biome	freshwater biome
+Sample	sample_name	Duguma_Mosq_9
+Sample	collection_timezone	UTC-8
+Sample	material	biofilm material
+Library: mimarks-survey	library_name	Duguma_Mosq_9
+Library: mimarks-survey	mgrast_id	mgl120639
+Library: mimarks-survey	metagenome_id	4527538.3
+Library: mimarks-survey	target_subfragment	V3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	16s rRNA
+Library: mimarks-survey	seq_make	Illumina
+Library: mimarks-survey	seq_center	IIGB Genomics
+Library: mimarks-survey	metagenome_name	Duguma_Mosq_9
+Library: mimarks-survey	file_name	sample_17.fna
+Library: mimarks-survey	reverse_primers	518r
+Library: mimarks-survey	file_checksum	3a9d947a15d33b55817c4260e8680c6f
+Library: mimarks-survey	sample_name	Duguma_Mosq_9
+Library: mimarks-survey	forward_primers	341f
+Library: mimarks-survey	investigation_type	mimarks-survey
+Library: mimarks-survey	seq_model	HiSeq2000
+Library: mimarks-survey	seq_url	http://genomics.ucr.edu/facility/genomics.html
+Enviromental Package: microbial mat|biofilm	mgrast_id	mge120638
+Enviromental Package: microbial mat|biofilm	env_package	microbial mat|biofilm
+Enviromental Package: microbial mat|biofilm	sample_name	Duguma_Mosq_9

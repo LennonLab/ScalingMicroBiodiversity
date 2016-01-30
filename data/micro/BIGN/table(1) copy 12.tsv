@@ -1,0 +1,47 @@
+Category	Label	Value
+Project	project_name	BioMarKs
+Project	mgrast_id	mgp7526
+Project	firstname	Ramiro
+Project	project_funding	European Science Foundation
+Project	PI_organization	CSIC (Spanish Research Council)
+Project	PI_firstname	Ramiro
+Project	lastname	Logares
+Project	email	ramiro.logares@gmail.com
+Project	PI_organization_address	Passeig Maritim de la Barceloneta, 37-49
+Project	PI_organization_country	Spain
+Project	organization_address	Passeig Maritim de la Barceloneta, 37-49
+Project	PI_lastname	Logares
+Project	organization_country	Spain
+Project	PI_email	ramiro.logares@gmail.com
+Project	organization	CSIC (Spanish Research Council)
+Sample	sample_name	NAPLES_2010_20.2000_Illumina
+Sample	mgrast_id	mgs156227
+Sample	country	Italy
+Sample	longitude	14.25
+Sample	location	Mediterranean Sea
+Sample	collection_date	2010-05-01
+Sample	feature	sea shore
+Sample	collection_time	12:00:00
+Sample	env_package	water
+Sample	latitude	40.8
+Sample	sample_name	NAPLES_2010_20.2000_Illumina
+Sample	biome	neritic epipelagic zone biome
+Sample	collection_timezone	UTC+1
+Sample	material	water
+Library: mimarks-survey	library_name	NAPLES_2010_cDNA_SURFACE_20.2000__ILLUMINA
+Library: mimarks-survey	mgrast_id	mgl156229
+Library: mimarks-survey	metagenome_id	4549957.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	18S rRNA (V9)
+Library: mimarks-survey	seq_make	Illumina
+Library: mimarks-survey	seq_center	Genoscope
+Library: mimarks-survey	file_name	MG_RAST_sub/NAPLES_2010_cDNA_SURFACE_20.2000__ILLUMINA.fna
+Library: mimarks-survey	metagenome_name	NAPLES_2010_cDNA_SURFACE_20.2000__ILLUMINA
+Library: mimarks-survey	seq_direction	forward
+Library: mimarks-survey	file_checksum	d518f3fe9e8a1ad29fae99ca3434ae78
+Library: mimarks-survey	sample_name	NAPLES_2010_20.2000_Illumina
+Library: mimarks-survey	seq_model	GA-IIx
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: water	mgrast_id	mge156228
+Enviromental Package: water	env_package	water
+Enviromental Package: water	sample_name	NAPLES_2010_20.2000_Illumina

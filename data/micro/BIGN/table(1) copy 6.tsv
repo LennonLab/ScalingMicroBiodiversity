@@ -1,0 +1,39 @@
+Category	Label	Value
+Project	project_name	NCSU Sink Microbiom
+Project	mgrast_id	mgp11478
+Project	PI_organization_address	Raleigh, NC
+Project	PI_organization_country	USA
+Project	PI_lastname	Lee
+Project	PI_organization	NCSU Biotechnology Program
+Project	PI_firstname	Laura
+Project	project_description	This project explores the microbial diversity in sinks. One swap sample was taken of a sink drain and faucent, and the 16S rRNA genes were sequenced.
+Project	PI_email	lllee@ncsu.edu
+Sample	sample_name	Sample1
+Sample	mgrast_id	mgs239652
+Sample	country	USA
+Sample	longitude	-78.6741935
+Sample	location	1910 entrepenuer drive, raleigh
+Sample	collection_date	2014-10-13
+Sample	feature	aquatic habitat
+Sample	collection_time	08:00:00
+Sample	env_package	built environment
+Sample	latitude	35.7695009
+Sample	sample_name	Sample1
+Sample	biome	terrestrial biome
+Sample	collection_timezone	UTC-5
+Sample	material	water scum
+Library: mimarks-survey	library_name	NCSU Sink Microbiome
+Library: mimarks-survey	mgrast_id	mgl239654
+Library: mimarks-survey	metagenome_id	4601301.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	seq_center	NCSU GSL
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	metagenome_name	NCSU Sink Microbiome
+Library: mimarks-survey	file_name	Paired_Ends.fna
+Library: mimarks-survey	seq_direction	both
+Library: mimarks-survey	sample_name	Sample1
+Library: mimarks-survey	file_checksum	4583e5342e4c023242f3c3d855999b3b
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: built environment	mgrast_id	mge239653
+Enviromental Package: built environment	env_package	built environment
+Enviromental Package: built environment	sample_name	Sample1

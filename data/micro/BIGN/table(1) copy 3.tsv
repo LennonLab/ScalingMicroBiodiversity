@@ -1,0 +1,42 @@
+Category	Label	Value
+Project	project_name	Arctic_Ocean_Microbial_Community
+Project	mgrast_id	mgp13170
+Project	firstname	Yu
+Project	PI_firstname	Nianzhi
+Project	lastname	Wang
+Project	email	wangyu@xmu.edu.cn
+Project	PI_organization_address	Xiangan Nan road, Xiamen, Fujian
+Project	organization_country	China
+Project	PI_lastname	Jiao
+Project	organization	Xiamen University
+Project	PI_email	jiao@xmu.edu.cn
+Project	PI_organization	Xiamen University
+Project	PI_organization_country	China
+Project	organization_address	Xiangan Nan road, Xiamen, Fujian
+Sample	sample_name	Total_samples.fna
+Sample	mgrast_id	mgs291513
+Sample	country	Svalbard
+Sample	longitude	11.94
+Sample	location	Kongsfjorden
+Sample	collection_date	2006-06-06
+Sample	feature	coast
+Sample	collection_time	12:00:00
+Sample	env_package	water
+Sample	latitude	79.8
+Sample	sample_name	Total_samples.fna
+Sample	biome	ocean
+Sample	collection_timezone	UTC+2
+Sample	material	water
+Library: mimarks-survey	library_name	Total_samples
+Library: mimarks-survey	mgrast_id	mgl291515
+Library: mimarks-survey	metagenome_id	4626065.3
+Library: mimarks-survey	seq_meth	illumina
+Library: mimarks-survey	target_gene	16S rRNA
+Library: mimarks-survey	metagenome_name	Total_samples
+Library: mimarks-survey	file_name	Total_samples.fna
+Library: mimarks-survey	sample_name	Total_samples.fna
+Library: mimarks-survey	file_checksum	051992cd134bf808a4cf7571936cbb9c
+Library: mimarks-survey	investigation_type	mimarks-survey
+Enviromental Package: water	mgrast_id	mge291514
+Enviromental Package: water	env_package	water
+Enviromental Package: water	sample_name	Total_samples.fna

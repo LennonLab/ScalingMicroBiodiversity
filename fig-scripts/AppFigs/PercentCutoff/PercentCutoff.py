@@ -29,7 +29,6 @@ def Fig1(cutoffs, Ones):
 
     datasets = []
     GoodNames = ['LAUB', 'CHU', 'HYDRO', 'CATLIN']
-    #GoodNames = ['LAUB', 'CHU', 'HYDRO', 'FUNGI', 'CATLIN', 'BOVINE', 'CHINA', 'HUMAN', 'SED']
 
     for cutoff in cutoffs:
         for name in GoodNames:
@@ -58,7 +57,7 @@ def Fig1(cutoffs, Ones):
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 1
+        its = 100
         for n in range(its):
 
             #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -71,10 +70,7 @@ def Fig1(cutoffs, Ones):
                 name, cutoff, kind, numlines = dataset
                 lines = []
 
-                #if name == 'EMPclosed' or name == 'EMPopen':
-                #    lines = np.random.choice(range(1, numlines+1), 100, replace=True)
-
-                lines = np.random.choice(range(1, numlines+1), numlines, replace=True)
+                lines = np.random.choice(range(1, numlines+1), numlines, replace=False)
 
                 if Ones == 'N':
                     path = mydir+'data/'+kind+'/'+name+'/'+name+cutoff+'/'+name+cutoff+'-SADMetricData_NoMicrobe1s.txt'
@@ -94,7 +90,7 @@ def Fig1(cutoffs, Ones):
                 N = float(N)
                 S = float(S)
 
-                if S < 10 or N < 11: continue
+                #if S < 10 or N < 11: continue
 
                 Nlist.append(float(np.log10(N)))
                 Slist.append(float(np.log10(S)))
@@ -239,9 +235,9 @@ def Fig1(cutoffs, Ones):
         if index == 0:
             plt.ylim(-0.1, 2.0)
             plt.xlim(1, 6)
-            plt.text(1.35, 1.7, r'$99%$'+ ' = '+str(round(c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 1.5, r'$97%$'+ ' = '+str(round(c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.35, 1.3, r'$95%$'+ ' = '+str(round(c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
+            plt.text(1.35, 1.7, r'$99%$'+ ' = '+str(round(10**c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 1.5, r'$97%$'+ ' = '+str(round(10**c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 1.3, r'$95%$'+ ' = '+str(round(10**c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
             plt.text(1.35, 1.1,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
             plt.scatter([0],[-1], color = 'none', alpha = 1, s=10, linewidths=0.9, edgecolor='Steelblue', label= '99% (n='+str(len(c99ListY))+')')
@@ -256,18 +252,18 @@ def Fig1(cutoffs, Ones):
             plt.ylim(0, 6)
             plt.xlim(1, 6)
 
-            plt.text(1.35, 5.1, r'$99%$'+ ' = '+str(round(c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 4.6, r'$97%$'+ ' = '+str(round(c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.35, 4.1, r'$95%$'+ ' = '+str(round(c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
+            plt.text(1.35, 5.1, r'$99%$'+ ' = '+str(round(10**c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 4.6, r'$97%$'+ ' = '+str(round(10**c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 4.1, r'$95%$'+ ' = '+str(round(10**c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
             plt.text(1.35, 3.6,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 2:
             plt.ylim(-3.0, 0.0)
             plt.xlim(1, 6)
 
-            plt.text(1.35, -1.8, r'$99%$'+ ' = '+str(round(c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, -2.1, r'$97%$'+ ' = '+str(round(c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.35, -2.4, r'$95%$'+ ' = '+str(round(c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
+            plt.text(1.35, -1.8, r'$99%$'+ ' = '+str(round(10**c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, -2.1, r'$97%$'+ ' = '+str(round(10**c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, -2.4, r'$95%$'+ ' = '+str(round(10**c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
             plt.text(1.35, -2.7,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
 
@@ -275,9 +271,9 @@ def Fig1(cutoffs, Ones):
             plt.ylim(0.9, 4.5)
             plt.xlim(1, 6)
 
-            plt.text(1.35, 3.9, r'$99%$'+ ' = '+str(round(c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.35, 3.5, r'$97%$'+ ' = '+str(round(c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.35, 3.1, r'$95%$'+ ' = '+str(round(c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
+            plt.text(1.35, 3.9, r'$99%$'+ ' = '+str(round(10**c99Int,2))+'*'+r'$N$'+'$^{'+str(round(c99Coef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(1.35, 3.5, r'$97%$'+ ' = '+str(round(10**c97Int,2))+'*'+r'$N$'+'$^{'+str(round(c97Coef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.35, 3.1, r'$95%$'+ ' = '+str(round(10**c95Int,2))+'*'+r'$N$'+'$^{'+str(round(c95Coef,2))+'}$', fontsize=fs, color='0.3')
             plt.text(1.35, 2.7,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
 
@@ -299,4 +295,4 @@ def Fig1(cutoffs, Ones):
 
 
 Fig1(cutoffs=['99','97','95'], Ones='Y')
-Fig1(cutoffs=['99','97','95'], Ones='N')
+#Fig1(cutoffs=['99','97','95'], Ones='N')

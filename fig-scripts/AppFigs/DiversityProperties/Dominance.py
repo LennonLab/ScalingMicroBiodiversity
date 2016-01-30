@@ -28,8 +28,10 @@ mydir = os.path.expanduser("~/GitHub/MicrobialScaling/")
 def Fig1(ref, Ones):
 
     datasets = []
-    if ref == 'ClosedRef': GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
-    if ref == 'OpenRef': GoodNames = ['MGRAST', 'HMP', 'EMPopen', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    if ref == 'ClosedRef': GoodNames = ['EMPclosed', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
+    if ref == 'OpenRef': GoodNames = ['EMPopen', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass
@@ -68,7 +70,7 @@ def Fig1(ref, Ones):
         EvarList, EQList, OList = [[],[],[]]
         SimpDomList, McNList, LogSkewList, POnesList = [[],[],[],[]]
 
-        its = 100
+        its = 10000
         for n in range(its):
             print n, metric
 
@@ -84,10 +86,22 @@ def Fig1(ref, Ones):
 
                 name, kind, numlines = dataset
                 lines = []
-                if name == 'EMPclosed' or name == 'EMPopen':
+                small = ['BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED']
+                big = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
+
+                if kind == 'macro':
                     lines = np.random.choice(range(1, numlines+1), 100, replace=True)
-                elif kind == 'micro': lines = np.random.choice(range(1, numlines+1), 100, replace=True)
-                else: lines = np.random.choice(range(1, numlines+1), 60, replace=True)
+
+                elif name in small:
+                    lines = np.random.choice(range(1, numlines+1), 20, replace=True)
+
+                elif name in big:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+
+                elif name == 'TARA':
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
+                else:
+                    lines = np.random.choice(range(1, numlines+1), 50, replace=True)
 
                 if Ones == 'N':   path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
                 elif Ones == 'Y': path = mydir+'data/'+kind+'/'+name+'/'+name+'-SADMetricData.txt'
@@ -217,7 +231,7 @@ def Fig1(ref, Ones):
 
         if index == 0:
             plt.ylim(0, 6)
-            plt.xlim(1, 7)
+            plt.xlim(1, 8)
             plt.text(1.5, 5.3, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
             plt.text(1.5, 4.7, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(1.5, 4.0,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
@@ -226,23 +240,23 @@ def Fig1(ref, Ones):
         if index == 1:
             plt.ylim(0, 120)
             plt.xlim(1, 8)
-            plt.text(4.0, 110, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(4.0, 100, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            #plt.text(4.0, 110, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            #plt.text(4.0, 100, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
             plt.text(5.0, 90,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
         if index == 2:
             plt.ylim(0, 1.2)
-            plt.xlim(1, 7)
-            plt.text(3.8, 1.10, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(3.8, 1.0, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(3.8, .9,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
+            plt.xlim(1, 8)
+            #plt.text(3.8, 1.10, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            #plt.text(3.8, 1.0, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.5, 1.0,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
         if index == 3:
             plt.ylim(0, 1.3)
-            plt.xlim(1, 7)
-            plt.text(1.5, 1.2, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(1.5, 1.1, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(1.5, 1.0,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
+            plt.xlim(1, 8)
+            #plt.text(1.5, 1.2, r'$micro$'+ ' = '+str(round(MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            #plt.text(1.5, 1.1, r'$macro$'+ ' = '+str(round(MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(1.5, 1.1,  r'$R^2$' + '=' +str(round(r2,3)), fontsize=fs-1, color='k')
 
         plt.xlabel('Number of reads or individuals, '+ '$log$'+r'$_{10}$', fontsize=fs)
         plt.ylabel(metric, fontsize=fs)
@@ -250,10 +264,10 @@ def Fig1(ref, Ones):
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
-    if ref == 'OpenRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryRarityFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'OpenRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryRarityFig-OpenRef.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'ClosedRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryRarityFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
-    elif ref == 'ClosedRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryRarityFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    if ref == 'OpenRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'OpenRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-OpenRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='Y': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedRef.png', dpi=600, bbox_inches = "tight")
+    elif ref == 'ClosedRef'and Ones =='N': plt.savefig(mydir+'/figs/appendix/Dominance/SupplementaryDominanceFig-ClosedRef_NoMicrobe1s.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
 
@@ -261,6 +275,6 @@ def Fig1(ref, Ones):
 
 
 Fig1(ref='ClosedRef', Ones='Y')
-Fig1(ref='ClosedRef', Ones='N')
-Fig1(ref='OpenRef', Ones='Y')
-Fig1(ref='OpenRef', Ones='N')
+#Fig1(ref='ClosedRef', Ones='N')
+#Fig1(ref='OpenRef', Ones='Y')
+#Fig1(ref='OpenRef', Ones='N')

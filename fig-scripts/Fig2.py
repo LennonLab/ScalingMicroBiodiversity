@@ -1,5 +1,5 @@
 from __future__ import division
-#from __future__ import print_function
+from __future__ import division
 import  matplotlib.pyplot as plt
 
 import numpy as np
@@ -30,26 +30,39 @@ mydir2 = os.path.expanduser("~/")
 
 
 
-def Fig2():
+def Fig2(condition, ones, sampling):
+
 
     """ A figure demonstrating a strong abundance relationship across 30
     orders of magnitude in total abundance. The abundance of the most abundant
     species scales in a log-log fashion with the total abundance of the sample
     or system. """
 
+    tail = str()
+    if ones is False:
+        tail = '-SADMetricData_NoMicrobe1s.txt'
+    elif ones is True:
+        tail = '-SADMetricData.txt'
+
+    datasets = []
+    GoodNames = []
+    emp = str()
+
+    if condition == 'open': emp = 'EMPopen'
+    elif condition == 'closed': emp = 'EMPclosed'
+
+    GoodNames = [emp, 'TARA', 'HMP', 'BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED', 'HUMAN', 'CHINA', 'CATLIN', 'FUNGI']
+
     fs = 10 # font size used across figures
     Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed']
 
     for name in os.listdir(mydir +'data/micro'):
         #if name in BadNames: continue
         if name in GoodNames: pass
         else: continue
 
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
-
+        path = mydir+'data/micro/'+name+'/'+name+tail
         numlines = sum(1 for line in open(path))
         print name, numlines
         datasets.append([name, 'micro', numlines])
@@ -57,9 +70,23 @@ def Fig2():
     for dataset in datasets:
         name, kind, numlines = dataset
         lines = []
-        lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
-        #path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData_NoMicrobe1s.txt'
-        path = mydir2+'data/micro/'+name+'/'+name+'-SADMetricData.txt'
+
+        small = ['BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED']
+        big = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
+
+        if name in small:
+            lines = np.random.choice(range(1, numlines+1), 4000, replace=True)
+
+        elif name in big:
+            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+
+        elif name == 'TARA':
+            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+        else:
+            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+
+
+        path = mydir+'data/micro/'+name+'/'+name+tail
 
         for line in lines:
             data = linecache.getline(path, line)
@@ -75,7 +102,7 @@ def Fig2():
         N = float(N)
         S = float(S)
 
-        if S < 10 or N < 11: continue # Min species richness
+        #if S < 10 or N < 11: continue # Min species richness
 
         Nlist.append(float(np.log10(float(N))))
         NmaxList.append(float(np.log10(float(Nmax))))
@@ -100,8 +127,8 @@ def Fig2():
     intercept = f.params[0]
     slope = f.params[1]
 
-    print f.summary()
-    print intercept, slope
+    #print f.summary()
+    #print intercept, slope
 
     X = np.linspace(6, 40, 100)
     Y = f.predict(exog=dict(N=X))
@@ -119,19 +146,19 @@ def Fig2():
     pred_ci_low, pred_ci_upp = data[:,6:8].T
 
     label1 = 'Microbial dominance-abundance ($N_{max}$ vs. $N$) scaling relationship'
-    label2 = 'Ranges of reported $N_{max}$ and $N$'
+    label2 = 'Ranges of published $N_{max}$ and $N$'
 
     plt.fill_between(Nlist2, pred_ci_low, pred_ci_upp, color='r', lw=0.5, alpha=0.2)
-    plt.text(2, 22, r'$N_{max}$'+ ' = '+str(round(intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
-    plt.text(2, 20,  r'$R^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
+    plt.text(2, 22, r'$N_{max}$'+ ' = '+str(round(10**intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
+    plt.text(2, 20,  r'$r^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
     plt.plot(X.tolist(), Y.tolist(), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
 
     print 'r-squared and slope for RADs w/out inferred:', round(R2, 3), round(slope,3)
 
 
-    #ax.plot([0],[0], '-', c='Steelblue', lw=4, alpha=1, label=label1)
+    #plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 40, bins='log', cmap=plt.cm.Reds_r)
+    plt.scatter(Nlist, NmaxList, color = 'LightCoral', alpha= 1 , s = 10, linewidths=0.5, edgecolor='Crimson')
 
-    plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 80, bins='log', cmap=plt.cm.Reds_r)
 
     GO = np.log10([360.0*(10**26), 1010.0*(10**26)]) # estimated open ocean bacteria; Whitman et al. 1998
     Pm = np.log10([2.8*(10**27), 3.0*(10**27)]) # estimated Prochlorococcus; Flombaum et al. 2013
@@ -208,10 +235,10 @@ def Fig2():
     plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
                                 mode="expand",prop={'size':fs+2}, numpoints=1)
 
-    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference_NoSingletons.png', dpi=600, bbox_inches = "tight")
-    #plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-OpenReference.png', dpi=600, bbox_inches = "tight")
-    plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-ClosedReference.png', dpi=600, bbox_inches = "tight")
+    if ones == False:
+        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_NoSingletons_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+    if ones == True:
+        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
 
     #plt.show()
     return
@@ -221,4 +248,11 @@ def Fig2():
 """ The following lines call figure functions to reproduce figures from the
     Locey and Lennon (2014) manuscript """
 
-Fig2()
+EMPcondition = ['closed']
+Singletons = [True]
+Samplings = [100]
+
+for condition in EMPcondition:
+    for ones in Singletons:
+        for sampling in Samplings:
+            Fig2(condition, ones, sampling)
