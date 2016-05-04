@@ -1,32 +1,41 @@
-EMPclosed 14615
+BIGN 13
+BOVINE 16
+CATLIN 130
+CHINA 186
+CHU 44
+FUNGI 128
 HMP 4303
-MGRAST 1298
+HUMAN 525
+HYDRO 123
+LAUB 84
+SED 34
+TARA 139
 BBS 2769
-CBC 1999
+CBC 1412
 FIA 10355
 GENTRY 222
 MCDB 103
 Rarity :   R-squared   :   AIC  :   BIC
-averages from power-law 0.625        -292.092        -274.504
-averages from semilog 0.457        3530.146        3547.733
-averages from exponential 0.508        -129.035        -111.447
-averages from linear 0.345        3642.024        3659.612 
+averages from power-law 0.552        -304.002        -282.749
+averages from semilog 0.356        10277.925        10299.178
+averages from exponential 0.353        247.352        268.605
+averages from linear 0.159        10680.013        10701.266 
 
 Dominance :   R-squared   :   AIC  :   BIC
-averages from power-law 0.938        304.839        322.427
-averages from semilog 0.548        15516.828        15534.416
-averages from exponential 0.679        1286.795        1304.383
-averages from linear 0.832        14901.395        14918.983 
+averages from power-law 0.942        775.754        797.007
+averages from semilog 0.205        44722.909        44744.162
+averages from exponential 0.406        4269.389        4290.642
+averages from linear 0.976        39399.243        39420.495 
 
 Evenness :   R-squared   :   AIC  :   BIC
-averages from power-law 0.734        133.599        151.187
-averages from semilog 0.75        -1068.973        -1051.385
-averages from exponential 0.582        405.159        422.747
-averages from linear 0.531        -690.923        -673.335 
+averages from power-law 0.636        846.321        867.574
+averages from semilog 0.707        -3106.808        -3085.555
+averages from exponential 0.404        1586.576        1607.828
+averages from linear 0.575        -2548.407        -2527.155 
 
 Richness :   R-squared   :   AIC  :   BIC
-averages from power-law 0.602        690.997        708.585
-averages from semilog 0.254        9232.117        9249.705
-averages from exponential 0.442        893.132        910.72
-averages from linear 0.163        9301.414        9319.002 
+averages from power-law 0.572        1884.812        1906.065
+averages from semilog 0.242        24918.301        24939.553
+averages from exponential 0.305        2610.94        2632.193
+averages from linear 0.071        25222.86        25244.113 
 

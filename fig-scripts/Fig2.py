@@ -53,7 +53,7 @@ def Fig2(condition, ones, sampling):
 
     GoodNames = [emp, 'TARA', 'HMP', 'BIGN', 'BOVINE', 'CHU', 'LAUB', 'SED', 'HUMAN', 'CHINA', 'CATLIN', 'FUNGI']
 
-    fs = 10 # font size used across figures
+    fs = 13 # font size used across figures
     Nlist, NmaxList, klist, datasets, radDATA = [[],[],[],[],[]]
 
 
@@ -75,15 +75,15 @@ def Fig2(condition, ones, sampling):
         big = ['HUMAN', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO']
 
         if name in small:
-            lines = np.random.choice(range(1, numlines+1), 4000, replace=True)
+            lines = np.random.choice(range(1, numlines+1), 1000, replace=True)
 
         elif name in big:
-            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+            lines = np.random.choice(range(1, numlines+1), 2500, replace=True)
 
         elif name == 'TARA':
-            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+            lines = np.random.choice(range(1, numlines+1), 2500, replace=True)
         else:
-            lines = np.random.choice(range(1, numlines+1), 10000, replace=True)
+            lines = np.random.choice(range(1, numlines+1), 2500, replace=True)
 
 
         path = mydir+'data/micro/'+name+'/'+name+tail
@@ -145,19 +145,19 @@ def Fig2(condition, ones, sampling):
     pred_mean_ci_low, pred_mean_ci_upp = data[:,4:6].T
     pred_ci_low, pred_ci_upp = data[:,6:8].T
 
-    label1 = 'Microbial dominance-abundance ($N_{max}$ vs. $N$) scaling relationship'
+    label1 = 'Dominance scaling law for microbial data compilation'
     label2 = 'Ranges of published $N_{max}$ and $N$'
 
     plt.fill_between(Nlist2, pred_ci_low, pred_ci_upp, color='r', lw=0.5, alpha=0.2)
     plt.text(2, 22, r'$N_{max}$'+ ' = '+str(round(10**intercept,2))+'*'+r'$N$'+'$^{'+str(round(slope,2))+'}$', fontsize=fs+4, color='Crimson', alpha=0.9)
-    plt.text(2, 20,  r'$r^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='0.2')
+    plt.text(2, 19,  r'$r^2$' + ' = ' +str("%.2f" % R2), fontsize=fs+4, color='0.2')
     plt.plot(X.tolist(), Y.tolist(), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
 
     print 'r-squared and slope for RADs w/out inferred:', round(R2, 3), round(slope,3)
 
 
-    #plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 40, bins='log', cmap=plt.cm.Reds_r)
-    plt.scatter(Nlist, NmaxList, color = 'LightCoral', alpha= 1 , s = 10, linewidths=0.5, edgecolor='Crimson')
+    plt.hexbin(Nlist, NmaxList, mincnt=1, gridsize = 50, bins='log', cmap=plt.cm.Reds_r)  #
+    #plt.scatter(Nlist, NmaxList, color = 'LightCoral', alpha= 0.6 , s = 10, linewidths=0.5, edgecolor='Crimson')
 
 
     GO = np.log10([360.0*(10**26), 1010.0*(10**26)]) # estimated open ocean bacteria; Whitman et al. 1998
@@ -180,10 +180,10 @@ def Fig2(condition, ones, sampling):
     y = [np.mean([min(Pm), max(SAR11)])]
     y_range = (max(SAR11) - min(Pm))/2.0
 
-    ax.text(13.3, max(SAR11)+0.2, r'$Prochlorococcus$ to $Pelagibacterales$', fontsize=fs+2, color = 'k')
+    ax.text(8.5, max(SAR11)+0.2, r'$Prochlorococcus$ and Pelagibacterales', fontsize=fs+2, color = 'k')
     ax.text(max(Earth)+0.5, 26, 'Earth microbiome', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axhline(y, 0, 0.90, ls = '--', c = '0.6')
-    ax.axvline(x, 0, 0.85, ls = '--', c = '0.6')
+    ax.axhline(y, 0, 0.90, ls = '--', c = '0.4')
+    ax.axvline(x, 0, 0.85, ls = '--', c = '0.4')
     plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1, label=label2)
 
     c = '0.4'
@@ -193,10 +193,10 @@ def Fig2(condition, ones, sampling):
     y = [np.mean(Pm)]
     y_range = (max(SAR11) - min(Pm))/2.0
 
-    ax.text(11, min(Pm)-1.25, r'$Synechococcus$ to $Prochloroccus$', fontsize=fs+2, color = 'k')
+    ax.text(7.5, min(Pm)-1.35, r'$Synechococcus$ and $Prochlorococcus$', fontsize=fs+2, color = 'k')
     ax.text(min(GO)-1, 22, 'Non-sediment ocean bacteria', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axhline(y, 0, 0.85, ls = '--', c = '0.6')
-    ax.axvline(x, 0, 0.83, ls = '--', c = '0.6')
+    ax.axhline(y, 0, 0.85, ls = '--', c = '0.4')
+    ax.axvline(x, 0, 0.83, ls = '--', c = '0.4')
     plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
 
     ## HUMAN GUT
@@ -205,10 +205,10 @@ def Fig2(condition, ones, sampling):
     y = [np.mean(HGy)]
     y_range = (max(HGy) - min(HGy))/2.0
 
-    ax.text(5, min(HGy)-1, 'Human gut', fontsize=fs+2, color = 'k')
+    ax.text(4, min(HGy)-1, 'Human gut', fontsize=fs+2, color = 'k')
     ax.text(min(HGx)-1, 8, 'Human gut', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axhline(y, 0, 0.40, ls = '--', c = '0.6')
-    ax.axvline(x, 0, 0.38, ls = '--', c = '0.6')
+    ax.axhline(y, 0, 0.40, ls = '--', c = '0.4')
+    ax.axvline(x, 0, 0.38, ls = '--', c = '0.4')
     plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
 
     ## COW RUMEN
@@ -217,28 +217,29 @@ def Fig2(condition, ones, sampling):
     y = [np.mean(COWy)]
     y_range = (max(COWy) - min(COWy))/2.0
 
-    ax.text(8, max(COWy)+0.3, 'Cow rumen', fontsize=fs+2, color = 'k')
+    ax.text(7, max(COWy)+0.3, '$Prevotella$', fontsize=fs+2, color = 'k')
     ax.text(max(COWx)+0.4, 11.2, 'Cow rumen', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axhline(y, 0, 0.41, ls = '--', c = '0.6')
-    ax.axvline(x, 0, 0.43, ls = '--', c = '0.6')
+    ax.axhline(y, 0, 0.41, ls = '--', c = '0.4')
+    ax.axvline(x, 0, 0.43, ls = '--', c = '0.4')
     plt.errorbar(x, y, xerr=x_range, yerr=y_range, color='k', linewidth=1)
 
-    ax.text(3, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
-    ax.text(-2.5, 22, metric, fontsize=fs*1.8, rotation=90)
+    ax.text(5, -4.2, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs+4)
+    ax.text(-2.5, 22, metric, fontsize=fs+4, rotation=90)
 
-    plt.plot([0,32],[0,32], ls = '-', lw=2, c='0.7')
-    ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
+    plt.plot([0,32],[0,32], ls = '--', lw=2, c='0.7')
+    #ax.text(18, 21, '1:1 line', fontsize=fs*1.0, rotation=40, color='0.7')
 
     plt.xlim(1, 33)
     plt.ylim(0, 32)
 
     plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
-                                mode="expand",prop={'size':fs+2}, numpoints=1)
+                                mode="expand",prop={'size':fs+1}, numpoints=1)
 
     if ones == False:
-        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_NoSingletons_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_NoSingletons_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
     if ones == True:
-        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig2/Locey_Lennon_2015_Fig2-'+condition+'_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
+        #plt.savefig(mydir+'/figs/Fig2/figure2-v2.pdf', dpi=300, bbox_inches = "tight")
 
     #plt.show()
     return

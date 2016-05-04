@@ -34,7 +34,8 @@ def modelcomparison():
     OUT = open(mydir + 'output/model_comparison.txt','w+')
 
     datasets = []
-    GoodNames = ['MGRAST', 'HMP', 'EMPclosed', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA']
+    GoodNames = ['empclosed', 'HMP', 'BIGN', 'TARA', 'BOVINE', 'HUMAN', 'LAUB', 'SED', 'CHU', 'CHINA', 'CATLIN', 'FUNGI', 'HYDRO', 'BBS', 'CBC', 'MCDB', 'GENTRY', 'FIA'] # all microbe data is MGRAST
+
 
     for name in os.listdir(mydir +'data/micro'):
         if name in GoodNames: pass

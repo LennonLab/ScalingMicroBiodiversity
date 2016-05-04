@@ -90,8 +90,8 @@ def Fig3(condition, ones, sampling):
     scales in a log-log fashion with the total abundance of the sample.
     """
 
-    fs = 10 # font size used across figures
-    metric = 'Richness, '+'log'+r'$_{10}$'
+    fs = 12 # font size used across figures
+    metric = 'Richness, '+r'$log$'+r'$_{10}$'
 
     tail = str()
     if ones is False:
@@ -126,7 +126,7 @@ def Fig3(condition, ones, sampling):
         datasets.append([name, 'micro', numlines])
 
     if sampling <= 500: its = 100
-    else: its = 10
+    else: its = 100
 
     for i in range(its):
 
@@ -222,7 +222,7 @@ def Fig3(condition, ones, sampling):
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
 
-    plt.text(2, 11.2, r'$S$'+ ' = '+str(round(10**sb, 1))+'*'+r'$N$'+'$^{'+str(round(sz, 2))+'},$' + r' $r^2$' + '=' +str(round(R2,2)), fontsize=fs+4, color='Crimson', alpha=0.9)
+    plt.text(2, 11.0, r'$S$'+ ' = '+str(round(10**sb, 1))+'*'+r'$N$'+'$^{'+str(round(sz, 2))+'},$' + r' $r^2$' + '=' +str(round(R2,2)), fontsize=fs+5, color='Crimson', alpha=0.9)
 
     # code for prediction intervals
     X = np.linspace(5, 32, 100)
@@ -246,8 +246,8 @@ def Fig3(condition, ones, sampling):
     xp = np.linspace(0, 32, 1000)
 
     label1 = 'Richness-abundance scaling relationship, $S$ = 7.6$N^{0.35}$'
-    label2 = 'Predicted $S$ using the lognormal and published $N$ and $N_{max}$'
-    label3 = 'Predicted $S$ using the lognormal, published $N$, and $N_{max}$ = 0.4$N^{0.93}$'
+    label2 = 'Predicted $S$ via lognormal, published $N$ and $N_{max}$'
+    label3 = 'Predicted $S$ via lognormal, published $N$, $N_{max}$ = 0.4$N^{0.93}$'
 
     plt.plot(xp, p(xp), '--', c='red', lw=2, alpha=0.8, color='Crimson', label=label1)
     plt.scatter(Nlist, Slist, color = 'LightCoral', alpha= 1 , s = 10, linewidths=0.5, edgecolor='Crimson')
@@ -284,6 +284,7 @@ def Fig3(condition, ones, sampling):
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(GO, sb, sz, db, dz, guess, yrange, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
+    S1 = float(S_ln)
     S_ln_sem = stats.sem(Slist_ln, ddof=1)
     S_SvN = np.mean(Slist_SvN)
     S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
@@ -316,10 +317,10 @@ def Fig3(condition, ones, sampling):
     S_sem = float(4*S_ln_sem)
     N_sem = float(4*avgN_sem)
 
-    ax.text(15, S2*0.93, 'Global Ocean', fontsize=fs+2, color = 'k')
-    ax.axhline(S2, 0, 0.91, ls = '--', c = '0.6')
+    ax.text(13.5, S1*0.93, 'Global Ocean', fontsize=fs+2, color = 'k')
+    ax.axhline(S1, 0, 0.91, ls = '--', c = '0.6')
     ax.text(N-1, S2*.80, 'Global ocean', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axvline(N, 0, 0.7, ls = '--', c = '0.6')
+    ax.axvline(N, 0, 0.65, ls = '--', c = '0.6')
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     Ns.append(N)
     DomSs.append(S2)
@@ -332,6 +333,7 @@ def Fig3(condition, ones, sampling):
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(Earth, sb, sz, db, dz, guess, yrange, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
+    S1 = float(S_ln)
     S_ln_sem = stats.sem(Slist_ln, ddof=1)
     S_SvN = np.mean(Slist_SvN)
     S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
@@ -370,7 +372,7 @@ def Fig3(condition, ones, sampling):
     ax.text(25, S2*1.025, 'Earth', fontsize=fs+2, color = 'k')
     ax.axhline(S2, 0, 0.95, ls = '--', c = '0.6')
     ax.text(N-1, 8, 'Earth', fontsize=fs+2, color = 'k', rotation = 90)
-    ax.axvline(N, 0, 0.85, ls = '--', c = '0.6')
+    ax.axvline(N, 0, 0.82, ls = '--', c = '0.6')
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
     Ns.append(N)
@@ -382,6 +384,7 @@ def Fig3(condition, ones, sampling):
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(HGx, sb, sz, db, dz, guess, HGy, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
+    S1 = float(S_ln)
     S_ln_sem = stats.sem(Slist_ln, ddof=1)
     S_SvN = np.mean(Slist_SvN)
     S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
@@ -408,9 +411,9 @@ def Fig3(condition, ones, sampling):
     S_sem = float(4*S_ln_sem)
     N_sem = float(4*avgN_sem)
 
-    ax.text(3, S2*.9, 'Human Gut', fontsize=fs+2, color = 'k')
+    ax.text(3.5, S2*.9, 'Human Gut', fontsize=fs+2, color = 'k')
     ax.axhline(S2, 0, 0.41, ls = '--', c = '0.6')
-    ax.text(N-1, 3.2, 'Human Gut', fontsize=fs+2, color = 'k', rotation = 90)
+    ax.text(N-1, 3.6, 'Human Gut', fontsize=fs+2, color = 'k', rotation = 90)
     ax.axvline(N, 0, 0.33, ls = '--', c = '0.6')
     #plt.scatter([N], [S2], color = '0.2', alpha= 1 , s = 60, linewidths=1, edgecolor='k')
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
@@ -424,6 +427,7 @@ def Fig3(condition, ones, sampling):
     Slist_ln, Slist_SvN, Dlist, Nlist = getS(COWx, sb, sz, db, dz, guess, COWy, predictNmax=False)
 
     S_ln = np.mean(Slist_ln)
+    S1 = float(S_ln)
     S_ln_sem = stats.sem(Slist_ln, ddof=1)
     S_SvN = np.mean(Slist_SvN)
     S_SvN_sem = stats.sem(Slist_SvN, ddof=1)
@@ -450,7 +454,7 @@ def Fig3(condition, ones, sampling):
     N_sem = float(4*avgN_sem)
 
     ax.text(6, S2*1.04, 'Cow Rumen', fontsize=fs+2, color = 'k')
-    ax.axhline(S2, 0, 0.43, ls = '--', c = '0.6')
+    ax.axhline(S2, 0, 0.46, ls = '--', c = '0.6')
     ax.text(N+0.3, 4.2, 'Cow Rumen', fontsize=fs+2, color = 'k', rotation = 90)
     ax.axvline(N, 0, 0.38, ls = '--', c = '0.6')
     Ns.append(N)
@@ -460,18 +464,20 @@ def Fig3(condition, ones, sampling):
     plt.scatter(Ns, DomSs, color = 'SkyBlue', alpha= 1, s = 50, linewidths=2, edgecolor='Steelblue', label=label3)
     #plt.errorbar([N], [S2], xerr=N_sem, yerr=S_sem, color='k', linewidth=2)
 
-    ax.text(3, -1, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs*1.8)
-    ax.text(-2.3, 12, 'OTU '+ metric, fontsize=fs*2, rotation=90)
+    ax.text(5, -0.8, 'Number of reads or total abundance, '+ '$log$'+r'$_{10}$', fontsize=fs+4)
+    ax.text(-2.1, 10, 'OTU '+ metric, fontsize=fs+4, rotation=90)
     plt.xlim(1, 31)
     plt.ylim(0.8, 14)
 
-    plt.legend(bbox_to_anchor=(-0.015, 1, 1.025, .2), loc=10, ncol=1,
-                                mode="expand",prop={'size':fs+2})
+    plt.legend(bbox_to_anchor=(-0.015, 1.03, 1.03, .2), loc=10, ncol=1,
+                                mode="expand",prop={'size':fs+2.2})
 
     if ones == False:
-        plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_NoSingletons_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig3/figure3.pdf', dpi=300, bbox_inches = "tight")
+        #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_NoSingletons_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
     if ones == True:
-        plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig3/figure3.pdf', dpi=300, bbox_inches = "tight")
+        #plt.savefig(mydir+'/figs/Fig3/Locey_Lennon_2015_Fig3-'+condition+'_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
 
     #plt.show()
 
@@ -482,7 +488,7 @@ def Fig3(condition, ones, sampling):
     Locey and Lennon (2014) manuscript """
 
 EMPcondition = ['closed']
-Singletons = [False]
+Singletons = [True]
 Samplings = [1000]
 
 for condition in EMPcondition:
