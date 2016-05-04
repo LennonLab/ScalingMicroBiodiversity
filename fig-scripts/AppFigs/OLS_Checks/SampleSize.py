@@ -57,7 +57,7 @@ def Fig_OLS_Checks():
     #color = str()
     #OrC = 'open'
 
-    SampSizes = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    SampSizes = [5, 6, 7, 8, 9, 10, 13, 16, 20, 30, 40, 50, 60, 70, 80, 90, 100]
     Iterations = 100
 
     fig = plt.figure(figsize=(12, 8))
@@ -65,6 +65,9 @@ def Fig_OLS_Checks():
     # MODEL PARAMETERS
     Rare_MacIntercept_pVals = [] # List to hold coefficient p-values
     Rare_MacIntercept_Coeffs = [] # List to hold coefficients
+
+    Rich_MacIntercept_pVals = []
+    Rich_MacIntercept_Coeffs = []
 
     Dom_MacIntercept_pVals = []
     Dom_MacIntercept_Coeffs = []
@@ -74,6 +77,9 @@ def Fig_OLS_Checks():
 
     Rare_MicIntercept_pVals = []
     Rare_MicIntercept_Coeffs = []
+
+    Rich_MicIntercept_pVals = []
+    Rich_MicIntercept_Coeffs = []
 
     Dom_MicIntercept_pVals = []
     Dom_MicIntercept_Coeffs = []
@@ -85,6 +91,9 @@ def Fig_OLS_Checks():
     Rare_MacSlope_pVals = []
     Rare_MacSlope_Coeffs = []
 
+    Rich_MacSlope_pVals = []
+    Rich_MacSlope_Coeffs = []
+
     Dom_MacSlope_pVals = []
     Dom_MacSlope_Coeffs = []
 
@@ -93,6 +102,9 @@ def Fig_OLS_Checks():
 
     Rare_MicSlope_pVals = []
     Rare_MicSlope_Coeffs = []
+
+    Rich_MicSlope_pVals = []
+    Rich_MicSlope_Coeffs = []
 
     Dom_MicSlope_pVals = []
     Dom_MicSlope_Coeffs = []
@@ -103,6 +115,8 @@ def Fig_OLS_Checks():
 
     RareR2List = [] # List to hold model R2
     RarepFList = [] # List to hold significance of model R2
+    RichR2List = [] # List to hold model R2
+    RichpFList = [] # List to hold significance of model R2
     DomR2List = [] # List to hold model R2
     DompFList = [] # List to hold significance of model R2
     EvenR2List = [] # List to hold model R2
@@ -116,6 +130,9 @@ def Fig_OLS_Checks():
     #RarepLinListHC = []
     RarepLinListRainB = []
     RarepLinListLM = []
+    #RichpLinListHC = []
+    RichpLinListRainB = []
+    RichpLinListLM = []
     #DompLinListHC = []
     DompLinListRainB = []
     DompLinListLM = []
@@ -128,6 +145,8 @@ def Fig_OLS_Checks():
     # 5. Independence of observations (no serial correlation in residuals)
     RarepCorrListBG = []
     RarepCorrListF = []
+    RichpCorrListBG = []
+    RichpCorrListF = []
     DompCorrListBG = []
     DompCorrListF = []
     EvenpCorrListBG = []
@@ -136,6 +155,8 @@ def Fig_OLS_Checks():
     # 6. Homoscedacticity
     RarepHomoHW = []
     RarepHomoHB = []
+    RichpHomoHW = []
+    RichpHomoHB = []
     DompHomoHW = []
     DompHomoHB = []
     EvenpHomoHW = []
@@ -146,6 +167,11 @@ def Fig_OLS_Checks():
     RarepNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
     RarepNormListKS = [] # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
     RarepNormListAD = [] # Anderson-Darling test for normal distribution unknown mean and variance
+
+    RichpNormListOmni = [] # Omnibus test for normality
+    RichpNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
+    RichpNormListKS = [] # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
+    RichpNormListAD = [] # Anderson-Darling test for normal distribution unknown mean and variance
 
     DompNormListOmni = [] # Omnibus test for normality
     DompNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
@@ -164,6 +190,9 @@ def Fig_OLS_Checks():
         sRare_MacIntercept_pVals = [] # List to hold coefficient p-values
         sRare_MacIntercept_Coeffs = [] # List to hold coefficients
 
+        sRich_MacIntercept_pVals = [] # List to hold coefficient p-values
+        sRich_MacIntercept_Coeffs = [] # List to hold coefficients
+
         sDom_MacIntercept_pVals = []
         sDom_MacIntercept_Coeffs = []
 
@@ -172,6 +201,9 @@ def Fig_OLS_Checks():
 
         sRare_MicIntercept_pVals = []
         sRare_MicIntercept_Coeffs = []
+
+        sRich_MicIntercept_pVals = []
+        sRich_MicIntercept_Coeffs = []
 
         sDom_MicIntercept_pVals = []
         sDom_MicIntercept_Coeffs = []
@@ -183,6 +215,9 @@ def Fig_OLS_Checks():
         sRare_MacSlope_pVals = []
         sRare_MacSlope_Coeffs = []
 
+        sRich_MacSlope_pVals = []
+        sRich_MacSlope_Coeffs = []
+
         sDom_MacSlope_pVals = []
         sDom_MacSlope_Coeffs = []
 
@@ -191,6 +226,9 @@ def Fig_OLS_Checks():
 
         sRare_MicSlope_pVals = []
         sRare_MicSlope_Coeffs = []
+
+        sRich_MicSlope_pVals = []
+        sRich_MicSlope_Coeffs = []
 
         sDom_MicSlope_pVals = []
         sDom_MicSlope_Coeffs = []
@@ -201,6 +239,8 @@ def Fig_OLS_Checks():
 
         sRareR2List = [] # List to hold model R2
         sRarepFList = [] # List to hold significance of model R2
+        sRichR2List = [] # List to hold model R2
+        sRichpFList = [] # List to hold significance of model R2
         sDomR2List = [] # List to hold model R2
         sDompFList = [] # List to hold significance of model R2
         sEvenR2List = [] # List to hold model R2
@@ -214,6 +254,9 @@ def Fig_OLS_Checks():
         #sRarepLinListHC = []
         sRarepLinListRainB = []
         sRarepLinListLM = []
+        #sRichpLinListHC = []
+        sRichpLinListRainB = []
+        sRichpLinListLM = []
         #sDompLinListHC = []
         sDompLinListRainB = []
         sDompLinListLM = []
@@ -226,6 +269,8 @@ def Fig_OLS_Checks():
         # 5. Independence of observations (no serial correlation in residuals)
         sRarepCorrListBG = []
         sRarepCorrListF = []
+        sRichpCorrListBG = []
+        sRichpCorrListF = []
         sDompCorrListBG = []
         sDompCorrListF = []
         sEvenpCorrListBG = []
@@ -234,6 +279,8 @@ def Fig_OLS_Checks():
         # 6. Homoscedacticity
         sRarepHomoHW = []
         sRarepHomoHB = []
+        sRichpHomoHW = []
+        sRichpHomoHB = []
         sDompHomoHW = []
         sDompHomoHB = []
         sEvenpHomoHW = []
@@ -244,6 +291,11 @@ def Fig_OLS_Checks():
         sRarepNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
         sRarepNormListKS = [] # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
         sRarepNormListAD = [] # Anderson-Darling test for normal distribution unknown mean and variance
+
+        sRichpNormListOmni = [] # Omnibus test for normality
+        sRichpNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
+        sRichpNormListKS = [] # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
+        sRichpNormListAD = [] # Anderson-Darling test for normal distribution unknown mean and variance
 
         sDompNormListOmni = [] # Omnibus test for normality
         sDompNormListJB = [] # Calculate residual skewness, kurtosis, and do the JB test for normality
@@ -348,6 +400,14 @@ def Fig_OLS_Checks():
             RarityResults = smf.ols('Rarity ~ N * Kind', d).fit() # Fit the dummy variable regression model
             #print RarityResults.summary(), '\n'
 
+            # Multiple regression for Rarity
+            d = pd.DataFrame({'N': list(Nlist)})
+            d['Richness'] = list(Slist)
+            d['Kind'] = list(KindList)
+
+            RichnessResults = smf.ols('Richness ~ N * Kind', d).fit() # Fit the dummy variable regression model
+            #print RichnessResults.summary(), '\n'
+
             # Multiple regression for Dominance
             d = pd.DataFrame({'N': list(Nlist)})
             d['Dominance'] = list(NmaxList)
@@ -365,6 +425,7 @@ def Fig_OLS_Checks():
             #print RarityResults.summary(), '\n'
 
             RareResids = RarityResults.resid # residuals of the model
+            RichResids = RichnessResults.resid # residuals of the model
             DomResids = DomResults.resid # residuals of the model
             EvenResids = EvenResults.resid # residuals of the model
 
@@ -372,6 +433,10 @@ def Fig_OLS_Checks():
             RareFpval = RarityResults.f_pvalue
             Rarer2 = RarityResults.rsquared # coefficient of determination
             #Adj_r2 = RareResults.rsquared_adj # adjusted
+            RichFpval = RichnessResults.f_pvalue
+            Richr2 = RichnessResults.rsquared # coefficient of determination
+            #Adj_r2 = RichnessResults.rsquared_adj # adjusted
+
             DomFpval = DomResults.f_pvalue
             Domr2 = DomResults.rsquared # coefficient of determination
             #Adj_r2 = DomResults.rsquared_adj # adjusted
@@ -385,21 +450,27 @@ def Fig_OLS_Checks():
             Rarepvals = RarityResults.pvalues
             Rarepvals = Rarepvals.tolist()
 
+            Richparams = RichnessResults.params
+            Richparams = Richparams.tolist()
+            Richpvals = RichnessResults.pvalues
+            Richpvals = Richpvals.tolist()
+
             Domparams = DomResults.params
             Domparams = Domparams.tolist()
             Dompvals = DomResults.pvalues
             Dompvals = Dompvals.tolist()
-
-            #print Domparams
-            #sys.exit()
 
             Evenparams = EvenResults.params
             Evenparams = Evenparams.tolist()
             Evenpvals = EvenResults.pvalues
             Evenpvals = Evenpvals.tolist()
 
+
             sRare_MacIntercept_pVals.append(Rarepvals[0])
             sRare_MacIntercept_Coeffs.append(Rareparams[0])
+
+            sRich_MacIntercept_pVals.append(Rarepvals[0])
+            sRich_MacIntercept_Coeffs.append(Rareparams[0])
 
             sDom_MacIntercept_pVals.append(Dompvals[0])
             sDom_MacIntercept_Coeffs.append(Domparams[0])
@@ -413,12 +484,17 @@ def Fig_OLS_Checks():
             else:
                 sRare_MicIntercept_Coeffs.append(Rareparams[1])
 
+            sRich_MicIntercept_pVals.append(Richpvals[1])
+            if Richpvals[1] > 0.05:
+                sRich_MicIntercept_Coeffs.append(Richparams[1])
+            else:
+                sRich_MicIntercept_Coeffs.append(Richparams[1])
+
             sDom_MicIntercept_pVals.append(Dompvals[1])
             if Dompvals[1] > 0.05:
                 sDom_MicIntercept_Coeffs.append(Domparams[1])
             else:
                 sDom_MicIntercept_Coeffs.append(Domparams[1])
-
 
             sEven_MicIntercept_pVals.append(Evenpvals[1])
             if Evenpvals[1] > 0.05:
@@ -429,6 +505,9 @@ def Fig_OLS_Checks():
 
             sRare_MacSlope_pVals.append(Rarepvals[2])
             sRare_MacSlope_Coeffs.append(Rareparams[2])
+
+            sRich_MacSlope_pVals.append(Richpvals[2])
+            sRich_MacSlope_Coeffs.append(Richparams[2])
 
             sDom_MacSlope_pVals.append(Dompvals[2])
             sDom_MacSlope_Coeffs.append(Domparams[2])
@@ -442,6 +521,12 @@ def Fig_OLS_Checks():
                 sRare_MicSlope_Coeffs.append(Rareparams[3])
             else:
                 sRare_MicSlope_Coeffs.append(Rareparams[3])
+
+            sRich_MicSlope_pVals.append(Richpvals[3])
+            if Richpvals[3] > 0.05:
+                sRich_MicSlope_Coeffs.append(Richparams[3])
+            else:
+                sRich_MicSlope_Coeffs.append(Richparams[3])
 
             sDom_MicSlope_pVals.append(Dompvals[3])
             if Dompvals[3] > 0.05:
@@ -457,6 +542,8 @@ def Fig_OLS_Checks():
 
             sRareR2List.append(Rarer2)
             sRarepFList.append(RareFpval)
+            sRichR2List.append(Richr2)
+            sRichpFList.append(RichFpval)
             sDomR2List.append(Domr2)
             sDompFList.append(DomFpval)
             sEvenR2List.append(Evenr2)
@@ -476,6 +563,9 @@ def Fig_OLS_Checks():
 
             RB = smd.linear_rainbow(RarityResults) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
             sRarepLinListRainB.append(RB[1])
+            RB = smd.linear_rainbow(RichnessResults) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
+            sRichpLinListRainB.append(RB[1])
+
             RB = smd.linear_rainbow(DomResults) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
             sDompLinListRainB.append(RB[1])
             RB = smd.linear_rainbow(EvenResults) # Rainbow test for linearity. The Null hypothesis is that the regression is correctly modeled as linear.
@@ -483,6 +573,9 @@ def Fig_OLS_Checks():
 
             LM = smd.linear_lm(RarityResults.resid, RarityResults.model.exog) # Lagrangian multiplier test for linearity
             sRarepLinListLM.append(LM[1])
+            LM = smd.linear_lm(RichnessResults.resid, RichnessResults.model.exog) # Lagrangian multiplier test for linearity
+            sRichpLinListLM.append(LM[1])
+
             LM = smd.linear_lm(DomResults.resid, DomResults.model.exog) # Lagrangian multiplier test for linearity
             sDompLinListLM.append(LM[1])
             LM = smd.linear_lm(EvenResults.resid, EvenResults.model.exog) # Lagrangian multiplier test for linearity
@@ -494,6 +587,12 @@ def Fig_OLS_Checks():
             #BGtest = smd.acorr_ljungbox(RareResids, lags=None, boxpierce=True)
             sRarepCorrListBG.append(BGtest[1])
             sRarepCorrListF.append(BGtest[3])
+
+            BGtest = smd.acorr_breush_godfrey(RichnessResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
+                                # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
+            #BGtest = smd.acorr_ljungbox(RichResids, lags=None, boxpierce=True)
+            sRichpCorrListBG.append(BGtest[1])
+            sRichpCorrListF.append(BGtest[3])
 
             BGtest = smd.acorr_breush_godfrey(DomResults, nlags=None, store=False) # Breusch Godfrey Lagrange Multiplier tests for residual autocorrelation
                                 # Lagrange multiplier test statistic, p-value for Lagrange multiplier test, fstatistic for F test, pvalue for F test
@@ -519,21 +618,29 @@ def Fig_OLS_Checks():
 
             HW = sms.het_white(RareResids, RarityResults.model.exog)
             sRarepHomoHW.append(HW[3])
-            HW = sms.het_white(DomResids, RarityResults.model.exog)
+            HW = sms.het_white(RichResids, RichnessResults.model.exog)
+            sRichpHomoHW.append(HW[3])
+
+            HW = sms.het_white(DomResids, DomResults.model.exog)
             sDompHomoHW.append(HW[3])
-            HW = sms.het_white(EvenResids, RarityResults.model.exog)
+            HW = sms.het_white(EvenResids, EvenResults.model.exog)
             sEvenpHomoHW.append(HW[3])
 
             HB = sms.het_breushpagan(RareResids, RarityResults.model.exog)
             sRarepHomoHB.append(HB[3])
-            HB = sms.het_breushpagan(DomResids, RarityResults.model.exog)
+            HB = sms.het_breushpagan(RichResids, RichnessResults.model.exog)
+            sRichpHomoHB.append(HB[3])
+
+            HB = sms.het_breushpagan(DomResids, DomResults.model.exog)
             sDompHomoHB.append(HB[3])
-            HB = sms.het_breushpagan(EvenResids, RarityResults.model.exog)
+            HB = sms.het_breushpagan(EvenResids, EvenResults.model.exog)
             sEvenpHomoHB.append(HB[3])
 
             # 7. NORMALITY OF ERROR TERMS
             O = sms.omni_normtest(RareResids)
             sRarepNormListOmni.append(O[1])
+            O = sms.omni_normtest(RichResids)
+            sRichpNormListOmni.append(O[1])
             O = sms.omni_normtest(DomResids)
             sDompNormListOmni.append(O[1])
             O = sms.omni_normtest(EvenResids)
@@ -541,6 +648,8 @@ def Fig_OLS_Checks():
 
             JB = sms.jarque_bera(RareResids)
             sRarepNormListJB.append(JB[1]) # Calculate residual skewness, kurtosis, and do the JB test for normality
+            JB = sms.jarque_bera(RichResids)
+            sRichpNormListJB.append(JB[1]) # Calculate residual skewness, kurtosis, and do the JB test for normality
             JB = sms.jarque_bera(DomResids)
             sDompNormListJB.append(JB[1]) # Calculate residual skewness, kurtosis, and do the JB test for normality
             JB = sms.jarque_bera(EvenResids)
@@ -548,6 +657,8 @@ def Fig_OLS_Checks():
 
             KS = smd.kstest_normal(RareResids)
             sRarepNormListKS.append(KS[1]) # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
+            KS = smd.kstest_normal(RichResids)
+            sRichpNormListKS.append(KS[1]) # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
             KS = smd.kstest_normal(DomResids)
             sDompNormListKS.append(KS[1]) # Lillifors test for normality, Kolmogorov Smirnov test with estimated mean and variance
             KS = smd.kstest_normal(EvenResids)
@@ -555,6 +666,8 @@ def Fig_OLS_Checks():
 
             AD = smd.normal_ad(RareResids)
             sRarepNormListAD.append(AD[1]) # Anderson-Darling test for normal distribution unknown mean and variance
+            AD = smd.normal_ad(RichResids)
+            sRichpNormListAD.append(AD[1]) # Anderson-Darling test for normal distribution unknown mean and variance
             AD = smd.normal_ad(DomResids)
             sDompNormListAD.append(AD[1]) # Anderson-Darling test for normal distribution unknown mean and variance
             AD = smd.normal_ad(EvenResids)
@@ -567,6 +680,9 @@ def Fig_OLS_Checks():
         Rare_MacIntercept_pVals.append(np.mean(sRare_MacIntercept_pVals)) # List to hold coefficient p-values
         Rare_MacIntercept_Coeffs.append(np.mean(sRare_MacIntercept_Coeffs)) # List to hold coefficients
 
+        Rich_MacIntercept_pVals.append(np.mean(sRich_MacIntercept_pVals)) # List to hold coefficient p-values
+        Rich_MacIntercept_Coeffs.append(np.mean(sRich_MacIntercept_Coeffs)) # List to hold coefficients
+
         Dom_MacIntercept_pVals.append(np.mean(sDom_MacIntercept_pVals))
         Dom_MacIntercept_Coeffs.append(np.mean(sDom_MacIntercept_Coeffs))
 
@@ -575,6 +691,9 @@ def Fig_OLS_Checks():
 
         Rare_MicIntercept_pVals.append(np.mean(sRare_MicIntercept_pVals))
         Rare_MicIntercept_Coeffs.append(np.mean(sRare_MicIntercept_Coeffs))
+
+        Rich_MicIntercept_pVals.append(np.mean(sRich_MicIntercept_pVals))
+        Rich_MicIntercept_Coeffs.append(np.mean(sRich_MicIntercept_Coeffs))
 
         Dom_MicIntercept_pVals.append(np.mean(sDom_MicIntercept_pVals))
         Dom_MicIntercept_Coeffs.append(np.mean(sDom_MicIntercept_Coeffs))
@@ -585,6 +704,9 @@ def Fig_OLS_Checks():
         Rare_MacSlope_pVals.append(np.mean(sRare_MacSlope_pVals)) # List to hold coefficient p-values
         Rare_MacSlope_Coeffs.append(np.mean(sRare_MacSlope_Coeffs)) # List to hold coefficients
 
+        Rich_MacSlope_pVals.append(np.mean(sRich_MacSlope_pVals)) # List to hold coefficient p-values
+        Rich_MacSlope_Coeffs.append(np.mean(sRich_MacSlope_Coeffs)) # List to hold coefficients
+
         Dom_MacSlope_pVals.append(np.mean(sDom_MacSlope_pVals))
         Dom_MacSlope_Coeffs.append(np.mean(sDom_MacSlope_Coeffs))
 
@@ -593,6 +715,9 @@ def Fig_OLS_Checks():
 
         Rare_MicSlope_pVals.append(np.mean(sRare_MicSlope_pVals))
         Rare_MicSlope_Coeffs.append(np.mean(sRare_MicSlope_Coeffs))
+
+        Rich_MicSlope_pVals.append(np.mean(sRich_MicSlope_pVals))
+        Rich_MicSlope_Coeffs.append(np.mean(sRich_MicSlope_Coeffs))
 
         Dom_MicSlope_pVals.append(np.mean(sDom_MicSlope_pVals))
         Dom_MicSlope_Coeffs.append(np.mean(sDom_MicSlope_Coeffs))
@@ -603,6 +728,8 @@ def Fig_OLS_Checks():
 
         RareR2List.append(np.mean(sRareR2List))
         RarepFList.append(np.mean(sRarepFList))
+        RichR2List.append(np.mean(sRichR2List))
+        RichpFList.append(np.mean(sRichpFList))
         DomR2List.append(np.mean(sDomR2List))
         DompFList.append(np.mean(sDompFList))
         EvenR2List.append(np.mean(sEvenR2List))
@@ -616,6 +743,9 @@ def Fig_OLS_Checks():
         #RarepLinListHC.append(np.mean(sRarepLinListHC))
         RarepLinListRainB.append(np.mean(sRarepLinListRainB))
         RarepLinListLM.append(np.mean(sRarepLinListLM))
+        #RichpLinListHC.append(np.mean(sRichpLinListHC))
+        RichpLinListRainB.append(np.mean(sRichpLinListRainB))
+        RichpLinListLM.append(np.mean(sRichpLinListLM))
         #DompLinListHC.append(np.mean(sDompLinListHC))
         DompLinListRainB.append(np.mean(sDompLinListRainB))
         DompLinListLM.append(np.mean(sDompLinListLM))
@@ -628,6 +758,8 @@ def Fig_OLS_Checks():
         # 5. Independence of observations (no serial correlation in residuals)
         RarepCorrListBG.append(np.mean(sRarepCorrListBG))
         RarepCorrListF.append(np.mean(sRarepCorrListF))
+        RichpCorrListBG.append(np.mean(sRichpCorrListBG))
+        RichpCorrListF.append(np.mean(sRichpCorrListF))
         DompCorrListBG.append(np.mean(sDompCorrListBG))
         DompCorrListF.append(np.mean(sDompCorrListF))
         EvenpCorrListBG.append(np.mean(sEvenpCorrListBG))
@@ -636,6 +768,8 @@ def Fig_OLS_Checks():
         # 6. Homoscedacticity
         RarepHomoHW.append(np.mean(sRarepHomoHW))
         RarepHomoHB.append(np.mean(sRarepHomoHB))
+        RichpHomoHB.append(np.mean(sRichpHomoHB))
+        RichpHomoHW.append(np.mean(sRichpHomoHW))
         DompHomoHW.append(np.mean(sDompHomoHW))
         DompHomoHB.append(np.mean(sDompHomoHB))
         EvenpHomoHW.append(np.mean(sEvenpHomoHW))
@@ -646,6 +780,11 @@ def Fig_OLS_Checks():
         RarepNormListJB.append(np.mean(sRarepNormListJB))
         RarepNormListKS.append(np.mean(sRarepNormListKS))
         RarepNormListAD.append(np.mean(sRarepNormListAD))
+
+        RichpNormListOmni.append(np.mean(sRichpNormListOmni))
+        RichpNormListJB.append(np.mean(sRichpNormListJB))
+        RichpNormListKS.append(np.mean(sRichpNormListKS))
+        RichpNormListAD.append(np.mean(sRichpNormListAD))
 
         DompNormListOmni.append(np.mean(sDompNormListOmni))
         DompNormListJB.append(np.mean(sDompNormListJB))
@@ -658,21 +797,20 @@ def Fig_OLS_Checks():
         EvenpNormListAD.append(np.mean(sEvenpNormListAD))
 
 
-    fig.add_subplot(3, 3, 1)
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    fig.add_subplot(4, 3, 1)
+    plt.xlim(min(SampSizes)-1,max(SampSizes)+10)
     plt.ylim(0,1)
     plt.xscale('log')
     # Rarity    R2 vs. Sample Size
     plt.plot(NLIST,RareR2List,  c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
-    plt.text(0.7, 0.6, 'Rarity', rotation='vertical', fontsize=20)
-
+    plt.text(1.01, 0.6, 'Rarity', rotation='vertical', fontsize=16)
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
 
-    fig.add_subplot(3, 3, 2)
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    fig.add_subplot(4, 3, 2)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     plt.xscale('log')
     plt.ylim(0.0, 0.16)
     # Rarity    Coeffs vs. Sample Size
@@ -680,13 +818,12 @@ def Fig_OLS_Checks():
     plt.plot(NLIST, Rare_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
     #plt.plot(NLIST, RareIntCoeffList, c='g', label='Interaction')
     plt.ylabel('Coefficient')
-
-    leg = plt.legend(loc=10,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':8})
     leg.draw_frame(False)
 
 
-    fig.add_subplot(3, 3, 3)
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    fig.add_subplot(4, 3, 3)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     plt.ylim(0.0, 0.6)
     plt.xscale('log')
     # Rarity    p-vals vs. Sample Size
@@ -710,42 +847,42 @@ def Fig_OLS_Checks():
     #plt.plot(NLIST,RarepNormListKS,  c='Lime', ls='--', lw=3)
     #plt.plot(NLIST,RarepNormListAD,  c='Lime', ls='--')
 
-    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--')
     plt.ylabel('p-value')
 
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=1,prop={'size':8})
     leg.draw_frame(False)
 
 
-    fig.add_subplot(3, 3, 4)
+    fig.add_subplot(4, 3, 4)
     plt.xscale('log')
     plt.ylim(0,1)
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     # Dominance     R2 vs. Sample Size
     plt.plot(NLIST, DomR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
     plt.ylabel(r'$R^2$', fontsize=14)
-    plt.text(0.7, 0.82, 'Dominance', rotation='vertical', fontsize=20)
+    plt.text(1.01, 0.82, 'Dominance', rotation='vertical', fontsize=16)
 
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
-    fig.add_subplot(3, 3, 5)
+    fig.add_subplot(4, 3, 5)
     plt.ylim(-0.2, 1.2)
     plt.xscale('log')
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     # Dominance     Coeffs vs. Sample Size
     plt.plot(NLIST, Dom_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
     plt.plot(NLIST, Dom_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
     #plt.plot(NLIST, DomIntCoeffList, c='g', label='Interaction')
     plt.ylabel('Coefficient')
 
-    leg = plt.legend(loc=10,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':8})
     leg.draw_frame(False)
 
-    fig.add_subplot(3, 3, 6)
+    fig.add_subplot(4, 3, 6)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     plt.xscale('log')
     #plt.yscale('log')
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     plt.ylim(0, 0.6)
     # Dominance     p-vals vs. Sample Size
 
@@ -768,45 +905,37 @@ def Fig_OLS_Checks():
     #plt.plot(NLIST, DompNormListKS, c='Lime', ls='--', lw=3)
     #plt.plot(NLIST, DompNormListAD, c='Lime', ls='--')
 
-    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
-
-    #plt.xlabel('Sample size')
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--')
     plt.ylabel('p-value')
-
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=1,prop={'size':8})
     leg.draw_frame(False)
 
-
-    fig.add_subplot(3, 3, 7)
-    plt.text(0.7, 0.7, 'Evenness', rotation='vertical', fontsize=20)
+    fig.add_subplot(4, 3, 7)
+    plt.text(1.01, 0.7, 'Evenness', rotation='vertical', fontsize=16)
     plt.xscale('log')
     plt.ylim(0,1)
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     # Evenness      R2 vs. Sample Size
     plt.plot(NLIST, EvenR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
-    plt.xlabel('Sample size')
     plt.ylabel(r'$R^2$', fontsize=14)
-
     leg = plt.legend(loc=4,prop={'size':14})
     leg.draw_frame(False)
 
-    fig.add_subplot(3, 3, 8)
+    fig.add_subplot(4, 3, 8)
     plt.ylim(-0.25, 0.0)
     plt.xscale('log')
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     # Evenness      Coeffs vs. Sample Size
     plt.plot(NLIST, Even_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
     plt.plot(NLIST, Even_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
     #plt.plot(NLIST, EvenIntCoeffList, c='g', label='Interaction')
-    plt.xlabel('Sample size')
     plt.ylabel('Coefficient')
-
-    leg = plt.legend(loc=10,prop={'size':10})
+    leg = plt.legend(loc=10,prop={'size':8})
     leg.draw_frame(False)
 
-    fig.add_subplot(3, 3, 9)
+    fig.add_subplot(4, 3, 9)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
     plt.xscale('log')
-    plt.xlim(min(SampSizes)-2,max(SampSizes)+10)
     plt.ylim(0.0, 0.3)
     # Evenness      p-vals vs. Sample Size
 
@@ -829,14 +958,68 @@ def Fig_OLS_Checks():
     #plt.plot(NLIST, EvenpNormListKS, c='Lime', alpha=0.9, ls='--', lw=3)
     #plt.plot(NLIST, EvenpNormListAD, c='Lime', alpha=0.9, ls='--')
 
-    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--', label=r'$\alpha$'+'='+str(0.05))
-
-    plt.xlabel('Sample size')
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--')
     plt.ylabel('p-value')
-
-    leg = plt.legend(loc=1,prop={'size':10})
+    leg = plt.legend(loc=1,prop={'size':8})
     leg.draw_frame(False)
 
+    fig.add_subplot(4, 3, 10)
+    plt.xscale('log')
+    plt.ylim(0,1)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
+    # Dominance     R2 vs. Sample Size
+    plt.plot(NLIST, RichR2List, c='0.2', ls='--', lw=2, label=r'$R^2$')
+    plt.ylabel(r'$R^2$', fontsize=14)
+    plt.xlabel('Sample size', fontsize=14)
+    plt.text(1.01, 0.82, 'Richness', rotation='vertical', fontsize=16)
+
+    leg = plt.legend(loc=4,prop={'size':14})
+    leg.draw_frame(False)
+
+    fig.add_subplot(4, 3, 11)
+    plt.ylim(-0.2, 1.2)
+    plt.xscale('log')
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
+    # Richness    Coeffs vs. Sample Size
+    plt.plot(NLIST, Rich_MicSlope_Coeffs, c='r', lw=2, label='Microbe')
+    plt.plot(NLIST, Rich_MacSlope_Coeffs,  c='b', lw=2, label='Macrobe')
+    #plt.plot(NLIST, RichIntCoeffList, c='g', label='Interaction')
+    plt.ylabel('Coefficient')
+    plt.xlabel('Sample size', fontsize=14)
+
+    leg = plt.legend(loc=10,prop={'size':8})
+    leg.draw_frame(False)
+
+
+    fig.add_subplot(4, 3, 12)
+    plt.xlim(min(SampSizes)-1, max(SampSizes)+10)
+    plt.xscale('log')
+    # Richness    p-vals vs. Sample Size
+
+    # 3. The relationship is linear
+    #plt.plot(RichpLinListHC, NLIST, c='m', alpha=0.8)
+    #plt.plot(NLIST,RichpLinListRainB,  c='m')
+    plt.plot(NLIST,RichpLinListLM,  c='m', ls='-', label='linearity')
+
+    # 5. Independence of observations (no serial correlation in residuals)
+    #plt.plot(NLIST,RichpCorrListBG,  c='c')
+    plt.plot(NLIST, EvenpCorrListF,  c='c', ls='-', label='autocorrelation')
+
+    # 6. Homoscedacticity
+    plt.plot(NLIST,RichpHomoHW,  c='orange', ls='-', label='homoscedasticity')
+    #plt.plot(NLIST,RichpHomoHB,  c='r', ls='-')
+
+    # 7. Normally distributed residuals (errors)
+    plt.plot(NLIST,RichpNormListOmni,  c='Lime', ls='-', label='normality')
+    #plt.plot(NLIST,RichpNormListJB,  c='Lime', ls='-')
+    #plt.plot(NLIST,RichpNormListKS,  c='Lime', ls='--', lw=3)
+    #plt.plot(NLIST,RichpNormListAD,  c='Lime', ls='--')
+
+    plt.plot([1, 100], [0.05, 0.05], c='0.2', ls='--')
+    plt.ylabel('p-value')
+    plt.xlabel('Sample size', fontsize=14)
+    leg = plt.legend(loc=1,prop={'size':8})
+    leg.draw_frame(False)
     #plt.tick_params(axis='both', which='major', labelsize=fs-3)
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     plt.savefig(mydir+'figs/appendix/SampleSize/SampleSizeEffects.png', dpi=600, bbox_inches = "tight")

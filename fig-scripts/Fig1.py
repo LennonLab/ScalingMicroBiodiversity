@@ -67,13 +67,13 @@ def Fig1(condition, ones, sampling):
 
         metric = i
         fig.add_subplot(2, 2, index+1)
-        fs = 10 # font size used across figures
+        fs = 12 # font size used across figures
 
         MicIntList, MicCoefList, MacIntList, MacCoefList, R2List, metlist = [[], [], [], [], [], []]
         Nlist, Slist, Evarlist, ESimplist, klist, radDATA, BPlist, NmaxList, rareSkews, KindList, StdList = [[], [], [], [], [], [], [], [], [], [], []]
         #name, kind, N, S, Evar, ESimp, EQ, O, ENee, EPielou, EHeip, BP, SimpDom, Nmax, McN, skew, logskew, chao1, ace, jknife1, jknife2, margalef, menhinick, preston_a, preston_S = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 
-        its = 10000
+        its = 10
 
         for n in range(its):
 
@@ -250,56 +250,56 @@ def Fig1(condition, ones, sampling):
         R2 = round(np.mean(R2List), 2)
 
         if index == 0:
-            plt.ylim(-0.1, 2.0)
+            plt.ylim(-0.1, 2.5)
             plt.xlim(0, 8.2)
 
-            plt.text(0.35, 1.7, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(0.35, 1.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(0.35, 1.3,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(0.35, 2.1, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, 1.8, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, 1.4,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
             plt.scatter([0],[-1], color = 'SkyBlue', alpha = 1, s=15, linewidths=0.9, edgecolor='Steelblue', label= 'microbes (n='+str(len(MicListY))+')')
             plt.scatter([0],[-1], color = 'LightCoral',alpha= 1, s=15, linewidths=0.9, edgecolor='Crimson', label= 'macrobes (n='+str(len(MacListY))+')')
-            plt.legend(bbox_to_anchor=(-0.04, 1.1, 2.48, .2), loc=10, ncol=2, mode="expand",prop={'size':fs+2})
+            plt.legend(bbox_to_anchor=(-0.04, 1.05, 2.48, .2), loc=10, ncol=2, mode="expand",prop={'size':fs})
 
         elif index == 1:
 
-            plt.plot([0,7],[0,7], ls = '--', lw=1, c='0.7')
+            plt.plot([0,8.2],[0,8.2], ls = '--', lw=1, c='0.7')
             plt.ylim(0, 8)
             plt.xlim(0, 8.2)
 
-            plt.text(0.35, 6.5, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(0.35, 5.5, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(0.35, 4.5,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(0.35, 6.7, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, 5.7, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, 4.7,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 2:
-            plt.ylim(-3.0, 0.0)
+            plt.ylim(-3.5, 0.0)
             plt.xlim(0, 8.2)
 
-            plt.text(0.35, -2.5, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(0.35, -2.8, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(0.35, -2.2,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(0.35, -2.9, r'$micro$'+ ' = '+str(round(10**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, -3.3, r'$macro$'+ ' = '+str(round(10**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, -2.5,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
 
         elif index == 3:
             plt.ylim(0.9, 5.0)
             plt.xlim(0, 8.2)
 
-            plt.text(0.35, 4.3, r'$micro$'+ ' = '+str(round(2**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
-            plt.text(0.35, 3.8, r'$macro$'+ ' = '+str(round(2**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
-            plt.text(0.35, 3.4,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
+            plt.text(0.35, 4.5, r'$micro$'+ ' = '+str(round(2**MicInt,2))+'*'+r'$N$'+'$^{'+str(round(MicCoef,2))+'}$', fontsize=fs, color='Steelblue')
+            plt.text(0.35, 4.0, r'$macro$'+ ' = '+str(round(2**MacInt,2))+'*'+r'$N$'+'$^{'+str(round(MacCoef,2))+'}$', fontsize=fs, color='Crimson')
+            plt.text(0.35, 3.5,  r'$R^2$' + '=' +str(R2), fontsize=fs-1, color='k')
             print condition, ones, ': S =', '%.3e' % (10**(MicInt + MicCoef*(30.0)))
             #print R2
 
 
-        plt.xlabel('Number of reads or individuals, '+ '$log$'+r'$_{10}$', fontsize=fs)
+        plt.xlabel('$log$'+r'$_{10}$'+'($N$)', fontsize=fs)
         plt.ylabel(metric, fontsize=fs)
         plt.tick_params(axis='both', which='major', labelsize=fs-3)
 
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
     if ones == False:
-        plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-'+condition+'_NoSingletons_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-'+condition+'_NoSingletons_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
     if ones == True:
-        plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-'+condition+'_'+str(sampling)+'.png', dpi=600, bbox_inches = "tight")
+        plt.savefig(mydir+'/figs/Fig1/Locey_Lennon_2015_Fig1-'+condition+'_'+str(sampling)+'.pdf', dpi=300, bbox_inches = "tight")
 
     #plt.show()
     plt.close()
