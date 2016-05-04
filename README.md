@@ -3,7 +3,7 @@ ScalingMicroBiodiversity
 
 Code, data, and text documents related to the study of abundance scaling relationships focused on taxonomic aspects of microbial biodiversity (evenness, dominance, richness, rarity), using datasets of plants and animals for comparative perspective and signals of potentially unifying patterns.
 
-##Recreating analyses of Locey and Lennon (2015)
+##Recreating analyses of Locey and Lennon (2016)
 
 Download or clone the public GitHub repository https://github.com/klocey/DiversityTools into the home directory and then running the Cython script:https://github.com/klocey/DiversityTools/blob/master/radMetrics/radMetrics.pyx
 ###Quantifying dominance, evenness, rarity, and richness
